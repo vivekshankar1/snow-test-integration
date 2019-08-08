@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
     <sys_properties_category_m2m action="INSERT_OR_UPDATE">
-        <category display_value="Chef Chef Automate Properties">7b811d68dbe02b00197478fdaa961975</category>
+        <category display_value="Chef Automate Properties">7b811d68dbe02b00197478fdaa961975</category>
         <order>300</order>
         <property display_value="">6413dda8dbe02b00197478fdaa9619dc</property>
         <sys_class_name>sys_properties_category_m2m</sys_class_name>
