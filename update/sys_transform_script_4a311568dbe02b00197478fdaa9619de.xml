@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <map display_value="Chef Automate Sync Transform">56940d5cdbe8e700197478fdaa96190b</map>
+        <order>101</order>
+        <script><![CDATA[// Update Cookbook Client runs tables
+(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+	var logger = new Logger();
+	try {
+		var clientRunJson = JSON.parse(source.client_run);
+		var clientRun = new GlideRecordSecure('x_chef_automate_client_run');
+
+		var nodeId = clientRunJson.node_id;
+		
+		clientRun.node = target.sys_id;
+		clientRun.id = clientRunJson.id;
+		clientRun.node_id = clientRunJson.node_id;
+		clientRun.node_name = clientRunJson.node_name;
+		clientRun.organization = clientRunJson.organization;
+		
+		var startTime = getDate( clientRunJson.start_time.seconds);
+		clientRun.start_time = startTime;
+		
+		var endTime = getDate( clientRunJson.end_time.seconds);
+		clientRun.end_time = endTime;
+		
+		clientRun.source = clientRunJson.source;
+		clientRun.status = clientRunJson.status;
+		clientRun.total_resource_count = clientRunJson.total_resource_count;
+		clientRun.chef_version = clientRunJson.chef_version;
+		clientRun.uptime_seconds = clientRunJson.uptime_seconds;
+		clientRun.environment = clientRunJson.environment;
+		clientRun.fqdn = clientRunJson.fqdn;
+		clientRun.source_fqdn = clientRunJson.source_fqdn;
+		clientRun.ip_address = clientRunJson.ipaddress;
+		
+		var clientRunSysId = clientRun.insert();
+		
+		logger.debug(gs.getMessage("Client run inserted {0}", clientRunSysId));
+		
+		var cookbookJson = JSON.parse(source.cookbooks);
+		
+		for (var cookbookKey in cookbookJson) {
+			var cookbookId = "";
+			var cookbookName = cookbookKey;
+			var cookbookVersion = cookbookJson[cookbookKey].version;
+			logger.info(gs.getMessage("Cookbook {0}, {1} ", [cookbookName, cookbookVersion]));
+			
+			var cookbook = new GlideRecordSecure('x_chef_automate_ci_cookbook');
+			if (cookbook.canCreate()) {
+				logger.info(gs.getMessage("User {0} can insert into x_chef_automate_ci_cookbook", gs.getUser().getName()));
+			} else {
+				logger.warn(gs.getMessage("User {0} cannot insert into x_chef_automate_ci_cookbook", gs.getUser().getName()));
+			}
+			cookbook.initialize();
+			cookbook.addQuery('name', cookbookName);
+			cookbook.addQuery('version', cookbookVersion);
+			cookbook.query();
+			
+			if (!cookbook.next()) {
+				cookbook.name = cookbookName;
+				cookbook.version = cookbookVersion;
+				cookbookId = cookbook.insert();
+				logger.info(gs.getMessage("cookbook id {0}", cookbookId));
+			} else {
+				cookbookId = cookbook.getValue('sys_id');
+				logger.info(gs.getMessage("Cookbook {0}, {1} already exists", [cookbookName, cookbookVersion]));
+			}
+			
+			var clientRunCookbook = new GlideRecordSecure('x_chef_automate_client_run_cookbooks');
+			clientRunCookbook.initialize();
+			clientRunCookbook.client_run = clientRunSysId;
+			clientRunCookbook.cookbook = cookbookId;
+			clientRunCookbook.node = target.sys_id;
+			clientRunCookbook.insert();
+		}
+		
+		var recipes = clientRunJson.recipes;
+		for (var recipe in recipes) {
+			var clientRunRecipe = new GlideRecordSecure('x_chef_automate_client_run_recipes');
+			clientRunRecipe.initialize();
+			clientRunRecipe.recipe = recipes[recipe];
+			clientRunRecipe.client_run = clientRunSysId;
+			clientRunRecipe.node = target.sys_id;
+			clientRunRecipe.insert();
+		}
+		
+		var runLists = clientRunJson.run_list;
+		for (var runList in runLists) {
+			var clientRunList = new GlideRecordSecure('x_chef_automate_client_run_lists');
+			clientRunList.initialize();
+			clientRunList.run_list = runLists[runList];
+			clientRunList.client_run = clientRunSysId;
+			clientRunList.node = target.sys_id;
+			clientRunList.insert();
+		}
+	} catch(error) {
+		logger.error("Client run transform error");
+		logger.error(error);
+		logger.error(error.stack);
+	}
+
+})(source, map, log, target);
+
+function getDate(seconds) {
+	new Logger().info("SECONDS: ".concat(seconds));
+	var date = new GlideDateTime();
+	date.subtract(date.getNumericValue());
+	date.add(seconds * 1000);
+	return date;
+}]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>dmurray</sys_created_by>
+        <sys_created_on>2018-09-11 10:20:00</sys_created_on>
+        <sys_id>4a311568dbe02b00197478fdaa9619de</sys_id>
+        <sys_mod_count>44</sys_mod_count>
+        <sys_name>onAfter</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_transform_script_4a311568dbe02b00197478fdaa9619de</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-06-17 14:35:11</sys_updated_on>
+        <when>onAfter</when>
+    </sys_transform_script>
+</record_update>

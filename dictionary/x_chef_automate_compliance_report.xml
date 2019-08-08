@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Compliance report" max_length="40" name="x_chef_automate_compliance_report" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Duration" max_length="40" name="duration" type="float"/>
+        <element label="End time" max_length="24" name="end_time" type="string"/>
+        <element label="Environment" max_length="40" name="environment" type="string"/>
+        <element label="Fqdn" max_length="255" name="fqdn" type="string"/>
+        <element label="Id" max_length="40" name="id" type="string"/>
+        <element label="Ip address" max_length="255" name="ip_address" type="string"/>
+        <element label="Job id" max_length="64" name="job_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Node" max_length="32" name="node" reference="cmdb_ci_server" type="reference"/>
+        <element label="Node id" max_length="40" name="node_id" type="string"/>
+        <element label="Node name" max_length="255" name="node_name" type="string"/>
+        <element label="Platform name" max_length="40" name="platform_name" type="string"/>
+        <element label="Platform release" max_length="40" name="platform_release" type="string"/>
+        <element label="Status" max_length="20" name="status" type="string"/>
+        <element label="Version" max_length="20" name="version" type="string"/>
+        <index name="index">
+            <element name="node"/>
+        </index>
+    </element>
+</database>

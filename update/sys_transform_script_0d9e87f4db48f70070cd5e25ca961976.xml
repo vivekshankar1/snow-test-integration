@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <map display_value="Chef Automate Sync Transform">56940d5cdbe8e700197478fdaa96190b</map>
+        <order>104</order>
+        <script><![CDATA[// filesystem transform
+(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+
+	var logger = new Logger();
+
+	try {
+	if (source.os_family == "Windows") {
+		var fileSystems = JSON.parse(source.file_system);
+		logger.info(source.fileSystem);
+		for (var fs in fileSystems) {
+			var name = fs;
+			var mountPoint = fileSystems[fs].mount;
+			var label = fileSystems[fs].volume_name;
+			var size = fileSystems[fs].kb_size;
+			var space = fileSystems[fs].kb_available;
+			var type = fileSystems[fs].fs_type;
+			var computer = target.sys_id;
+			
+			var fileSystem = new GlideRecordSecure('cmdb_ci_file_system');
+			fileSystem.initialize();
+			fileSystem.addQuery('name', name);
+			fileSystem.addQuery('computer', computer);
+			fileSystem.query();
+			if (fileSystem.next()) {
+				fileSystem.mount_point = mountPoint;
+				fileSystem.label = label;
+				fileSystem.size = size;
+				fileSystem.space = space;
+				fileSystem.file_system = type;
+				fileSystem.update();
+			} else {
+				fileSystem.name = name;
+				fileSystem.computer = computer;
+				fileSystem.mount_point = mountPoint;
+				fileSystem.label = label;
+				fileSystem.size = size;
+				fileSystem.space = space;
+				fileSystem.file_system = type;
+				fileSystem.insert();
+			}
+		}
+	} else {
+		var fileSystems = JSON.parse(source.file_system);
+		logger.info(source.fileSystem);
+		for (var fs in fileSystems.by_device) {
+			var name = fs;
+			var mountPoint = fileSystems.by_device[fs].mounts[0];
+			var label = fileSystems.by_device[fs].label;
+			var size = fileSystems.by_device[fs].kb_size;
+			var space = fileSystems.by_device[fs].kb_available;
+			var type = fileSystems.by_device[fs].fs_type;
+			var computer = target.sys_id;
+			
+			var fileSystem = new GlideRecordSecure('cmdb_ci_file_system');
+			fileSystem.initialize();
+			fileSystem.addQuery('name', name);
+			fileSystem.addQuery('computer', computer);
+			fileSystem.query();
+			if (fileSystem.next()) {
+				fileSystem.mount_point = mountPoint;
+				fileSystem.label = label;
+				fileSystem.size = size;
+				fileSystem.space = space;
+				fileSystem.file_system = type;
+				fileSystem.update();
+			} else {
+				fileSystem.name = name;
+				fileSystem.computer = computer;
+				fileSystem.mount_point = mountPoint;
+				fileSystem.label = label;
+				fileSystem.size = size;
+				fileSystem.space = space;
+				fileSystem.file_system = type;
+				fileSystem.insert();
+			}
+		}
+	}
+	} catch (error) {
+		logger.error('Chef Chef Automate File System Import Table Mapping Error: '.concat(error.message));
+		logger.error(error.stack);
+	}
+		
+
+})(source, map, log, target);
+]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2019-03-05 14:28:23</sys_created_on>
+        <sys_id>0d9e87f4db48f70070cd5e25ca961976</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>onAfter</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_transform_script_0d9e87f4db48f70070cd5e25ca961976</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-04-17 12:10:43</sys_updated_on>
+        <when>onAfter</when>
+    </sys_transform_script>
+</record_update>

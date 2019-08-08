@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <map display_value="CPU Manufacturer Transform">3f6948fadbbcb700bd7169c3ca96199a</map>
+        <order>100</order>
+        <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+
+	var logger = new Logger();
+	try {
+		source.cpu_manufacturer_sys_id = target.sys_id;
+		source.update();
+		
+		logger.info(gs.getMessage("Manufacturer on after script setting source.cpu_manufacturer_sys_id to {0}",source.cpu_manufacturer_sys_id));
+	} catch (err) {
+		logger.error(err.message);
+		logger.error(err.stack);
+	} 
+})(source, map, log, target);]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2019-04-17 11:21:58</sys_created_on>
+        <sys_id>261a80fadbbcb700bd7169c3ca961991</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>onAfter</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_transform_script_261a80fadbbcb700bd7169c3ca961991</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-05-28 10:25:47</sys_updated_on>
+        <when>onAfter</when>
+    </sys_transform_script>
+</record_update>

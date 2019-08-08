@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="4cf47c15db443b0070cd5e25ca9619fa" sys_domain="global" table="x_chef_automate_client_run_recipes" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2019-03-06 15:51:00</sys_created_on>
+            <sys_id>ccf47c15db443b0070cd5e25ca9619fe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_client_run_recipes" sys_domain="global" view="Default view">4cf47c15db443b0070cd5e25ca9619fa</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:51:00</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>client_run</element>
+            <position>1</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2019-03-06 15:51:00</sys_created_on>
+            <sys_id>40f47c15db443b0070cd5e25ca9619ff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_client_run_recipes" sys_domain="global" view="Default view">4cf47c15db443b0070cd5e25ca9619fa</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:51:00</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2019-03-06 15:51:00</sys_created_on>
+            <sys_id>c0f47c15db443b0070cd5e25ca9619ff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_client_run_recipes" sys_domain="global" view="Default view">4cf47c15db443b0070cd5e25ca9619fa</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:51:00</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>node</element>
+            <position>3</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2019-03-06 15:51:00</sys_created_on>
+            <sys_id>44f47c15db443b0070cd5e25ca9619ff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_client_run_recipes" sys_domain="global" view="Default view">4cf47c15db443b0070cd5e25ca9619fa</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:51:00</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>4</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2019-03-06 15:51:00</sys_created_on>
+            <sys_id>c4f47c15db443b0070cd5e25ca9619ff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_client_run_recipes" sys_domain="global" view="Default view">4cf47c15db443b0070cd5e25ca9619fa</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:51:00</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>recipe</element>
+            <position>5</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2019-03-06 15:51:00</sys_created_on>
+            <sys_id>48f47c15db443b0070cd5e25ca9619ff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_client_run_recipes" sys_domain="global" view="Default view">4cf47c15db443b0070cd5e25ca9619fa</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:51:00</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_chef_automate_client_run_recipes</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2019-03-06 15:51:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4cf47c15db443b0070cd5e25ca9619fa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_chef_automate_client_run_recipes</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+            <sys_update_name>sys_ui_section_4cf47c15db443b0070cd5e25ca9619fa</sys_update_name>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:51:00</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

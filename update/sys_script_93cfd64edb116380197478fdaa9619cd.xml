@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_chef_automate_asset_queue</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Insert to Asset Import</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions>x_chef_automate.admin</role_conditions>
+        <script><![CDATA[var logger = new Logger();
+
+(function executeRule(current, previous /*null when async*/) {
+	
+	
+	logger.info("Performing Asset Data Transform");
+	try {
+		var assetData = JSON.parse(current.data);
+		
+		var chefAssetsTable = new GlideRecordSecure('x_chef_automate_asset_import');
+		
+		chefAssetsTable.initialize();
+		if (chefAssetsTable.canCreate()) {
+			logger.info(gs.getMessage("User {0} can insert into x_chef_automate_asset_import", gs.getUser().getName()));
+		} else {
+			logger.warn(gs.getMessage("User {0} cannot insert into x_chef_automate_asset_import", gs.getUser().getName()));
+		}
+				
+		// Map Request to Table
+		logger.info("Asset data length".concat(assetData.length));
+		for(var entry = 0; entry < assetData.length; entry++) {
+			MapToImportTable(chefAssetsTable, assetData[entry], logger);
+			if (chefAssetsTable.insert() === null) {
+				var message = "Insert failed into x_chef_automate_asset_import";
+				logger.warn(message);
+			} else {
+				logger.info("Insert succeeded into x_chef_automate_asset_import");
+			}
+		}
+	} catch (err) {
+		logger.error(err);
+	}
+
+
+})(current, previous);
+
+function CapitalizeFirstLetter(string) {
+	try {
+		return string.charAt(0).toUpperCase() + string.slice(1);
+	} catch (err) {
+		logger.warn(err);
+		return "";
+	}
+}
+		
+function ConvertCpuSpeed(cpuSpeed) {
+	var cpuMHz = cpuSpeed.slice(0, -3) * 1000;
+	return cpuMHz.toString().replace(/\s/g, '');
+}
+		
+function MapToImportTable(chefAssetsTable, assetData, logger){
+	try {
+		logger.info("About to parse JSON");
+		//var automatic = JSON.parse(assetData.automatic);
+		var automatic = assetData.automatic;
+		var lastRun = assetData.last_run;
+		
+		chefAssetsTable.client_run = JSON.stringify(lastRun);
+
+		chefAssetsTable.host_name = getStringValue(automatic, "hostname");
+		var hostnamectl = getObject(automatic, "hostnamectl");
+		var operatingSystem = getStringValue(hostnamectl, "operating_system");
+		if (operatingSystem == "") {
+			operatingSystem = getStringValue(automatic, "os");
+		}
+		chefAssetsTable.operating_system = CapitalizeFirstLetter(operatingSystem);
+		chefAssetsTable.os_family = CapitalizeFirstLetter(getStringValue(automatic, "os"));
+		chefAssetsTable.os_version = CapitalizeFirstLetter(getStringValue(automatic, "os_version"));
+		chefAssetsTable.mac_address = getStringValue(automatic, "macaddress");
+		chefAssetsTable.ip_address = getStringValue(automatic, "ipaddress");
+		logger.debug("ip: ".concat(getStringValue(automatic, "ipaddress")));
+		var cpu = getObject(automatic, "cpu");
+		var cpu0 = getObject(cpu, "0");
+		chefAssetsTable.cpu_vendor_id = getStringValue(cpu0, "vendor_id");
+		logger.info("cpu vendor: ".concat(getStringValue(cpu0, "vendor_id")));
+		chefAssetsTable.cpu_model = getStringValue(cpu0, "model");
+		logger.info("cpu model: ".concat(getStringValue(cpu0, "model")));
+		var cores = getIntValue(cpu, "cores");
+		if (cores != null) {
+			chefAssetsTable.cpu_cores = cores;
+		}
+		
+		logger.info("cpu cores: ".concat(cores));
+		var cpuTotal = getIntValue(cpu, "total");
+		if (cpuTotal != null) {
+			chefAssetsTable.cpu_total = cpuTotal;
+		}
+		logger.info("cpu total: ".concat(cpuTotal));
+				
+		cpuModelName = getStringValue(cpu0, "model_name");
+		if (cpuModelName.indexOf('@') > -1) {
+			var cpuSplit = cpuModelName.split('@');
+			chefAssetsTable.cpu_type = cpuSplit[0].replace(/\s/g, '');
+			var cpuMHz = ConvertCpuSpeed(cpuSplit[1]);
+			chefAssetsTable.cpu_speed = cpuMHz;
+		} else {
+			chefAssetsTable.cpu_type = cpuModelName;
+			chefAssetsTable.cpu_speed = ConvertCpuSpeed(getStringValue(cpu0, "mhz"));
+		}
+		
+		var cpuReal = getIntValue(cpu, "real");
+		if (cpuReal != null) {
+			chefAssetsTable.cpu_count = cpuReal;
+		}
+		
+		var dmi = getObject(automatic, "dmi");
+		var system = getObject(dmi, "system");
+		var systemEnclosure = getObject(automatic, "system_enclosure");
+		var serialNumber = getStringValue(automatic, "serial_number");
+
+		chefAssetsTable.serial_number = serialNumber;
+		logger.info("serial number: ".concat(getStringValue(automatic, "serial_number")));
+		var memory = getObject(automatic, "memory");
+		chefAssetsTable.memory_total = parseInt(getStringValue(memory, "total")) / 1024;
+		logger.info("total memory: ".concat(chefAssetsTable.memory_total));
+		//chefAssetsTable.disk_space = parseInt(automatic.filesystem.by_mountpoint["/"].kb_size) /(1024*1024);
+		//logger.info("disk size: ".concat(automatic.filesystem.by_mountpoint["/"].kb_size));
+		var time = getObject(automatic, "time");
+		chefAssetsTable.timezone = getStringValue(time, "timezone");
+		logger.info("timezone: ".concat(getStringValue(time, "timezone")));
+		if (getStringValue(hostnamectl, "chassis") == "vm") {
+			chefAssetsTable.isvirtual = true;
+		} else {
+			chefAssetsTable.isvirtual = false;
+		}
+		chefAssetsTable.languages = JSON.stringify(automatic.languages);
+		chefAssetsTable.packages = JSON.stringify(automatic.packages);
+		chefAssetsTable.cookbooks = JSON.stringify(automatic.cookbooks);
+		chefAssetsTable.file_system = JSON.stringify(automatic.filesystem);
+		var manufacturer = getStringValue(system, "manufacturer");
+		
+		if (manufacturer == "") {
+			// try system_enclosure
+			manufacturer =  getStringValue(systemEnclosure, "manufacturer");
+		}
+		chefAssetsTable.manufacturer = manufacturer;
+		var model =  getStringValue(system, "product_name");
+		var kernel = getObject(automatic, "kernel");
+		var csInfo = getObject(kernel, "cs_info");
+		if (model == "") {
+			model = getStringValue(csInfo, "model");
+		}
+		chefAssetsTable.model = model;
+		
+		chefAssetsTable.chef_environment = getStringValue(automatic, "environment");
+		var cloud = getObject(automatic, "cloud");
+		if (cloud != null) {
+			var cloudProviderName = getObject(cloud, "provider");
+			logger.info(gs.getMessage("cloud_provider {0}", cloudProviderName));
+			var cloudProvider = getObject(automatic, cloudProviderName);
+			chefAssetsTable.cloud_provider = JSON.stringify(cloudProvider);
+		}
+		chefAssetsTable.dns_domain = getStringValue(automatic, "domain");
+		var chassis = getObject(dmi, "chassis");
+		chefAssetsTable.asset_tag = getStringValue(chassis, "asset_tag");
+		chefAssetsTable.description = getStringValue(automatic, "description");
+		logger.info(gs.getMessage("description: {0}", chefAssetsTable.description));
+		chefAssetsTable.os_service_pack = getStringValue(automatic, "os_service_pack");
+	} catch (err) {
+		logger.error('Chef Chef Automate Import Table Mapping Error: '.concat(err.message));
+		logger.error(err.stack);
+		throw err;
+	}
+}
+
+function getStringValue(object, value) {
+	try {
+		return object[value];
+	} catch (err) {
+		logger.warn(err);
+		return "";
+	}
+}
+function getIntValue(object, value) {
+	try {
+		return object[value];
+	} catch (err) {
+		logger.warn(err);
+		return null;
+	}
+}
+
+function getObject(object, value) {
+	try {
+		return object[value];
+	} catch (err) {
+		logger.warn(err);
+		return {};
+	}
+}]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>dmurray</sys_created_by>
+        <sys_created_on>2018-10-23 14:42:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>93cfd64edb116380197478fdaa9619cd</sys_id>
+        <sys_mod_count>83</sys_mod_count>
+        <sys_name>Insert to Asset Import</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_script_93cfd64edb116380197478fdaa9619cd</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-06-17 14:16:37</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=93cfd64edb116380197478fdaa9619cd"/>
+</record_update>

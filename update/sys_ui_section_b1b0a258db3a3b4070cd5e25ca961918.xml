@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="b1b0a258db3a3b4070cd5e25ca961918" sys_domain="global" table="x_chef_automate_compliance_profiles" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <position>0</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2019-07-19 09:22:55</sys_created_on>
+            <sys_id>9bba6e60db727b4070cd5e25ca961926</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_profiles" sys_domain="global" view="Default view">b1b0a258db3a3b4070cd5e25ca961918</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2019-07-19 09:22:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>title</element>
+            <position>1</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2019-07-19 09:22:55</sys_created_on>
+            <sys_id>1fba6e60db727b4070cd5e25ca961926</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_profiles" sys_domain="global" view="Default view">b1b0a258db3a3b4070cd5e25ca961918</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2019-07-19 09:22:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>copyright</element>
+            <position>2</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2019-07-19 09:22:55</sys_created_on>
+            <sys_id>9fba6e60db727b4070cd5e25ca961926</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_profiles" sys_domain="global" view="Default view">b1b0a258db3a3b4070cd5e25ca961918</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2019-07-19 09:22:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>copyright_email</element>
+            <position>3</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2019-07-19 09:22:55</sys_created_on>
+            <sys_id>13ba6e60db727b4070cd5e25ca961927</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_profiles" sys_domain="global" view="Default view">b1b0a258db3a3b4070cd5e25ca961918</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2019-07-19 09:22:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>version</element>
+            <position>4</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2019-07-19 09:22:55</sys_created_on>
+            <sys_id>93ba6e60db727b4070cd5e25ca961927</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_profiles" sys_domain="global" view="Default view">b1b0a258db3a3b4070cd5e25ca961918</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2019-07-19 09:22:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>summary</element>
+            <position>5</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2019-07-19 09:24:54</sys_created_on>
+            <sys_id>2c3b26a0db727b4070cd5e25ca961969</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_profiles" sys_domain="global" view="Default view">b1b0a258db3a3b4070cd5e25ca961918</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2019-07-19 09:24:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sha256</element>
+            <position>6</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2019-07-19 09:25:18</sys_created_on>
+            <sys_id>1e4b6e60db727b4070cd5e25ca9619d1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_profiles" sys_domain="global" view="Default view">b1b0a258db3a3b4070cd5e25ca961918</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2019-07-19 09:25:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>report</element>
+            <position>7</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2019-07-19 10:00:38</sys_created_on>
+            <sys_id>7f537ee4db727b4070cd5e25ca9619c8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_profiles" sys_domain="global" view="Default view">b1b0a258db3a3b4070cd5e25ca961918</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2019-07-19 10:00:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_chef_automate_compliance_profiles</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2019-07-18 14:00:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b1b0a258db3a3b4070cd5e25ca961918</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_chef_automate_compliance_profiles</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+            <sys_update_name>sys_ui_section_b1b0a258db3a3b4070cd5e25ca961918</sys_update_name>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2019-07-18 14:00:38</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

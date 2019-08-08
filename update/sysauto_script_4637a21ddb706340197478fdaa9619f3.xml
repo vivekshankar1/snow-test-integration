@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Scheduled Cookbook Cleanup</name>
+        <run_as/>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2018-09-26 10:46:14</run_start>
+        <run_time>1970-01-01 00:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[// TODO better logic to remove cookbooks
+// Potentially check if they have been used in any client runs recently
+logger = new Logger();
+var date = new GlideDateTime();
+var table = new GlideRecordSecure('x_chef_automate_ci_cookbook');
+var retentionDays = parseInt(gs.getProperty('x_chef_automate.cookbookCleanup'));	
+table.initialize();
+date.subtract(retentionDays);
+table.addQuery('sys_updated_on', '>', date);
+table.query();
+	logger.info('Performing scheduled Cookbook cleanup');
+	table.deleteMultiple();]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>dmurray</sys_created_by>
+        <sys_created_on>2018-09-26 13:27:29</sys_created_on>
+        <sys_id>4637a21ddb706340197478fdaa9619f3</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>Scheduled Cookbook Cleanup</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sysauto_script_4637a21ddb706340197478fdaa9619f3</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-03-07 10:56:13</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

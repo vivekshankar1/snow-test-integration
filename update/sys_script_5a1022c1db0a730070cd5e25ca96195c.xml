@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_chef_automate_asset_queue</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Insert to compliance import</name>
+        <order>110</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions>x_chef_automate.admin</role_conditions>
+        <script><![CDATA[var logger = new Logger();
+
+(function executeRule(current, previous /*null when async*/) {
+	
+	
+	logger.info("Performing Compliance Data Transform");
+	//logger.info(current.reports);
+	try {
+		var assetData = JSON.parse(current.data);
+		
+		var complianceImport = new GlideRecordSecure('x_chef_automate_compliance_import');
+		
+		complianceImport.initialize();
+		if (complianceImport.canCreate()) {
+			logger.info(gs.getMessage("User {0} can insert into x_chef_automate_compliance_import", gs.getUser().getName()));
+		} else {
+			logger.warn(gs.getMessage("User {0} cannot insert into x_chef_automate_compliance_import", gs.getUser().getName()));
+		}
+		logger.info("Asset data length".concat(assetData.length));
+	
+		// Map Request to Table
+		for(var entry = 0; entry < assetData.length; entry++) {
+			MapToImportTable(complianceImport, assetData[entry].report, logger);
+			if (complianceImport.insert() === null) {
+				var message = "Insert failed into x_chef_automate_compliance_import";
+				logger.warn(message);
+			} else {
+				logger.info("Insert succeeded into x_chef_automate_compliance_import");
+			}
+		}
+	} catch (err) {
+		logger.error(err);
+		logger.error(err.stack);
+	}
+
+
+})(current, previous);
+
+function MapToImportTable(complianceImport, report, logger){
+	try {
+		
+		
+			logger.info(gs.getMessage("asset report {0}", report));
+
+			complianceImport.id = getStringValue(report, "id");
+			complianceImport.node_id = getStringValue(report, "node_id");
+			complianceImport.node_name = getStringValue(report, "node_name");
+			var endTime = getObject(report, "end_time");
+			complianceImport.end_time = getDateValue(getIntValue(endTime, "seconds"));
+			complianceImport.status = getStringValue(report, "status");
+			complianceImport.environment = getStringValue(report, "environment");
+			complianceImport.version = getStringValue(report, "version");
+			complianceImport.job_id = getStringValue(report, "job_id");
+			complianceImport.ip_address = getStringValue(report, "ipaddress");
+			complianceImport.fqdn = getStringValue(report, "fqdn");
+			complianceImport.controls = JSON.stringify(report.controls);
+			complianceImport.platform = JSON.stringify(report.platform);
+			complianceImport.statistics = JSON.stringify(report.statistics);
+			complianceImport.profiles = JSON.stringify(report.profiles);
+		
+	} catch (err) {
+		logger.error('Chef Chef Automate Import Table Mapping Error: '.concat(err.message));
+		logger.error(err.stack);
+		throw err;
+	}
+}
+
+function getStringValue(object, value) {
+	try {
+		return object[value];
+	} catch (err) {
+		logger.warn(err);
+		return "";
+	}
+}
+function getIntValue(object, value) {
+	try {
+		logger.info(gs.getMessage("get int value: {0}", object[value]));
+		return object[value];
+	} catch (err) {
+		logger.warn(err);
+		return null;
+	}
+}
+
+
+function getDateValue(seconds) {
+	try {
+		logger.info(gs.getMessage("seconds {0}", seconds));
+		var d = 1000 * seconds;
+		var date = new Date(1000 * seconds);
+		logger.info(gs.getMessage("seconds {0}, millis {1}, date {2}", [seconds, d, date.toISOString()]));
+		return date.toISOString();
+	} catch (err) {
+		logger.warn(err);
+		return null;
+	}
+}
+function getObject(object, value) {
+	try {
+		return object[value];
+	} catch (err) {
+		logger.warn(err);
+		return {};
+	}
+}]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2019-06-13 15:12:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5a1022c1db0a730070cd5e25ca96195c</sys_id>
+        <sys_mod_count>38</sys_mod_count>
+        <sys_name>Insert to compliance import</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_script_5a1022c1db0a730070cd5e25ca96195c</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-07-18 12:36:09</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=5a1022c1db0a730070cd5e25ca96195c"/>
+</record_update>

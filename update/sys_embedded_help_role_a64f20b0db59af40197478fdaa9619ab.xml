@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role/>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>dmurray</sys_created_by>
+        <sys_created_on>2018-10-19 09:16:41</sys_created_on>
+        <sys_id>a64f20b0db59af40197478fdaa9619ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>664fe830db59af40197478fdaa9619ac</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_embedded_help_role_a64f20b0db59af40197478fdaa9619ab</sys_update_name>
+        <sys_updated_by>dmurray</sys_updated_by>
+        <sys_updated_on>2018-10-19 09:16:41</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

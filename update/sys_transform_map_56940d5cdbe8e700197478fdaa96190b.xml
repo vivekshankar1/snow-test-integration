@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_map">
+    <sys_transform_map action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copy_empty_fields>false</copy_empty_fields>
+        <create_new_record_on_empty_coalesce_fields>false</create_new_record_on_empty_coalesce_fields>
+        <enforce_mandatory_fields>All Fields</enforce_mandatory_fields>
+        <name>Chef Automate Sync Transform</name>
+        <order>110</order>
+        <run_business_rules>false</run_business_rules>
+        <run_script>true</run_script>
+        <script><![CDATA[(function transformRow(source, target, map, log, isUpdate) {
+	var logger = new Logger();
+	logger.info('Chef Chef Automate Transform Run');
+	logger.info(gs.getMessage("Transforming row with sys_id {0} isUpdate() {1}", [source.sys_id, isUpdate]));
+	try {
+	if (!isUpdate) {
+		setTargetTable(target, source);
+		MapToCiTable(target, source, logger);		
+	}
+	}catch(err) {
+		logger.error(err);
+		logger.error(err.stack);
+	}
+})(source, target, map, log, action==="update");
+	
+
+function setTargetTable(target, source) {
+	var logger = new Logger();
+	
+	var os_family = source.os_family;
+	var operatingSystem = source.operating_system;
+	logger.info("setTargetTable: operating_system: ".concat(operatingSystem));
+	if (os_family.match(/linux/i)) {
+		target.sys_class_name = "cmdb_ci_linux_server";
+	}	
+	if (os_family.match(/windows/i)) {
+		target.sys_class_name = "cmdb_ci_win_server";
+	}
+	if (os_family.match(/mac_os_x/i)) {
+		target.sys_class_name = "cmdb_ci_osx_server";
+	}	
+	//if (operatingSystem.match(/windows/i)) {
+	//	target.sys_class_name = "cmdb_ci_win_server";
+	//}
+
+	logger.info("setTargetTable: ".concat(target.sys_class_name));
+}
+	
+function MapToCiTable(target, source, logger) {
+		
+	try {
+		target.name.setValue(source.host_name.toString());
+		target.ip_address.setValue(source.ip_address.toString());
+		target.host_name.setValue(source.host_name.toString());
+		target.os.setValue(source.operating_system.toString());
+		target.os_version.setValue(source.os_version.toString());
+		target.mac_address.setValue(source.mac_address.toString());
+		target.serial_number.setValue(source.serial_number.toString());
+		target.cpu_manufacturer.setValue(source.cpu_vendor_id.toString());
+		target.cpu_manufacturer.setDisplayValue(source.cpu_vendor_id.toString());
+		target.cpu_type.setValue(source.cpu_type.toString());
+		target.cpu_core_count.setValue(source.cpu_cores.toString());
+		target.dns_domain.setValue(source.dns_domain);
+		target.asset_tag.setValue(source.asset_tag);
+		target.cpu_count.setValue(source.cpu_count);
+			
+		if(source.cpu_total) {
+			target.cpu_count.setValue(source.cpu_total.toString());
+		}
+		target.cpu_speed.setValue(source.cpu_speed.toString());
+		target.ram.setValue(source.memory_total.toString());
+		if(source.disk_space) {
+			target.disk_space.setValue(source.disk_space.toString());
+		}
+		target.virtual.setValue(source.isvirtual.toString());
+		target.manufacturer = source.manufacturer_sys_id;
+		target.model_id = source.model_sys_id;
+		target.short_description = source.description;
+		logger.info(gs.getMessage("source description: {0}, target description: {1}", [source.description, target.short_description]));
+		target.os_service_pack = source.os_service_pack;
+	} catch (err) {
+		logger.error('Chef Chef Automate Transform Error: '.concat(err.message));
+		logger.error(err.stack);
+	}
+}]]></script>
+        <source_table>x_chef_automate_asset_import</source_table>
+        <sys_class_name>sys_transform_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-09-10 14:47:23</sys_created_on>
+        <sys_id>56940d5cdbe8e700197478fdaa96190b</sys_id>
+        <sys_mod_count>96</sys_mod_count>
+        <sys_name>Chef Automate Sync Transform</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_transform_map_56940d5cdbe8e700197478fdaa96190b</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-06-14 13:58:37</sys_updated_on>
+        <target_table>cmdb_ci_server</target_table>
+    </sys_transform_map>
+</record_update>
