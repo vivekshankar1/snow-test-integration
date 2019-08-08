@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
     <sys_ui_module action="INSERT_OR_UPDATE">
         <active>true</active>
-        <application display_value="Chef Chef Automate">8298681ddb043b0070cd5e25ca961918</application>
+        <application display_value="Chef Automate">8298681ddb043b0070cd5e25ca961918</application>
         <filter/>
         <name>Compliance reports</name>
         <order/>
