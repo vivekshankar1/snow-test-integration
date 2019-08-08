@@ -14,7 +14,7 @@
         <mobile_title>Compliance profiles</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name>x_chef_automate_compliance_profiles</name>
-        <order/>
+        <order>80</order>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
@@ -25,7 +25,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>83375a14db3a3b4070cd5e25ca96194d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Compliance profiles</sys_name>
         <sys_overrides/>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -33,7 +33,7 @@
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_app_module_83375a14db3a3b4070cd5e25ca96194d</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-07-18 13:19:13</sys_updated_on>
+        <sys_updated_on>2019-08-08 11:26:23</sys_updated_on>
         <timeline_page/>
         <title>Compliance profiles</title>
         <uncancelable>false</uncancelable>
