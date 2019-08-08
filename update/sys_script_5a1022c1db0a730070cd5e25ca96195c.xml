@@ -88,7 +88,7 @@ function MapToImportTable(complianceImport, report, logger){
 			complianceImport.profiles = JSON.stringify(report.profiles);
 		
 	} catch (err) {
-		logger.error('Chef Chef Automate Import Table Mapping Error: '.concat(err.message));
+		logger.error('Chef Automate Import Table Mapping Error: '.concat(err.message));
 		logger.error(err.stack);
 		throw err;
 	}

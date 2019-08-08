@@ -186,7 +186,7 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
 		logger.info(gs.getMessage("description: {0}", chefAssetsTable.description));
 		chefAssetsTable.os_service_pack = getStringValue(automatic, "os_service_pack");
 	} catch (err) {
-		logger.error('Chef Chef Automate Import Table Mapping Error: '.concat(err.message));
+		logger.error('Chef Automate Import Table Mapping Error: '.concat(err.message));
 		logger.error(err.stack);
 		throw err;
 	}

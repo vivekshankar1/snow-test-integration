@@ -2,7 +2,7 @@
     <sys_user_role action="INSERT_OR_UPDATE">
         <assignable_by display_value="x_chef_automate.admin" name="x_chef_automate.admin">cd24d6fadbe42f00197478fdaa96199a</assignable_by>
         <can_delegate>true</can_delegate>
-        <description>Can use Chef Chef Automate application</description>
+        <description>Can use Chef Automate application</description>
         <elevated_privilege>false</elevated_privilege>
         <encryption_context/>
         <grantable>true</grantable>

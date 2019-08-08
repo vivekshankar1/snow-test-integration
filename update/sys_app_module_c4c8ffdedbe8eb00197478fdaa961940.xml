@@ -14,7 +14,7 @@
         <mobile_title>Support</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name/>
-        <order>160</order>
+        <order/>
         <override_menu_roles>false</override_menu_roles>
         <query>x_chef_automate_Support.do</query>
         <report/>
@@ -25,15 +25,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c4c8ffdedbe8eb00197478fdaa961940</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Support</sys_name>
         <sys_overrides/>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_app_module_c4c8ffdedbe8eb00197478fdaa961940</sys_update_name>
-        <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-08-08 11:28:31</sys_updated_on>
+        <sys_updated_by>dmurray</sys_updated_by>
+        <sys_updated_on>2018-10-10 13:07:31</sys_updated_on>
         <timeline_page/>
         <title>Support</title>
         <uncancelable>false</uncancelable>

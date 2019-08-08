@@ -14,9 +14,9 @@
         <mobile_title>Properties</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name/>
-        <order>150</order>
+        <order/>
         <override_menu_roles>false</override_menu_roles>
-        <query>system_properties_ui.do?sysparm_title=Chef Chef Automate Properties&amp;sysparm_category=Chef Automate Properties</query>
+        <query>system_properties_ui.do?sysparm_title=Chef Automate Properties&amp;sysparm_category=Chef Automate Properties</query>
         <report/>
         <roles>x_chef_automate.admin</roles>
         <sys_class_name>sys_app_module</sys_class_name>
@@ -25,15 +25,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9615123edbe42f00197478fdaa961902</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Properties</sys_name>
         <sys_overrides/>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_app_module_9615123edbe42f00197478fdaa961902</sys_update_name>
-        <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-08-08 11:39:51</sys_updated_on>
+        <sys_updated_by>dmurray</sys_updated_by>
+        <sys_updated_on>2018-09-18 15:03:09</sys_updated_on>
         <timeline_page/>
         <title>Properties</title>
         <uncancelable>false</uncancelable>

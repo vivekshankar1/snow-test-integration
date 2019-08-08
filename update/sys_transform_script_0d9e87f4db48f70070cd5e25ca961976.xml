@@ -81,7 +81,7 @@
 		}
 	}
 	} catch (error) {
-		logger.error('Chef Chef Automate File System Import Table Mapping Error: '.concat(error.message));
+		logger.error('Chef Automate File System Import Table Mapping Error: '.concat(error.message));
 		logger.error(error.stack);
 	}
 		

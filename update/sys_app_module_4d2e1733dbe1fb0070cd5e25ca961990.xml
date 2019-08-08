@@ -14,7 +14,7 @@
         <mobile_title>Asset Queue</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name>x_chef_automate_asset_queue</name>
-        <order>130</order>
+        <order/>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
@@ -25,7 +25,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4d2e1733dbe1fb0070cd5e25ca961990</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Asset Queue</sys_name>
         <sys_overrides/>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -33,7 +33,7 @@
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_app_module_4d2e1733dbe1fb0070cd5e25ca961990</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-08-08 11:28:01</sys_updated_on>
+        <sys_updated_on>2019-05-28 12:09:56</sys_updated_on>
         <timeline_page/>
         <title>Asset Queue</title>
         <uncancelable>false</uncancelable>

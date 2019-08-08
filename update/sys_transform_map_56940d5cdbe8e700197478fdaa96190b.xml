@@ -10,7 +10,7 @@
         <run_script>true</run_script>
         <script><![CDATA[(function transformRow(source, target, map, log, isUpdate) {
 	var logger = new Logger();
-	logger.info('Chef Chef Automate Transform Run');
+	logger.info('Chef Automate Transform Run');
 	logger.info(gs.getMessage("Transforming row with sys_id {0} isUpdate() {1}", [source.sys_id, isUpdate]));
 	try {
 	if (!isUpdate) {
@@ -79,7 +79,7 @@ function MapToCiTable(target, source, logger) {
 		logger.info(gs.getMessage("source description: {0}, target description: {1}", [source.description, target.short_description]));
 		target.os_service_pack = source.os_service_pack;
 	} catch (err) {
-		logger.error('Chef Chef Automate Transform Error: '.concat(err.message));
+		logger.error('Chef Automate Transform Error: '.concat(err.message));
 		logger.error(err.stack);
 	}
 }]]></script>

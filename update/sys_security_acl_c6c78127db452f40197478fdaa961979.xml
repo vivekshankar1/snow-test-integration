@@ -4,7 +4,7 @@
         <admin_overrides>true</admin_overrides>
         <advanced>false</advanced>
         <condition/>
-        <description>Chef Chef Automate application log read ACL</description>
+        <description>Chef Automate application log read ACL</description>
         <name>syslog_app_scope</name>
         <operation display_value="read">read</operation>
         <script/>

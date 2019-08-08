@@ -46,7 +46,7 @@
 			}
 		}
 	} catch (error) {
-		logger.error('Chef Chef Automate packages Import Table Mapping Error: '.concat(error.message));
+		logger.error('Chef Automate packages Import Table Mapping Error: '.concat(error.message));
 		logger.error(error.stack);
 	}
 })(source, map, log, target);]]></script>

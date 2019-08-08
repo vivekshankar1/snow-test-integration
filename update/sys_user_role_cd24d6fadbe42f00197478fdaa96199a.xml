@@ -2,7 +2,7 @@
     <sys_user_role action="INSERT_OR_UPDATE">
         <assignable_by/>
         <can_delegate>true</can_delegate>
-        <description>Chef Chef Automate application admin role</description>
+        <description>Chef Automate application admin role</description>
         <elevated_privilege>false</elevated_privilege>
         <encryption_context/>
         <grantable>true</grantable>

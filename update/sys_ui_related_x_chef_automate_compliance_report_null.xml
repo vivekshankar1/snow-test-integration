@@ -8,11 +8,11 @@
             <related_list>x_chef_automate_compliance_report_results.compliance_report</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>mscott</sys_created_by>
-            <sys_created_on>2019-08-08 08:44:37</sys_created_on>
-            <sys_id>21c1650fdbcfb30070cd5e25ca9619f4</sys_id>
+            <sys_created_on>2019-07-19 11:07:53</sys_created_on>
+            <sys_id>0dc28360dbb27b4070cd5e25ca96196f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>mscott</sys_updated_by>
-            <sys_updated_on>2019-08-08 08:44:37</sys_updated_on>
+            <sys_updated_on>2019-07-19 11:07:53</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list action="INSERT_OR_UPDATE">
             <calculated_name>Compliance report - Default view</calculated_name>
@@ -23,7 +23,7 @@
             <related_list/>
             <sys_class_name>sys_ui_related_list</sys_class_name>
             <sys_created_by>mscott</sys_created_by>
-            <sys_created_on>2019-08-08 08:44:37</sys_created_on>
+            <sys_created_on>2019-07-19 11:07:53</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>29c1650fdbcfb30070cd5e25ca9619f3</sys_id>
@@ -34,7 +34,7 @@
             <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
             <sys_update_name>sys_ui_related_x_chef_automate_compliance_report_null</sys_update_name>
             <sys_updated_by>mscott</sys_updated_by>
-            <sys_updated_on>2019-08-08 08:44:37</sys_updated_on>
+            <sys_updated_on>2019-07-19 11:07:53</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

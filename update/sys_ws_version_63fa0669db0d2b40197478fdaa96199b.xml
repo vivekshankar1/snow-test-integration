@@ -18,6 +18,6 @@
         <sys_updated_on>2018-10-09 13:37:06</sys_updated_on>
         <version>1</version>
         <version_id>v1</version_id>
-        <web_service_definition display_value="Chef Chef Automate Asset Sync">f7bb7c18dbe8e700197478fdaa961992</web_service_definition>
+        <web_service_definition display_value="Chef Automate Asset Sync">f7bb7c18dbe8e700197478fdaa961992</web_service_definition>
     </sys_ws_version>
 </record_update>
