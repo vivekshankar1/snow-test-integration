@@ -17,5 +17,8 @@
         <index name="index">
             <element name="node"/>
         </index>
+        <index name="index2">
+            <element name="id"/>
+        </index>
     </element>
 </database>

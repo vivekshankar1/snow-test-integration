@@ -32,7 +32,7 @@
 (function executeRule(current, previous /*null when async*/) {
 	
 	
-	logger.info("Performing Compliance Data Transform");
+	logger.info("Inserting to compliance import");
 	//logger.info(current.reports);
 	try {
 		var assetData = JSON.parse(current.data);
@@ -45,11 +45,16 @@
 		} else {
 			logger.warn(gs.getMessage("User {0} cannot insert into x_chef_automate_compliance_import", gs.getUser().getName()));
 		}
-		logger.info("Asset data length".concat(assetData.length));
+		logger.info("Asset data length ".concat(assetData.length));
 	
 		// Map Request to Table
 		for(var entry = 0; entry < assetData.length; entry++) {
-			MapToImportTable(complianceImport, assetData[entry].report, logger);
+			var report =  assetData[entry].report;
+			if (isEmpty(report)) {
+				logger.info("There is no compliance report to process");
+				continue;
+			}
+			MapToImportTable(complianceImport, report, logger);
 			if (complianceImport.insert() === null) {
 				var message = "Insert failed into x_chef_automate_compliance_import";
 				logger.warn(message);
@@ -64,6 +69,13 @@
 
 
 })(current, previous);
+
+function isEmpty(report) {
+	for(var key in report) {
+		return false;
+	}
+	return true;
+}
 
 function MapToImportTable(complianceImport, report, logger){
 	try {
@@ -112,7 +124,6 @@ function getIntValue(object, value) {
 	}
 }
 
-
 function getDateValue(seconds) {
 	try {
 		logger.info(gs.getMessage("seconds {0}", seconds));
@@ -125,6 +136,7 @@ function getDateValue(seconds) {
 		return null;
 	}
 }
+
 function getObject(object, value) {
 	try {
 		return object[value];
@@ -139,7 +151,7 @@ function getObject(object, value) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5a1022c1db0a730070cd5e25ca96195c</sys_id>
-        <sys_mod_count>38</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name>Insert to compliance import</sys_name>
         <sys_overrides/>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -147,7 +159,7 @@ function getObject(object, value) {
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_5a1022c1db0a730070cd5e25ca96195c</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-07-18 12:36:09</sys_updated_on>
+        <sys_updated_on>2019-08-09 07:42:47</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

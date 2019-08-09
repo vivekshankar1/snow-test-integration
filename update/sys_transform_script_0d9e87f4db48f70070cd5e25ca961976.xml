@@ -11,7 +11,6 @@
 	try {
 	if (source.os_family == "Windows") {
 		var fileSystems = JSON.parse(source.file_system);
-		logger.info(source.fileSystem);
 		for (var fs in fileSystems) {
 			var name = fs;
 			var mountPoint = fileSystems[fs].mount;
@@ -46,7 +45,7 @@
 		}
 	} else {
 		var fileSystems = JSON.parse(source.file_system);
-		logger.info(source.fileSystem);
+		
 		for (var fs in fileSystems.by_device) {
 			var name = fs;
 			var mountPoint = fileSystems.by_device[fs].mounts[0];
@@ -92,14 +91,14 @@
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-03-05 14:28:23</sys_created_on>
         <sys_id>0d9e87f4db48f70070cd5e25ca961976</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>onAfter</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_transform_script_0d9e87f4db48f70070cd5e25ca961976</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-04-17 12:10:43</sys_updated_on>
+        <sys_updated_on>2019-08-09 07:53:33</sys_updated_on>
         <when>onAfter</when>
     </sys_transform_script>
 </record_update>
