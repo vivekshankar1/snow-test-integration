@@ -24,16 +24,16 @@
         <sys_created_by>dmurray</sys_created_by>
         <sys_created_on>2018-10-19 09:43:06</sys_created_on>
         <sys_id>2b157474db59af40197478fdaa9619e0</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Asset Buffer</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_db_object_2b157474db59af40197478fdaa9619e0</sys_update_name>
-        <sys_updated_by>dmurray</sys_updated_by>
-        <sys_updated_on>2018-10-22 10:17:34</sys_updated_on>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-08-12 12:35:42</sys_updated_on>
         <update_access>false</update_access>
-        <user_role display_value="x_chef_automate.admin" name="x_chef_automate.admin">cd24d6fadbe42f00197478fdaa96199a</user_role>
+        <user_role display_value="x_chef_automate.user" name="x_chef_automate.user">9d7ce010dbe8e700197478fdaa9619ba</user_role>
         <ws_access>false</ws_access>
     </sys_db_object>
 </record_update>

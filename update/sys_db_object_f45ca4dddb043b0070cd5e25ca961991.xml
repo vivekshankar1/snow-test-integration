@@ -24,16 +24,16 @@
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-03-06 15:13:37</sys_created_on>
         <sys_id>f45ca4dddb043b0070cd5e25ca961991</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Client run recipes</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_db_object_f45ca4dddb043b0070cd5e25ca961991</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-03-06 15:13:37</sys_updated_on>
+        <sys_updated_on>2019-08-12 12:37:43</sys_updated_on>
         <update_access>false</update_access>
-        <user_role display_value="x_chef_automate.client_run_recipes_user" name="x_chef_automate.client_run_recipes_user">686c2c5ddb043b0070cd5e25ca96199c</user_role>
+        <user_role display_value="x_chef_automate.user" name="x_chef_automate.user">9d7ce010dbe8e700197478fdaa9619ba</user_role>
         <ws_access>true</ws_access>
     </sys_db_object>
 </record_update>

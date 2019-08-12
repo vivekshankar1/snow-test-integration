@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_index">
     <sys_index action="INSERT_OR_UPDATE">
         <col_name_string>id</col_name_string>
-        <index_col_name element="id" name="x_chef_automate_compliance_report">05418af2db47b30070cd5e25ca96192c</index_col_name>
+        <index_col_name>05418af2db47b30070cd5e25ca96192c</index_col_name>
         <logical_table_name>x_chef_automate_compliance_report</logical_table_name>
         <sys_class_name>sys_index</sys_class_name>
         <sys_created_by>system</sys_created_by>
@@ -15,7 +15,7 @@
         <sys_update_name>sys_index_x_chef_automate_compliance_report_id</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
         <sys_updated_on>2019-08-09 07:02:29</sys_updated_on>
-        <table display_value="Compliance report" name="x_chef_automate_compliance_report">fb5b4b5ddb42b30070cd5e25ca96191d</table>
+        <table/>
         <unique_index>false</unique_index>
     </sys_index>
 </record_update>
