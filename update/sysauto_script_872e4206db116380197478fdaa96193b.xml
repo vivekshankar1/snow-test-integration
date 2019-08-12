@@ -13,24 +13,32 @@
         <run_time>1970-01-01 00:00:00</run_time>
         <run_type>weekly</run_type>
         <script><![CDATA[logger = new Logger();
-var date = new GlideDateTime();
-var table = new GlideRecordSecure('x_chef_automate_asset_queue');
-table.initialize();
-table.query();
-	logger.info('Performing scheduled Asset Queue cleanup');
-	table.deleteMultiple();]]></script>
+try {
+	logger.info('Performing Scheduled Asset Queue cleanup');
+	var date = new GlideDateTime();
+	var table = new GlideRecordSecure('x_chef_automate_asset_queue');
+	table.initialize();
+	table.query();
+	if (table.hasNext()) {
+		table.deleteMultiple();
+	}
+} catch (err) {
+	logger.error(err.message);
+	logger.error(err.stack);
+	throw err;
+}]]></script>
         <sys_class_name>sysauto_script</sys_class_name>
         <sys_created_by>dmurray</sys_created_by>
         <sys_created_on>2018-10-23 13:24:14</sys_created_on>
         <sys_id>872e4206db116380197478fdaa96193b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Scheduled Asset Queue Cleanup</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sysauto_script_872e4206db116380197478fdaa96193b</sys_update_name>
-        <sys_updated_by>dmurray</sys_updated_by>
-        <sys_updated_on>2018-10-23 13:24:50</sys_updated_on>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-08-12 10:48:36</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>
