@@ -7,7 +7,7 @@
         <element label="Id" max_length="40" name="id" type="string"/>
         <element label="Ip address" max_length="255" name="ip_address" type="string"/>
         <element label="Job id" max_length="64" name="job_id" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Node" max_length="32" name="node" reference="cmdb_ci_server" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Node" max_length="32" name="node" reference="cmdb_ci_server" reference_cascade_rule="delete" type="reference"/>
         <element label="Node id" max_length="40" name="node_id" type="string"/>
         <element label="Node name" max_length="255" name="node_name" type="string"/>
         <element label="Platform name" max_length="40" name="platform_name" type="string"/>

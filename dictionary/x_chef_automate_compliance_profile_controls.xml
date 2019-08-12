@@ -3,7 +3,7 @@
         <element label="Code" max_length="10000" name="code" type="string"/>
         <element display="true" label="Id" max_length="255" name="id" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Impact" max_length="40" name="impact" type="float"/>
-        <element attributes="edge_encryption_enabled=true" label="Profile" max_length="32" name="profile" reference="x_chef_automate_compliance_profiles" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Profile" max_length="32" name="profile" reference="x_chef_automate_compliance_profiles" reference_cascade_rule="delete" type="reference"/>
         <element label="Source location" max_length="1000" name="source_location" type="string"/>
         <element label="Title" max_length="255" name="title" type="string"/>
         <index name="index">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Client run lists" max_length="40" name="x_chef_automate_client_run_lists" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Client run" max_length="32" name="client_run" reference="x_chef_automate_client_run" type="reference"/>
-        <element attributes="edge_encryption_enabled=true" display="true" label="Node" max_length="32" name="node" reference="cmdb_ci_server" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Node" max_length="32" name="node" reference="cmdb_ci_server" reference_cascade_rule="delete" type="reference"/>
         <element label="Run list" max_length="255" name="run_list" type="string"/>
         <index name="index">
             <element name="node"/>
