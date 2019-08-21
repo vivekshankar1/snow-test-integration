@@ -18,10 +18,10 @@
 		clientRun.node_name = clientRunJson.node_name;
 		clientRun.organization = clientRunJson.organization;
 		
-		var startTime = getDate( clientRunJson.start_time.seconds);
+		var startTime = getDate(clientRunJson.start_time.seconds);
 		clientRun.start_time = startTime;
 		
-		var endTime = getDate( clientRunJson.end_time.seconds);
+		var endTime = getDate(clientRunJson.end_time.seconds);
 		clientRun.end_time = endTime;
 		
 		clientRun.source = clientRunJson.source;
@@ -103,24 +103,31 @@
 })(source, map, log, target);
 
 function getDate(seconds) {
-	new Logger().info("SECONDS: ".concat(seconds));
-	var date = new GlideDateTime();
-	date.subtract(date.getNumericValue());
-	date.add(seconds * 1000);
-	return date;
+	var logger = new Logger();
+	logger.info("seconds: ".concat(seconds));
+	try {
+		var date = new GlideDateTime();
+		date.subtract(date.getNumericValue());
+		date.add(seconds * 1000);
+		return date;
+	} catch (err) {
+		logger.error(gs.getMessage("getDate() {0}", err.message));
+		logger.error(err.stack);
+	}
+	return "";	
 }]]></script>
         <sys_class_name>sys_transform_script</sys_class_name>
         <sys_created_by>dmurray</sys_created_by>
         <sys_created_on>2018-09-11 10:20:00</sys_created_on>
         <sys_id>4a311568dbe02b00197478fdaa9619de</sys_id>
-        <sys_mod_count>44</sys_mod_count>
+        <sys_mod_count>47</sys_mod_count>
         <sys_name>onAfter</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_transform_script_4a311568dbe02b00197478fdaa9619de</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-06-17 14:35:11</sys_updated_on>
+        <sys_updated_on>2019-08-21 12:56:28</sys_updated_on>
         <when>onAfter</when>
     </sys_transform_script>
 </record_update>
