@@ -11,7 +11,7 @@
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>mscott</sys_created_by>
             <sys_created_on>2019-07-19 09:27:52</sys_created_on>
-            <sys_id>a99bf210db5fb70070cd5e25ca961902</sys_id>
+            <sys_id>8ce4be83dba7330070cd5e25ca96191d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Compliance profile controls</sys_name>
             <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>

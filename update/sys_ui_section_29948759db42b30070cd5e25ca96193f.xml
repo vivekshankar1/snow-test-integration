@@ -294,6 +294,34 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>host_name</element>
+            <position>21</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2019-10-14 13:51:36</sys_created_on>
+            <sys_id>2b8a6760db200010bd7169c3ca9619b5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_import" sys_domain="global" view="Default view">29948759db42b30070cd5e25ca96193f</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2019-10-14 13:51:36</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>mac_address</element>
+            <position>22</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2019-10-14 13:53:18</sys_created_on>
+            <sys_id>28faab64db200010bd7169c3ca9619b6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_import" sys_domain="global" view="Default view">29948759db42b30070cd5e25ca96193f</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2019-10-14 13:53:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>

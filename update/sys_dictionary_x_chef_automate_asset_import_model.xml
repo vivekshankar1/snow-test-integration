@@ -53,7 +53,7 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-03-01 11:59:42</sys_created_on>
-        <sys_id>cd9b7210db5fb70070cd5e25ca9619ac</sys_id>
+        <sys_id>5fd43e83dba7330070cd5e25ca9619e2</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Model</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -61,7 +61,7 @@
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_dictionary_x_chef_automate_asset_import_model</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2019-08-12 12:29:38</sys_updated_on>
+        <sys_updated_on>2019-09-02 11:19:20</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

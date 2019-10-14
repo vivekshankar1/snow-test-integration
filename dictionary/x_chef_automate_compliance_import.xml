@@ -4,9 +4,11 @@
         <element label="End time" max_length="24" name="end_time" type="string"/>
         <element label="Environment" max_length="40" name="environment" type="string"/>
         <element label="Fqdn" max_length="255" name="fqdn" type="string"/>
+        <element label="Host name" max_length="255" name="host_name" type="string"/>
         <element label="Id" max_length="40" name="id" type="string"/>
         <element label="Ip address" max_length="255" name="ip_address" type="string"/>
         <element label="Job id" max_length="64" name="job_id" type="string"/>
+        <element label="MAC address" max_length="255" name="mac_address" type="string"/>
         <element label="Node Id" max_length="40" name="node_id" type="string"/>
         <element label="Node name" max_length="255" name="node_name" type="string"/>
         <element label="Platform" max_length="10000" name="platform" type="string"/>
