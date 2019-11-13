@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element extends="sys_import_set_row" label="Compliance import" max_length="40" name="x_chef_automate_compliance_import" type="collection">
-        <element label="Controls" max_length="10000" name="controls" type="string"/>
+        <element label="Controls" max_length="16777215" name="controls" type="string"/>
         <element label="End time" max_length="24" name="end_time" type="string"/>
         <element label="Environment" max_length="40" name="environment" type="string"/>
         <element label="Fqdn" max_length="255" name="fqdn" type="string"/>
@@ -11,10 +11,10 @@
         <element label="MAC address" max_length="255" name="mac_address" type="string"/>
         <element label="Node Id" max_length="40" name="node_id" type="string"/>
         <element label="Node name" max_length="255" name="node_name" type="string"/>
-        <element label="Platform" max_length="10000" name="platform" type="string"/>
+        <element label="Platform" max_length="16777215" name="platform" type="string"/>
         <element label="Platform release" max_length="40" name="platform_release" type="string"/>
-        <element label="Profiles" max_length="10000" name="profiles" type="string"/>
-        <element label="Statistics" max_length="10000" name="statistics" type="string"/>
+        <element label="Profiles" max_length="16777215" name="profiles" type="string"/>
+        <element label="Statistics" max_length="16777215" name="statistics" type="string"/>
         <element label="Status" max_length="20" name="status" type="string"/>
         <element label="Version" max_length="20" name="version" type="string"/>
     </element>

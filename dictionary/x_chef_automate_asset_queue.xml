@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Asset Queue" max_length="40" name="x_chef_automate_asset_queue" type="collection">
-        <element label="Data" max_length="100000000" name="data" type="string"/>
+        <element label="Data" max_length="16777215" name="data" type="string"/>
     </element>
 </database>

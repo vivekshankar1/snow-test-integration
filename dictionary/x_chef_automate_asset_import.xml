@@ -2,9 +2,9 @@
     <element extends="sys_import_set_row" label="Asset Import" max_length="40" name="x_chef_automate_asset_import" type="collection">
         <element label="Asset tag" max_length="255" name="asset_tag" type="string"/>
         <element label="Chef Environment" max_length="256" name="chef_environment" type="string"/>
-        <element label="Client run" max_length="1000000" name="client_run" type="string"/>
-        <element label="Cloud Provider" max_length="10000" name="cloud_provider" type="string"/>
-        <element label="Cookbooks" max_length="500" name="cookbooks" type="string"/>
+        <element label="Client run" max_length="16777215" name="client_run" type="string"/>
+        <element label="Cloud Provider" max_length="16777215" name="cloud_provider" type="string"/>
+        <element label="Cookbooks" max_length="16777215" name="cookbooks" type="string"/>
         <element label="Cpu Cores" max_length="3" name="cpu_cores" type="string"/>
         <element label="CPU count" max_length="4" name="cpu_count" type="string"/>
         <element label="CPU manufacturer sys id" max_length="32" name="cpu_manufacturer_sys_id" type="string"/>
@@ -15,11 +15,11 @@
         <element label="Description" max_length="1000" name="description" type="string"/>
         <element label="Disk Space" max_length="100" name="disk_space" type="string"/>
         <element label="DNS domain" max_length="255" name="dns_domain" type="string"/>
-        <element label="File system" max_length="10000" name="file_system" type="string"/>
+        <element label="File system" max_length="16777215" name="file_system" type="string"/>
         <element label="Host Name" max_length="256" name="host_name" type="string"/>
         <element label="Ip Address" max_length="50" name="ip_address" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Is Virtual" max_length="5" name="isvirtual" type="boolean"/>
-        <element label="Languages" max_length="1000000" name="languages" type="string"/>
+        <element label="Languages" max_length="16777215" name="languages" type="string"/>
         <element label="Mac Address" max_length="20" name="mac_address" type="string"/>
         <element label="Manufacturer" max_length="255" name="manufacturer" type="string"/>
         <element label="Manufacturer sys_id" max_length="32" name="manufacturer_sys_id" type="string"/>
@@ -31,7 +31,7 @@
         <element label="OS Family" max_length="100" name="os_family" type="string"/>
         <element label="OS service pack" max_length="40" name="os_service_pack" type="string"/>
         <element label="OS Version" max_length="256" name="os_version" type="string"/>
-        <element label="Packages" max_length="1000000" name="packages" type="string"/>
+        <element label="Packages" max_length="16777215" name="packages" type="string"/>
         <element label="Serial Number" max_length="50" name="serial_number" type="string"/>
         <element label="Timezone" max_length="50" name="timezone" type="string"/>
     </element>

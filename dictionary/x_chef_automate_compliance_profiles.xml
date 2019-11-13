@@ -5,7 +5,7 @@
         <element display="true" label="Name" max_length="255" name="name" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Report" max_length="32" name="report" reference="x_chef_automate_compliance_report" type="reference"/>
         <element label="Sha256" max_length="255" name="sha256" type="string"/>
-        <element label="Summary" max_length="1000" name="summary" type="string"/>
+        <element label="Summary" max_length="16777215" name="summary" type="string"/>
         <element label="Title" max_length="255" name="title" type="string"/>
         <element label="Version" max_length="40" name="version" type="string"/>
         <index name="index">
