@@ -8,7 +8,7 @@
         <configuration_access>false</configuration_access>
         <create_access>false</create_access>
         <create_access_controls>true</create_access_controls>
-        <delete_access>false</delete_access>
+        <delete_access>true</delete_access>
         <extension_model/>
         <is_extendable>false</is_extendable>
         <label>Client run</label>
@@ -24,14 +24,14 @@
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-03-05 15:54:08</sys_created_on>
         <sys_id>1cfbab38db88f70070cd5e25ca961905</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Client run</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_db_object_1cfbab38db88f70070cd5e25ca961905</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-08-12 12:36:26</sys_updated_on>
+        <sys_updated_on>2019-11-14 09:58:08</sys_updated_on>
         <update_access>false</update_access>
         <user_role display_value="x_chef_automate.user" name="x_chef_automate.user">9d7ce010dbe8e700197478fdaa9619ba</user_role>
         <ws_access>true</ws_access>
