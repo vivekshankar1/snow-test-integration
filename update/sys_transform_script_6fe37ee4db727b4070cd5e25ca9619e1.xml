@@ -7,12 +7,11 @@
 
 	// Add your code here
 	var logger = new Logger();
-	//logger.info(gs.getmessage("source: {0}", source.profiles));
+	var theMessage;
 	try {
 		var profiles = JSON.parse(source.profiles);
 		for (var p in profiles) {
 			var profile = profiles[p];
-			//logger.info(gs.getMessage("RESULTS for profile {0}", profile.name));
 			var profileId = "";
 			
 			var complianceProfile = new GlideRecordSecure('x_chef_automate_compliance_profiles');
@@ -27,7 +26,6 @@
 			} else {
 				logger.info(gs.getMessage("NO PROFILE FOUND for {0}:{1}", [profile.name, profile.version]));
 			}
-			//logger.info(gs.getMessage("RESULTS for profile {0}, {1}", [profile.name, profileId]));
 			for (var c in profile.controls) {
 				var control = profile.controls[c];
 				
@@ -42,17 +40,18 @@
 					profileControl.next();
 					controlId = profileControl.sys_id;
 				}
-				//logger.info(gs.getMessage("RESULTS for profile {0}, control {1}, {2}", [profile.name, control.id, controlId]));
 				for (var r in control.results) {
 					var result = control.results[r];
-					//logger.info(gs.getMessage("RESULTS for profile {0}, control {1}, result {2}", [profile.name, control.id, result.code_desc]));
 					var controlResult = new GlideRecordSecure('x_chef_automate_compliance_report_results');
 					controlResult.initialize();
 					controlResult.compliance_report = target.sys_id;
 					controlResult.compliance_profile = profileId;
 					controlResult.compliance_profile_control = controlId;
 					controlResult.code_desc = result.code_desc;
-					controlResult.message = result.message;
+					theMessage = result.message;
+					if (result.message !== undefined && result.message !== null) {
+						controlResult.message = result.message.replace('\f', '\n');
+					}
 					controlResult.run_time = result.run_time;
 					controlResult.status = result.status;
 					controlResult.insert();
@@ -69,14 +68,14 @@
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-07-19 10:25:20</sys_created_on>
         <sys_id>6fe37ee4db727b4070cd5e25ca9619e1</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>onAfter</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_transform_script_6fe37ee4db727b4070cd5e25ca9619e1</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-08-09 09:38:01</sys_updated_on>
+        <sys_updated_on>2019-11-18 10:08:12</sys_updated_on>
         <when>onAfter</when>
     </sys_transform_script>
 </record_update>
