@@ -96,7 +96,9 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
 		
 		chefAssetsTable.client_run = JSON.stringify(lastRun);
 
-		chefAssetsTable.host_name = getStringValue(automatic, "hostname");
+		var nodeData = getObject(assetData, "node_data");
+		//chefAssetsTable.host_name = getStringValue(automatic, "hostname");
+		chefAssetsTable.host_name = getStringValue(nodeData, "hostname");
 		var hostnamectl = getObject(automatic, "hostnamectl");
 		var operatingSystem = getStringValue(hostnamectl, "operating_system");
 		if (operatingSystem == "") {
@@ -105,7 +107,7 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
 		chefAssetsTable.operating_system = CapitalizeFirstLetter(operatingSystem);
 		chefAssetsTable.os_family = CapitalizeFirstLetter(getStringValue(automatic, "os"));
 		chefAssetsTable.os_version = CapitalizeFirstLetter(getStringValue(automatic, "os_version"));
-		chefAssetsTable.mac_address = getStringValue(automatic, "macaddress");
+		chefAssetsTable.mac_address = getStringValue(nodeData, "macaddress");
 		chefAssetsTable.ip_address = getStringValue(automatic, "ipaddress");
 		logger.debug("ip: ".concat(getStringValue(automatic, "ipaddress")));
 		var cpu = getObject(automatic, "cpu");
@@ -234,7 +236,7 @@ function getObject(object, value) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>93cfd64edb116380197478fdaa9619cd</sys_id>
-        <sys_mod_count>89</sys_mod_count>
+        <sys_mod_count>90</sys_mod_count>
         <sys_name>Insert to Asset Import</sys_name>
         <sys_overrides/>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -242,7 +244,7 @@ function getObject(object, value) {
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_93cfd64edb116380197478fdaa9619cd</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-11-18 16:41:37</sys_updated_on>
+        <sys_updated_on>2019-11-19 13:59:57</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

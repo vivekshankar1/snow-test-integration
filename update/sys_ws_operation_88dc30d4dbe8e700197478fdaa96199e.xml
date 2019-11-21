@@ -11,6 +11,8 @@
 	var logger = new Logger();
 	logger.info("REST API call /api/x_chef_automate/asset");
 	try {
+		var version = request.getHeader("Chef-Data-Feed-Message-Version");
+		logger.info("Chef-Data-Feed-Message-Version: " + version);
 		var dataStream = request.body.dataStream;
 		var reader = new GlideTextReader(dataStream);
 		var data = "[";
@@ -103,14 +105,14 @@ function MapToBufferTable(assetsBufferTable, assetData){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-09-10 14:15:41</sys_created_on>
         <sys_id>88dc30d4dbe8e700197478fdaa96199e</sys_id>
-        <sys_mod_count>91</sys_mod_count>
+        <sys_mod_count>92</sys_mod_count>
         <sys_name>create</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_ws_operation_88dc30d4dbe8e700197478fdaa96199e</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-11-15 16:26:27</sys_updated_on>
+        <sys_updated_on>2019-11-21 15:25:53</sys_updated_on>
         <web_service_definition display_value="Chef Automate Asset Sync">f7bb7c18dbe8e700197478fdaa961992</web_service_definition>
         <web_service_version display_value="v1">63fa0669db0d2b40197478fdaa96199b</web_service_version>
     </sys_ws_operation>
