@@ -12,7 +12,7 @@
 		clientRun.addQuery('id', clientRunJson.id);
 		clientRun.query();
 		if (clientRun.hasNext()) {
-			logger.info("client run already imported");
+			logger.debug("client run already imported");
 		} else {
 			var nodeId = clientRunJson.node_id;
 		
@@ -49,11 +49,11 @@
 				var cookbookId = "";
 				var cookbookName = cookbookKey;
 				var cookbookVersion = cookbookJson[cookbookKey].version;
-				logger.info(gs.getMessage("Cookbook {0}, {1} ", [cookbookName, cookbookVersion]));
+				logger.debug(gs.getMessage("Cookbook {0}, {1} ", [cookbookName, cookbookVersion]));
 			
 				var cookbook = new GlideRecordSecure('x_chef_automate_ci_cookbook');
 				if (cookbook.canCreate()) {
-					logger.info(gs.getMessage("User {0} can insert into x_chef_automate_ci_cookbook", gs.getUser().getName()));
+					logger.debug(gs.getMessage("User {0} can insert into x_chef_automate_ci_cookbook", gs.getUser().getName()));
 				} else {
 					logger.warn(gs.getMessage("User {0} cannot insert into x_chef_automate_ci_cookbook", gs.getUser().getName()));
 				}
@@ -66,10 +66,10 @@
 					cookbook.name = cookbookName;
 					cookbook.version = cookbookVersion;
 					cookbookId = cookbook.insert();
-					logger.info(gs.getMessage("cookbook id {0}", cookbookId));
+					logger.debug(gs.getMessage("cookbook id {0}", cookbookId));
 				} else {
 					cookbookId = cookbook.getValue('sys_id');
-					logger.info(gs.getMessage("Cookbook {0}, {1} already exists", [cookbookName, cookbookVersion]));
+					logger.debug(gs.getMessage("Cookbook {0}, {1} already exists", [cookbookName, cookbookVersion]));
 				}
 			
 				var clientRunCookbook = new GlideRecordSecure('x_chef_automate_client_run_cookbooks');
@@ -120,7 +120,7 @@ function parseJson(json) {
 
 function getDate(seconds) {
 	var logger = new Logger();
-	logger.info("seconds: ".concat(seconds));
+	logger.debug("seconds: ".concat(seconds));
 	try {
 		var date = new GlideDateTime();
 		date.subtract(date.getNumericValue());
@@ -136,14 +136,14 @@ function getDate(seconds) {
         <sys_created_by>dmurray</sys_created_by>
         <sys_created_on>2018-09-11 10:20:00</sys_created_on>
         <sys_id>4a311568dbe02b00197478fdaa9619de</sys_id>
-        <sys_mod_count>52</sys_mod_count>
+        <sys_mod_count>53</sys_mod_count>
         <sys_name>onAfter</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_transform_script_4a311568dbe02b00197478fdaa9619de</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-11-18 11:44:19</sys_updated_on>
+        <sys_updated_on>2019-11-22 11:03:10</sys_updated_on>
         <when>onAfter</when>
     </sys_transform_script>
 </record_update>

@@ -22,9 +22,9 @@
 			if (complianceProfile.hasNext()) {
 				complianceProfile.next();
 				profileId = complianceProfile.getValue("sys_id");
-				logger.info(gs.getMessage("compliance profile {0}, {1}", [profileId, complianceProfile.sys_id]));
+				logger.debug(gs.getMessage("compliance profile {0}, {1}", [profileId, complianceProfile.sys_id]));
 			} else {
-				logger.info(gs.getMessage("NO PROFILE FOUND for {0}:{1}", [profile.name, profile.version]));
+				logger.debug(gs.getMessage("NO PROFILE FOUND for {0}:{1}", [profile.name, profile.version]));
 			}
 			for (var c in profile.controls) {
 				var control = profile.controls[c];
@@ -68,14 +68,14 @@
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-07-19 10:25:20</sys_created_on>
         <sys_id>6fe37ee4db727b4070cd5e25ca9619e1</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>onAfter</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_transform_script_6fe37ee4db727b4070cd5e25ca9619e1</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-11-18 10:08:12</sys_updated_on>
+        <sys_updated_on>2019-11-22 11:05:34</sys_updated_on>
         <when>onAfter</when>
     </sys_transform_script>
 </record_update>

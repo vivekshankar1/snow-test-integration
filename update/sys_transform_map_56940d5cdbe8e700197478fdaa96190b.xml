@@ -10,13 +10,13 @@
         <run_script>true</run_script>
         <script><![CDATA[(function transformRow(source, target, map, log, isUpdate) {
 	var logger = new Logger();
-	logger.info('Chef Automate Transform Run');
-	logger.info(gs.getMessage("Transforming row with sys_id {0} isUpdate() {1}", [source.sys_id, isUpdate]));
+	logger.debug('Chef Automate Transform Run');
+	logger.debug(gs.getMessage("Transforming row with sys_id {0} isUpdate() {1}", [source.sys_id, isUpdate]));
 	try {
-	//if (!isUpdate) {
+
 		setTargetTable(target, source);
 		MapToCiTable(target, source, logger);		
-	//}
+
 	}catch(err) {
 		logger.error(err);
 		logger.error(err.stack);
@@ -29,7 +29,7 @@ function setTargetTable(target, source) {
 	
 	var os_family = source.os_family;
 	var operatingSystem = source.operating_system;
-	logger.info("setTargetTable: operating_system: ".concat(operatingSystem));
+	logger.debug("setTargetTable: operating_system: ".concat(operatingSystem));
 	if (os_family.match(/linux/i)) {
 		target.sys_class_name = "cmdb_ci_linux_server";
 	}	
@@ -38,12 +38,9 @@ function setTargetTable(target, source) {
 	}
 	if (os_family.match(/mac_os_x/i)) {
 		target.sys_class_name = "cmdb_ci_osx_server";
-	}	
-	//if (operatingSystem.match(/windows/i)) {
-	//	target.sys_class_name = "cmdb_ci_win_server";
-	//}
+	}
 
-	logger.info("setTargetTable: ".concat(target.sys_class_name));
+	logger.debug("setTargetTable: ".concat(target.sys_class_name));
 }
 	
 function MapToCiTable(target, source, logger) {
@@ -76,7 +73,7 @@ function MapToCiTable(target, source, logger) {
 		target.manufacturer = source.manufacturer_sys_id;
 		target.model_id = source.model_sys_id;
 		target.short_description = source.description;
-		logger.info(gs.getMessage("source description: {0}, target description: {1}", [source.description, target.short_description]));
+		logger.debug(gs.getMessage("source description: {0}, target description: {1}", [source.description, target.short_description]));
 		target.os_service_pack = source.os_service_pack;
 	} catch (err) {
 		logger.error('Chef Automate Transform Error: '.concat(err.message));
@@ -88,14 +85,14 @@ function MapToCiTable(target, source, logger) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-09-10 14:47:23</sys_created_on>
         <sys_id>56940d5cdbe8e700197478fdaa96190b</sys_id>
-        <sys_mod_count>97</sys_mod_count>
+        <sys_mod_count>98</sys_mod_count>
         <sys_name>Chef Automate Sync Transform</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_transform_map_56940d5cdbe8e700197478fdaa96190b</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-08-08 15:13:34</sys_updated_on>
+        <sys_updated_on>2019-11-22 11:01:36</sys_updated_on>
         <target_table>cmdb_ci_server</target_table>
     </sys_transform_map>
 </record_update>

@@ -21,7 +21,7 @@
 		var testMessage = '{"text":"TEST: Successful validation completed by Automate"}';
 		while((line = reader.readLine()) != null) {
 			if (data.length == 1 && line === testMessage) {
-				logger.info("received test message");
+				logger.debug("received test message");
 				response.setStatus(200);
 				return;
 			}
@@ -56,7 +56,7 @@
 			
 function processData(assetData) {
 	var logger = new Logger();
-	logger.info(gs.getMessage("asset data: {0}", assetData));
+	logger.debug(gs.getMessage("asset data: {0}", assetData));
 		
 	var assetsBufferTable = new GlideRecordSecure('x_chef_automate_asset_buffer');
 	assetsBufferTable.initialize();
@@ -78,7 +78,7 @@ function processData(assetData) {
 		error.setMessage("Insert failed into x_chef_automate_asset_import");
 		throw error;
 	} else {
-		logger.info(gs.getMessage("Insert succeeded into x_chef_automate_asset_import {0}", assetId));
+		logger.debug(gs.getMessage("Insert succeeded into x_chef_automate_asset_import {0}", assetId));
 	}
 }
 
@@ -105,14 +105,14 @@ function MapToBufferTable(assetsBufferTable, assetData){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-09-10 14:15:41</sys_created_on>
         <sys_id>88dc30d4dbe8e700197478fdaa96199e</sys_id>
-        <sys_mod_count>94</sys_mod_count>
+        <sys_mod_count>95</sys_mod_count>
         <sys_name>create</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_ws_operation_88dc30d4dbe8e700197478fdaa96199e</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-11-21 19:21:11</sys_updated_on>
+        <sys_updated_on>2019-11-22 11:00:05</sys_updated_on>
         <web_service_definition display_value="Chef Automate Asset Sync">f7bb7c18dbe8e700197478fdaa961992</web_service_definition>
         <web_service_version display_value="v1">63fa0669db0d2b40197478fdaa96199b</web_service_version>
     </sys_ws_operation>
