@@ -32,7 +32,7 @@
 (function executeRule(current, previous /*null when async*/) {
 	
 	
-	logger.info("Performing Asset Data Transform");
+	logger.debug("Performing Asset Data Transform");
 	try {
 		var assetData = JSON.parse(current.data);
 		
@@ -40,24 +40,24 @@
 		
 		chefAssetsTable.initialize();
 		if (chefAssetsTable.canCreate()) {
-			logger.info(gs.getMessage("User {0} can insert into x_chef_automate_asset_import", gs.getUser().getName()));
+			logger.debug(gs.getMessage("User {0} can insert into x_chef_automate_asset_import", gs.getUser().getName()));
 		} else {
 			logger.warn(gs.getMessage("User {0} cannot insert into x_chef_automate_asset_import", gs.getUser().getName()));
 		}
 				
 		// Map Request to Table
-		logger.info("Asset data length".concat(assetData.length));
+		logger.debug("Asset data length".concat(assetData.length));
 		for(var entry = 0; entry < assetData.length; entry++) {
 			var hasAssetData = MapToImportTable(chefAssetsTable, assetData[entry], logger);
 			if (!hasAssetData) {
-				logger.info("No asset data for entry");
+				logger.debug("No asset data for entry");
 				continue;
 			}
 			if (chefAssetsTable.insert() === null) {
 				var message = "Insert failed into x_chef_automate_asset_import";
 				logger.warn(message);
 			} else {
-				logger.info("Insert succeeded into x_chef_automate_asset_import");
+				logger.debug("Insert succeeded into x_chef_automate_asset_import");
 			}
 		}
 	} catch (err) {
@@ -83,13 +83,10 @@ function ConvertCpuSpeed(cpuSpeed) {
 		
 function MapToImportTable(chefAssetsTable, assetData, logger){
 	try {
-		logger.info("About to parse JSON");
-		//var automatic = JSON.parse(assetData.automatic);
-		// can be undefined
 		var automatic = assetData.attributes;
-		logger.info("Attributes: " + automatic);
+		logger.debug("Attributes: " + automatic);
 		var lastRun = assetData.node_data.last_run;
-		logger.info("Last run: " + lastRun);
+		logger.debug("Last run: " + lastRun);
 		if (automatic === undefined && lastRun === undefined) {
 			return false;
 		}
@@ -113,20 +110,20 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
 		var cpu = getObject(automatic, "cpu");
 		var cpu0 = getObject(cpu, "0");
 		chefAssetsTable.cpu_vendor_id = getStringValue(cpu0, "vendor_id");
-		logger.info("cpu vendor: ".concat(getStringValue(cpu0, "vendor_id")));
+		logger.debug("cpu vendor: ".concat(getStringValue(cpu0, "vendor_id")));
 		chefAssetsTable.cpu_model = getStringValue(cpu0, "model");
-		logger.info("cpu model: ".concat(getStringValue(cpu0, "model")));
+		logger.debug("cpu model: ".concat(getStringValue(cpu0, "model")));
 		var cores = getIntValue(cpu, "cores");
 		if (cores != null) {
 			chefAssetsTable.cpu_cores = cores;
 		}
 		
-		logger.info("cpu cores: ".concat(cores));
+		logger.debug("cpu cores: ".concat(cores));
 		var cpuTotal = getIntValue(cpu, "total");
 		if (cpuTotal != null) {
 			chefAssetsTable.cpu_total = cpuTotal;
 		}
-		logger.info("cpu total: ".concat(cpuTotal));
+		logger.debug("cpu total: ".concat(cpuTotal));
 				
 		cpuModelName = getStringValue(cpu0, "model_name");
 		if (cpuModelName.indexOf('@') > -1) {
@@ -150,15 +147,13 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
 		var serialNumber = getStringValue(automatic, "serial_number");
 
 		chefAssetsTable.serial_number = serialNumber;
-		logger.info("serial number: ".concat(getStringValue(automatic, "serial_number")));
+		logger.debug("serial number: ".concat(getStringValue(automatic, "serial_number")));
 		var memory = getObject(automatic, "memory");
 		chefAssetsTable.memory_total = parseInt(getStringValue(memory, "total")) / 1024;
-		logger.info("total memory: ".concat(chefAssetsTable.memory_total));
-		//chefAssetsTable.disk_space = parseInt(automatic.filesystem.by_mountpoint["/"].kb_size) /(1024*1024);
-		//logger.info("disk size: ".concat(automatic.filesystem.by_mountpoint["/"].kb_size));
+		logger.debug("total memory: ".concat(chefAssetsTable.memory_total));
 		var time = getObject(automatic, "time");
 		chefAssetsTable.timezone = getStringValue(time, "timezone");
-		logger.info("timezone: ".concat(getStringValue(time, "timezone")));
+		logger.debug("timezone: ".concat(getStringValue(time, "timezone")));
 		if (getStringValue(hostnamectl, "chassis") == "vm") {
 			chefAssetsTable.isvirtual = true;
 		} else {
@@ -187,7 +182,7 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
 		var cloud = getObject(automatic, "cloud");
 		if (cloud != null) {
 			var cloudProviderName = getObject(cloud, "provider");
-			logger.info(gs.getMessage("cloud_provider {0}", cloudProviderName));
+			logger.debug(gs.getMessage("cloud_provider {0}", cloudProviderName));
 			var cloudProvider = getObject(automatic, cloudProviderName);
 			chefAssetsTable.cloud_provider = JSON.stringify(cloudProvider);
 		}
@@ -195,7 +190,7 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
 		var chassis = getObject(dmi, "chassis");
 		chefAssetsTable.asset_tag = getStringValue(chassis, "asset_tag");
 		chefAssetsTable.description = getStringValue(automatic, "description");
-		logger.info(gs.getMessage("description: {0}", chefAssetsTable.description));
+		logger.debug(gs.getMessage("description: {0}", chefAssetsTable.description));
 		chefAssetsTable.os_service_pack = getStringValue(automatic, "os_service_pack");
 		return true;
 	} catch (err) {
@@ -236,7 +231,7 @@ function getObject(object, value) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>93cfd64edb116380197478fdaa9619cd</sys_id>
-        <sys_mod_count>90</sys_mod_count>
+        <sys_mod_count>91</sys_mod_count>
         <sys_name>Insert to Asset Import</sys_name>
         <sys_overrides/>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -244,7 +239,7 @@ function getObject(object, value) {
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_93cfd64edb116380197478fdaa9619cd</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-11-19 13:59:57</sys_updated_on>
+        <sys_updated_on>2019-11-22 10:35:48</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
