@@ -28,6 +28,7 @@
         <rest_variables/>
         <role_conditions>x_chef_automate.user</role_conditions>
         <script><![CDATA[var logger = new Logger();
+var jsonUtil = new JsonUtil();
 
 (function executeRule(current, previous /*null when async*/) {
 	
@@ -91,41 +92,41 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
 			return false;
 		}
 		
-		chefAssetsTable.client_run = JSON.stringify(lastRun);
+		chefAssetsTable.client_run = jsonUtil.stringify(lastRun);
 
-		var nodeData = getObject(assetData, "node_data");
+		var nodeData = jsonUtil.getObject(assetData, "node_data");
 		//chefAssetsTable.host_name = getStringValue(automatic, "hostname");
-		chefAssetsTable.host_name = getStringValue(nodeData, "hostname");
-		var hostnamectl = getObject(automatic, "hostnamectl");
-		var operatingSystem = getStringValue(hostnamectl, "operating_system");
+		chefAssetsTable.host_name = jsonUtil.getStringValue(nodeData, "hostname");
+		var hostnamectl = jsonUtil.getObject(automatic, "hostnamectl");
+		var operatingSystem = jsonUtil.getStringValue(hostnamectl, "operating_system");
 		if (operatingSystem == "") {
-			operatingSystem = getStringValue(automatic, "os");
+			operatingSystem = jsonUtil.getStringValue(automatic, "os");
 		}
 		chefAssetsTable.operating_system = CapitalizeFirstLetter(operatingSystem);
-		chefAssetsTable.os_family = CapitalizeFirstLetter(getStringValue(automatic, "os"));
-		chefAssetsTable.os_version = CapitalizeFirstLetter(getStringValue(automatic, "os_version"));
-		chefAssetsTable.mac_address = getStringValue(nodeData, "macaddress");
-		chefAssetsTable.ip_address = getStringValue(automatic, "ipaddress");
-		logger.debug("ip: ".concat(getStringValue(automatic, "ipaddress")));
-		var cpu = getObject(automatic, "cpu");
-		var cpu0 = getObject(cpu, "0");
-		chefAssetsTable.cpu_vendor_id = getStringValue(cpu0, "vendor_id");
-		logger.debug("cpu vendor: ".concat(getStringValue(cpu0, "vendor_id")));
-		chefAssetsTable.cpu_model = getStringValue(cpu0, "model");
-		logger.debug("cpu model: ".concat(getStringValue(cpu0, "model")));
-		var cores = getIntValue(cpu, "cores");
+		chefAssetsTable.os_family = CapitalizeFirstLetter(jsonUtil.getStringValue(automatic, "os"));
+		chefAssetsTable.os_version = CapitalizeFirstLetter(jsonUtil.getStringValue(automatic, "os_version"));
+		chefAssetsTable.mac_address = jsonUtil.getStringValue(nodeData, "macaddress");
+		chefAssetsTable.ip_address = jsonUtil.getStringValue(automatic, "ipaddress");
+		logger.debug("ip: ".concat(jsonUtil.getStringValue(automatic, "ipaddress")));
+		var cpu = jsonUtil.getObject(automatic, "cpu");
+		var cpu0 = jsonUtil.getObject(cpu, "0");
+		chefAssetsTable.cpu_vendor_id = jsonUtil.getStringValue(cpu0, "vendor_id");
+		logger.debug("cpu vendor: ".concat(jsonUtil.getStringValue(cpu0, "vendor_id")));
+		chefAssetsTable.cpu_model = jsonUtil.getStringValue(cpu0, "model");
+		logger.debug("cpu model: ".concat(jsonUtil.getStringValue(cpu0, "model")));
+		var cores = jsonUtil.getIntValue(cpu, "cores");
 		if (cores != null) {
 			chefAssetsTable.cpu_cores = cores;
 		}
 		
 		logger.debug("cpu cores: ".concat(cores));
-		var cpuTotal = getIntValue(cpu, "total");
+		var cpuTotal = jsonUtil.getIntValue(cpu, "total");
 		if (cpuTotal != null) {
 			chefAssetsTable.cpu_total = cpuTotal;
 		}
 		logger.debug("cpu total: ".concat(cpuTotal));
 				
-		cpuModelName = getStringValue(cpu0, "model_name");
+		cpuModelName = jsonUtil.getStringValue(cpu0, "model_name");
 		if (cpuModelName.indexOf('@') > -1) {
 			var cpuSplit = cpuModelName.split('@');
 			chefAssetsTable.cpu_type = cpuSplit[0].replace(/\s/g, '');
@@ -133,65 +134,65 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
 			chefAssetsTable.cpu_speed = cpuMHz;
 		} else {
 			chefAssetsTable.cpu_type = cpuModelName;
-			chefAssetsTable.cpu_speed = ConvertCpuSpeed(getStringValue(cpu0, "mhz"));
+			chefAssetsTable.cpu_speed = ConvertCpuSpeed(jsonUtil.getStringValue(cpu0, "mhz"));
 		}
 		
-		var cpuReal = getIntValue(cpu, "real");
+		var cpuReal = jsonUtil.getIntValue(cpu, "real");
 		if (cpuReal != null) {
 			chefAssetsTable.cpu_count = cpuReal;
 		}
 		
-		var dmi = getObject(automatic, "dmi");
-		var system = getObject(dmi, "system");
-		var systemEnclosure = getObject(automatic, "system_enclosure");
-		var serialNumber = getStringValue(automatic, "serial_number");
+		var dmi = jsonUtil.getObject(automatic, "dmi");
+		var system = jsonUtil.getObject(dmi, "system");
+		var systemEnclosure = jsonUtil.getObject(automatic, "system_enclosure");
+		var serialNumber = jsonUtil.getStringValue(automatic, "serial_number");
 
 		chefAssetsTable.serial_number = serialNumber;
-		logger.debug("serial number: ".concat(getStringValue(automatic, "serial_number")));
-		var memory = getObject(automatic, "memory");
-		chefAssetsTable.memory_total = parseInt(getStringValue(memory, "total")) / 1024;
+		logger.debug("serial number: ".concat(jsonUtil.getStringValue(automatic, "serial_number")));
+		var memory = jsonUtil.getObject(automatic, "memory");
+		chefAssetsTable.memory_total = parseInt(jsonUtil.getStringValue(memory, "total")) / 1024;
 		logger.debug("total memory: ".concat(chefAssetsTable.memory_total));
-		var time = getObject(automatic, "time");
-		chefAssetsTable.timezone = getStringValue(time, "timezone");
-		logger.debug("timezone: ".concat(getStringValue(time, "timezone")));
-		if (getStringValue(hostnamectl, "chassis") == "vm") {
+		var time = jsonUtil.getObject(automatic, "time");
+		chefAssetsTable.timezone = jsonUtil.getStringValue(time, "timezone");
+		logger.debug("timezone: ".concat(jsonUtil.getStringValue(time, "timezone")));
+		if (jsonUtil.getStringValue(hostnamectl, "chassis") == "vm") {
 			chefAssetsTable.isvirtual = true;
 		} else {
 			chefAssetsTable.isvirtual = false;
 		}
-		chefAssetsTable.languages = JSON.stringify(automatic.languages);
-		chefAssetsTable.packages = JSON.stringify(automatic.packages);
-		chefAssetsTable.cookbooks = JSON.stringify(automatic.cookbooks);
-		chefAssetsTable.file_system = JSON.stringify(automatic.filesystem);
-		var manufacturer = getStringValue(system, "manufacturer");
+		chefAssetsTable.languages = jsonUtil.stringify(automatic.languages);
+		chefAssetsTable.packages = jsonUtil.stringify(automatic.packages);
+		chefAssetsTable.cookbooks = jsonUtil.stringify(automatic.cookbooks);
+		chefAssetsTable.file_system = jsonUtil.stringify(automatic.filesystem);
+		var manufacturer = jsonUtil.getStringValue(system, "manufacturer");
 		
 		if (manufacturer == "") {
 			// try system_enclosure
-			manufacturer =  getStringValue(systemEnclosure, "manufacturer");
+			manufacturer =  jsonUtil.getStringValue(systemEnclosure, "manufacturer");
 		}
 		chefAssetsTable.manufacturer = manufacturer;
-		var model =  getStringValue(system, "product_name");
-		var kernel = getObject(automatic, "kernel");
-		var csInfo = getObject(kernel, "cs_info");
+		var model =  jsonUtil.getStringValue(system, "product_name");
+		var kernel = jsonUtil.getObject(automatic, "kernel");
+		var csInfo = jsonUtil.getObject(kernel, "cs_info");
 		if (model == "") {
-			model = getStringValue(csInfo, "model");
+			model = jsonUtil.getStringValue(csInfo, "model");
 		}
 		chefAssetsTable.model = model;
 		
-		chefAssetsTable.chef_environment = getStringValue(automatic, "environment");
-		var cloud = getObject(automatic, "cloud");
+		chefAssetsTable.chef_environment = jsonUtil.getStringValue(automatic, "environment");
+		var cloud = jsonUtil.getObject(automatic, "cloud");
 		if (cloud != null) {
-			var cloudProviderName = getObject(cloud, "provider");
+			var cloudProviderName = jsonUtil.getObject(cloud, "provider");
 			logger.debug(gs.getMessage("cloud_provider {0}", cloudProviderName));
-			var cloudProvider = getObject(automatic, cloudProviderName);
-			chefAssetsTable.cloud_provider = JSON.stringify(cloudProvider);
+			var cloudProvider = jsonUtil.getObject(automatic, cloudProviderName);
+			chefAssetsTable.cloud_provider = jsonUtil.stringify(cloudProvider);
 		}
-		chefAssetsTable.dns_domain = getStringValue(automatic, "domain");
-		var chassis = getObject(dmi, "chassis");
-		chefAssetsTable.asset_tag = getStringValue(chassis, "asset_tag");
-		chefAssetsTable.description = getStringValue(automatic, "description");
+		chefAssetsTable.dns_domain = jsonUtil.getStringValue(automatic, "domain");
+		var chassis = jsonUtil.getObject(dmi, "chassis");
+		chefAssetsTable.asset_tag = jsonUtil.getStringValue(chassis, "asset_tag");
+		chefAssetsTable.description = jsonUtil.getStringValue(automatic, "description");
 		logger.debug(gs.getMessage("description: {0}", chefAssetsTable.description));
-		chefAssetsTable.os_service_pack = getStringValue(automatic, "os_service_pack");
+		chefAssetsTable.os_service_pack = jsonUtil.getStringValue(automatic, "os_service_pack");
 		return true;
 	} catch (err) {
 		logger.error('Chef Automate Import Table Mapping Error: '.concat(err.message));
@@ -199,39 +200,14 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
 		throw err;
 	}
 }
-
-function getStringValue(object, value) {
-	try {
-		return object[value];
-	} catch (err) {
-		logger.warn(err);
-		return "";
-	}
-}
-function getIntValue(object, value) {
-	try {
-		return object[value];
-	} catch (err) {
-		logger.warn(err);
-		return null;
-	}
-}
-
-function getObject(object, value) {
-	try {
-		return object[value];
-	} catch (err) {
-		logger.warn(err);
-		return {};
-	}
-}]]></script>
+]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>dmurray</sys_created_by>
         <sys_created_on>2018-10-23 14:42:56</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>93cfd64edb116380197478fdaa9619cd</sys_id>
-        <sys_mod_count>91</sys_mod_count>
+        <sys_mod_count>93</sys_mod_count>
         <sys_name>Insert to Asset Import</sys_name>
         <sys_overrides/>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -239,7 +215,7 @@ function getObject(object, value) {
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_93cfd64edb116380197478fdaa9619cd</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-11-22 10:35:48</sys_updated_on>
+        <sys_updated_on>2019-11-22 11:56:39</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
