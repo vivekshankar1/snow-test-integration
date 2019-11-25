@@ -5,83 +5,84 @@
         <order>104</order>
         <script><![CDATA[// filesystem transform
 (function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
-
+	var jsonUtil = new JsonUtil();
+	var util = new Util();
 	var logger = new Logger();
 
 	try {
-	if (source.os_family == "Windows") {
-		var fileSystems = JSON.parse(source.file_system);
-		for (var fs in fileSystems) {
-			var name = fs;
-			var mountPoint = fileSystems[fs].mount;
-			var label = fileSystems[fs].volume_name;
-			var size = fileSystems[fs].kb_size;
-			var space = fileSystems[fs].kb_available;
-			var type = fileSystems[fs].fs_type;
-			var computer = target.sys_id;
+		if (source.operating_system == "Windows") {
+			var fileSystems = jsonUtil.parse(source.file_system);
+			for (var fs in fileSystems) {
+				var name = fs;
+				var mountPoint = jsonUtil.getStringValue(fileSystems[fs], "mount");
+				var label = jsonUtil.getStringValue(fileSystems[fs], "volume_name");
+				var size =  util.getSafeNumber(jsonUtil.getStringValue(fileSystems[fs], "kb_size"));
+				var space =  util.getSafeNumber(jsonUtil.getStringValue(fileSystems[fs], "kb_available"));
+				var type =  jsonUtil.getStringValue(fileSystems[fs], "fs_type");
+				var computer = target.sys_id;
 			
-			var fileSystem = new GlideRecordSecure('cmdb_ci_file_system');
-			fileSystem.initialize();
-			fileSystem.addQuery('name', name);
-			fileSystem.addQuery('computer', computer);
-			fileSystem.query();
-			if (fileSystem.next()) {
-				fileSystem.mount_point = mountPoint;
-				fileSystem.label = label;
-				fileSystem.size = size;
-				fileSystem.space = space;
-				fileSystem.file_system = type;
-				fileSystem.update();
-			} else {
-				fileSystem.name = name;
-				fileSystem.computer = computer;
-				fileSystem.mount_point = mountPoint;
-				fileSystem.label = label;
-				fileSystem.size = size;
-				fileSystem.space = space;
-				fileSystem.file_system = type;
-				fileSystem.insert();
+				var fileSystem = new GlideRecordSecure('cmdb_ci_file_system');
+				fileSystem.initialize();
+				fileSystem.addQuery('name', name);
+				fileSystem.addQuery('computer', computer);
+				fileSystem.query();
+				if (fileSystem.next()) {
+					fileSystem.mount_point = mountPoint;
+					fileSystem.label = label;
+					fileSystem.size_bytes = size;
+					fileSystem.free_space_bytes = space;
+					fileSystem.file_system = type;
+					fileSystem.update();
+				} else {
+					fileSystem.name = name;
+					fileSystem.computer = computer;
+					fileSystem.mount_point = mountPoint;
+					fileSystem.label = label;
+					fileSystem.size_bytes = size;
+					fileSystem.free_space_bytes = space;
+					fileSystem.file_system = type;
+					fileSystem.insert();
+				}
+			}
+		} else {
+			var fileSystems = jsonUtil.parse(source.file_system);
+			var fsByDevice = jsonUtil.getObject(fileSystems, "by_device");
+			for (var fs in fsByDevice) {
+				var name = fs;
+				var mountPoint = jsonUtil.getStringValueFromArray(fsByDevice[fs], "mounts", 0);
+				var label = jsonUtil.getStringValue(fsByDevice[fs], "label");
+				var size = util.getSafeNumber(jsonUtil.getStringValue(fsByDevice[fs], "kb_size"));
+				var space = util.getSafeNumber(jsonUtil.getStringValue(fsByDevice[fs], "kb_available"));
+				var type = jsonUtil.getStringValue(fsByDevice[fs], "fs_type");
+				var computer = target.sys_id;
+			
+				var fileSystem = new GlideRecordSecure('cmdb_ci_file_system');
+				fileSystem.initialize();
+				fileSystem.addQuery('name', name);
+				fileSystem.addQuery('computer', computer);
+				fileSystem.query();
+				if (fileSystem.next()) {
+					fileSystem.mount_point = mountPoint;
+					fileSystem.label = label;
+					fileSystem.size_bytes = size;
+					fileSystem.free_space_bytes = space;
+					fileSystem.file_system = type;
+					fileSystem.update();
+				} else {
+					fileSystem.name = name;
+					fileSystem.computer = computer;
+					fileSystem.mount_point = mountPoint;
+					fileSystem.label = label;
+					fileSystem.size_bytes = size;
+					fileSystem.free_space_bytes = space;
+					fileSystem.file_system = type;
+					fileSystem.insert();
+				}
 			}
 		}
-	} else {
-		var fileSystems = JSON.parse(source.file_system);
-		
-		for (var fs in fileSystems.by_device) {
-			var name = fs;
-			var mountPoint = fileSystems.by_device[fs].mounts[0];
-			var label = fileSystems.by_device[fs].label;
-			var size = fileSystems.by_device[fs].kb_size;
-			var space = fileSystems.by_device[fs].kb_available;
-			var type = fileSystems.by_device[fs].fs_type;
-			var computer = target.sys_id;
-			
-			var fileSystem = new GlideRecordSecure('cmdb_ci_file_system');
-			fileSystem.initialize();
-			fileSystem.addQuery('name', name);
-			fileSystem.addQuery('computer', computer);
-			fileSystem.query();
-			if (fileSystem.next()) {
-				fileSystem.mount_point = mountPoint;
-				fileSystem.label = label;
-				fileSystem.size = size;
-				fileSystem.space = space;
-				fileSystem.file_system = type;
-				fileSystem.update();
-			} else {
-				fileSystem.name = name;
-				fileSystem.computer = computer;
-				fileSystem.mount_point = mountPoint;
-				fileSystem.label = label;
-				fileSystem.size = size;
-				fileSystem.space = space;
-				fileSystem.file_system = type;
-				fileSystem.insert();
-			}
-		}
-	}
 	} catch (error) {
-		logger.error('Chef Automate File System Import Table Mapping Error: '.concat(error.message));
-		logger.error("Filesystem asset onAfter script: " + error.stack);
+		logger.error(gs.getMessage("Chef Automate File System Import Table Mapping Error: {0}", error.message));
+		logger.error(gs.getMessage("Filesystem asset onAfter script: {0}", error.stack));
 	}
 		
 
@@ -91,14 +92,14 @@
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-03-05 14:28:23</sys_created_on>
         <sys_id>0d9e87f4db48f70070cd5e25ca961976</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name>onAfter</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_transform_script_0d9e87f4db48f70070cd5e25ca961976</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-11-18 11:29:32</sys_updated_on>
+        <sys_updated_on>2019-11-25 16:34:06</sys_updated_on>
         <when>onAfter</when>
     </sys_transform_script>
 </record_update>
