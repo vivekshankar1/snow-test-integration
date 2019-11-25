@@ -6,10 +6,13 @@
         <script><![CDATA[// Update Cookbook Client runs tables
 (function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
 	var logger = new Logger();
+	var jsonUtil = new JsonUtil();
+	var util = new Util();
 	try {
-		var clientRunJson = JSON.parse(source.client_run);
+		var clientRunJson = jsonUtil.parse(source.client_run);
+		logger.debug(gs.getMessage("clientRunJson: {0}", clientRunJson));
 		var clientRun = new GlideRecordSecure('x_chef_automate_client_run');
-		clientRun.addQuery('id', clientRunJson.id);
+		clientRun.addQuery('id', jsonUtil.getStringValue(clientRunJson, "id"));
 		clientRun.query();
 		if (clientRun.hasNext()) {
 			logger.debug("client run already imported");
@@ -17,38 +20,41 @@
 			var nodeId = clientRunJson.node_id;
 		
 			clientRun.node = target.sys_id;
-			clientRun.id = clientRunJson.id;
-			clientRun.node_id = clientRunJson.node_id;
-			clientRun.node_name = clientRunJson.node_name;
-			clientRun.organization = clientRunJson.organization;
+			clientRun.id = jsonUtil.getStringValue(clientRunJson, "id");
+			clientRun.node_id = jsonUtil.getStringValue(clientRunJson, "node_id");
+			clientRun.node_name = jsonUtil.getStringValue(clientRunJson, "node_name");
+			clientRun.organization =  jsonUtil.getStringValue(clientRunJson, "organization");
 		
-			var startTime = getDate(clientRunJson.start_time.seconds);
+			var startTimeObj = jsonUtil.getObject(clientRunJson, "start_time");
+			logger.debug(gs.getMessage("startTimeObj: {0}", startTimeObj));
+			var startTime = util.getDate(jsonUtil.getIntValue(startTimeObj, "seconds"));
 			clientRun.start_time = startTime;
 		
-			var endTime = getDate(clientRunJson.end_time.seconds);
+			var endTimeObj = jsonUtil.getObject(clientRunJson, "end_time");
+			logger.debug(gs.getMessage("endTimeObj: {0}", endTimeObj));
+			var endTime = util.getDate(jsonUtil.getIntValue(endTimeObj, "seconds"));
 			clientRun.end_time = endTime;
 		
-			clientRun.source = clientRunJson.source;
-			clientRun.status = clientRunJson.status;
-			clientRun.total_resource_count = clientRunJson.total_resource_count;
-			clientRun.chef_version = clientRunJson.chef_version;
-			clientRun.uptime_seconds = clientRunJson.uptime_seconds;
-			clientRun.environment = clientRunJson.environment;
-			clientRun.fqdn = clientRunJson.fqdn;
-			clientRun.source_fqdn = clientRunJson.source_fqdn;
-			clientRun.ip_address = clientRunJson.ipaddress;
-		
+			clientRun.source = jsonUtil.getStringValue(clientRunJson.source);
+			clientRun.status = jsonUtil.getStringValue(clientRunJson.status);
+			clientRun.total_resource_count = jsonUtil.getIntValue(clientRunJson, "total_resource_count");
+			clientRun.chef_version = jsonUtil.getStringValue(clientRunJson, "chef_version");
+			clientRun.uptime_seconds = jsonUtil.getIntValue(clientRunJson, "uptime_seconds");
+			clientRun.environment = jsonUtil.getStringValue(clientRunJson, "environment");
+			clientRun.fqdn = jsonUtil.getStringValue(clientRunJson, "fqdn");
+			clientRun.source_fqdn = jsonUtil.getStringValue(clientRunJson, "source_fqdn");
+			clientRun.ip_address = jsonUtil.getStringValue(clientRunJson, "ipaddress");
 		
 			var clientRunSysId = clientRun.insert();
 		
 			logger.debug(gs.getMessage("Client run inserted {0}", clientRunSysId));
 		
-			var cookbookJson = parseJson(source.cookbooks);
+			var cookbookJson = jsonUtil.parse(source.cookbooks);
 		
 			for (var cookbookKey in cookbookJson) {
 				var cookbookId = "";
 				var cookbookName = cookbookKey;
-				var cookbookVersion = cookbookJson[cookbookKey].version;
+				var cookbookVersion = jsonUtil.getStringValue(cookbookJson[cookbookKey], "version");
 				logger.debug(gs.getMessage("Cookbook {0}, {1} ", [cookbookName, cookbookVersion]));
 			
 				var cookbook = new GlideRecordSecure('x_chef_automate_ci_cookbook');
@@ -80,7 +86,7 @@
 				clientRunCookbook.insert();
 			}
 		
-			var recipes = clientRunJson.recipes;
+			var recipes = jsonUtil.getObject(clientRunJson, "recipes");
 			for (var recipe in recipes) {
 				var clientRunRecipe = new GlideRecordSecure('x_chef_automate_client_run_recipes');
 				clientRunRecipe.initialize();
@@ -90,7 +96,7 @@
 				clientRunRecipe.insert();
 			}
 		
-			var runLists = clientRunJson.run_list;
+			var runLists = jsonUtil.getObject(clientRunJson, "run_list");
 			for (var runList in runLists) {
 				var clientRunList = new GlideRecordSecure('x_chef_automate_client_run_lists');
 				clientRunList.initialize();
@@ -101,49 +107,24 @@
 			}
 		}
 	} catch(error) {
-		logger.error("onAfter Client run transformScript error:" + error);
-		logger.error("onAfter Client run transformScript error:" + error.stack);
+		logger.error(gs.getMessage("onAfter Client run transformScript error: {0}", error));
+		logger.error(gs.getMessage("onAfter Client run transformScript error: {0}", error.stack));
 	}
 
 })(source, map, log, target);
-
-
-function parseJson(json) {
-	var logger = new Logger();
-	try {
-		return JSON.parse(json);
-	} catch (err) {
-		logger.warn("onAfter Client run transformScript json error: " + err.msg);
-		return {};
-	}
-}
-
-function getDate(seconds) {
-	var logger = new Logger();
-	logger.debug("seconds: ".concat(seconds));
-	try {
-		var date = new GlideDateTime();
-		date.subtract(date.getNumericValue());
-		date.add(seconds * 1000);
-		return date;
-	} catch (err) {
-		logger.error(gs.getMessage("getDate() {0}", err.message));
-		logger.error(err.stack);
-	}
-	return "";	
-}]]></script>
+]]></script>
         <sys_class_name>sys_transform_script</sys_class_name>
         <sys_created_by>dmurray</sys_created_by>
         <sys_created_on>2018-09-11 10:20:00</sys_created_on>
         <sys_id>4a311568dbe02b00197478fdaa9619de</sys_id>
-        <sys_mod_count>53</sys_mod_count>
+        <sys_mod_count>61</sys_mod_count>
         <sys_name>onAfter</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_transform_script_4a311568dbe02b00197478fdaa9619de</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-11-22 11:03:10</sys_updated_on>
+        <sys_updated_on>2019-11-25 17:50:14</sys_updated_on>
         <when>onAfter</when>
     </sys_transform_script>
 </record_update>
