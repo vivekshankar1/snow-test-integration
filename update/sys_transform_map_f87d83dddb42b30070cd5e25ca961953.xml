@@ -8,7 +8,9 @@
         <order>100</order>
         <run_business_rules>true</run_business_rules>
         <run_script>true</run_script>
-        <script><![CDATA[(function transformRow(source, target, map, log, isUpdate) {
+        <script><![CDATA[var jsonUtil = new JsonUtil();
+
+(function transformRow(source, target, map, log, isUpdate) {
 	
 	// Add your code here
 	var logger = new Logger();
@@ -46,18 +48,19 @@
 		}
 	
 		// platform
-		var platform = JSON.parse(source.platform);
-		var platformName = platform.name;
-		var platformRelease = platform.release;
+		var platform = jsonUtil.parse(source.platform);
+		var platformName = jsonUtil.getStringValue(platform, "name");
+		var platformRelease = jsonUtil.getStringValue(platform, "release");
 		logger.debug(gs.getMessage("platform {0} {1}", [platformName, platformRelease]));
 		target.platform_name = platformName;
 		target.platform_release = platformRelease;
 	
 		// stats
-		var duration = JSON.parse(source.statistics).duration;
+		var statistics = jsonUtil.parse(source.statistics);
+		var duration = jsonUtil.getStringValue(statistics, "duration");
 		target.duration = duration;
 	} catch (err) {
-		logger.error(err);
+		logger.error(gs.getMessage("Compliance import transform row {0}", err));
 		logger.error(err.stack);
 	}
 			
@@ -67,14 +70,14 @@
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-06-14 13:03:47</sys_created_on>
         <sys_id>f87d83dddb42b30070cd5e25ca961953</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_name>Compliance Import to Report</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_transform_map_f87d83dddb42b30070cd5e25ca961953</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-11-22 11:03:57</sys_updated_on>
+        <sys_updated_on>2019-11-25 09:47:22</sys_updated_on>
         <target_table>x_chef_automate_compliance_report</target_table>
     </sys_transform_map>
 </record_update>
