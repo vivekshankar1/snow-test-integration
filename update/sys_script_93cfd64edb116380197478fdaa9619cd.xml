@@ -78,37 +78,41 @@ function CapitalizeFirstLetter(string) {
 }
 		
 function ConvertCpuSpeed(cpuSpeed) {
-	var cpuMHz = cpuSpeed.slice(0, -3) * 1000;
-	return cpuMHz.toString().replace(/\s/g, '');
+	try {
+		var cpuMHz = cpuSpeed.slice(0, -3) * 1000;
+		return cpuMHz.toString().replace(/\s/g, '');
+	} catch (err) {
+		logger.warn(err);
+		return "";
+	}
 }
 		
 function MapToImportTable(chefAssetsTable, assetData, logger){
 	try {
-		var automatic = assetData.attributes;
-		logger.debug("Attributes: " + automatic);
+		var attributes = assetData.attributes;
+		logger.debug("Attributes: " + attributes);
 		var lastRun = assetData.node_data.last_run;
 		logger.debug("Last run: " + lastRun);
-		if (automatic === undefined && lastRun === undefined) {
+		if (attributes === undefined && lastRun === undefined) {
 			return false;
 		}
 		
 		chefAssetsTable.client_run = jsonUtil.stringify(lastRun);
 
 		var nodeData = jsonUtil.getObject(assetData, "node_data");
-		//chefAssetsTable.host_name = getStringValue(automatic, "hostname");
 		chefAssetsTable.host_name = jsonUtil.getStringValue(nodeData, "hostname");
-		var hostnamectl = jsonUtil.getObject(automatic, "hostnamectl");
+		var hostnamectl = jsonUtil.getObject(attributes, "hostnamectl");
 		var operatingSystem = jsonUtil.getStringValue(hostnamectl, "operating_system");
 		if (operatingSystem == "") {
-			operatingSystem = jsonUtil.getStringValue(automatic, "os");
+			operatingSystem = jsonUtil.getStringValue(attributes, "os");
 		}
 		chefAssetsTable.operating_system = CapitalizeFirstLetter(operatingSystem);
-		chefAssetsTable.os_family = CapitalizeFirstLetter(jsonUtil.getStringValue(automatic, "os"));
-		chefAssetsTable.os_version = CapitalizeFirstLetter(jsonUtil.getStringValue(automatic, "os_version"));
+		chefAssetsTable.os_family = CapitalizeFirstLetter(jsonUtil.getStringValue(attributes, "os"));
+		chefAssetsTable.os_version = CapitalizeFirstLetter(jsonUtil.getStringValue(attributes, "os_version"));
 		chefAssetsTable.mac_address = jsonUtil.getStringValue(nodeData, "macaddress");
-		chefAssetsTable.ip_address = jsonUtil.getStringValue(automatic, "ipaddress");
-		logger.debug("ip: ".concat(jsonUtil.getStringValue(automatic, "ipaddress")));
-		var cpu = jsonUtil.getObject(automatic, "cpu");
+		chefAssetsTable.ip_address = jsonUtil.getStringValue(attributes, "ipaddress");
+		logger.debug("ip: ".concat(jsonUtil.getStringValue(attributes, "ipaddress")));
+		var cpu = jsonUtil.getObject(attributes, "cpu");
 		var cpu0 = jsonUtil.getObject(cpu, "0");
 		chefAssetsTable.cpu_vendor_id = jsonUtil.getStringValue(cpu0, "vendor_id");
 		logger.debug("cpu vendor: ".concat(jsonUtil.getStringValue(cpu0, "vendor_id")));
@@ -142,17 +146,17 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
 			chefAssetsTable.cpu_count = cpuReal;
 		}
 		
-		var dmi = jsonUtil.getObject(automatic, "dmi");
+		var dmi = jsonUtil.getObject(attributes, "dmi");
 		var system = jsonUtil.getObject(dmi, "system");
-		var systemEnclosure = jsonUtil.getObject(automatic, "system_enclosure");
-		var serialNumber = jsonUtil.getStringValue(automatic, "serial_number");
+		var systemEnclosure = jsonUtil.getObject(attributes, "system_enclosure");
+		var serialNumber = jsonUtil.getStringValue(attributes, "serial_number");
 
 		chefAssetsTable.serial_number = serialNumber;
-		logger.debug("serial number: ".concat(jsonUtil.getStringValue(automatic, "serial_number")));
-		var memory = jsonUtil.getObject(automatic, "memory");
+		logger.debug("serial number: ".concat(jsonUtil.getStringValue(attributes, "serial_number")));
+		var memory = jsonUtil.getObject(attributes, "memory");
 		chefAssetsTable.memory_total = parseInt(jsonUtil.getStringValue(memory, "total")) / 1024;
 		logger.debug("total memory: ".concat(chefAssetsTable.memory_total));
-		var time = jsonUtil.getObject(automatic, "time");
+		var time = jsonUtil.getObject(attributes, "time");
 		chefAssetsTable.timezone = jsonUtil.getStringValue(time, "timezone");
 		logger.debug("timezone: ".concat(jsonUtil.getStringValue(time, "timezone")));
 		if (jsonUtil.getStringValue(hostnamectl, "chassis") == "vm") {
@@ -160,10 +164,10 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
 		} else {
 			chefAssetsTable.isvirtual = false;
 		}
-		chefAssetsTable.languages = jsonUtil.stringify(automatic.languages);
-		chefAssetsTable.packages = jsonUtil.stringify(automatic.packages);
-		chefAssetsTable.cookbooks = jsonUtil.stringify(automatic.cookbooks);
-		chefAssetsTable.file_system = jsonUtil.stringify(automatic.filesystem);
+		chefAssetsTable.languages = jsonUtil.stringify(attributes.languages);
+		chefAssetsTable.packages = jsonUtil.stringify(attributes.packages);
+		chefAssetsTable.cookbooks = jsonUtil.stringify(attributes.cookbooks);
+		chefAssetsTable.file_system = jsonUtil.stringify(attributes.filesystem);
 		var manufacturer = jsonUtil.getStringValue(system, "manufacturer");
 		
 		if (manufacturer == "") {
@@ -172,30 +176,30 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
 		}
 		chefAssetsTable.manufacturer = manufacturer;
 		var model =  jsonUtil.getStringValue(system, "product_name");
-		var kernel = jsonUtil.getObject(automatic, "kernel");
+		var kernel = jsonUtil.getObject(attributes, "kernel");
 		var csInfo = jsonUtil.getObject(kernel, "cs_info");
 		if (model == "") {
 			model = jsonUtil.getStringValue(csInfo, "model");
 		}
 		chefAssetsTable.model = model;
 		
-		chefAssetsTable.chef_environment = jsonUtil.getStringValue(automatic, "environment");
-		var cloud = jsonUtil.getObject(automatic, "cloud");
+		chefAssetsTable.chef_environment = jsonUtil.getStringValue(attributes, "environment");
+		var cloud = jsonUtil.getObject(attributes, "cloud");
 		if (cloud != null) {
 			var cloudProviderName = jsonUtil.getObject(cloud, "provider");
 			logger.debug(gs.getMessage("cloud_provider {0}", cloudProviderName));
-			var cloudProvider = jsonUtil.getObject(automatic, cloudProviderName);
+			var cloudProvider = jsonUtil.getObject(attributes, cloudProviderName);
 			chefAssetsTable.cloud_provider = jsonUtil.stringify(cloudProvider);
 		}
-		chefAssetsTable.dns_domain = jsonUtil.getStringValue(automatic, "domain");
+		chefAssetsTable.dns_domain = jsonUtil.getStringValue(attributes, "domain");
 		var chassis = jsonUtil.getObject(dmi, "chassis");
 		chefAssetsTable.asset_tag = jsonUtil.getStringValue(chassis, "asset_tag");
-		chefAssetsTable.description = jsonUtil.getStringValue(automatic, "description");
+		chefAssetsTable.description = jsonUtil.getStringValue(attributes, "description");
 		logger.debug(gs.getMessage("description: {0}", chefAssetsTable.description));
-		chefAssetsTable.os_service_pack = jsonUtil.getStringValue(automatic, "os_service_pack");
+		chefAssetsTable.os_service_pack = jsonUtil.getStringValue(attributes, "os_service_pack");
 		return true;
 	} catch (err) {
-		logger.error('Chef Automate Import Table Mapping Error: '.concat(err.message));
+		logger.error(gs.getMessage("Chef Automate Import Table Mapping Error: {0}", err.message));
 		logger.error(err.stack);
 		throw err;
 	}
@@ -207,7 +211,7 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>93cfd64edb116380197478fdaa9619cd</sys_id>
-        <sys_mod_count>93</sys_mod_count>
+        <sys_mod_count>95</sys_mod_count>
         <sys_name>Insert to Asset Import</sys_name>
         <sys_overrides/>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -215,7 +219,7 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_93cfd64edb116380197478fdaa9619cd</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-11-22 11:56:39</sys_updated_on>
+        <sys_updated_on>2019-11-25 09:07:14</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
