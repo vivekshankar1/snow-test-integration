@@ -12,7 +12,6 @@
         <element label="Node Id" max_length="40" name="node_id" type="string"/>
         <element label="Node name" max_length="255" name="node_name" type="string"/>
         <element label="Platform" max_length="16777215" name="platform" type="string"/>
-        <element label="Platform release" max_length="40" name="platform_release" type="string"/>
         <element label="Profiles" max_length="16777215" name="profiles" type="string"/>
         <element label="Statistics" max_length="16777215" name="statistics" type="string"/>
         <element label="Status" max_length="20" name="status" type="string"/>
