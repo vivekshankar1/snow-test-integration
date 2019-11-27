@@ -32,6 +32,15 @@ Logger.prototype = {
 		return logMessage;
 	},
 	
+	warnWithStack: function(message, err) {
+		var logMessage = message;
+		if (this._loggingEnabled()) {
+			logMessage = this._format(logMessage);
+			gs.warn(gs.getMessage("{0} {1} {2}", [logMessage, err.message, err.stack]));
+		}
+		return logMessage;
+	},
+	
 	debug: function(message) {
 		var logMessage = message;
 		if (this._loggingEnabled()) {
@@ -50,6 +59,15 @@ Logger.prototype = {
 		return logMessage;
 	},
 	
+	errorWithStack: function(message, err) {
+		var logMessage = message;
+		if (this._loggingEnabled()) {
+			logMessage = this._format(logMessage);
+			gs.error(gs.getMessage("{0} {1} {2}", [logMessage, err.message, err.stack]));
+		}
+		return logMessage;
+	},
+
 	_loggingEnabled: function() {
 		 return "true" === gs.getProperty('x_chef_automate.logging.enabled');
 	},
@@ -73,13 +91,13 @@ Logger.prototype = {
         <sys_created_by>dmurray</sys_created_by>
         <sys_created_on>2018-09-11 14:22:09</sys_created_on>
         <sys_id>28b88e24db642b00197478fdaa9619b2</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Logger</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_include_28b88e24db642b00197478fdaa9619b2</sys_update_name>
-        <sys_updated_by>dmurray</sys_updated_by>
-        <sys_updated_on>2018-10-09 12:12:57</sys_updated_on>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-11-27 09:40:10</sys_updated_on>
     </sys_script_include>
 </record_update>

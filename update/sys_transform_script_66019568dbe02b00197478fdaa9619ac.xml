@@ -46,22 +46,21 @@ var jsonUtil = new JsonUtil();
 			}
 		}
 	} catch (error) {
-		logger.error(gs.getMessage("Chef Automate packages Import Table Mapping Error: {0}", error.message));
-		logger.error(gs.getMessage("software packages transform script onAfter: {0}" + error.stack));
+		logger.errorWithStack("Chef Automate packages Import Table Mapping Error", error);
 	}
 })(source, map, log, target);]]></script>
         <sys_class_name>sys_transform_script</sys_class_name>
         <sys_created_by>dmurray</sys_created_by>
         <sys_created_on>2018-09-11 10:18:53</sys_created_on>
         <sys_id>66019568dbe02b00197478fdaa9619ac</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>onAfter</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_transform_script_66019568dbe02b00197478fdaa9619ac</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-11-25 10:17:24</sys_updated_on>
+        <sys_updated_on>2019-11-27 09:54:54</sys_updated_on>
         <when>onAfter</when>
     </sys_transform_script>
 </record_update>
