@@ -11,19 +11,20 @@
         <source_script><![CDATA[answer = (function transformEntry(source) {
 
 	// Add your code here
-	var os_family = source.os_family;
+	var osFamily = source.os_family;
 	var operatingSystem = source.operating_system;
-	var ci_class = "";
-	if (os_family.match(/linux/i))
-		ci_class = "cmdb_ci_linux_server";
+	log.warn(gs.getmessage("Model category transform CI class, os_family: {0}, operating_system: {1}", [osFamily, operatingSystem]));
+	var ciClass = "";
+	if (osFamily.match(/linux/i))
+		ciClass = "cmdb_ci_linux_server";
 		
-	if (operatingSystem.match(/mac_os_x/i))
-		ci_class = "cmdb_ci_osx_server";
+	if (osFamily.match(/mac_os_x/i))
+		ciClass = "cmdb_ci_osx_server";
 		
-	if (operatingSystem.match(/windows/i))
-		ci_class = "cmdb_ci_win_server";
+	if (osFamily.match(/windows/i))
+		ciClass = "cmdb_ci_win_server";
 	
-	return ci_class; // return the value to be put into the target field
+	return ciClass; // return the value to be put into the target field
 
 })(source);]]></source_script>
         <source_table>x_chef_automate_asset_import</source_table>
@@ -31,14 +32,14 @@
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-03-04 09:34:47</sys_created_on>
         <sys_id>394b85a4db0cb70070cd5e25ca9619c2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>[Script]</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_transform_entry_394b85a4db0cb70070cd5e25ca9619c2</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-03-04 09:34:47</sys_updated_on>
+        <sys_updated_on>2019-11-27 14:23:38</sys_updated_on>
         <target_field>cmdb_ci_class</target_field>
         <target_table>cmdb_model_category</target_table>
         <use_source_script>true</use_source_script>

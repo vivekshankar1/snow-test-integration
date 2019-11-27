@@ -32,10 +32,9 @@ var jsonUtil = new JsonUtil();
 
 (function executeRule(current, previous /*null when async*/) {
 	
-	
 	logger.debug("Inserting to compliance import");
 	try {
-		var assetData = JSON.parse(current.data);
+		var assetData = jsonUtil.parse(current.data);
 		
 		var complianceImport = new GlideRecordSecure('x_chef_automate_compliance_import');
 		
@@ -57,17 +56,14 @@ var jsonUtil = new JsonUtil();
 			}
 			MapToImportTable(complianceImport, asset, logger);
 			if (complianceImport.insert() === null) {
-				var message = "Insert failed into x_chef_automate_compliance_import";
-				logger.warn(message);
+				logger.warn("Insert failed into x_chef_automate_compliance_import");
 			} else {
 				logger.debug("Insert succeeded into x_chef_automate_compliance_import");
 			}
 		}
 	} catch (err) {
-		logger.error(err);
-		logger.error(err.stack);
+		logger.errorWithStack("Insert to compliance report error", err);
 	}
-
 
 })(current, previous);
 
@@ -115,7 +111,7 @@ function MapToImportTable(complianceImport, asset, logger){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5a1022c1db0a730070cd5e25ca96195c</sys_id>
-        <sys_mod_count>59</sys_mod_count>
+        <sys_mod_count>60</sys_mod_count>
         <sys_name>Insert to compliance import</sys_name>
         <sys_overrides/>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -123,7 +119,7 @@ function MapToImportTable(complianceImport, asset, logger){
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_5a1022c1db0a730070cd5e25ca96195c</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-11-27 10:00:53</sys_updated_on>
+        <sys_updated_on>2019-11-27 13:51:51</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

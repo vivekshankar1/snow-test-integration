@@ -40,7 +40,7 @@
 			logger.warn(gs.getMessage("User {0} cannot insert into x_chef_automate_asset_queue", gs.getUser().getName()));
 		}
 		chefAssetQueueTable.initialize();
-		logger.debug(gs.getMessage("Current.Data: {0}", current.data));
+		logger.debug(gs.getMessage("Data: {0}", current.data));
 		chefAssetQueueTable.data = current.data;
 		var id = chefAssetQueueTable.insert();
 		logger.debug(gs.getMessage("Inserted to asset queue {0}", id));
@@ -54,7 +54,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>18b5fc74db59af40197478fdaa9619a0</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>Start Transform Chain</sys_name>
         <sys_overrides/>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -62,7 +62,7 @@
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_18b5fc74db59af40197478fdaa9619a0</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-11-27 10:01:20</sys_updated_on>
+        <sys_updated_on>2019-11-27 13:52:45</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
