@@ -3,7 +3,7 @@
         <active>true</active>
         <condition/>
         <conditional>false</conditional>
-        <name>Scheduled Asset Import Cleanup</name>
+        <name>Scheduled x_chef_automate_asset_import cleanup</name>
         <run_as/>
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
@@ -12,33 +12,20 @@
         <run_start>2018-10-23 13:20:20</run_start>
         <run_time>1970-01-01 00:00:00</run_time>
         <run_type>weekly</run_type>
-        <script><![CDATA[logger = new Logger();
-try {
-	logger.info('Performing Scheduled Asset Import cleanup');
-	var date = new GlideDateTime();
-	var table = new GlideRecordSecure('x_chef_automate_asset_import');
-	table.initialize();
-	table.query();
-	if (table.hasNext()) {
-		table.deleteMultiple();
-	}
-} catch (err) {
-	logger.error(err.message);
-	logger.error(err.stack);
-	throw err;
-}]]></script>
+        <script><![CDATA[var util = new Util();
+util.scheduleDelete('x_chef_automate_asset_import', 7);]]></script>
         <sys_class_name>sysauto_script</sys_class_name>
         <sys_created_by>dmurray</sys_created_by>
         <sys_created_on>2018-10-23 13:21:52</sys_created_on>
         <sys_id>7a6d0ec2db116380197478fdaa96195e</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Scheduled Asset Import Cleanup</sys_name>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Scheduled x_chef_automate_asset_import cleanup</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sysauto_script_7a6d0ec2db116380197478fdaa96195e</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-08-12 10:47:42</sys_updated_on>
+        <sys_updated_on>2019-11-27 16:30:45</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

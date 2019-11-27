@@ -48,6 +48,27 @@ Util.prototype = {
 		}
 		return "";	
 	},
+	
+	scheduleDelete: function(tableName, days) {
+		var logger = new Logger();
+		try {
+			var date = new GlideDateTime();
+			date.addDaysUTC(-days);
+			var table = new GlideRecordSecure(tableName);
+			table.initialize();
+			table.addQuery('sys_created_on', '<', date);
+			table.query();
+			if (table.hasNext()) {
+				table.deleteMultiple();
+				logger.info(gs.getMessage("Scheduled {0} cleanup deleted records before {1}", [tableName, date]));
+			} else {
+				logger.info(gs.getMessage("Scheduled {0} cleanup found no records to delete", tableName));
+			}
+		} catch (err) {
+			logger.errorWithStack(gs.getMessage("Scheduled {0} cleanup", tabeName), err);
+			throw err;
+		}
+	},
 
     type: 'Util'
 };]]></script>
@@ -55,13 +76,13 @@ Util.prototype = {
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-11-25 11:22:48</sys_created_on>
         <sys_id>28e993cedb910010bd7169c3ca9619d2</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Util</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_include_28e993cedb910010bd7169c3ca9619d2</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-11-26 16:12:17</sys_updated_on>
+        <sys_updated_on>2019-11-27 16:27:51</sys_updated_on>
     </sys_script_include>
 </record_update>
