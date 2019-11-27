@@ -3,31 +3,31 @@
         <active>true</active>
         <map display_value="Compliance Import to Report">f87d83dddb42b30070cd5e25ca961953</map>
         <order>100</order>
-        <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+        <script><![CDATA[var logger = new Logger();
+var jsonUtil = new JsonUtil();
 
-	// Add your code here
-	var logger = new Logger();
-	//logger.info(gs.getmessage("source: {0}", source.profiles));
+(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+	
 	try {
-		var profiles = JSON.parse(source.profiles);
+		var profiles = jsonUtil.parse(source.profiles);
 		for (var p in profiles) {
 			var profile = profiles[p];
 			var complianceProfile = new GlideRecordSecure('x_chef_automate_compliance_profiles');
 			complianceProfile.initialize();
-			complianceProfile.addQuery('name', profile.name);
-			complianceProfile.addQuery('version', profile.version);
+			complianceProfile.addQuery('name', jsonUtil.getStringValue(profile, "name"));
+			complianceProfile.addQuery('version', jsonUtil.getStringValue(profile, "version"));
 			complianceProfile.query();
 			if (complianceProfile.hasNext()) {
-				logger.debug(gs.getMessage("compliance profile {0} already exists", profile.name));
+				logger.debug(gs.getMessage("compliance profile {0} already exists", jsonUtil.getStringValue(profile, "name")));
 				continue;
 			} else {
-				complianceProfile.name = profile.name;				
-				complianceProfile.title = profile.title;
-				complianceProfile.copyright = profile.copyright;
-				complianceProfile.copyright_email = profile.copyright_email;
-				complianceProfile.summary = profile.summary;
-				complianceProfile.version = profile.version;
-				complianceProfile.sha256 = profile.sha256;
+				complianceProfile.name = jsonUtil.getStringValue(profile, "name");			
+				complianceProfile.title = jsonUtil.getStringValue(profile, "title");
+				complianceProfile.copyright = jsonUtil.getStringValue(profile, "copyright");
+				complianceProfile.copyright_email = jsonUtil.getStringValue(profile, "copyright_email");
+				complianceProfile.summary = jsonUtil.getStringValue(profile, "summary");
+				complianceProfile.version = jsonUtil.getStringValue(profile, "version");
+				complianceProfile.sha256 = jsonUtil.getStringValue(profile, "sha256");
 				var id = complianceProfile.insert();
 				logger.info(gs.getMessage("inserting compliance profile {0} {1}", [complianceProfile.name, id]));
 			}
@@ -36,44 +36,60 @@
 				var control = profile.controls[c];
 				var profileControl = new GlideRecordSecure('x_chef_automate_compliance_profile_controls');
 				profileControl.initialize();
-				profileControl.addQuery('id', control.id);
+				profileControl.addQuery('id', jsonUtil.getStringValue(control, "id"));
 				profileControl.addQuery('profile', complianceProfile.sys_id);
 				profileControl.query();
 				if (profileControl.hasNext()) {
 					continue;
 				} else {
-					profileControl.id = control.id;
+					profileControl.id = jsonUtil.getStringValue(control, "id");
 					if (control.code !== undefined && control.code !== null) {
-						profileControl.code = control.code.replace('\f', '\n');
+						profileControl.code = fixNewLines(jsonUtil.getStringValue(control, "code"));
 					}
-					profileControl.impact = control.impact;
-					profileControl.title = control.title;
-					var ref = control.source_location.ref;
-					var line = control.source_location.line;
-					profileControl.source_location = ref.concat('[').concat(line).concat(']');
+					profileControl.impact = jsonUtil.getDecimalValue(control, "impact");
+					profileControl.title = jsonUtil.getStringValue(control, "title");
+					profileControl.source_location = getSourceLocation(control);
 					profileControl.profile = complianceProfile.sys_id;
 					profileControl.insert();
 				}
 			}
 		}
 	} catch(err) {
-		logger.error(gs.getMessage("onBefore compliance {0}", err.msg));
-		logger.error(err.stack);
+		logger.error(gs.getMessage("onBefore() compliance import to report {0} {1}", [err.message, err.stack]));
 	}
 
-})(source, map, log, target);]]></script>
+})(source, map, log, target);
+
+function fixNewLines(code) {
+	try {
+		return code.replace('\f', '\n');
+	} catch (err) {
+		logger.warn(gs.getMessage("onBefore() compliance import to report fixNewLines {0} {1}", [err.message, err.stack]));
+	}
+}
+
+function getSourceLocation(control) {
+	try {
+		var sourceLocation = jsonUtil.getObject(control, "source_location");
+		var ref = jsonUtil.getStringValue(sourceLocation, "ref");
+		var line = jsonUtil.getStringValue(sourceLocation, "line");
+		return ref.concat('[').concat(line).concat(']');
+	} catch (err) {
+		logger.warn(gs.getMessage("onBefore() compliance import to report getSourceLocation() {0} {1}", [err.message, err.stack]));
+	}
+}]]></script>
         <sys_class_name>sys_transform_script</sys_class_name>
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-07-19 08:59:37</sys_created_on>
         <sys_id>ca55ea6cdb327b4070cd5e25ca9619b4</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>onBefore</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_transform_script_ca55ea6cdb327b4070cd5e25ca9619b4</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-11-22 11:05:10</sys_updated_on>
+        <sys_updated_on>2019-11-27 09:28:15</sys_updated_on>
         <when>onBefore</when>
     </sys_transform_script>
 </record_update>
