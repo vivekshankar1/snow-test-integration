@@ -2,48 +2,48 @@
     <sys_ui_list parent="" relationship="" sys_domain="global" table="x_chef_automate_compliance_profile_controls" version="2" view="">
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>id</element>
-            <list_id display_value="x_chef_automate_compliance_profile_controls" element="NULL" name="x_chef_automate_compliance_profile_controls" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">f79e6e24db727b4070cd5e25ca9619c8</list_id>
+            <element>profile.name</element>
+            <list_id display_value="x_chef_automate_compliance_profile_controls" element="NULL" name="x_chef_automate_compliance_profile_controls" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">1cb67bc3db590010bd7169c3ca961945</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>mscott</sys_created_by>
-            <sys_created_on>2019-07-19 09:39:52</sys_created_on>
-            <sys_id>739e6e24db727b4070cd5e25ca9619c9</sys_id>
+            <sys_created_on>2019-11-28 15:56:32</sys_created_on>
+            <sys_id>d0b67bc3db590010bd7169c3ca961946</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>mscott</sys_updated_by>
-            <sys_updated_on>2019-07-19 09:39:52</sys_updated_on>
+            <sys_updated_on>2019-11-28 15:56:32</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>profile</element>
-            <list_id display_value="x_chef_automate_compliance_profile_controls" element="NULL" name="x_chef_automate_compliance_profile_controls" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">f79e6e24db727b4070cd5e25ca9619c8</list_id>
+            <element>title</element>
+            <list_id display_value="x_chef_automate_compliance_profile_controls" element="NULL" name="x_chef_automate_compliance_profile_controls" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">1cb67bc3db590010bd7169c3ca961945</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>mscott</sys_created_by>
-            <sys_created_on>2019-07-19 09:39:52</sys_created_on>
-            <sys_id>f79e6e24db727b4070cd5e25ca9619c9</sys_id>
+            <sys_created_on>2019-11-28 15:56:32</sys_created_on>
+            <sys_id>54b67bc3db590010bd7169c3ca961946</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>mscott</sys_updated_by>
-            <sys_updated_on>2019-07-19 09:39:52</sys_updated_on>
+            <sys_updated_on>2019-11-28 15:56:32</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>title</element>
-            <list_id display_value="x_chef_automate_compliance_profile_controls" element="NULL" name="x_chef_automate_compliance_profile_controls" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">f79e6e24db727b4070cd5e25ca9619c8</list_id>
+            <element>id</element>
+            <list_id display_value="x_chef_automate_compliance_profile_controls" element="NULL" name="x_chef_automate_compliance_profile_controls" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">1cb67bc3db590010bd7169c3ca961945</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
             <sys_created_by>mscott</sys_created_by>
-            <sys_created_on>2019-07-19 09:39:52</sys_created_on>
-            <sys_id>7b9e6e24db727b4070cd5e25ca9619c9</sys_id>
+            <sys_created_on>2019-11-28 15:56:32</sys_created_on>
+            <sys_id>d4b67bc3db590010bd7169c3ca961946</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>mscott</sys_updated_by>
-            <sys_updated_on>2019-07-19 09:39:52</sys_updated_on>
+            <sys_updated_on>2019-11-28 15:56:32</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -57,10 +57,10 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>mscott</sys_created_by>
-            <sys_created_on>2019-07-19 09:39:52</sys_created_on>
+            <sys_created_on>2019-11-28 15:56:32</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>f79e6e24db727b4070cd5e25ca9619c8</sys_id>
+            <sys_id>1cb67bc3db590010bd7169c3ca961945</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_chef_automate_compliance_profile_controls</sys_name>
             <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -68,7 +68,7 @@
             <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
             <sys_update_name>sys_ui_list_x_chef_automate_compliance_profile_controls_null</sys_update_name>
             <sys_updated_by>mscott</sys_updated_by>
-            <sys_updated_on>2019-07-19 09:39:52</sys_updated_on>
+            <sys_updated_on>2019-11-28 15:56:32</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>
