@@ -53,7 +53,7 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>dmurray</sys_created_by>
         <sys_created_on>2018-10-23 14:40:03</sys_created_on>
-        <sys_id>ebd47e83dba7330070cd5e25ca961985</sys_id>
+        <sys_id>222c2bc7db190010bd7169c3ca961901</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_chef_automate_asset_queue</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -61,7 +61,7 @@
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_dictionary_x_chef_automate_asset_queue_NULL</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2019-09-02 11:19:21</sys_updated_on>
+        <sys_updated_on>2019-11-28 15:10:53</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

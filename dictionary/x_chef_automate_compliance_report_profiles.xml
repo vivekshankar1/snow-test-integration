@@ -7,5 +7,11 @@
         <element label="Skipped controls" max_length="40" name="skipped_controls" type="integer"/>
         <element label="Status" max_length="10" name="status" type="string"/>
         <element label="Total controls" max_length="40" name="total_controls" type="integer"/>
+        <index name="index">
+            <element name="compliance_profile"/>
+        </index>
+        <index name="index2">
+            <element name="report"/>
+        </index>
     </element>
 </database>

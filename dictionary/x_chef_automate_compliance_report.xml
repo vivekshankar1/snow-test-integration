@@ -12,7 +12,7 @@
         <element label="Node name" max_length="255" name="node_name" type="string"/>
         <element label="Platform name" max_length="40" name="platform_name" type="string"/>
         <element label="Platform release" max_length="40" name="platform_release" type="string"/>
-        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;return &quot;&quot;; // return the calculated value&#13;&#10;&#13;&#10;})(current);" display="true" label="Report name" max_length="279" name="report_name" type="string"/>
+        <element calculation="(function calculatedFieldValue(current) {&#10;&#10;&#9;return &quot;&quot;; // return the calculated value&#10;&#10;})(current);" display="true" label="Report name" max_length="279" name="report_name" type="string"/>
         <element label="Status" max_length="20" name="status" type="string"/>
         <element label="Version" max_length="20" name="version" type="string"/>
         <index name="index">
