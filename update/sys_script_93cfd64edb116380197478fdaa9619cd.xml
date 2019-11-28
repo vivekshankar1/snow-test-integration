@@ -89,7 +89,8 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
 	try {
 		var attributes = assetData.attributes;
 		logger.debug("Attributes: " + attributes);
-		var lastRun = assetData.node_data.last_run;
+		var nodeData = jsonUtil.getObject(assetData, "node_data");
+		var lastRun = jsonUtil.getObject(nodeData, "last_run");
 		logger.debug("Last run: " + lastRun);
 		if (attributes === undefined && lastRun === undefined) {
 			return false;
@@ -97,7 +98,7 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
 		
 		chefAssetsTable.client_run = jsonUtil.stringify(lastRun);
 
-		var nodeData = jsonUtil.getObject(assetData, "node_data");
+		
 		chefAssetsTable.host_name = jsonUtil.getStringValue(nodeData, "hostname");
 		var hostnamectl = jsonUtil.getObject(attributes, "hostnamectl");
 		var operatingSystem = jsonUtil.getStringValue(hostnamectl, "operating_system");
@@ -198,7 +199,7 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>93cfd64edb116380197478fdaa9619cd</sys_id>
-        <sys_mod_count>99</sys_mod_count>
+        <sys_mod_count>100</sys_mod_count>
         <sys_name>Insert to Asset Import</sys_name>
         <sys_overrides/>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -206,7 +207,7 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_93cfd64edb116380197478fdaa9619cd</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-11-27 13:49:54</sys_updated_on>
+        <sys_updated_on>2019-11-28 10:50:01</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

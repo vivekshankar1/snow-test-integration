@@ -4,13 +4,13 @@
             <element>id</element>
             <position>0</position>
             <sys_created_by>mscott</sys_created_by>
-            <sys_created_on>2019-11-27 17:32:37</sys_created_on>
-            <sys_id>3d13cb72db19001070cd5e25ca96196f</sys_id>
+            <sys_created_on>2019-11-28 12:09:34</sys_created_on>
+            <sys_id>a7b20f07db950010bd7169c3ca96199e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_report" sys_domain="global" view="Default view">176e0fdddb42b30070cd5e25ca961953</sys_ui_section>
             <sys_updated_by>mscott</sys_updated_by>
-            <sys_updated_on>2019-11-27 17:32:37</sys_updated_on>
+            <sys_updated_on>2019-11-28 12:09:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>node_name</element>
             <position>1</position>
             <sys_created_by>mscott</sys_created_by>
-            <sys_created_on>2019-11-27 17:32:37</sys_created_on>
-            <sys_id>f113cb72db19001070cd5e25ca961970</sys_id>
+            <sys_created_on>2019-11-28 12:09:34</sys_created_on>
+            <sys_id>6fb20f07db950010bd7169c3ca96199e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_report" sys_domain="global" view="Default view">176e0fdddb42b30070cd5e25ca961953</sys_ui_section>
             <sys_updated_by>mscott</sys_updated_by>
-            <sys_updated_on>2019-11-27 17:32:37</sys_updated_on>
+            <sys_updated_on>2019-11-28 12:09:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>status</element>
             <position>2</position>
             <sys_created_by>mscott</sys_created_by>
-            <sys_created_on>2019-11-27 17:32:37</sys_created_on>
-            <sys_id>7513cb72db19001070cd5e25ca961970</sys_id>
+            <sys_created_on>2019-11-28 12:09:34</sys_created_on>
+            <sys_id>efb20f07db950010bd7169c3ca96199e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_report" sys_domain="global" view="Default view">176e0fdddb42b30070cd5e25ca961953</sys_ui_section>
             <sys_updated_by>mscott</sys_updated_by>
-            <sys_updated_on>2019-11-27 17:32:37</sys_updated_on>
+            <sys_updated_on>2019-11-28 12:09:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>node</element>
             <position>3</position>
             <sys_created_by>mscott</sys_created_by>
-            <sys_created_on>2019-11-27 17:32:37</sys_created_on>
-            <sys_id>f513cb72db19001070cd5e25ca961970</sys_id>
+            <sys_created_on>2019-11-28 12:09:34</sys_created_on>
+            <sys_id>63b20f07db950010bd7169c3ca96199f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_report" sys_domain="global" view="Default view">176e0fdddb42b30070cd5e25ca961953</sys_ui_section>
             <sys_updated_by>mscott</sys_updated_by>
-            <sys_updated_on>2019-11-27 17:32:37</sys_updated_on>
+            <sys_updated_on>2019-11-28 12:09:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>node_id</element>
             <position>4</position>
             <sys_created_by>mscott</sys_created_by>
-            <sys_created_on>2019-11-27 17:32:37</sys_created_on>
-            <sys_id>7913cb72db19001070cd5e25ca961970</sys_id>
+            <sys_created_on>2019-11-28 12:09:34</sys_created_on>
+            <sys_id>e3b20f07db950010bd7169c3ca96199f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_report" sys_domain="global" view="Default view">176e0fdddb42b30070cd5e25ca961953</sys_ui_section>
             <sys_updated_by>mscott</sys_updated_by>
-            <sys_updated_on>2019-11-27 17:32:37</sys_updated_on>
+            <sys_updated_on>2019-11-28 12:09:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>fqdn</element>
             <position>5</position>
             <sys_created_by>mscott</sys_created_by>
-            <sys_created_on>2019-11-27 17:32:37</sys_created_on>
-            <sys_id>f913cb72db19001070cd5e25ca961970</sys_id>
+            <sys_created_on>2019-11-28 12:09:34</sys_created_on>
+            <sys_id>67b20f07db950010bd7169c3ca96199f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_report" sys_domain="global" view="Default view">176e0fdddb42b30070cd5e25ca961953</sys_ui_section>
             <sys_updated_by>mscott</sys_updated_by>
-            <sys_updated_on>2019-11-27 17:32:37</sys_updated_on>
+            <sys_updated_on>2019-11-28 12:09:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>ip_address</element>
             <position>6</position>
             <sys_created_by>mscott</sys_created_by>
-            <sys_created_on>2019-11-27 17:32:37</sys_created_on>
-            <sys_id>7d13cb72db19001070cd5e25ca961970</sys_id>
+            <sys_created_on>2019-11-28 12:09:34</sys_created_on>
+            <sys_id>e7b20f07db950010bd7169c3ca96199f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_report" sys_domain="global" view="Default view">176e0fdddb42b30070cd5e25ca961953</sys_ui_section>
             <sys_updated_by>mscott</sys_updated_by>
-            <sys_updated_on>2019-11-27 17:32:37</sys_updated_on>
+            <sys_updated_on>2019-11-28 12:09:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -102,13 +102,13 @@
             <element>end_time</element>
             <position>7</position>
             <sys_created_by>mscott</sys_created_by>
-            <sys_created_on>2019-11-27 17:32:37</sys_created_on>
-            <sys_id>fd13cb72db19001070cd5e25ca961970</sys_id>
+            <sys_created_on>2019-11-28 12:09:34</sys_created_on>
+            <sys_id>6bb20f07db950010bd7169c3ca96199f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_report" sys_domain="global" view="Default view">176e0fdddb42b30070cd5e25ca961953</sys_ui_section>
             <sys_updated_by>mscott</sys_updated_by>
-            <sys_updated_on>2019-11-27 17:32:37</sys_updated_on>
+            <sys_updated_on>2019-11-28 12:09:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -116,13 +116,13 @@
             <element>environment</element>
             <position>8</position>
             <sys_created_by>mscott</sys_created_by>
-            <sys_created_on>2019-11-27 17:32:37</sys_created_on>
-            <sys_id>7113cb72db19001070cd5e25ca961971</sys_id>
+            <sys_created_on>2019-11-28 12:09:34</sys_created_on>
+            <sys_id>ebb20f07db950010bd7169c3ca96199f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_report" sys_domain="global" view="Default view">176e0fdddb42b30070cd5e25ca961953</sys_ui_section>
             <sys_updated_by>mscott</sys_updated_by>
-            <sys_updated_on>2019-11-27 17:32:37</sys_updated_on>
+            <sys_updated_on>2019-11-28 12:09:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -130,13 +130,13 @@
             <element>version</element>
             <position>9</position>
             <sys_created_by>mscott</sys_created_by>
-            <sys_created_on>2019-11-27 17:32:37</sys_created_on>
-            <sys_id>f113cb72db19001070cd5e25ca961971</sys_id>
+            <sys_created_on>2019-11-28 12:09:34</sys_created_on>
+            <sys_id>6fb20f07db950010bd7169c3ca96199f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_report" sys_domain="global" view="Default view">176e0fdddb42b30070cd5e25ca961953</sys_ui_section>
             <sys_updated_by>mscott</sys_updated_by>
-            <sys_updated_on>2019-11-27 17:32:37</sys_updated_on>
+            <sys_updated_on>2019-11-28 12:09:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -144,13 +144,13 @@
             <element>job_id</element>
             <position>10</position>
             <sys_created_by>mscott</sys_created_by>
-            <sys_created_on>2019-11-27 17:32:37</sys_created_on>
-            <sys_id>7513cb72db19001070cd5e25ca961971</sys_id>
+            <sys_created_on>2019-11-28 12:09:34</sys_created_on>
+            <sys_id>efb20f07db950010bd7169c3ca96199f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_report" sys_domain="global" view="Default view">176e0fdddb42b30070cd5e25ca961953</sys_ui_section>
             <sys_updated_by>mscott</sys_updated_by>
-            <sys_updated_on>2019-11-27 17:32:37</sys_updated_on>
+            <sys_updated_on>2019-11-28 12:09:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -158,13 +158,13 @@
             <element>platform_name</element>
             <position>11</position>
             <sys_created_by>mscott</sys_created_by>
-            <sys_created_on>2019-11-27 17:32:37</sys_created_on>
-            <sys_id>f513cb72db19001070cd5e25ca961971</sys_id>
+            <sys_created_on>2019-11-28 12:09:34</sys_created_on>
+            <sys_id>63b20f07db950010bd7169c3ca9619a0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_report" sys_domain="global" view="Default view">176e0fdddb42b30070cd5e25ca961953</sys_ui_section>
             <sys_updated_by>mscott</sys_updated_by>
-            <sys_updated_on>2019-11-27 17:32:37</sys_updated_on>
+            <sys_updated_on>2019-11-28 12:09:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -172,13 +172,13 @@
             <element>platform_release</element>
             <position>12</position>
             <sys_created_by>mscott</sys_created_by>
-            <sys_created_on>2019-11-27 17:32:37</sys_created_on>
-            <sys_id>7913cb72db19001070cd5e25ca961971</sys_id>
+            <sys_created_on>2019-11-28 12:09:34</sys_created_on>
+            <sys_id>e3b20f07db950010bd7169c3ca9619a0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_report" sys_domain="global" view="Default view">176e0fdddb42b30070cd5e25ca961953</sys_ui_section>
             <sys_updated_by>mscott</sys_updated_by>
-            <sys_updated_on>2019-11-27 17:32:37</sys_updated_on>
+            <sys_updated_on>2019-11-28 12:09:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -186,13 +186,13 @@
             <element>duration</element>
             <position>13</position>
             <sys_created_by>mscott</sys_created_by>
-            <sys_created_on>2019-11-27 17:32:37</sys_created_on>
-            <sys_id>f913cb72db19001070cd5e25ca961971</sys_id>
+            <sys_created_on>2019-11-28 12:09:34</sys_created_on>
+            <sys_id>67b20f07db950010bd7169c3ca9619a0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_report" sys_domain="global" view="Default view">176e0fdddb42b30070cd5e25ca961953</sys_ui_section>
             <sys_updated_by>mscott</sys_updated_by>
-            <sys_updated_on>2019-11-27 17:32:37</sys_updated_on>
+            <sys_updated_on>2019-11-28 12:09:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
