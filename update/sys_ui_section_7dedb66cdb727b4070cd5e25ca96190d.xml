@@ -140,6 +140,20 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>compliance_report_profile</element>
+            <position>10</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2019-11-28 11:29:47</sys_created_on>
+            <sys_id>f8a93e4fdb550010bd7169c3ca96196d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_compliance_report_results" sys_domain="global" view="Default view">7dedb66cdb727b4070cd5e25ca96190d</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2019-11-28 11:29:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>

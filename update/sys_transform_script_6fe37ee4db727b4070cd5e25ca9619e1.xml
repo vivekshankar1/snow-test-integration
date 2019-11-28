@@ -14,6 +14,7 @@ var jsonUtil = new JsonUtil();
 		for (var p in profiles) {
 			var profile = profiles[p];
 			var profileId = "";
+			var reportProfileId = "";
 			var profileName = jsonUtil.getStringValue(profile, "name");
 			var profileVersion = jsonUtil.getStringValue(profile, "version");
 			var complianceProfile = new GlideRecordSecure('x_chef_automate_compliance_profiles');
@@ -28,7 +29,28 @@ var jsonUtil = new JsonUtil();
 			} else {
 				logger.debug(gs.getMessage("NO PROFILE FOUND for {0}:{1}", [profileName, profileVersion]));
 			}
-			var controls = jsonUtil.getObject(profile, "controls");
+			
+			var reportProfile = new GlideRecordSecure('x_chef_automate_compliance_report_profiles');
+			reportProfile.initialize();
+			reportProfile.report = target.sys_id;
+			reportProfile.status = jsonUtil.getStringValue(profile, "status");
+			reportProfile.compliance_profile = profileId;
+			reportProfile.total_controls = 10;
+			reportProfile.passed_controls = 5;
+			reportProfile.skipped_controls = 2;
+			reportProfile.failed_controls = 3;
+			reportProfileId = reportProfile.insert();
+			if (reportProfileId) {
+				logger.debug(gs.getMessage("Report profile {0} added for report {1}", [profileName, source.sys_id]));
+			} else {
+				logger.error("Could not insert report profile");
+			}
+			
+			var totalControls = 0;
+			var skippedControls = 0;
+			var passedControls = 0;
+			var failedControls = 0;
+			var controls = jsonUtil.getObject(profile, "controls");			
 			for (var c in controls) {
 				var control = controls[c];
 				
@@ -50,16 +72,40 @@ var jsonUtil = new JsonUtil();
 					controlResult.compliance_report = target.sys_id;
 					controlResult.compliance_profile = profileId;
 					controlResult.compliance_profile_control = controlId;
+					controlResult.compliance_report_profile = reportProfileId;
 					controlResult.code_desc = jsonUtil.getStringValue(result, "code_desc");
 					controlResult.message = getMessage(result);
 					
 					controlResult.run_time = jsonUtil.getDecimalValue(result, "run_time");
-					controlResult.status = jsonUtil.getStringValue(result, "status");
+					var controlStatus = jsonUtil.getStringValue(result, "status");
+					controlResult.status = controlStatus;
+					totalControls++;
+					if (controlStatus === "passed") {
+						passedControls++;
+					} else if (controlStatus === "skipped") {
+						skippedControls++;
+					} else if (controlStatus === "failed") {
+						failedControls++;
+					}
 					var controlResultId = controlResult.insert();
 					if (controlResultId == null) {
 						logger.error("onAfter() compliance import to report could not insert result");
 					}
 				}
+			}
+			reportProfile = new GlideRecordSecure('x_chef_automate_compliance_report_profiles');
+			reportProfile.initialize();
+			reportProfile.addQuery('sys_id', reportProfileId);
+			reportProfile.query();
+			if (reportProfile.hasNext()) {
+				reportProfile.next();
+				reportProfile.total_controls = totalControls;
+				reportProfile.passed_controls = passedControls;
+				reportProfile.skipped_controls = skippedControls;
+				reportProfile.failed_controls = failedControls;
+				reportProfileId = reportProfile.update("Updated control totals");
+			} else {
+				logger.warn(gs.getMessage("Could not query reportProfile {0} {1} for update", [profileName, reportProfileId]));
 			}
 		}
 	} catch(err) {
@@ -82,14 +128,14 @@ function getMessage(result) {
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-07-19 10:25:20</sys_created_on>
         <sys_id>6fe37ee4db727b4070cd5e25ca9619e1</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>51</sys_mod_count>
         <sys_name>onAfter</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_transform_script_6fe37ee4db727b4070cd5e25ca9619e1</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-11-27 14:08:05</sys_updated_on>
+        <sys_updated_on>2019-11-28 14:13:04</sys_updated_on>
         <when>onAfter</when>
     </sys_transform_script>
 </record_update>
