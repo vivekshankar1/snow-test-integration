@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Client run" max_length="40" name="x_chef_automate_client_run" type="collection">
         <element label="Chef version" max_length="40" name="chef_version" type="string"/>
-        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;return gs.getMessage(&quot;{0} {1}&quot;, [current.node_name, current.start_time]);&#13;&#10;&#13;&#10;})(current);" label="Display name" max_length="40" name="display_name" type="string" virtual="true"/>
         <element label="End time" max_length="40" name="end_time" type="glide_date_time"/>
         <element label="Environment" max_length="255" name="environment" type="string"/>
         <element label="FQDN" max_length="255" name="fqdn" type="string"/>
