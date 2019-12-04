@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
     <sys_properties_category_m2m action="INSERT_OR_UPDATE">
         <category display_value="Chef Automate Properties">7b811d68dbe02b00197478fdaa961975</category>
-        <order>500</order>
+        <order>600</order>
         <property display_value="x_chef_automate.logging.enabled" name="x_chef_automate.logging.enabled">32303a07db07f30070cd5e25ca9619c3</property>
         <sys_class_name>sys_properties_category_m2m</sys_class_name>
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-08-08 14:29:47</sys_created_on>
         <sys_id>31c0b647db07f30070cd5e25ca96199c</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>x_chef_automate.logging.enabled.Chef Automate Properties</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_properties_category_m2m_31c0b647db07f30070cd5e25ca96199c</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-12-03 14:48:58</sys_updated_on>
+        <sys_updated_on>2019-12-04 09:27:48</sys_updated_on>
     </sys_properties_category_m2m>
 </record_update>
