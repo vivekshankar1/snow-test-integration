@@ -43,7 +43,7 @@
     </sys_ui_related_list_relationship_entry>
     <sys_ui_related_list_relationship_entry action="INSERT_OR_UPDATE">
         <filter/>
-        <list_id display_value="Server - Default view" name="cmdb_ci_server" related_list="NULL" sys_domain="global" view="Default view">1cef3596db73130070cd5e25ca96196c</list_id>
+        <list_id display_value="Server - Default view" name="cmdb_ci_server" related_list="NULL" sys_domain="global" view="Default view">f9903c18db6023003daaec51ca9619b5</list_id>
         <order_by/>
         <position>1</position>
         <related_list>REL:1d58bc94dbe8e700197478fdaa961925</related_list>
@@ -53,15 +53,15 @@
         <sys_id>92cae79fdb286f00197478fdaa96199c</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_relationship display_value="Client Runs">1d58bc94dbe8e700197478fdaa961925</sys_relationship>
-        <sys_ui_related_list display_value="Server - Default view" name="cmdb_ci_server" related_list="NULL" sys_domain="global" view="Default view">1cef3596db73130070cd5e25ca96196c</sys_ui_related_list>
+        <sys_ui_related_list display_value="Server - Default view" name="cmdb_ci_server" related_list="NULL" sys_domain="global" view="Default view">f9903c18db6023003daaec51ca9619b5</sys_ui_related_list>
         <sys_updated_by>dmurray</sys_updated_by>
         <sys_updated_on>2018-09-20 10:33:35</sys_updated_on>
     </sys_ui_related_list_relationship_entry>
     <sys_ui_related_list_relationship_entry action="INSERT_OR_UPDATE">
         <filter/>
-        <list_id display_value="Windows Server - Default view" name="cmdb_ci_win_server" related_list="NULL" sys_domain="global" view="Default view">d2142c0bdb467700bd7169c3ca961936</list_id>
+        <list_id display_value="Windows Server - Default view" name="cmdb_ci_win_server" related_list="NULL" sys_domain="global" view="Default view">6d25896e0b103200c71e259335673aeb</list_id>
         <order_by/>
-        <position>14</position>
+        <position>12</position>
         <related_list>REL:1d58bc94dbe8e700197478fdaa961925</related_list>
         <sys_class_name>sys_ui_related_list_relationship_entry</sys_class_name>
         <sys_created_by>mscott</sys_created_by>
@@ -69,7 +69,7 @@
         <sys_id>d6142c0bdb467700bd7169c3ca96193a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_relationship display_value="Client Runs">1d58bc94dbe8e700197478fdaa961925</sys_relationship>
-        <sys_ui_related_list display_value="Windows Server - Default view" name="cmdb_ci_win_server" related_list="NULL" sys_domain="global" view="Default view">d2142c0bdb467700bd7169c3ca961936</sys_ui_related_list>
+        <sys_ui_related_list display_value="Windows Server - Default view" name="cmdb_ci_win_server" related_list="NULL" sys_domain="global" view="Default view">6d25896e0b103200c71e259335673aeb</sys_ui_related_list>
         <sys_updated_by>mscott</sys_updated_by>
         <sys_updated_on>2019-06-19 11:12:22</sys_updated_on>
     </sys_ui_related_list_relationship_entry>
@@ -91,9 +91,9 @@
     </sys_ui_related_list_relationship_entry>
     <sys_ui_related_list_relationship_entry action="INSERT_OR_UPDATE">
         <filter/>
-        <list_id display_value="Linux Server - Default view" name="cmdb_ci_linux_server" related_list="NULL" sys_domain="global" view="Default view">f8601f12dbc2370070cd5e25ca961918</list_id>
+        <list_id display_value="Linux Server - Default view" name="cmdb_ci_linux_server" related_list="NULL" sys_domain="global" view="Default view">5c71c8f137332100dcd445cbbebe5d61</list_id>
         <order_by/>
-        <position>13</position>
+        <position>11</position>
         <related_list>REL:1d58bc94dbe8e700197478fdaa961925</related_list>
         <sys_class_name>sys_ui_related_list_relationship_entry</sys_class_name>
         <sys_created_by>mscott</sys_created_by>
@@ -101,7 +101,7 @@
         <sys_id>f8601f12dbc2370070cd5e25ca96191c</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_relationship display_value="Client Runs">1d58bc94dbe8e700197478fdaa961925</sys_relationship>
-        <sys_ui_related_list display_value="Linux Server - Default view" name="cmdb_ci_linux_server" related_list="NULL" sys_domain="global" view="Default view">f8601f12dbc2370070cd5e25ca961918</sys_ui_related_list>
+        <sys_ui_related_list display_value="Linux Server - Default view" name="cmdb_ci_linux_server" related_list="NULL" sys_domain="global" view="Default view">5c71c8f137332100dcd445cbbebe5d61</sys_ui_related_list>
         <sys_updated_by>mscott</sys_updated_by>
         <sys_updated_on>2019-06-17 15:49:41</sys_updated_on>
     </sys_ui_related_list_relationship_entry>
