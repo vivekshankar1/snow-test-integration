@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="pa_dashboards_permissions">
+    <pa_dashboards_permissions action="DELETE">
+        <dashboard display_value="Usage by Requestor">aaed481d9f902200ef4afa7dc67fcf50</dashboard>
+        <delete>true</delete>
+        <group/>
+        <identity>pa_admin</identity>
+        <read>true</read>
+        <role display_value="pa_admin" name="pa_admin">a4cc30b3bf101100b96dac808c073918</role>
+        <sys_class_name>pa_dashboards_permissions</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2019-02-05 15:42:06</sys_created_on>
+        <sys_id>4fcc573fdb1fe340bd7169c3ca961958</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>pa_admin</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>pa_dashboards_permissions_4fcc573fdb1fe340bd7169c3ca961958</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-02-05 15:42:06</sys_updated_on>
+        <type>1</type>
+        <user/>
+        <write>true</write>
+    </pa_dashboards_permissions>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>4f0d5a8cdb3743c02b157236bf961971</instance_id>
+        <instance_name>ven02359</instance_name>
+        <name>pa_dashboards_permissions_4fcc573fdb1fe340bd7169c3ca961958</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="pa_dashboards_permissions">
+    <pa_dashboards_permissions action="INSERT_OR_UPDATE">
+        <dashboard display_value="Usage by Requestor">aaed481d9f902200ef4afa7dc67fcf50</dashboard>
+        <delete>true</delete>
+        <group/>
+        <identity>pa_admin</identity>
+        <read>true</read>
+        <role display_value="pa_admin" name="pa_admin">a4cc30b3bf101100b96dac808c073918</role>
+        <sys_class_name>pa_dashboards_permissions</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2019-02-05 15:42:06</sys_created_on>
+        <sys_id>4fcc573fdb1fe340bd7169c3ca961958</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>pa_admin</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>pa_dashboards_permissions_4fcc573fdb1fe340bd7169c3ca961958</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-02-05 15:42:06</sys_updated_on>
+        <type>1</type>
+        <user/>
+        <write>true</write>
+    </pa_dashboards_permissions>
+</record_update>]]></payload>
+        <payload_hash>-92056736</payload_hash>
+        <record_name>pa_admin</record_name>
+        <reverted_from/>
+        <source>6df1e587db2a0c504db62b35ca961944</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-01-29 08:25:52</sys_created_on>
+        <sys_id>5312a1c7db2a0c504db62b35ca961954</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16ff0681cd90000001</sys_recorded_at>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-01-29 08:25:52</sys_updated_on>
+        <type>Dashboard Permissions</type>
+        <update_guid>9f12a1c7302a0c50e0ce4c537263c553</update_guid>
+        <update_guid_history>9f12a1c7302a0c50e0ce4c537263c553:0,3bd1ed470c2a0c50028a51867eb16126:652393010,3ef9e93657aac850fe2278595bd9329e:0,13c9a9f2d5aac8506c1e6a91a0ed65ba:652393010,d188adbe806ac850307206cf11e5e0fa:0,9e48697e5f6ac85053e0774e6a934b3b:652393010,de2d3c12bb16c81010427cb998454b8e:0,dcfcf4debcd2c8102daa5b9efbadb768:652393010,87b4e496f892c810d2eb66d1ccf32938:0,8d84e056fc92c81000102baf9e024a85:652393010,bdb32c128c92c810c53bba2ad7a8e9b9:0,3a63e0dec052c81088bf2fcb3f35424d:652393010,5114c7df62910410bb6f8679bb41b833:0,7fd3039f8a91041091d07d3b308afa92:652393010,4d30fe873ad1c0103997c34f9fba20ad:0,0200fe4770d1c010262d16901d086f38:652393010,803804a2ce5d00106507150b19d69f24:0,e9f700628c5d00107d62aafeb42fcea7:652393010,c0ab2626878100106fe28ba919d6d183:0,417be2e23481001006b9d0c3c2435bae:652393010,ea2dc3c835737700dceb1568fef1adf3:-92056736</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="pa_admin">3492258bdb2a0c504db62b35ca9619e6</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-01-29 08:27:53</sys_created_on>
+        <sys_db_object display_value="" name="pa_dashboards_permissions">pa_dashboards_permissions</sys_db_object>
+        <sys_id>1051ce2927c24d889e5162a5a11d7864</sys_id>
+        <sys_metadata>4fcc573fdb1fe340bd7169c3ca961958</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>pa_admin</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete display_value="">03835e456e36492781266dc672a19f01</sys_scope_delete>
+        <sys_update_name>pa_dashboards_permissions_4fcc573fdb1fe340bd7169c3ca961958</sys_update_name>
+        <sys_update_version display_value="pa_dashboards_permissions_4fcc573fdb1fe340bd7169c3ca961958">5312a1c7db2a0c504db62b35ca961954</sys_update_version>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-01-29 08:27:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

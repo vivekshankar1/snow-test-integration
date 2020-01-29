@@ -4,7 +4,6 @@
         <can_delegate>true</can_delegate>
         <description>Can use the Chef Automate rest api</description>
         <elevated_privilege>false</elevated_privilege>
-        <encryption_context/>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_chef_automate.api</name>
