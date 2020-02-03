@@ -3,7 +3,7 @@
         <choices/>
         <description>Filter matching CI's by ip address</description>
         <ignore_cache>true</ignore_cache>
-        <is_private>true</is_private>
+        <is_private>false</is_private>
         <name>x_chef_automate.ipAddress</name>
         <read_roles>x_chef_automate.admin</read_roles>
         <suffix>ipAddress</suffix>
@@ -11,14 +11,14 @@
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-08-08 14:27:12</sys_created_on>
         <sys_id>ecff22c3db07f30070cd5e25ca96193f</sys_id>
-        <sys_mod_count>1086</sys_mod_count>
+        <sys_mod_count>1091</sys_mod_count>
         <sys_name>x_chef_automate.ipAddress</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_properties_ecff22c3db07f30070cd5e25ca96193f</sys_update_name>
-        <sys_updated_by>chef_api</sys_updated_by>
-        <sys_updated_on>2020-01-14 12:54:41</sys_updated_on>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-01-30 16:21:02</sys_updated_on>
         <type>boolean</type>
         <value>true</value>
         <write_roles/>

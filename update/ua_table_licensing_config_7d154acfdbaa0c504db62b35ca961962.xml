@@ -4,22 +4,22 @@
         <license_condition/>
         <license_model>none</license_model>
         <license_roles/>
-        <name>x_chef_automate_asset_queue</name>
+        <name>x_chef_automate_compliance_profile_controls</name>
         <op_delete>true</op_delete>
         <op_insert>true</op_insert>
         <op_update>true</op_update>
         <owner_condition/>
         <sys_class_name>ua_table_licensing_config</sys_class_name>
-        <sys_created_by>dmurray</sys_created_by>
-        <sys_created_on>2018-10-23 14:40:03</sys_created_on>
-        <sys_id>e8f1a587db2a0c504db62b35ca961938</sys_id>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2019-07-19 09:27:52</sys_created_on>
+        <sys_id>7d154acfdbaa0c504db62b35ca961962</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_chef_automate_asset_queue</sys_name>
+        <sys_name>x_chef_automate_compliance_profile_controls</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
-        <sys_update_name>ua_table_licensing_config_e8f1a587db2a0c504db62b35ca961938</sys_update_name>
-        <sys_updated_by>dmurray</sys_updated_by>
-        <sys_updated_on>2018-10-23 14:40:03</sys_updated_on>
+        <sys_update_name>ua_table_licensing_config_7d154acfdbaa0c504db62b35ca961962</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-07-19 09:27:52</sys_updated_on>
     </ua_table_licensing_config>
 </record_update>
