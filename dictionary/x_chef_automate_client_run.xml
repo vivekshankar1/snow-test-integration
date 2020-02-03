@@ -3,6 +3,9 @@
         <element label="Chef version" max_length="40" name="chef_version" type="string"/>
         <element label="End time" max_length="40" name="end_time" type="glide_date_time"/>
         <element label="Environment" max_length="255" name="environment" type="string"/>
+        <element label="Error backtrace" max_length="4000" name="error_backtrace" type="string"/>
+        <element label="Error class" max_length="255" name="error_class" type="string"/>
+        <element label="Error message" max_length="1000" name="error_message" type="string"/>
         <element label="FQDN" max_length="255" name="fqdn" type="string"/>
         <element label="Id" max_length="36" name="id" type="string"/>
         <element label="IP address" max_length="40" name="ip_address" type="string"/>
