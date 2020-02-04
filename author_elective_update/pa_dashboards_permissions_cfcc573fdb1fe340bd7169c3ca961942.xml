@@ -72,7 +72,7 @@
         <update_guid_history>9f12a1c7112a0c501b3b87ddfca58e6f:0,41e121874e2a0c5032f7ce9642e9d3c1:-369571827,cff9e93602aac850abb7c1ce06e08fc8:0,a4d92df23faac8504aced3e4647937b1:-369571827,dd88edbea66ac85072f83aa98cf17117:0,2748e97ebc6ac850847fc070e6629117:-369571827,962d3c125216c81016b714a83bf27db7:0,d00d7cde86d2c81010bce36bbc7233dd:-369571827,03b4e4966192c810abd6234313d3e26f:0,568464564392c810095167bdc4014664:-369571827,8ab32c124792c81023e94696331accd7:0,a87364deaa52c81051b04aabaf92454f:-369571827,5d14c7df20910410a630c7bc5c95bd50:0,b8e3839ffa910410ec68ed75af6faf6d:-369571827,0130fe876dd1c01002ecbc8ed68c40d8:0,5f007287e0d1c0101d1cdb1022d3f515:-369571827,4c3804a2455d001018b9edafe9af924a:0,a6f78062905d00101a23b5b92257f260:-369571827,58ab26260a810010669548ea0ea9f99c:0,427b66e2478100107e51f6ccdfab0b58:-369571827,2e2d07c832737700658ee2289dd6bb17:-63041157</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="pa_admin">1ea2a58bdb2a0c504db62b35ca961988</sys_audit_delete>
+        <sys_audit_delete display_value="">1ea2a58bdb2a0c504db62b35ca961988</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2020-01-29 08:28:16</sys_created_on>

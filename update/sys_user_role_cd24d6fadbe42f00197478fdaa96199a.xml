@@ -4,6 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>Chef Automate application admin role</description>
         <elevated_privilege>false</elevated_privilege>
+        <encryption_context/>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_chef_automate.admin</name>

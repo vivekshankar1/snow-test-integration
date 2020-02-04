@@ -11,7 +11,7 @@
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>dmurray</sys_created_by>
             <sys_created_on>2018-09-10 14:57:32</sys_created_on>
-            <sys_id>30150acfdbaa0c504db62b35ca961926</sys_id>
+            <sys_id>e32ed94ddbf6c410bd7169c3ca9619f5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Cpu Cores</sys_name>
             <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>

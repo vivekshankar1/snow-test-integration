@@ -27,7 +27,7 @@
     <sys_translated_text action="delete_multiple" query="documentkey=e171d257db8ff30070cd5e25ca961998"/>
     <sys_ui_related_list_relationship_entry action="INSERT_OR_UPDATE">
         <filter/>
-        <list_id display_value="Server - Default view" name="cmdb_ci_server" related_list="NULL" sys_domain="global" view="Default view">f9903c18db6023003daaec51ca9619b5</list_id>
+        <list_id display_value="Server - Default view" name="cmdb_ci_server" related_list="NULL" sys_domain="global" view="Default view">1cef3596db73130070cd5e25ca96196c</list_id>
         <order_by/>
         <position>2</position>
         <related_list>REL:e171d257db8ff30070cd5e25ca961998</related_list>
@@ -37,7 +37,7 @@
         <sys_id>0ec1d257db8ff30070cd5e25ca9619c5</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_relationship display_value="Compliance reports">e171d257db8ff30070cd5e25ca961998</sys_relationship>
-        <sys_ui_related_list display_value="Server - Default view" name="cmdb_ci_server" related_list="NULL" sys_domain="global" view="Default view">f9903c18db6023003daaec51ca9619b5</sys_ui_related_list>
+        <sys_ui_related_list display_value="Server - Default view" name="cmdb_ci_server" related_list="NULL" sys_domain="global" view="Default view">1cef3596db73130070cd5e25ca96196c</sys_ui_related_list>
         <sys_updated_by>mscott</sys_updated_by>
         <sys_updated_on>2019-08-09 06:52:50</sys_updated_on>
     </sys_ui_related_list_relationship_entry>
@@ -59,9 +59,9 @@
     </sys_ui_related_list_relationship_entry>
     <sys_ui_related_list_relationship_entry action="INSERT_OR_UPDATE">
         <filter/>
-        <list_id display_value="Windows Server - Default view" name="cmdb_ci_win_server" related_list="NULL" sys_domain="global" view="Default view">6d25896e0b103200c71e259335673aeb</list_id>
+        <list_id display_value="Windows Server - Default view" name="cmdb_ci_win_server" related_list="NULL" sys_domain="global" view="Default view">d2142c0bdb467700bd7169c3ca961936</list_id>
         <order_by/>
-        <position>13</position>
+        <position>15</position>
         <related_list>REL:e171d257db8ff30070cd5e25ca961998</related_list>
         <sys_class_name>sys_ui_related_list_relationship_entry</sys_class_name>
         <sys_created_by>mscott</sys_created_by>
@@ -69,15 +69,15 @@
         <sys_id>86c1d257db8ff30070cd5e25ca9619c7</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_relationship display_value="Compliance reports">e171d257db8ff30070cd5e25ca961998</sys_relationship>
-        <sys_ui_related_list display_value="Windows Server - Default view" name="cmdb_ci_win_server" related_list="NULL" sys_domain="global" view="Default view">6d25896e0b103200c71e259335673aeb</sys_ui_related_list>
+        <sys_ui_related_list display_value="Windows Server - Default view" name="cmdb_ci_win_server" related_list="NULL" sys_domain="global" view="Default view">d2142c0bdb467700bd7169c3ca961936</sys_ui_related_list>
         <sys_updated_by>mscott</sys_updated_by>
         <sys_updated_on>2019-08-09 06:52:50</sys_updated_on>
     </sys_ui_related_list_relationship_entry>
     <sys_ui_related_list_relationship_entry action="INSERT_OR_UPDATE">
         <filter/>
-        <list_id display_value="Linux Server - Default view" name="cmdb_ci_linux_server" related_list="NULL" sys_domain="global" view="Default view">5c71c8f137332100dcd445cbbebe5d61</list_id>
+        <list_id display_value="Linux Server - Default view" name="cmdb_ci_linux_server" related_list="NULL" sys_domain="global" view="Default view">f8601f12dbc2370070cd5e25ca961918</list_id>
         <order_by/>
-        <position>12</position>
+        <position>14</position>
         <related_list>REL:e171d257db8ff30070cd5e25ca961998</related_list>
         <sys_class_name>sys_ui_related_list_relationship_entry</sys_class_name>
         <sys_created_by>mscott</sys_created_by>
@@ -85,7 +85,7 @@
         <sys_id>c6c1d257db8ff30070cd5e25ca9619c3</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_relationship display_value="Compliance reports">e171d257db8ff30070cd5e25ca961998</sys_relationship>
-        <sys_ui_related_list display_value="Linux Server - Default view" name="cmdb_ci_linux_server" related_list="NULL" sys_domain="global" view="Default view">5c71c8f137332100dcd445cbbebe5d61</sys_ui_related_list>
+        <sys_ui_related_list display_value="Linux Server - Default view" name="cmdb_ci_linux_server" related_list="NULL" sys_domain="global" view="Default view">f8601f12dbc2370070cd5e25ca961918</sys_ui_related_list>
         <sys_updated_by>mscott</sys_updated_by>
         <sys_updated_on>2019-08-09 06:52:50</sys_updated_on>
     </sys_ui_related_list_relationship_entry>
