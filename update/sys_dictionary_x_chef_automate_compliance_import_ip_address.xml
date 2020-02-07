@@ -53,7 +53,7 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-06-14 12:20:30</sys_created_on>
-        <sys_id>1b2ed94ddbf6c410bd7169c3ca961964</sys_id>
+        <sys_id>5b1b5dc6db3e48104db62b35ca9619a1</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Ip address</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -61,7 +61,7 @@
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_dictionary_x_chef_automate_compliance_import_ip_address</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-02-04 13:16:52</sys_updated_on>
+        <sys_updated_on>2020-02-07 15:37:26</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
