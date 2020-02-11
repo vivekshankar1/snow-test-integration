@@ -3,7 +3,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>report_name</element>
-            <list_id display_value="x_chef_automate_compliance_report" element="NULL" name="x_chef_automate_compliance_report" parent="NULL" relationship="NULL" sys_domain="global" view="9b5e2050db2023003daaec51ca96195e">1fe20347db950010bd7169c3ca9619d5</list_id>
+            <list_id display_value="x_chef_automate_compliance_report" element="NULL" name="x_chef_automate_compliance_report" parent="NULL" relationship="NULL" sys_domain="global" view="063c1153db3200101846e7dcd39619c1">1fe20347db950010bd7169c3ca9619d5</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -40,7 +40,7 @@
             <sys_updated_by>mscott</sys_updated_by>
             <sys_updated_on>2019-11-28 12:10:22</sys_updated_on>
             <sys_user/>
-            <view display_value="Reference List" name="sys_ref_list">9b5e2050db2023003daaec51ca96195e</view>
+            <view display_value="Reference List" name="sys_ref_list">063c1153db3200101846e7dcd39619c1</view>
             <view_name/>
         </sys_ui_list>
     </sys_ui_list>

@@ -43,7 +43,7 @@
     </sys_ui_related_list_relationship_entry>
     <sys_ui_related_list_relationship_entry action="INSERT_OR_UPDATE">
         <filter/>
-        <list_id display_value="Server - Default view" name="cmdb_ci_server" related_list="NULL" sys_domain="global" view="Default view">f9903c18db6023003daaec51ca9619b5</list_id>
+        <list_id display_value="Server - Default view" name="cmdb_ci_server" related_list="NULL" sys_domain="global" view="Default view">e8ae5513dbb200101846e7dcd396194f</list_id>
         <order_by/>
         <position>1</position>
         <related_list>REL:1d58bc94dbe8e700197478fdaa961925</related_list>
@@ -53,7 +53,7 @@
         <sys_id>92cae79fdb286f00197478fdaa96199c</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_relationship display_value="Client Runs">1d58bc94dbe8e700197478fdaa961925</sys_relationship>
-        <sys_ui_related_list display_value="Server - Default view" name="cmdb_ci_server" related_list="NULL" sys_domain="global" view="Default view">f9903c18db6023003daaec51ca9619b5</sys_ui_related_list>
+        <sys_ui_related_list display_value="Server - Default view" name="cmdb_ci_server" related_list="NULL" sys_domain="global" view="Default view">e8ae5513dbb200101846e7dcd396194f</sys_ui_related_list>
         <sys_updated_by>dmurray</sys_updated_by>
         <sys_updated_on>2018-09-20 10:33:35</sys_updated_on>
     </sys_ui_related_list_relationship_entry>
