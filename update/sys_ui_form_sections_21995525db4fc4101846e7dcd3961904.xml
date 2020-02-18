@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="21995525db4fc4101846e7dcd3961904" sys_domain="global" table="x_chef_automate_attributes" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 12:29:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a9995525db4fc4101846e7dcd396191f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_chef_automate_attributes" name="x_chef_automate_attributes" sys_domain="global" view="Default view">21995525db4fc4101846e7dcd3961904</sys_ui_form>
+            <sys_ui_section caption="Node" display_value="Node" name="x_chef_automate_attributes" sys_domain="global" view="Default view">25991525db4fc4101846e7dcd39619fe</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 12:29:07</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 12:29:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a5995525db4fc4101846e7dcd3961920</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_chef_automate_attributes" name="x_chef_automate_attributes" sys_domain="global" view="Default view">21995525db4fc4101846e7dcd3961904</sys_ui_form>
+            <sys_ui_section caption="Attributes" display_value="Attributes" name="x_chef_automate_attributes" sys_domain="global" view="Default view">32b749a1db0fc4101846e7dcd39619a9</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 12:29:07</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 12:29:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>69995525db4fc4101846e7dcd3961923</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_chef_automate_attributes" name="x_chef_automate_attributes" sys_domain="global" view="Default view">21995525db4fc4101846e7dcd3961904</sys_ui_form>
+            <sys_ui_section caption="Value counts" display_value="Value counts" name="x_chef_automate_attributes" sys_domain="global" view="Default view">21995525db4fc4101846e7dcd3961903</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 12:29:07</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_chef_automate_attributes</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 12:29:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>21995525db4fc4101846e7dcd3961904</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_chef_automate_attributes</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+            <sys_update_name>sys_ui_form_sections_21995525db4fc4101846e7dcd3961904</sys_update_name>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 12:29:07</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

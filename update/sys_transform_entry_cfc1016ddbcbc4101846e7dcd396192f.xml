@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_entry">
+    <sys_transform_entry action="INSERT_OR_UPDATE">
+        <choice_action>create</choice_action>
+        <coalesce>false</coalesce>
+        <coalesce_case_sensitive>false</coalesce_case_sensitive>
+        <coalesce_empty_fields>false</coalesce_empty_fields>
+        <date_format>yyyy-MM-dd HH:mm:ss</date_format>
+        <map display_value="Attributes import">60910965dbcbc4101846e7dcd39619c5</map>
+        <reference_value_field/>
+        <source_field>automatic</source_field>
+        <source_script><![CDATA[answer = (function transformEntry(source) {
+
+	// Add your code here
+	return ""; // return the value to be put into the target field
+
+})(source);]]></source_script>
+        <source_table>x_chef_automate_attributes_import</source_table>
+        <sys_class_name>sys_transform_entry</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-02-18 10:45:11</sys_created_on>
+        <sys_id>cfc1016ddbcbc4101846e7dcd396192f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>automatic</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_transform_entry_cfc1016ddbcbc4101846e7dcd396192f</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-02-18 10:45:11</sys_updated_on>
+        <target_field>automatic</target_field>
+        <target_table>x_chef_automate_attributes</target_table>
+        <use_source_script>false</use_source_script>
+    </sys_transform_entry>
+</record_update>

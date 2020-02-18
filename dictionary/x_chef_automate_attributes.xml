@@ -5,9 +5,13 @@
         <element label="Automatic value count" max_length="40" name="automatic_value_count" type="longint"/>
         <element label="Default" max_length="16777215" name="default" type="string"/>
         <element label="Default value count" max_length="40" name="default_value_count" type="longint"/>
+        <element label="Node" max_length="32" name="node" reference="cmdb_ci_server" type="reference"/>
         <element label="Normal" max_length="16777215" name="normal" type="string"/>
         <element label="Normal value count" max_length="40" name="normal_value_count" type="longint"/>
         <element label="Override" max_length="16777215" name="override" type="string"/>
         <element label="Override value count" max_length="40" name="override_value_count" type="longint"/>
+        <index name="index">
+            <element name="node"/>
+        </index>
     </element>
 </database>
