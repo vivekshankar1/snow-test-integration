@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <map display_value="Chef Automate Sync Transform">56940d5cdbe8e700197478fdaa96190b</map>
+        <order>105</order>
+        <script><![CDATA[// Attributes transform script
+
+var jsonUtil = new JsonUtil();
+var logger = new Logger();
+
+(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+
+    try {
+        var attributesTable = new GlideRecordSecure('x_chef_automate_attributes');
+        attributesTable.initialize();
+        attributesTable.addQuery('node', target.sys_id);
+        attributesTable.query();
+
+        if (attributesTable.next()) {
+			setAttributes(attributesTable, source);
+			logger.debug(gs.getMessage("Updating attributes for node {0}", target.sys_id));
+            attributesTable.update();
+        } else {
+			setAttributes(attributesTable, source);
+			logger.debug(gs.getMessage("Inserting attributes for node {0}", target.sys_id));
+            attributesTable.insert();
+        }
+
+    } catch (error) {
+        logger.errorWithStack("Attributes transform script error", error);
+    }
+
+})(source, map, log, target);
+
+function setAttributes(attributesTable, source) {
+    var attributes = jsonUtil.parse(source.attributes);
+    var defaults = jsonUtil.stringify(jsonUtil.getObject(attributes, "default"));
+    var normal = jsonUtil.stringify(jsonUtil.getObject(attributes, "normal"));
+    var automatic = jsonUtil.stringify(jsonUtil.getObject(attributes, "automatic"));
+    var override = jsonUtil.stringify(jsonUtil.getObject(attributes, "override"));
+    var allCount = jsonUtil.getIntValue(attributes, "all_value_count");
+    var defaultCount = jsonUtil.getIntValue(attributes, "default_value_count");
+    var normalCount = jsonUtil.getIntValue(attributes, "normal_value_count");
+    var automaticCount = jsonUtil.getIntValue(attributes, "automatic_value_count");
+    var overrideCount = jsonUtil.getIntValue(attributes, "override_value_count");
+	attributesTable.setValue('default', defaults);
+	attributesTable.setValue('normal', normal);
+	attributesTable.setValue('automatic', automatic);
+	attributesTable.setValue('override', override);
+	attributesTable.setValue('all_value_count', allCount);
+	attributesTable.setValue('default_value_count', defaultCount);
+	attributesTable.setValue('normal_value_count', normalCount);
+	attributesTable.setValue('automatic_value_count', automaticCount);
+	attributesTable.setValue('override_value_count', overrideCount);
+}]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-02-18 15:38:55</sys_created_on>
+        <sys_id>bcd34aa5dbcfc4101846e7dcd396196f</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>onAfter</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_transform_script_bcd34aa5dbcfc4101846e7dcd396196f</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-02-18 16:36:39</sys_updated_on>
+        <when>onAfter</when>
+    </sys_transform_script>
+</record_update>

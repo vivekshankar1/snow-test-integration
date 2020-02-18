@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element extends="sys_import_set_row" label="Asset Import" max_length="40" name="x_chef_automate_asset_import" type="collection">
         <element label="Asset tag" max_length="255" name="asset_tag" type="string"/>
+        <element label="Attributes" max_length="16777215" name="attributes" type="string"/>
         <element label="Chef Environment" max_length="256" name="chef_environment" type="string"/>
         <element label="Client run" max_length="16777215" name="client_run" type="string"/>
         <element label="Cloud Provider" max_length="16777215" name="cloud_provider" type="string"/>
