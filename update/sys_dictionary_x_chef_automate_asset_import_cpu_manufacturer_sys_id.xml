@@ -53,7 +53,7 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-04-17 11:28:13</sys_created_on>
-        <sys_id>560e34dcdb8bc0101846e7dcd396197c</sys_id>
+        <sys_id>17b2782ddb8bc4101846e7dcd39619f8</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>CPU manufacturer sys id</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -61,7 +61,7 @@
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_dictionary_x_chef_automate_asset_import_cpu_manufacturer_sys_id</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-02-14 13:16:31</sys_updated_on>
+        <sys_updated_on>2020-02-18 09:39:34</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
