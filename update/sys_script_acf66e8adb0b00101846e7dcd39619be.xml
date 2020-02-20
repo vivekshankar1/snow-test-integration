@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_chef_automate_instances</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Configure Automate Instance</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    var logger = new Logger();
+    var jsonUtil = new JsonUtil();
+    var automateApi = new AutomateApi(current.instance, current.api_token.getDecryptedValue());
+    try {
+
+        var r;
+        var secretId;
+		var adding = isAdd(current.secret_id);
+        if (adding) {
+            logger.debug("Adding secret");
+            secretId = automateApi.addSecret('Service Now Created Feed', current.servicenow_user, current.servicenow_password.getDecryptedValue());
+			current.secret_id = secretId;
+            current.setWorkflow(false);
+            current.update();
+        } else {
+            logger.debug(gs.getMessage("Update secret {0}", current.secret_id));
+            secretId = automateApi.addSecret('Service Now Created Feed', current.servicenow_user, current.servicenow_password.getDecryptedValue(), current.secret_id);
+            logger.debug(gs.getMessage("secret {0} updated", secretId));
+        }
+
+		if (adding) {
+			destination = automateApi.addDestination('Service Now Created Destination', getAppUrl(), secretId);
+		} else {
+			destination = automateApi.updateDestination('Service Now Created Destination', getAppUrl(), secretId);
+		}
+
+    } catch (ex) {
+        logger.errorWithStack("Error calling automate secrets API", ex);
+    }
+
+
+})(current, previous);
+
+function isAdd(secretId) {
+	return secretId == "";
+}
+
+function getAppUrl() {
+	return "https://" + gs.getProperty("instance_name") + ".service-now.com/api/x_chef_automate/asset";
+}]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-02-20 07:29:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>acf66e8adb0b00101846e7dcd39619be</sys_id>
+        <sys_mod_count>44</sys_mod_count>
+        <sys_name>Configure Automate Instance</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_script_acf66e8adb0b00101846e7dcd39619be</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-02-20 14:08:44</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=acf66e8adb0b00101846e7dcd39619be"/>
+</record_update>

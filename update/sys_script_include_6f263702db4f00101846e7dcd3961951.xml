@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_chef_automate.AutomateApi</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>AutomateApi</name>
+        <script><![CDATA[var AutomateApi = Class.create();
+AutomateApi.prototype = {
+    initialize: function(url, apiToken) {
+        this.logger = new Logger();
+        this.jsonUtil = new JsonUtil();
+        this.automateUrl = url;
+        this.apiToken = apiToken;
+    },
+
+    addSecret: function(name, user, password) {
+
+        try {
+
+            var message = new sn_ws.RESTMessageV2('x_chef_automate.Automate API', 'Add secret');
+
+            message.setStringParameterNoEscape('secret_name', name);
+            message.setStringParameterNoEscape('secret_id', '');
+            message.setStringParameterNoEscape('automate_url', this.automateUrl);
+            message.setStringParameterNoEscape('servicenow_user', user);
+            message.setStringParameterNoEscape('api_token', this.apiToken);
+            message.setStringParameterNoEscape('servicenow_password', password);
+
+            var response = message.execute();
+            var httpStatus = response.getStatusCode();
+            this.logger.debug(gs.getMessage("response {0} {1}", [httpStatus, response.getBody()]));
+            if (httpStatus == 200) {
+                var responseBody = response.getBody();
+                var responseJson = this.jsonUtil.parse(responseBody);
+                var secretId = this.jsonUtil.getStringValue(responseJson, "id");
+                this.logger.debug(gs.getMessage("Secret id {0}", secretId));
+				return secretId;
+			}
+        } catch (ex) {
+            this.logger.errorWithStack("Error calling automate addSecret API", ex);
+			throw ex;
+        }
+		return '';
+    },
+
+    updateSecret: function(name, user, password, secretId) {
+
+        try {
+
+            var message = new sn_ws.RESTMessageV2('x_chef_automate.Automate API', 'Update secret');
+
+            message.setStringParameterNoEscape('secret_name', name);
+            message.setStringParameterNoEscape('secret_id', secretId);
+            message.setStringParameterNoEscape('automate_url', this.automateUrl);
+            message.setStringParameterNoEscape('servicenow_user', user);
+            message.setStringParameterNoEscape('api_token', this.apiToken);
+            message.setStringParameterNoEscape('servicenow_password', password);
+
+            var response = message.execute();
+            var httpStatus = response.getStatusCode();
+            this.logger.debug(gs.getMessage("response {0}", httpStatus));
+            if (httpStatus == 200) {
+				return secretId;
+			}
+        } catch (ex) {
+            this.logger.errorWithStack("Error calling automate updateSecret API", ex);
+			throw ex;
+        }
+		return '';
+    },
+	
+	
+    addDestination: function(name, servicenowUrl, secretId) {
+
+        try {
+
+            var message = new sn_ws.RESTMessageV2('x_chef_automate.Automate API', 'Add destination');
+
+            message.setStringParameterNoEscape('name', name);
+            message.setStringParameterNoEscape('secret_id', secretId);
+            message.setStringParameterNoEscape('automate_url', this.automateUrl);
+            message.setStringParameterNoEscape('servicenow_url', servicenowUrl);
+            message.setStringParameterNoEscape('api_token', this.apiToken);
+
+            var response = message.execute();
+            var httpStatus = response.getStatusCode();
+            this.logger.debug(gs.getMessage("response {0} {1}", [httpStatus, response.getBody()]));
+            if (httpStatus == 200) {
+                var responseBody = response.getBody();
+                var responseJson = this.jsonUtil.parse(responseBody);
+				return name;
+			}
+        } catch (ex) {
+            this.logger.errorWithStack("Error calling automate addDestination API", ex);
+			throw ex;
+        }
+		return '';
+    },
+	
+	
+    updateDestination: function(destinationId, name, servicenowUrl, secretId) {
+
+        try {
+
+            var message = new sn_ws.RESTMessageV2('x_chef_automate.Automate API', 'Update destination');
+            message.setStringParameterNoEscape('destination_id', destinationId);
+            message.setStringParameterNoEscape('name', name);
+            message.setStringParameterNoEscape('secret_id', secretId);
+            message.setStringParameterNoEscape('automate_url', this.automateUrl);
+            message.setStringParameterNoEscape('servicenow_url', servicenowUrl);
+            message.setStringParameterNoEscape('api_token', this.apiToken);
+
+            var response = message.execute();
+            var httpStatus = response.getStatusCode();
+            this.logger.debug(gs.getMessage("response {0} {1}", [httpStatus, response.getBody()]));
+            if (httpStatus == 200) {
+                var responseBody = response.getBody();
+                var responseJson = this.jsonUtil.parse(responseBody);
+				return name;
+			}
+        } catch (ex) {
+            this.logger.errorWithStack("Error calling automate updateDestination API", ex);
+			throw ex;
+        }
+		return '';
+    },
+    type: 'AutomateApi'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-02-20 13:18:25</sys_created_on>
+        <sys_id>6f263702db4f00101846e7dcd3961951</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>AutomateApi</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_script_include_6f263702db4f00101846e7dcd3961951</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-02-20 14:18:05</sys_updated_on>
+    </sys_script_include>
+</record_update>
