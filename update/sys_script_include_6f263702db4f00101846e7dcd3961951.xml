@@ -72,6 +72,28 @@ AutomateApi.prototype = {
 		return '';
     },
 	
+    deleteSecret: function(secretId) {
+
+        try {
+
+            var message = new sn_ws.RESTMessageV2('x_chef_automate.Automate API', 'Delete secret');
+
+            message.setStringParameterNoEscape('secret_id', secretId);
+            message.setStringParameterNoEscape('automate_url', this.automateUrl);
+            message.setStringParameterNoEscape('api_token', this.apiToken);
+
+            var response = message.executeAsync();
+            var httpStatus = response.getStatusCode();
+            this.logger.debug(gs.getMessage("delete secret response {0}", httpStatus));
+            if (httpStatus == 200) {
+				return secretId;
+			}
+        } catch (ex) {
+            this.logger.errorWithStack("Error calling automate deleteSecret API", ex);
+			throw ex;
+        }
+		return '';
+    },
 	
     addDestination: function(name, secretId) {
 
@@ -128,6 +150,30 @@ AutomateApi.prototype = {
 		return '';
     },
 	
+    deleteDestination: function(destinationId) {
+
+        try {
+
+            var message = new sn_ws.RESTMessageV2('x_chef_automate.Automate API', 'Delete destination');
+            message.setStringParameterNoEscape('destination_id', destinationId);
+            message.setStringParameterNoEscape('automate_url', this.automateUrl);
+            message.setStringParameterNoEscape('api_token', this.apiToken);
+
+            var response = message.executeAsync();
+            var httpStatus = response.getStatusCode();
+            this.logger.debug(gs.getMessage("delete destination response {0} {1}", [httpStatus, response.getBody()]));
+            if (httpStatus == 200) {
+                var responseBody = response.getBody();
+                var responseJson = this.jsonUtil.parse(responseBody);
+				return this.jsonUtil.getStringValue(responseJson, "success");
+			}
+        } catch (ex) {
+            this.logger.errorWithStack("Error calling automate updateDestination API", ex);
+			throw ex;
+        }
+		return '';
+    },
+	
 	getAppUrl: function() {
 		return "https://" + gs.getProperty("instance_name") + ".service-now.com/api/x_chef_automate/asset";
 	},
@@ -138,13 +184,13 @@ AutomateApi.prototype = {
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2020-02-20 13:18:25</sys_created_on>
         <sys_id>6f263702db4f00101846e7dcd3961951</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>AutomateApi</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_include_6f263702db4f00101846e7dcd3961951</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-02-21 15:00:05</sys_updated_on>
+        <sys_updated_on>2020-02-21 16:33:39</sys_updated_on>
     </sys_script_include>
 </record_update>
