@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_change_log">
+    <gsw_change_log action="INSERT_OR_UPDATE">
+        <change_date>2020-02-21 08:39:46</change_date>
+        <changed_by display_value="Martin Scott">0813351fdbf600101846e7dcd3961928</changed_by>
+        <content display_value="Validate MID">d2d157dac39312007bf1bea192d3aea6</content>
+        <related_change_log_entry/>
+        <related_task_entry/>
+        <sys_class_name>gsw_change_log</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-02-21 08:39:46</sys_created_on>
+        <sys_id>c7d1c466db8b40101846e7dcd3961921</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2020-02-21 08:39:46</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>gsw_change_log_c7d1c466db8b40101846e7dcd3961921</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-02-21 08:39:46</sys_updated_on>
+        <type>7</type>
+    </gsw_change_log>
+</record_update>

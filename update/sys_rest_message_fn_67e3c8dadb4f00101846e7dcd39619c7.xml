@@ -4,7 +4,7 @@
         <basic_auth_password/>
         <basic_auth_profile/>
         <basic_auth_user/>
-        <content>{"name":"${name}","url":"${servicenow_url}","secret":"${secret_id}"}</content>
+        <content>{"id":"${destination_id}","name":"${name}","url":"${servicenow_url}","secret":"${secret_id}"}</content>
         <function_name>Update destination</function_name>
         <http_method>patch</http_method>
         <lock>false</lock>
@@ -17,14 +17,14 @@
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2020-02-20 14:16:26</sys_created_on>
         <sys_id>67e3c8dadb4f00101846e7dcd39619c7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Update destination</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_rest_message_fn_67e3c8dadb4f00101846e7dcd39619c7</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-02-20 14:16:26</sys_updated_on>
+        <sys_updated_on>2020-02-21 10:00:07</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
         <use_mid_server/>
         <use_mutual_auth>false</use_mutual_auth>
