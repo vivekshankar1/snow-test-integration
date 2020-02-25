@@ -3,13 +3,17 @@
         <element label="All value count" max_length="40" name="all_value_count" type="longint"/>
         <element label="Automatic" max_length="16777215" name="automatic" type="string"/>
         <element label="Automatic value count" max_length="40" name="automatic_value_count" type="longint"/>
+        <element label="Chef environment" max_length="255" name="chef_environment" type="string"/>
         <element label="Default" max_length="16777215" name="default" type="string"/>
         <element label="Default value count" max_length="40" name="default_value_count" type="longint"/>
+        <element label="Name" max_length="255" name="name" type="string"/>
         <element label="Node" max_length="32" name="node" reference="cmdb_ci_server" reference_cascade_rule="delete" type="reference"/>
+        <element label="Node id" max_length="255" name="node_id" type="string"/>
         <element label="Normal" max_length="16777215" name="normal" type="string"/>
         <element label="Normal value count" max_length="40" name="normal_value_count" type="longint"/>
         <element label="Override" max_length="16777215" name="override" type="string"/>
         <element label="Override value count" max_length="40" name="override_value_count" type="longint"/>
+        <element label="Run list" max_length="16777215" name="run_list" type="string"/>
         <index name="index">
             <element name="node"/>
         </index>

@@ -14,6 +14,62 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>chef_environment</element>
+            <position>1</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-24 16:31:24</sys_created_on>
+            <sys_id>1d9a0d2bdb4344101846e7dcd39619dd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Node" display_value="Node" name="x_chef_automate_attributes" sys_domain="global" view="Default view">25991525db4fc4101846e7dcd39619fe</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-24 16:31:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <position>2</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-24 16:31:42</sys_created_on>
+            <sys_id>e9aa892bdb4344101846e7dcd396193f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Node" display_value="Node" name="x_chef_automate_attributes" sys_domain="global" view="Default view">25991525db4fc4101846e7dcd39619fe</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-24 16:31:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>node_id</element>
+            <position>3</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-24 16:32:00</sys_created_on>
+            <sys_id>71ba816bdb4344101846e7dcd3961993</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Node" display_value="Node" name="x_chef_automate_attributes" sys_domain="global" view="Default view">25991525db4fc4101846e7dcd39619fe</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-24 16:32:00</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>run_list</element>
+            <position>4</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-24 16:32:26</sys_created_on>
+            <sys_id>5cda056bdb4344101846e7dcd3961986</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Node" display_value="Node" name="x_chef_automate_attributes" sys_domain="global" view="Default view">25991525db4fc4101846e7dcd39619fe</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-24 16:32:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption>Node</caption>
             <header>false</header>
