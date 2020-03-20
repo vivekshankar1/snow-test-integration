@@ -4,22 +4,22 @@
         <license_condition/>
         <license_model>none</license_model>
         <license_roles/>
-        <name>x_chef_automate_compliance_report</name>
+        <name>x_chef_automate_client_run_lists</name>
         <op_delete>true</op_delete>
         <op_insert>true</op_insert>
         <op_update>true</op_update>
         <owner_condition/>
         <sys_class_name>ua_table_licensing_config</sys_class_name>
         <sys_created_by>mscott</sys_created_by>
-        <sys_created_on>2019-06-14 12:54:13</sys_created_on>
-        <sys_id>57b2782ddb8bc4101846e7dcd39619e2</sys_id>
+        <sys_created_on>2019-03-06 15:22:31</sys_created_on>
+        <sys_id>433e9ea0dba384501846e7dcd3961973</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_chef_automate_compliance_report</sys_name>
+        <sys_name>x_chef_automate_client_run_lists</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
-        <sys_update_name>ua_table_licensing_config_57b2782ddb8bc4101846e7dcd39619e2</sys_update_name>
+        <sys_update_name>ua_table_licensing_config_433e9ea0dba384501846e7dcd3961973</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-06-14 12:54:13</sys_updated_on>
+        <sys_updated_on>2019-03-06 15:22:31</sys_updated_on>
     </ua_table_licensing_config>
 </record_update>

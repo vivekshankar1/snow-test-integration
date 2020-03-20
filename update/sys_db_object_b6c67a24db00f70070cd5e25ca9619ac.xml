@@ -19,9 +19,9 @@
         <read_access>true</read_access>
         <scriptable_table>false</scriptable_table>
         <super_class display_value="Configuration Item" name="cmdb_ci">603d195bdb3200101846e7dcd39619fd</super_class>
-        <sys_class_code>$#</sys_class_code>
+        <sys_class_code>$.</sys_class_code>
         <sys_class_name>sys_db_object</sys_class_name>
-        <sys_class_path>/!!/$#</sys_class_path>
+        <sys_class_path>/!!/$.</sys_class_path>
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-03-04 17:23:17</sys_created_on>
         <sys_id>b6c67a24db00f70070cd5e25ca9619ac</sys_id>
