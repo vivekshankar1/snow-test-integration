@@ -102,12 +102,14 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
 
 		
 		chefAssetsTable.host_name = jsonUtil.getStringValue(nodeData, "hostname");
+		chefAssetsTable.name = chefAssetsTable.host_name;
 		var hostnamectl = jsonUtil.getObject(automaticAttrs, "hostnamectl");
 		var operatingSystem = jsonUtil.getStringValue(hostnamectl, "operating_system");
 		if (operatingSystem == "") {
 			operatingSystem = jsonUtil.getStringValue(automaticAttrs, "os");
 		}
 		chefAssetsTable.operating_system = CapitalizeFirstLetter(operatingSystem);
+		chefAssetsTable.os = chefAssetsTable.operating_system;
 		chefAssetsTable.os_family = CapitalizeFirstLetter(jsonUtil.getStringValue(automaticAttrs, "os"));
 		chefAssetsTable.os_version = CapitalizeFirstLetter(jsonUtil.getStringValue(automaticAttrs, "os_version"));
 		chefAssetsTable.mac_address = jsonUtil.getStringValue(nodeData, "macaddress");
@@ -119,6 +121,7 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
 		var cores = jsonUtil.getIntValue(cpu, "cores");
 		if (cores != null) {
 			chefAssetsTable.cpu_cores = cores;
+			chefAssetsTable.cpu_core_count = cores;
 		}
 		
 		var cpuTotal = jsonUtil.getIntValue(cpu, "total");
@@ -150,12 +153,13 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
 		chefAssetsTable.serial_number = serialNumber;
 		var memory = jsonUtil.getObject(automaticAttrs, "memory");
 		chefAssetsTable.memory_total = parseInt(jsonUtil.getStringValue(memory, "total")) / 1024;
+		chefAssetsTable.ram = parseInt(jsonUtil.getStringValue(memory, "total")) / 1024;
 		var time = jsonUtil.getObject(automaticAttrs, "time");
 		chefAssetsTable.timezone = jsonUtil.getStringValue(time, "timezone");
 		if (jsonUtil.getStringValue(hostnamectl, "chassis") == "vm") {
-			chefAssetsTable.isvirtual = true;
+			chefAssetsTable.virtual = true;
 		} else {
-			chefAssetsTable.isvirtual = false;
+			chefAssetsTable.virtual = false;
 		}
 		chefAssetsTable.languages = jsonUtil.stringify(automaticAttrs.languages);
 		chefAssetsTable.packages = jsonUtil.stringify(automaticAttrs.packages);
@@ -201,7 +205,7 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>93cfd64edb116380197478fdaa9619cd</sys_id>
-        <sys_mod_count>104</sys_mod_count>
+        <sys_mod_count>110</sys_mod_count>
         <sys_name>Insert to Asset Import</sys_name>
         <sys_overrides/>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -209,7 +213,7 @@ function MapToImportTable(chefAssetsTable, assetData, logger){
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_93cfd64edb116380197478fdaa9619cd</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-02-18 15:32:33</sys_updated_on>
+        <sys_updated_on>2020-03-24 16:35:41</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

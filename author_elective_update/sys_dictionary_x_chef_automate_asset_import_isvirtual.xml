@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_dictionary action="DELETE" element="isvirtual" table="x_chef_automate_asset_import">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>edge_encryption_enabled=true</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Is Virtual</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>isvirtual</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="">boolean</internal_type>
+        <mandatory>false</mandatory>
+        <max_length>5</max_length>
+        <name>x_chef_automate_asset_import</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>dmurray</sys_created_by>
+        <sys_created_on>2018-09-10 14:52:52</sys_created_on>
+        <sys_id>563e1ea0dba384501846e7dcd3961998</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Is Virtual</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_dictionary_x_chef_automate_asset_import_isvirtual</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-03-11 11:26:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
+        <instance_name>ven02358</instance_name>
+        <name>sys_dictionary_x_chef_automate_asset_import_isvirtual</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update&gt;
+    &lt;sys_dictionary action="INSERT_OR_UPDATE" element="isvirtual" table="x_chef_automate_asset_import"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;array&gt;false&lt;/array&gt;
+        &lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+        &lt;attributes&gt;edge_encryption_enabled=true&lt;/attributes&gt;
+        &lt;audit&gt;false&lt;/audit&gt;
+        &lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;
+        &lt;choice/&gt;
+        &lt;choice_field/&gt;
+        &lt;choice_table/&gt;
+        &lt;column_label&gt;Is Virtual&lt;/column_label&gt;
+        &lt;comments/&gt;
+        &lt;create_roles/&gt;
+        &lt;default_value/&gt;
+        &lt;defaultsort/&gt;
+        &lt;delete_roles/&gt;
+        &lt;dependent/&gt;
+        &lt;dependent_on_field/&gt;
+        &lt;display&gt;false&lt;/display&gt;
+        &lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+        &lt;dynamic_creation_script/&gt;
+        &lt;dynamic_default_value/&gt;
+        &lt;dynamic_ref_qual/&gt;
+        &lt;element&gt;isvirtual&lt;/element&gt;
+        &lt;element_reference&gt;false&lt;/element_reference&gt;
+        &lt;foreign_database/&gt;
+        &lt;function_definition/&gt;
+        &lt;function_field&gt;false&lt;/function_field&gt;
+        &lt;internal_type display_value=""&gt;boolean&lt;/internal_type&gt;
+        &lt;mandatory&gt;false&lt;/mandatory&gt;
+        &lt;max_length&gt;5&lt;/max_length&gt;
+        &lt;name&gt;x_chef_automate_asset_import&lt;/name&gt;
+        &lt;next_element/&gt;
+        &lt;primary&gt;false&lt;/primary&gt;
+        &lt;read_only&gt;false&lt;/read_only&gt;
+        &lt;read_roles/&gt;
+        &lt;reference/&gt;
+        &lt;reference_cascade_rule/&gt;
+        &lt;reference_floats&gt;false&lt;/reference_floats&gt;
+        &lt;reference_key/&gt;
+        &lt;reference_qual/&gt;
+        &lt;reference_qual_condition/&gt;
+        &lt;reference_type/&gt;
+        &lt;sizeclass/&gt;
+        &lt;spell_check&gt;false&lt;/spell_check&gt;
+        &lt;staged&gt;false&lt;/staged&gt;
+        &lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;dmurray&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2018-09-10 14:52:52&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;563e1ea0dba384501846e7dcd3961998&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Is Virtual&lt;/sys_name&gt;
+        &lt;sys_package display_value="Chef Automate" source="x_chef_automate"&gt;4cd4b300db68e700197478fdaa961908&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Chef Automate"&gt;4cd4b300db68e700197478fdaa961908&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_dictionary_x_chef_automate_asset_import_isvirtual&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;mscott&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2020-03-11 11:26:42&lt;/sys_updated_on&gt;
+        &lt;table_reference&gt;false&lt;/table_reference&gt;
+        &lt;text_index&gt;false&lt;/text_index&gt;
+        &lt;unique&gt;false&lt;/unique&gt;
+        &lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+        &lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+        &lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+        &lt;virtual&gt;false&lt;/virtual&gt;
+        &lt;widget/&gt;
+        &lt;write_roles/&gt;
+        &lt;xml_view&gt;false&lt;/xml_view&gt;
+    &lt;/sys_dictionary&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>-1704747338</payload_hash>
+        <record_name>Asset Import.Is Virtual</record_name>
+        <reverted_from/>
+        <source>a3c0963cdbf38810a9ad266e139619d8</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-03-24 15:22:11</sys_created_on>
+        <sys_id>c2d0da3cdbf38810a9ad266e13961995</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1710d2308450000001</sys_recorded_at>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-03-24 15:22:11</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>02d0da3c26f388102928da29dfbcd595</update_guid>
+        <update_guid_history>02d0da3c26f388102928da29dfbcd595:0,b490d6b826f3881006fd099a177adf6f:1874413108,f94e56e0d4a384502794ecaa44e17539:0,a2cc5aec886384509b17f41dc4b9f7f4:1874413108,35ca9a28c9638450b32e48e6f0cce936:0,ce7a9aa4b4638450f5d9b44ec11cf6af:1874413108,63991624af638450b31453b18f9a38c9:0,80191660a7638450b4629e8b63838d27:1874413108,31665a286e2384507ee58f78a42edfbc:0,6126daa49e23845049ae4660612cfc72:1874413108,61c59e243d238450e7b73a50b66834a4:0,308512e06a238450611f59bc5527294c:1874413108,0bc615905bef04507378c710bc0bbfe9:0,a6a51d9c53af04509da92a0aecb28471:1874413108,a30091d057af0450cc00623b6ed3c88b:0,12cfc150f7af04505a4cbf97023fa895:1874413108,fe3f05dc2b6f04508ac9e4c0a6f0cb68:0,74fe055c806f04500a29d4d674d307b3:1874413108,17958910b16f04507182bfe95fbe190d:0,e625c95c072f0450c01653c5b4f06245:1874413108,35200cb173570c1007fa564212c47cf8:0,6cdf3f2133570c1081d5cfce21d56c89:1874413108,92c2fc2d2b8bc410748496be917bb973:0,f492b4e9e08bc410addc713012b07da3:1874413108,160deca19a8bc41079dc26a64a702138:0,40dca461cc8bc410a8d7e9d92f089cdd:1874413108,0d1e78dc7d8bc0108c304ffbec91abd6:0,c1edf09c7e8bc010ca8efda1cb4fee61:1874413108,9d9183bb26f680104c4e083264e69826:0,7351873bb3f6801071362a23d53907f1:1874413108,e71682a358f64010b0c2b38017a75994:0,abe5ca236ef6401024a1e810d1acab07:1874413108,5a95426f60b640108cc1d6e91d8209d7:0,e5150eab39b64010f7212596bd83a83f:1874413108,75f44a5b127a00101195ac4eb92b66c2:0,92c4021b487a001046caefc282633d1f:1874413108,14104213087a0010d3eac29c7b8dcd9c:0,f3bef55f683a0010a80287f7fa423117:1874413108,0d057d9fd7f6001004791c99f3bc9dff:1733631848</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-03-24 16:35:16</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>1327c35f4f5944e682240bb26932dd84</sys_id>
+        <sys_metadata>d2c0163cdbf38810a9ad266e13961985</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Is Virtual</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent display_value="Asset Import">44d3815cdbe8e700197478fdaa961979</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete display_value="">03835e456e36492781266dc672a19f01</sys_scope_delete>
+        <sys_update_name>sys_dictionary_x_chef_automate_asset_import_isvirtual</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_chef_automate_asset_import_isvirtual">c2d0da3cdbf38810a9ad266e13961995</sys_update_version>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-03-24 16:35:16</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
