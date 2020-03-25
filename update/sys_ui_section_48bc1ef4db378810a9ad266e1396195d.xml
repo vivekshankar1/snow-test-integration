@@ -644,6 +644,48 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>short_description</element>
+            <position>46</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-03-25 11:42:16</sys_created_on>
+            <sys_id>56186a8ddbb3c810a9ad266e13961918</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_asset_import" sys_domain="global" view="Default view">48bc1ef4db378810a9ad266e1396195d</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-03-25 11:42:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cpu_manufacturer</element>
+            <position>47</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-03-25 12:08:26</sys_created_on>
+            <sys_id>651e2205dbf3c810a9ad266e139619ef</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_asset_import" sys_domain="global" view="Default view">48bc1ef4db378810a9ad266e1396195d</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-03-25 12:08:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>system_class_name</element>
+            <position>48</position>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-03-25 15:43:24</sys_created_on>
+            <sys_id>e64fd701dbb7c810a9ad266e1396190c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_chef_automate_asset_import" sys_domain="global" view="Default view">48bc1ef4db378810a9ad266e1396195d</sys_ui_section>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-03-25 15:43:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>

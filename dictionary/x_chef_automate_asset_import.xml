@@ -9,12 +9,11 @@
         <element label="Cpu Cores" max_length="3" name="cpu_cores" type="string"/>
         <element label="CPU core count" max_length="40" name="cpu_core_count" type="integer"/>
         <element label="CPU count" max_length="4" name="cpu_count" type="string"/>
+        <element label="Cpu manufacturer" max_length="100" name="cpu_manufacturer" type="string"/>
         <element label="CPU manufacturer sys id" max_length="32" name="cpu_manufacturer_sys_id" type="string"/>
         <element label="Cpu Model" max_length="100" name="cpu_model" type="string"/>
         <element label="Cpu Speed" max_length="20" name="cpu_speed" type="string"/>
         <element label="Cpu Type" max_length="100" name="cpu_type" type="string"/>
-        <element label="Cpu Vendor Id" max_length="100" name="cpu_vendor_id" type="string"/>
-        <element label="Description" max_length="1000" name="description" type="string"/>
         <element label="Disk Space" max_length="100" name="disk_space" type="string"/>
         <element label="DNS domain" max_length="255" name="dns_domain" type="string"/>
         <element label="File system" max_length="16777215" name="file_system" type="string"/>
@@ -37,6 +36,8 @@
         <element label="Packages" max_length="16777215" name="packages" type="string"/>
         <element label="RAM (MB)" max_length="40" name="ram" type="integer"/>
         <element label="Serial Number" max_length="50" name="serial_number" type="string"/>
+        <element label="Description" max_length="1000" name="short_description" type="string"/>
+        <element label="System class name" max_length="255" name="system_class_name" type="string"/>
         <element label="Timezone" max_length="50" name="timezone" type="string"/>
         <element label="Is Virtual" max_length="40" name="virtual" type="boolean"/>
     </element>

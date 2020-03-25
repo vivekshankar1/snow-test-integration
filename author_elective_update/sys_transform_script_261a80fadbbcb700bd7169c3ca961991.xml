@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="DELETE">
+        <active>true</active>
+        <map display_value="CPU Manufacturer Transform">3f6948fadbbcb700bd7169c3ca96199a</map>
+        <order>100</order>
+        <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+
+	var logger = new Logger();
+	try {
+		source.cpu_manufacturer_sys_id = target.sys_id;
+		source.update();
+		
+		logger.debug(gs.getMessage("Manufacturer on after script setting source.cpu_manufacturer_sys_id to {0}",source.cpu_manufacturer_sys_id));
+	} catch (err) {
+		logger.errorWithStack("onAfter() CPU Manufacturer transform", err);
+	} 
+})(source, map, log, target);]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2019-04-17 11:21:58</sys_created_on>
+        <sys_id>261a80fadbbcb700bd7169c3ca961991</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>onAfter</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_transform_script_261a80fadbbcb700bd7169c3ca961991</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-11-27 09:49:35</sys_updated_on>
+        <when>onAfter</when>
+    </sys_transform_script>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
+        <instance_name>ven02358</instance_name>
+        <name>sys_transform_script_261a80fadbbcb700bd7169c3ca961991</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_transform_script"&gt;
+    &lt;sys_transform_script action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;map display_value="CPU Manufacturer Transform"&gt;3f6948fadbbcb700bd7169c3ca96199a&lt;/map&gt;
+        &lt;order&gt;100&lt;/order&gt;
+        &lt;script&gt;&lt;![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+
+	var logger = new Logger();
+	try {
+		source.cpu_manufacturer_sys_id = target.sys_id;
+		source.update();
+		
+		logger.debug(gs.getMessage("Manufacturer on after script setting source.cpu_manufacturer_sys_id to {0}",source.cpu_manufacturer_sys_id));
+	} catch (err) {
+		logger.errorWithStack("onAfter() CPU Manufacturer transform", err);
+	} 
+})(source, map, log, target);]]&gt;&lt;/script&gt;
+        &lt;sys_class_name&gt;sys_transform_script&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;mscott&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2019-04-17 11:21:58&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;261a80fadbbcb700bd7169c3ca961991&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;onAfter&lt;/sys_name&gt;
+        &lt;sys_package display_value="Chef Automate" source="x_chef_automate"&gt;4cd4b300db68e700197478fdaa961908&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Chef Automate"&gt;4cd4b300db68e700197478fdaa961908&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_transform_script_261a80fadbbcb700bd7169c3ca961991&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;mscott&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2019-11-27 09:49:35&lt;/sys_updated_on&gt;
+        &lt;when&gt;onAfter&lt;/when&gt;
+    &lt;/sys_transform_script&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>520434736</payload_hash>
+        <record_name>onAfter</record_name>
+        <reverted_from/>
+        <source>a3c0963cdbf38810a9ad266e139619d8</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-03-24 15:22:34</sys_created_on>
+        <sys_id>e3e0567cdbf38810a9ad266e13961925</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1710d2360be0000001</sys_recorded_at>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-03-24 15:22:34</sys_updated_on>
+        <type>Transform Script</type>
+        <update_guid>23e0567cc6f388102db9260c3e668925</update_guid>
+        <update_guid_history>23e0567cc6f388102db9260c3e668925:0,2db0daf809f38810309c5990c2db2534:-1384429692,ef5e122419a384505bb092922f2a5e8a:0,c4fcda20b3a38450a6a5eff77c1eb53b:-53795654,c8ead668456384501d727d4bc6b1adbc:0,38aadae4b26384509c5bd3457c1236c5:-1384429692,35b912645c638450fb5ec91a7243e701:0,1e391aa0e66384504928335688e36df9:1944141374,8086d26860238450e07ab03cd3204c2b:0,e546dae44023845016c89a3bd4cce86f:-1384429692,87d51a644123845031ec698861f77833:0,99a51224462384500c02faaf4888701c:-1384429692,bce691d0d2ef04509c4aa3dfb5b6505b:0,b4d5dddc9caf045018c34e900bd4e164:-1921349567,9d201114c0af0450f76f74629005fd21:0,0bef059095af0450d4931bba8364280e:-1384429692,3c5f4ddc9d6f0450bbae573b073d5ecc:0,f91f459cd96f0450da98ad11783a9ac2:-1384429692,9db509509a6f045054821d411785cd48:0,545541dc7d2f0450ae984cf4af770e24:1167533455,7840c4f122570c108510af2ae4d1b06c:0,cc004c7191570c1085d871a86e2ebaee:-1384429692,c6d2b46d1d8bc410124c397a1c18fe8d:0,6ba2342d7a8bc4107bfe73eda13dc106:-1384429692,eb1d2c25e38bc4104df193a6fb0b9699:0,dcfc24a1d58bc41011bae376ab72fd2e:-1384429692,052e301082cbc0101164aaf7c6181cda:0,17fdbc9c458bc010248bb34c8bb68ef9:-1384429692,4ea18bbbfcf68010d05a020548deb53c:0,5f71c37b88f68010388e1553d76d4ce5:-1384429692,29615227383a4010f691dca5d5bbd299:0,ce311ea3a03a4010c2e8b7c0d0d71e1f:-1384429692,5f26caa3daf6401005b0921dcbf774a9:0,b9068663e3f640109f1fa0cd66a865fb:-1384429692,36a5ca6fe0b64010a9fbfb94b8c5cd9c:0,21358aeba2b64010fdea2baff86fd624:563584018,e105829bc07a00107981d8f1db9c6a66:0,c4e44e1ba17a0010b4568209796a9831:-1384429692,08200a133a7a001094d121327973f938:0,31def19f1f3a00103f50f42aacce793c:-1384429692,eb1579dfaff60010ec86102c3f6f6455:1615014264</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-03-25 15:10:21</sys_created_on>
+        <sys_db_object display_value="" name="sys_transform_script">sys_transform_script</sys_db_object>
+        <sys_id>4e8dcfd495984c219de311091120bf09</sys_id>
+        <sys_metadata>261a80fadbbcb700bd7169c3ca961991</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>onAfter</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete display_value="">03835e456e36492781266dc672a19f01</sys_scope_delete>
+        <sys_update_name>sys_transform_script_261a80fadbbcb700bd7169c3ca961991</sys_update_name>
+        <sys_update_version display_value="sys_transform_script_261a80fadbbcb700bd7169c3ca961991">e3e0567cdbf38810a9ad266e13961925</sys_update_version>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-03-25 15:10:21</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

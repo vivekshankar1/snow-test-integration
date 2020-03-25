@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_entry">
+    <sys_transform_entry action="DELETE">
+        <choice_action>create</choice_action>
+        <coalesce>false</coalesce>
+        <coalesce_case_sensitive>false</coalesce_case_sensitive>
+        <coalesce_empty_fields>false</coalesce_empty_fields>
+        <date_format>yyyy-MM-dd HH:mm:ss</date_format>
+        <map display_value="Model transform">1bfb8da4db0cb70070cd5e25ca9619ba</map>
+        <reference_value_field/>
+        <source_field>model</source_field>
+        <source_script><![CDATA[answer = (function transformEntry(source) {
+
+	// Add your code here
+	return ""; // return the value to be put into the target field
+
+})(source);]]></source_script>
+        <source_table>x_chef_automate_asset_import</source_table>
+        <sys_class_name>sys_transform_entry</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2019-03-04 11:25:25</sys_created_on>
+        <sys_id>5ee4ade4db4cb70070cd5e25ca961932</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>model</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_transform_entry_5ee4ade4db4cb70070cd5e25ca961932</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-03-04 11:25:25</sys_updated_on>
+        <target_field>display_name</target_field>
+        <target_table>cmdb_model</target_table>
+        <use_source_script>false</use_source_script>
+    </sys_transform_entry>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
+        <instance_name>ven02358</instance_name>
+        <name>sys_transform_entry_5ee4ade4db4cb70070cd5e25ca961932</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_transform_entry"&gt;
+    &lt;sys_transform_entry action="INSERT_OR_UPDATE"&gt;
+        &lt;choice_action&gt;create&lt;/choice_action&gt;
+        &lt;coalesce&gt;false&lt;/coalesce&gt;
+        &lt;coalesce_case_sensitive&gt;false&lt;/coalesce_case_sensitive&gt;
+        &lt;coalesce_empty_fields&gt;false&lt;/coalesce_empty_fields&gt;
+        &lt;date_format&gt;yyyy-MM-dd HH:mm:ss&lt;/date_format&gt;
+        &lt;map display_value="Model transform"&gt;1bfb8da4db0cb70070cd5e25ca9619ba&lt;/map&gt;
+        &lt;reference_value_field/&gt;
+        &lt;source_field&gt;model&lt;/source_field&gt;
+        &lt;source_script&gt;&lt;![CDATA[answer = (function transformEntry(source) {
+
+	// Add your code here
+	return ""; // return the value to be put into the target field
+
+})(source);]]&gt;&lt;/source_script&gt;
+        &lt;source_table&gt;x_chef_automate_asset_import&lt;/source_table&gt;
+        &lt;sys_class_name&gt;sys_transform_entry&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;mscott&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2019-03-04 11:25:25&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;5ee4ade4db4cb70070cd5e25ca961932&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;model&lt;/sys_name&gt;
+        &lt;sys_package display_value="Chef Automate" source="x_chef_automate"&gt;4cd4b300db68e700197478fdaa961908&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Chef Automate"&gt;4cd4b300db68e700197478fdaa961908&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_transform_entry_5ee4ade4db4cb70070cd5e25ca961932&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;mscott&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2019-03-04 11:25:25&lt;/sys_updated_on&gt;
+        &lt;target_field&gt;display_name&lt;/target_field&gt;
+        &lt;target_table&gt;cmdb_model&lt;/target_table&gt;
+        &lt;use_source_script&gt;false&lt;/use_source_script&gt;
+    &lt;/sys_transform_entry&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>-60069071</payload_hash>
+        <record_name>model</record_name>
+        <reverted_from/>
+        <source>a3c0963cdbf38810a9ad266e139619d8</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-03-24 15:22:34</sys_created_on>
+        <sys_id>a7e0167cdbf38810a9ad266e139619f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1710d235f0a0000001</sys_recorded_at>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-03-24 15:22:34</sys_updated_on>
+        <type>Field Map</type>
+        <update_guid>e3e0167c33f388100dc7379434fca3f8</update_guid>
+        <update_guid_history>e3e0167c33f388100dc7379434fca3f8:0,e9b09af8a4f38810916b53af90e083cf:-565665634,df5e1224aaa38450a2649ff5a5f7fa39:0,73ec9a2083a38450971b0b1028ecb7e0:222452327,33dad66878638450c6d8b93a04439691:0,e8aadae482638450f9c28b737bbfbc86:-565665634,edb9de24a86384501e34a4465cb9c570:0,86391aa0da63845061fb92672dead28e:364768915,c4869268a1238450b76797bd89f1fcff:0,a946dae47e238450d84632dd1f2beb3d:-565665634,cbd5d66478238450eae60d2a4847f3ed:0,85a5dee01b2384500a0d79492b3852de:-565665634,b8e691d0f1ef04509044c4009ec8e722:0,e0d59ddc8eaf04507facf162369017ec:-147354179,1d20ddd0bcaf0450afe234019e4d03e9:0,4fefc190cdaf0450c7f66b2ad1f4b6da:-565665634,ec5f4ddcc86f04505b2f7c04c69ba99f:0,391f459cbe6f0450eacf9a4115dffd8e:-565665634,c1b509508c6f045045f44eb124e83c1c:0,c45501dcd92f0450a019935fac7db77a:-2081165659,2c40c4f111570c10ec68c5ea75705c3f:0,7bff7f61c4570c10d0dde2113a5c91bc:-565665634,8ad2b46dfc8bc410c8cb673d0568b660:0,9ba2f02d2a8bc41030e37e7f240e5aca:-565665634,171d2c256e8bc410ed73c0350786f96f:0,0cfce0a16d8bc41040b9ebb310c4e6e9:-565665634,012e301035cbc0105b5368e286a523a1:0,43fdbc9c1f8bc010455d1b85d5e47dcd:-565665634,82a18bbbe1f68010728d7b1476b13610:0,1f71c37bfcf68010f99644797f0e36b9:-565665634,6d615227453a40102631d88b58086053:0,7d31daa3c53a40101dd607fe080176bb:-565665634,5b26caa3d1f64010b685e6e7dd43905d:0,a1068663b3f64010d742342350ccc0c5:-565665634,36a5ca6ff3b64010b0d4fec7f2c7b56a:0,11354aebf8b640105f6f4eedf36369d3:-1699171990,dd05429bff7a0010b926b6a12bfba8ff:0,08e40e1bc77a0010b77a8318a577b3e0:-565665634,c4200a13607a0010583c9f4a178e0f10:0,3ddeb19f533a0010f7878d36ee83ddd8:-565665634,a31579dfdcf6001002e52b76b956c315:-1032195421</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-03-25 15:09:06</sys_created_on>
+        <sys_db_object display_value="" name="sys_transform_entry">sys_transform_entry</sys_db_object>
+        <sys_id>2ee37f9f4b9249dd996c5ba93c587539</sys_id>
+        <sys_metadata>5ee4ade4db4cb70070cd5e25ca961932</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>model</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete display_value="">03835e456e36492781266dc672a19f01</sys_scope_delete>
+        <sys_update_name>sys_transform_entry_5ee4ade4db4cb70070cd5e25ca961932</sys_update_name>
+        <sys_update_version display_value="sys_transform_entry_5ee4ade4db4cb70070cd5e25ca961932">a7e0167cdbf38810a9ad266e139619f8</sys_update_version>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-03-25 15:09:06</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

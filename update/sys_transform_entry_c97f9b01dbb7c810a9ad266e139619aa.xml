@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_entry">
     <sys_transform_entry action="INSERT_OR_UPDATE">
-        <choice_action>create</choice_action>
-        <coalesce>true</coalesce>
+        <choice_action>ignore</choice_action>
+        <coalesce>false</coalesce>
         <coalesce_case_sensitive>false</coalesce_case_sensitive>
         <coalesce_empty_fields>false</coalesce_empty_fields>
         <date_format>yyyy-MM-dd HH:mm:ss</date_format>
-        <map display_value="Manufacturer Transform">8f7ff060db0cb70070cd5e25ca9619df</map>
+        <map display_value="Chef Automate Sync Transform">56940d5cdbe8e700197478fdaa96190b</map>
         <reference_value_field/>
-        <source_field>manufacturer</source_field>
+        <source_field>system_class_name</source_field>
         <source_script><![CDATA[answer = (function transformEntry(source) {
 
 	// Add your code here
@@ -17,18 +17,18 @@
         <source_table>x_chef_automate_asset_import</source_table>
         <sys_class_name>sys_transform_entry</sys_class_name>
         <sys_created_by>mscott</sys_created_by>
-        <sys_created_on>2019-03-04 08:49:22</sys_created_on>
-        <sys_id>a72141a0db0cb70070cd5e25ca961928</sys_id>
+        <sys_created_on>2020-03-25 15:44:33</sys_created_on>
+        <sys_id>c97f9b01dbb7c810a9ad266e139619aa</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>manufacturer</sys_name>
+        <sys_name>system_class_name</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
-        <sys_update_name>sys_transform_entry_a72141a0db0cb70070cd5e25ca961928</sys_update_name>
+        <sys_update_name>sys_transform_entry_c97f9b01dbb7c810a9ad266e139619aa</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-03-04 08:49:22</sys_updated_on>
-        <target_field>name</target_field>
-        <target_table>core_company</target_table>
+        <sys_updated_on>2020-03-25 15:44:33</sys_updated_on>
+        <target_field>sys_class_name</target_field>
+        <target_table>cmdb_ci_server</target_table>
         <use_source_script>false</use_source_script>
     </sys_transform_entry>
 </record_update>
