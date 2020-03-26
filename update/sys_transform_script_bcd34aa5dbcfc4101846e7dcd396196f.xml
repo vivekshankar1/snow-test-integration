@@ -9,20 +9,20 @@ var jsonUtil = new JsonUtil();
 var logger = new Logger();
 
 (function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
-
+	
     try {
         var attributesTable = new GlideRecordSecure('x_chef_automate_attributes');
         attributesTable.initialize();
-        attributesTable.addQuery('node', target.sys_id);
+        attributesTable.addQuery('node', source.server);
         attributesTable.query();
 
         if (attributesTable.next()) {
 			setAttributes(attributesTable, source);
-			logger.debug(gs.getMessage("Updating attributes for node {0}", target.sys_id));
+			logger.debug(gs.getMessage("Updating attributes for node {0}", source.server));
             attributesTable.update();
         } else {
 			setAttributes(attributesTable, source);
-			logger.debug(gs.getMessage("Inserting attributes for node {0}", target.sys_id));
+			logger.debug(gs.getMessage("Inserting attributes for node {0}", source.server));
             attributesTable.insert();
         }
 
@@ -65,14 +65,14 @@ function setAttributes(attributesTable, source) {
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2020-02-18 15:38:55</sys_created_on>
         <sys_id>bcd34aa5dbcfc4101846e7dcd396196f</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>onAfter</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_transform_script_bcd34aa5dbcfc4101846e7dcd396196f</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-02-24 16:58:49</sys_updated_on>
+        <sys_updated_on>2020-03-26 17:04:09</sys_updated_on>
         <when>onAfter</when>
     </sys_transform_script>
 </record_update>

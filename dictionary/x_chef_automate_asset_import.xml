@@ -28,7 +28,7 @@
         <element label="Model category name" max_length="255" name="model_category_name" type="string"/>
         <element label="Model sys id" max_length="32" name="model_sys_id" type="string"/>
         <element label="Name" max_length="255" name="name" type="string"/>
-        <element label="Deprecated Operating System " max_length="256" name="operating_system" type="string"/>
+        <element label="Deprecated Operating System" max_length="256" name="operating_system" type="string"/>
         <element label="Operating System" max_length="50" name="os" type="string"/>
         <element label="OS Family" max_length="100" name="os_family" type="string"/>
         <element label="OS service pack" max_length="40" name="os_service_pack" type="string"/>

@@ -18,6 +18,7 @@
         } else {
             logger.info('IE Output Payload: ' + cmdbUtil.getOutputPayload());
             logger.info('Imported CI: ' + cmdbUtil.getOutputRecordSysId());
+			source.server = cmdbUtil.getOutputRecordSysId();
         }
     } catch (err) {
         logger.errorWithStack("CMDBTransformUtil error", err);
@@ -27,14 +28,14 @@
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2020-03-24 15:56:15</sys_created_on>
         <sys_id>16681274db378810a9ad266e1396192d</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>onBefore</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_transform_script_16681274db378810a9ad266e1396192d</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-03-25 15:09:51</sys_updated_on>
+        <sys_updated_on>2020-03-26 17:09:49</sys_updated_on>
         <when>onBefore</when>
     </sys_transform_script>
 </record_update>
