@@ -6,7 +6,7 @@
         <action_insert>true</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
-        <active>true</active>
+        <active>false</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
@@ -27,48 +27,34 @@
         <rest_service_text/>
         <rest_variables/>
         <role_conditions/>
-        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
 
-	var jsonUtil = new JsonUtil();
-	var logger = new Logger();
-	try {
-	
-		var server = new GlideRecordSecure("cmdb_ci_server");
-		server.initialize();
-		var useIp = gs.getProperty('x_chef_automate.ipAddress') == "true";
-		logger.debug(gs.getMessage("useIp {0}", useIp));
-		var useHostname = gs.getProperty('x_chef_automate.hostname') == "true";
-		logger.debug(gs.getMessage("useHostname {0}", useHostname));
-		var useMac = gs.getProperty('x_chef_automate.macAddress') == "true";
-		logger.debug(gs.getMessage("useMac {0}", useMac));
-		if (useIp == false && useHostname == false && useMac == false) {
-			useIp = true;
-		}
-		
-		var automatic = jsonUtil.parse(current.automatic);
-		var ipaddress = jsonUtil.getStringValue(automatic, "ipaddress");
-		if (useIp) {
-			server.addQuery("ip_address", ipaddress);
-		}
-		if (useMac) {
-			var macaddress = jsonUtil.getStringValue(automatic, "macaddress");
-			server.addQuery("mac_address", ipaddress);
-		}
-		if (useHostname) {
-			var hostname = jsonUtil.getStringValue(automatic, "hostname");
-			server.addQuery("host_name", hostname);
-		}
-		server.query();
-		if (server.next()) {
-			current.node = server.sys_id;
-			logger.debug(gs.getMessage("Server found for ip address {0}", ipaddress));
-		} else {
-			logger.debug(gs.getMessage("No server found for ip {0}", ipaddress));
-		}
-	
-	} catch (err) {
-		logger.errorWithStack("Attributes server reference business rule error", err);
-	}
+    var jsonUtil = new JsonUtil();
+    var logger = new Logger();
+    try {
+
+        var server = new GlideRecordSecure("cmdb_ci_server");
+        server.initialize();
+
+
+        var automatic = jsonUtil.parse(current.automatic);
+        var ipaddress = jsonUtil.getStringValue(automatic, "ipaddress");
+        server.addQuery("ip_address", ipaddress);
+        var macaddress = jsonUtil.getStringValue(automatic, "macaddress");
+        server.addQuery("mac_address", ipaddress);
+        var hostname = jsonUtil.getStringValue(automatic, "hostname");
+        server.addQuery("host_name", hostname);
+        server.query();
+        if (server.next()) {
+            current.node = server.sys_id;
+            logger.debug(gs.getMessage("Server found for ip address {0}", ipaddress));
+        } else {
+            logger.debug(gs.getMessage("No server found for ip {0}", ipaddress));
+        }
+
+    } catch (err) {
+        logger.errorWithStack("Attributes server reference business rule error", err);
+    }
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -77,7 +63,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ca30912ddb0fc4101846e7dcd39619fd</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Attributes server reference</sys_name>
         <sys_overrides/>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -85,7 +71,7 @@
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_ca30912ddb0fc4101846e7dcd39619fd</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-03-20 13:31:14</sys_updated_on>
+        <sys_updated_on>2020-03-27 15:06:40</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

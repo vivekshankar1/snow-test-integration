@@ -91,7 +91,7 @@
 				clientRunCookbook.initialize();
 				clientRunCookbook.client_run = clientRunSysId;
 				clientRunCookbook.cookbook = cookbookId;
-				clientRunCookbook.node = target.sys_id;
+				clientRunCookbook.node = source.server;
 				clientRunCookbook.insert();
 			}
 		
@@ -101,7 +101,7 @@
 				clientRunRecipe.initialize();
 				clientRunRecipe.recipe = recipes[recipe];
 				clientRunRecipe.client_run = clientRunSysId;
-				clientRunRecipe.node = target.sys_id;
+				clientRunRecipe.node = source.server;
 				clientRunRecipe.insert();
 			}
 		
@@ -111,7 +111,7 @@
 				clientRunList.initialize();
 				clientRunList.run_list = runLists[runList];
 				clientRunList.client_run = clientRunSysId;
-				clientRunList.node = target.sys_id;
+				clientRunList.node = source.server;
 				clientRunList.insert();
 			}
 		}
@@ -125,14 +125,14 @@
         <sys_created_by>dmurray</sys_created_by>
         <sys_created_on>2018-09-11 10:20:00</sys_created_on>
         <sys_id>4a311568dbe02b00197478fdaa9619de</sys_id>
-        <sys_mod_count>70</sys_mod_count>
+        <sys_mod_count>71</sys_mod_count>
         <sys_name>onAfter</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_transform_script_4a311568dbe02b00197478fdaa9619de</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-03-26 17:15:01</sys_updated_on>
+        <sys_updated_on>2020-03-27 14:30:57</sys_updated_on>
         <when>onAfter</when>
     </sys_transform_script>
 </record_update>
