@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="model_sys_id" table="x_chef_automate_asset_import">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="model_id" table="x_chef_automate_asset_import">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
@@ -14,7 +14,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Model sys id</column_label>
+        <column_label>Model ID</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -27,7 +27,7 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>model_sys_id</element>
+        <element>model_id</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
@@ -52,16 +52,16 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>mscott</sys_created_by>
-        <sys_created_on>2019-03-04 09:47:23</sys_created_on>
-        <sys_id>b4832caddbf70c10a9ad266e13961909</sys_id>
+        <sys_created_on>2020-03-27 13:21:50</sys_created_on>
+        <sys_id>3ff15539db3b4c10a9ad266e13961925</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Model sys id</sys_name>
+        <sys_name>Model ID</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
-        <sys_update_name>sys_dictionary_x_chef_automate_asset_import_model_sys_id</sys_update_name>
+        <sys_update_name>sys_dictionary_x_chef_automate_asset_import_model_id</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-03-26 15:20:15</sys_updated_on>
+        <sys_updated_on>2020-03-27 13:21:50</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

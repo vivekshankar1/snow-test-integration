@@ -22,11 +22,10 @@
         <element label="Languages" max_length="16777215" name="languages" type="string"/>
         <element label="Mac Address" max_length="20" name="mac_address" type="string"/>
         <element label="Manufacturer" max_length="255" name="manufacturer" type="string"/>
-        <element label="Manufacturer sys_id" max_length="32" name="manufacturer_sys_id" type="string"/>
         <element label="Memory Total" max_length="20" name="memory_total" type="string"/>
         <element label="Model" max_length="255" name="model" type="string"/>
         <element label="Model category name" max_length="255" name="model_category_name" type="string"/>
-        <element label="Model sys id" max_length="32" name="model_sys_id" type="string"/>
+        <element label="Model ID" max_length="32" name="model_id" type="string"/>
         <element label="Name" max_length="255" name="name" type="string"/>
         <element label="Deprecated Operating System" max_length="256" name="operating_system" type="string"/>
         <element label="Operating System" max_length="50" name="os" type="string"/>
