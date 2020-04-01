@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>api_token</name>
+        <rest_message_function display_value="Test destination">a66f9397db73c050a9ad266e139619f8</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-04-01 15:39:14</sys_created_on>
+        <sys_id>5e512f97db73c050a9ad266e139619d2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>api_token</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_5e512f97db73c050a9ad266e139619d2</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-04-01 15:39:38</sys_updated_on>
+        <type>string</type>
+        <value>Mj0roz-v_RdBszGzfv6GZhEL0EQ=</value>
+    </sys_rest_message_fn_parameters>
+</record_update>

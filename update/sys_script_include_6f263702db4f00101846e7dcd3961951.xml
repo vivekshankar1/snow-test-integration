@@ -4,7 +4,7 @@
         <active>true</active>
         <api_name>x_chef_automate.AutomateApi</api_name>
         <caller_access/>
-        <client_callable>false</client_callable>
+        <client_callable>true</client_callable>
         <description/>
         <name>AutomateApi</name>
         <script><![CDATA[var AutomateApi = Class.create();
@@ -173,7 +173,30 @@ AutomateApi.prototype = {
         }
 		return '';
     },
-	
+
+    testDestination: function(username, password) {
+
+        try {
+
+            var message = new sn_ws.RESTMessageV2('x_chef_automate.Automate API', 'Test destination');
+
+            message.setStringParameterNoEscape('servicenow_user', username);
+			message.setStringParameterNoEscape('servicenow_password', password);
+            message.setStringParameterNoEscape('automate_url', this.automateUrl);
+            message.setStringParameterNoEscape('servicenow_url', this.getAppUrl());
+            message.setStringParameterNoEscape('api_token', this.apiToken);
+
+            var response = message.execute();
+            var httpStatus = response.getStatusCode();
+            this.logger.debug(gs.getMessage("response {0} {1}", [httpStatus, response.getBody()]));
+            var responseBody = response.getBody();
+            return this.jsonUtil.parse(responseBody);				
+        } catch (ex) {
+            this.logger.errorWithStack("Error calling automate testDestination API", ex);
+			throw ex;
+        }
+    },
+
 	getAppUrl: function() {
 		return this.getInstance() + "/api/x_chef_automate/asset";
 	},
@@ -192,13 +215,13 @@ AutomateApi.prototype = {
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2020-02-20 13:18:25</sys_created_on>
         <sys_id>6f263702db4f00101846e7dcd3961951</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>33</sys_mod_count>
         <sys_name>AutomateApi</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_include_6f263702db4f00101846e7dcd3961951</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-02-21 17:30:42</sys_updated_on>
+        <sys_updated_on>2020-04-01 16:00:20</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -4,22 +4,22 @@
         <license_condition/>
         <license_model>none</license_model>
         <license_roles/>
-        <name>x_chef_automate_attributes_import</name>
+        <name>x_chef_automate_client_run_recipes</name>
         <op_delete>true</op_delete>
         <op_insert>true</op_insert>
         <op_update>true</op_update>
         <owner_condition/>
         <sys_class_name>ua_table_licensing_config</sys_class_name>
         <sys_created_by>mscott</sys_created_by>
-        <sys_created_on>2020-02-18 09:40:52</sys_created_on>
-        <sys_id>2483e8addbf70c10a9ad266e139619d5</sys_id>
+        <sys_created_on>2019-03-06 15:13:38</sys_created_on>
+        <sys_id>6120e61bdb7f8050a9ad266e139619db</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_chef_automate_attributes_import</sys_name>
+        <sys_name>x_chef_automate_client_run_recipes</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
-        <sys_update_name>ua_table_licensing_config_2483e8addbf70c10a9ad266e139619d5</sys_update_name>
+        <sys_update_name>ua_table_licensing_config_6120e61bdb7f8050a9ad266e139619db</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-02-18 09:40:52</sys_updated_on>
+        <sys_updated_on>2019-03-06 15:13:38</sys_updated_on>
     </ua_table_licensing_config>
 </record_update>
