@@ -28,10 +28,16 @@ gs.addInfoMessage("Hello World");
         <name>Test connectivity</name>
         <onclick>test()</onclick>
         <order>-1000</order>
-        <script><![CDATA[function test() {
+        <script><![CDATA[var dialog = null;
+
+function test() {
     
-    try { 
-        var ga = new GlideAjax('AutomateApiClient');
+    try {
+		g_form.clearMessages();
+		dialog = new GlideDialogWindow('x_chef_automate_test_automate_connectivity', true, 300, 120);
+		dialog.setTitle("Automate instance");
+        dialog.render();
+		var ga = new GlideAjax('AutomateApiClient');
         ga.addParam('sysparm_name', 'test');
         ga.addParam('sysparm_instance_name', g_form.getValue('name'));
 		ga.addParam('sysparm_instance_url', g_form.getValue('instance'));
@@ -40,13 +46,21 @@ gs.addInfoMessage("Hello World");
         ga.addParam('sysparm_servicenow_password', g_form.getValue('servicenow_password'));
         ga.getXML(parseResponse);
     } catch (err) {
-        alert(err);
+        g_form.addErrorMessage(err.message);
     }
 }
 
 function parseResponse(response) {
-    var answer = response.responseXML.documentElement.getAttribute("answer");
-    alert(answer);
+    dialog.destroy();
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	var json = JSON.parse(answer);
+	var status = json['status'];
+	if (status == 200) {
+		g_form.addInfoMessage(json['message']);
+	} else {
+		g_form.addErrorMessage(json['error']);
+	}
+    
 }]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -58,7 +72,7 @@ function parseResponse(response) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>58c822d3dbbf8050a9ad266e13961908</sys_id>
-        <sys_mod_count>75</sys_mod_count>
+        <sys_mod_count>93</sys_mod_count>
         <sys_name>Test connectivity</sys_name>
         <sys_overrides/>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -66,7 +80,7 @@ function parseResponse(response) {
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_ui_action_58c822d3dbbf8050a9ad266e13961908</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-04-02 12:44:57</sys_updated_on>
+        <sys_updated_on>2020-04-02 15:04:11</sys_updated_on>
         <table>x_chef_automate_instances</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>
