@@ -90,17 +90,17 @@ Util.prototype = {
         }
         return manufacturerSysId;
     },
-	
-	transformModel: function(model, category, manufacturer) {
-		this.logger.debug(gs.getMessage("model: {0}, category: {1}, manufacturer: {2}", [model, category, manufacturer]));
+
+    transformModel: function(model, category, manufacturer) {
+        this.logger.debug(gs.getMessage("model: {0}, category: {1}, manufacturer: {2}", [model, category, manufacturer]));
         var value = null;
         try {
 
             var cmdbModel = new GlideRecord('cmdb_model');
             cmdbModel.initialize();
             cmdbModel.addQuery('name', model);
-			cmdbModel.addQuery('category', category);
-			cmdbModel.addQuery('manufacturer', manufacturer);
+            cmdbModel.addQuery('category', category);
+            cmdbModel.addQuery('manufacturer', manufacturer);
             cmdbModel.query();
             if (cmdbModel.hasNext()) {
                 cmdbModel.next();
@@ -108,9 +108,9 @@ Util.prototype = {
                 this.logger.debug(gs.getMessage("Model {0} exists with sys_id {1} ", [model, value]));
             } else if (gs.getProperty("x_chef_automate.insert_model") == "true") {
                 cmdbModel.name = model;
-				cmdbModel.display_name = model;
-				cmdbModel.category = category;
-				cmdbModel.manufacturer = manufacturer;
+                cmdbModel.display_name = model;
+                cmdbModel.category = category;
+                cmdbModel.manufacturer = manufacturer;
                 value = cmdbModel.insert();
                 this.logger.debug(gs.getMessage("Model {0} insert() with sys_id {1} ", [model, value]));
             }
@@ -127,15 +127,15 @@ Util.prototype = {
             var modelCategory = new GlideRecordSecure('cmdb_model_category');
             modelCategory.initialize();
             modelCategory.addQuery('cmdb_ci_class', ciClass);
-			modelCategory.query();
+            modelCategory.query();
             if (modelCategory.hasNext()) {
-				modelCategory.next();
-				name = modelCategory.name;
+                modelCategory.next();
+                name = modelCategory.name;
             }
         } catch (err) {
             this.logger.warn(gs.getMessage("Util.transformModelCategory({0}) error: {1} ", [category, err.message]));
         }
-		return name;
+        return name;
     },
 
     getCIClass: function(os) {
@@ -152,6 +152,73 @@ Util.prototype = {
         return ciClass;
     },
 
+	
+    deleteComplianceReports: function() {
+
+        try {
+            this.logger.debug('Executing Scheduled Script Delete Client runs');
+            var complianceReportsPerNode = parseInt(gs.getProperty('x_chef_automate.compliance_reports_per_node'));
+            this._deleteRecords('x_chef_automate_compliance_report', complianceReportsPerNode);
+        } catch (err) {
+            this.logger.errorWithStack("Util Delete compliance reports", err);
+        }
+    },
+	
+    deleteClientRuns: function() {
+
+        try {
+            this.logger.debug('Executing Scheduled Script Delete Client runs');
+            var clientRunsPerNode = parseInt(gs.getProperty('x_chef_automate.client_runs_per_node'));
+            this._deleteRecords('x_chef_automate_client_run', clientRunsPerNode);
+        } catch (err) {
+            this.logger.errorWithStack("Util Delete Client runs", err);
+        }
+    },
+
+    _deleteRecords: function(table, retain) {
+        this.logger.info('Util._deleteRecords()');
+        var agg = new GlideAggregate(table);
+        agg.addAggregate('COUNT', 'node');
+        agg.query();
+        while (agg.hasNext()) {
+            agg.next();
+            agg.getAggregate('COUNT', 'node');
+            var sysCreatedOn = this._getSysCreatedOn(table, agg, retain);
+			this.logger.debug("sysCreatedOn " + sysCreatedOn);
+            if (sysCreatedOn != null) {
+                this._deleteRecordsBefore(table, agg.node, sysCreatedOn);
+            }
+        }
+    },
+
+    _deleteRecordsBefore: function(table, node, date) {
+        this.logger.info('Util._deleteRecordsBefore()');
+        var query = new GlideRecordSecure(table);
+        query.addQuery('node', node);
+        query.addQuery('sys_created_on', '<=', date);
+        query.query();
+        if (query.hasNext()) {
+            query.next();
+            query.deleteMultiple();
+        }
+    },
+
+    _getSysCreatedOn: function(table, aggregate, retain) {
+        this.logger.info(gs.getMessage("Util._getSysCreatedOn() {0} {1} {2}", [table, aggregate, retain]));
+        var node = aggregate.node;
+        var query = new GlideRecordSecure(table);
+        query.addQuery('node', node);
+        query.orderByDesc('sys_created_on');
+        query.chooseWindow(retain, retain + 1);
+        query.query();
+        if (query.hasNext()) {
+            query.next();
+			this.logger.info('Util._getSysCreatedOn(): ' + query.getValue('sys_created_on'));
+            return query.getValue('sys_created_on'); 
+        }
+		this.logger.info('Util._getSysCreatedOn(): null');
+        return null;
+    },
 
     type: 'Util'
 };]]></script>
@@ -159,13 +226,13 @@ Util.prototype = {
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-11-25 11:22:48</sys_created_on>
         <sys_id>28e993cedb910010bd7169c3ca9619d2</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_name>Util</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_include_28e993cedb910010bd7169c3ca9619d2</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-04-01 10:11:22</sys_updated_on>
+        <sys_updated_on>2020-04-07 12:03:42</sys_updated_on>
     </sys_script_include>
 </record_update>

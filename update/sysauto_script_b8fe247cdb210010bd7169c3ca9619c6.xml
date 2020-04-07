@@ -13,53 +13,25 @@
         <run_time>1970-01-01 01:00:00</run_time>
         <run_type>daily</run_type>
         <script><![CDATA[var logger = new Logger();
-var clientRunsPerNode = 5;
 
 try {
-	logger.info('Executing Scheduled Script Delete Client runs');
-	clientRunsPerNode = parseInt(gs.getProperty('x_chef_automate.client_runs_per_node'));
-	var agg = new GlideAggregate('x_chef_automate_client_run');
-	agg.addAggregate('COUNT', 'node');
-	agg.query();
-	var clientRuns = 0;
-	while (agg.hasNext()) {
-		agg.next();
-		clientRuns = agg.getAggregate('COUNT', 'node');
-		processClientRuns(agg);
-	}
-} catch(err) {
-	logger.errorWithStack("Delete Client runs", err);
-}
-
-function processClientRuns(aggregate) {
-	var node = aggregate.node;
-	var query = new GlideRecordSecure('x_chef_automate_client_run');
-	query.addQuery('node', node);
-	query.orderByDesc('sys_created_on');
-	query.query();
-	var rowCount = query.getRowCount();
-	var skipCount = 0;
-	while (query.hasNext()) {
-		query.next();
-		skipCount++;
-		if (skipCount <= clientRunsPerNode) {
-			continue;
-		}
-		query.deleteRecord();
-	}
+	util = new Util();
+	util.deleteClientRuns();
+} catch (err) {
+    logger.errorWithStack("Delete Client runs", err);
 }]]></script>
         <sys_class_name>sysauto_script</sys_class_name>
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-12-03 12:01:10</sys_created_on>
         <sys_id>b8fe247cdb210010bd7169c3ca9619c6</sys_id>
-        <sys_mod_count>36</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name>Delete Client runs</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sysauto_script_b8fe247cdb210010bd7169c3ca9619c6</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-04-01 09:19:28</sys_updated_on>
+        <sys_updated_on>2020-04-07 11:52:38</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>
