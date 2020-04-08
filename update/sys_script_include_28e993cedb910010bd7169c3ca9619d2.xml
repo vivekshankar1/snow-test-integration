@@ -72,7 +72,12 @@ Util.prototype = {
         var manufacturerSysId = null;
         try {
 
-            var company = new GlideRecord('core_company');
+            var company = new GlideRecordSecure('core_company');
+			if (company.canCreate()) {
+				this.logger.debug("User can create core_company record");
+			} else {
+				this.logger.debug("User cannot create core_company record");
+			}
             company.initialize();
             company.addQuery('name', manufacturer);
             company.query();
@@ -82,6 +87,7 @@ Util.prototype = {
                 this.logger.debug(gs.getMessage("Manufacturer {0} exists with sys_id {1} ", [manufacturer, manufacturerSysId]));
             } else if (gs.getProperty("x_chef_automate.insert_manufacturer") == "true") {
                 company.name = manufacturer;
+				company.manufacturer = true;
                 manufacturerSysId = company.insert();
                 this.logger.debug(gs.getMessage("Manufacturer {0} insert() with sys_id {1} ", [manufacturer, manufacturerSysId]));
             }
@@ -96,10 +102,16 @@ Util.prototype = {
         var value = null;
         try {
 
-            var cmdbModel = new GlideRecord('cmdb_model');
+            var cmdbModel = new GlideRecordSecure('cmdb_model');
+			
+			if (cmdbModel.canCreate()) {
+				this.logger.debug("User can create cmdb_model record");
+			} else {
+				this.logger.debug("User cannot create cmdb_model record");
+			}
             cmdbModel.initialize();
             cmdbModel.addQuery('name', model);
-            cmdbModel.addQuery('category', category);
+            cmdbModel.addQuery('cmdb_model_category', 'CONTAINS', category);
             cmdbModel.addQuery('manufacturer', manufacturer);
             cmdbModel.query();
             if (cmdbModel.hasNext()) {
@@ -109,7 +121,7 @@ Util.prototype = {
             } else if (gs.getProperty("x_chef_automate.insert_model") == "true") {
                 cmdbModel.name = model;
                 cmdbModel.display_name = model;
-                cmdbModel.category = category;
+                cmdbModel.cmdb_model_category = category;
                 cmdbModel.manufacturer = manufacturer;
                 value = cmdbModel.insert();
                 this.logger.debug(gs.getMessage("Model {0} insert() with sys_id {1} ", [model, value]));
@@ -120,9 +132,9 @@ Util.prototype = {
         return value;
     },
 
-    transformModelcategory: function(os, category) {
+    transformModelCategory: function(os) {
         var ciClass = this.getCIClass(os);
-        var name = "";
+        var categorySysId = "";
         try {
             var modelCategory = new GlideRecordSecure('cmdb_model_category');
             modelCategory.initialize();
@@ -130,12 +142,12 @@ Util.prototype = {
             modelCategory.query();
             if (modelCategory.hasNext()) {
                 modelCategory.next();
-                name = modelCategory.name;
+                categorySysId = modelCategory.sys_id;
             }
         } catch (err) {
-            this.logger.warn(gs.getMessage("Util.transformModelCategory({0}) error: {1} ", [category, err.message]));
+            this.logger.warn(gs.getMessage("Util.transformModelCategory({0}) error: {1} ", err.message));
         }
-        return name;
+        return categorySysId;
     },
 
     getCIClass: function(os) {
@@ -226,13 +238,13 @@ Util.prototype = {
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-11-25 11:22:48</sys_created_on>
         <sys_id>28e993cedb910010bd7169c3ca9619d2</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>41</sys_mod_count>
         <sys_name>Util</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_include_28e993cedb910010bd7169c3ca9619d2</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-04-07 12:03:42</sys_updated_on>
+        <sys_updated_on>2020-04-08 12:33:05</sys_updated_on>
     </sys_script_include>
 </record_update>

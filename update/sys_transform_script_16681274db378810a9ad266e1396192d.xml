@@ -12,10 +12,10 @@
 		source.manufacturer = util.transformManufacturer(source.manufacturer);
 		source.cpu_manufacturer = util.transformManufacturer(source.cpu_manufacturer);		
 		logger.debug("transformed cpu manufacturer:  " + source.cpu_manufacturer);		
-		source.model_category = util.transformModelcategory(source.os_family);	
+		source.model_category = util.transformModelCategory(source.os_family);	
 		logger.debug("transformed model category:  " + source.model_category);
 		source.model_id = util.transformModel(source.model_id, source.model_category, source.manufacturer);	
-		logger.debug("transformed model:  " + source.model);
+		logger.debug("transformed model:  " + source.model_id);
 		
         var cmdbUtil = new global.CMDBTransformUtil();
         cmdbUtil.setDataSource('ImportSet');
@@ -38,14 +38,14 @@
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2020-03-24 15:56:15</sys_created_on>
         <sys_id>16681274db378810a9ad266e1396192d</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_name>onBefore</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_transform_script_16681274db378810a9ad266e1396192d</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-03-27 13:29:11</sys_updated_on>
+        <sys_updated_on>2020-04-08 12:49:16</sys_updated_on>
         <when>onBefore</when>
     </sys_transform_script>
 </record_update>
