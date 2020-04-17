@@ -33,8 +33,8 @@
     var automateApi = new AutomateApi(current.instance, current.api_token.getDecryptedValue());
     try {
         logger.debug(gs.getMessage("Update secret {0}", current.secret_id));
-        automateApi.updateSecret('Service Now Created Feed', current.servicenow_user, current.servicenow_password.getDecryptedValue(), current.secret_id);
-        automateApi.updateDestination(current.destination_id, 'Service Now Created Destination', current.secret_id);
+        automateApi.updateSecret(current.name, current.servicenow_user, current.servicenow_password.getDecryptedValue(), current.secret_id);
+        automateApi.updateDestination(current.destination_id, current.name, current.secret_id);
     } catch (ex) {
         logger.errorWithStack("Error calling automate secrets API", ex);
     }
@@ -46,7 +46,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>50a4952adb8f40101846e7dcd3961901</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Update automate instance</sys_name>
         <sys_overrides/>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -54,7 +54,7 @@
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_50a4952adb8f40101846e7dcd3961901</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-02-21 14:45:09</sys_updated_on>
+        <sys_updated_on>2020-04-17 11:25:13</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
