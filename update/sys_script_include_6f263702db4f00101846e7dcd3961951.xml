@@ -163,15 +163,15 @@ AutomateApi.prototype = {
             var httpStatus = response.getStatusCode();
             this.logger.debug(gs.getMessage("delete destination response {0} {1}", [httpStatus, response.getBody()]));
             if (httpStatus == 200) {
-                var responseBody = response.getBody();
-                var responseJson = this.jsonUtil.parse(responseBody);
-                return this.jsonUtil.getStringValue(responseJson, "success");
-            }
+				return true;
+			} else if (httpStatus == 404) {
+				return false;
+			}
         } catch (ex) {
             this.logger.errorWithStack("Error calling automate updateDestination API", ex);
             throw ex;
         }
-        return '';
+        return false;
     },
 
     testDestination: function(username, password) {
@@ -245,13 +245,13 @@ AutomateApi.prototype = {
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2020-02-20 13:18:25</sys_created_on>
         <sys_id>6f263702db4f00101846e7dcd3961951</sys_id>
-        <sys_mod_count>54</sys_mod_count>
+        <sys_mod_count>55</sys_mod_count>
         <sys_name>AutomateApi</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_include_6f263702db4f00101846e7dcd3961951</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-04-06 14:48:12</sys_updated_on>
+        <sys_updated_on>2020-04-17 10:52:51</sys_updated_on>
     </sys_script_include>
 </record_update>
