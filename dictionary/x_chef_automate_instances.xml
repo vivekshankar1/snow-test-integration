@@ -3,7 +3,7 @@
         <element label="Automate API token" max_length="255" name="api_token" type="password2"/>
         <element label="Destination id" max_length="40" name="destination_id" type="integer"/>
         <element label="Instance URL" max_length="255" name="instance" type="string"/>
-        <element label="Name" max_length="255" name="name" read_only="true" type="string"/>
+        <element label="Name" max_length="255" name="name" type="string"/>
         <element label="Secret id" max_length="255" name="secret_id" read_only="true" type="string"/>
         <element label="ServiceNow password" max_length="255" name="servicenow_password" type="password2"/>
         <element label="ServiceNow user" max_length="255" name="servicenow_user" type="string"/>
