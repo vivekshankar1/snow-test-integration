@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>api_token</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Instance onload</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+
+    try {
+        if (g_form.getValue('name') != "") {
+            var ga = new GlideAjax('AutomateApiClient');
+            ga.addParam('sysparm_name', 'destinationExists');
+            ga.addParam('sysparm_destination_id', g_form.getValue('destination_id'));
+            ga.addParam('sysparm_instance_url', g_form.getValue('instance'));
+
+            ga.getXML(parseResponse);
+        }
+    } catch (err) {
+        g_form.addErrorMessage(err.message);
+    }
+
+    function parseResponse(response) {
+        var name = g_form.getValue('name');
+        var answer = response.responseXML.documentElement.getAttribute("answer");
+        var json = JSON.parse(answer);
+        var status = json["status"];
+        if (status == 404) {
+            g_form.addErrorMessage("Data Feed configuration '" + name + "' was not found on the target automate instance");
+			g_form.addInfoMessage("Click 'Update' to create the Data Feed on the target automate instance or click 'Delete' to remove this record from this ServiceNow instance");
+			g_form.setValue('destination_id', -1);
+        } else if (status != 200) {
+            g_form.addErrorMessage("Error trying to verify Data Feed '" + name + "' on target automate instance");
+            g_form.addErrorMessage(json["error"]);
+        }
+    }
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-04-24 12:59:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a2d895bedb5c5450bd7169c3ca961929</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Instance onload</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_script_client_a2d895bedb5c5450bd7169c3ca961929</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-04-24 14:32:11</sys_updated_on>
+        <table>x_chef_automate_instances</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

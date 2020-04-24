@@ -149,6 +149,32 @@ AutomateApi.prototype = {
         }
         return '';
     },
+	
+	destinationExists: function(destinationId) {
+
+        try {
+
+            var message = new sn_ws.RESTMessageV2('x_chef_automate.Automate API', 'Get destination');
+            message.setStringParameterNoEscape('destination_id', destinationId);
+            message.setStringParameterNoEscape('automate_url', this.automateUrl);
+            message.setStringParameterNoEscape('api_token', this.apiToken);
+
+            var response = message.execute();
+            var httpStatus = response.getStatusCode();
+            this.logger.debug(gs.getMessage("response {0} {1}", [httpStatus, response.getBody()]));
+            if (httpStatus == 200) {
+                return {
+                    "status": httpStatus,
+                    "message": "destination with id: " + destinationId + " exists"
+                };
+            } else {
+				return this._getError(response);
+			}
+        } catch (ex) {
+            this.logger.errorWithStack("Error calling automate getDestination API", ex);
+            throw ex;
+        }
+    },
 
     deleteDestination: function(destinationId) {
 
@@ -241,13 +267,13 @@ AutomateApi.prototype = {
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2020-02-20 13:18:25</sys_created_on>
         <sys_id>6f263702db4f00101846e7dcd3961951</sys_id>
-        <sys_mod_count>57</sys_mod_count>
+        <sys_mod_count>62</sys_mod_count>
         <sys_name>AutomateApi</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_include_6f263702db4f00101846e7dcd3961951</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-04-24 11:24:07</sys_updated_on>
+        <sys_updated_on>2020-04-24 13:49:42</sys_updated_on>
     </sys_script_include>
 </record_update>
