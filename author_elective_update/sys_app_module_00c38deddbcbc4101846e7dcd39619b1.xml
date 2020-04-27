@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="Chef Automate">ab604058db68e700197478fdaa961982</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Attributes import</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_chef_automate_attributes_import</name>
+        <order>215</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-02-18 10:57:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>00c38deddbcbc4101846e7dcd39619b1</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Attributes import</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_app_module_00c38deddbcbc4101846e7dcd39619b1</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-02-18 10:59:36</sys_updated_on>
+        <timeline_page/>
+        <title>Attributes import</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
+        <instance_name>ven02358</instance_name>
+        <name>sys_app_module_00c38deddbcbc4101846e7dcd39619b1</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Chef Automate">ab604058db68e700197478fdaa961982</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Attributes import</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_chef_automate_attributes_import</name>
+        <order>215</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-02-18 10:57:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>00c38deddbcbc4101846e7dcd39619b1</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Attributes import</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_app_module_00c38deddbcbc4101846e7dcd39619b1</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-02-18 10:59:36</sys_updated_on>
+        <timeline_page/>
+        <title>Attributes import</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>]]></payload>
+        <payload_hash>1959640077</payload_hash>
+        <record_name>Attributes import</record_name>
+        <reverted_from/>
+        <source>9a202a1bdb7f8050a9ad266e139619a4</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-04-01 10:54:22</sys_created_on>
+        <sys_id>7c40a25bdb7f8050a9ad266e139619db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1713560b3c70000001</sys_recorded_at>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-04-01 10:54:22</sys_updated_on>
+        <type>Module</type>
+        <update_guid>b840a25b297f80507b48be8d4db680db</update_guid>
+        <update_guid_history>b840a25b297f80507b48be8d4db680db:0,cd002ad7d27f8050a6ecad422ab9b8e8:474190309,761e1a93fd7f8050108251c29224b0ba:0,aaddde13617f8050176e1e8af6a24e1d:474190309,7ebc169f973f805001c0f87f18117fb0:0,257c9a1f213f8050a4d3bf2876a4e80b:474190309,b4a328ed04f70c10c534f023a91660d6:0,f863a86d51f70c101d07dc2ed18a57e0:474190309,f2c020a54bf70c10bd2064025ac6f198:0,768020253bf70c10739ff89212ade5f9:474190309,e9e0127c46f3881090ee08b26a3798af:0,c3a016f834f388108d01cf936397686e:474190309,995e9ae01fa384501e81621d88dae253:0,09ec5620a3a38450c878f3a5faf635a3:-255792250,a9da52686a638450f102e52cb8541860:0,e59a96e4da6384500ded38dac95d95be:474190309,93a99a24dc6384504d9a5a7b88b341dd:0,832992a034638450ae80b8803283520a:-997567316,8a769e289f23845048711e93ce6647d7:0,4b3696e4e4238450758d89bee9a9765e:474190309,8dd5d2644623845061b9eb1e61823aa6:0,2a959ae0f8238450b57573619d8ceae2:474190309,62d6d99023ef04508845a880b4885dea:0,d1c559dc32af04506c21fb1b088bd148:448293599,d31099d0f5af0450017702407323ff42:0,dcef8d503faf045049cd30c95ce888a2:474190309,ae4f49dc866f04503d892b26f8442871:0,030f019ca56f0450846d7d738f12bc0b:474190309,47a541504a6f04503f1f255c9a68f811:0,8545499c2e2f045080b01edf50334c48:-1863002627,aa3080f1cd570c105207206ecbc03bdf:0,05ff3b6142570c10a7b3612f36cdc7f1:474190309,56150961a00fc4101e4b4ee8d0929cb9:-211556239,50f4c561a70fc410d59b1fd3b4581cb0:1555535499,00c4c521740fc410731c41cfdf4763b3:-818179002,7f840deda3cbc4108c47f7175c5dae5f:-1425639579</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Attributes import">093270b7db905850bd7169c3ca9619fd</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-04-27 12:41:52</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>02165fb09cbf461c8e9e9dd2a8b61d10</sys_id>
+        <sys_metadata>00c38deddbcbc4101846e7dcd39619b1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Attributes import</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete display_value="">03835e456e36492781266dc672a19f01</sys_scope_delete>
+        <sys_update_name>sys_app_module_00c38deddbcbc4101846e7dcd39619b1</sys_update_name>
+        <sys_update_version display_value="sys_app_module_00c38deddbcbc4101846e7dcd39619b1">7c40a25bdb7f8050a9ad266e139619db</sys_update_version>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-04-27 12:41:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
