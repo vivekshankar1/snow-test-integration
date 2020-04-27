@@ -3,47 +3,32 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>sys_created_on</element>
-            <list_id display_value="x_chef_automate_asset_buffer" element="NULL" name="x_chef_automate_asset_buffer" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">ab03a43ddb552380197478fdaa961987</list_id>
+            <list_id display_value="x_chef_automate_asset_buffer" element="NULL" name="x_chef_automate_asset_buffer" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">ad8a4073db105850bd7169c3ca961918</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
-            <sys_created_by>dmurray</sys_created_by>
-            <sys_created_on>2018-10-22 10:57:09</sys_created_on>
-            <sys_id>2303a43ddb552380197478fdaa961988</sys_id>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-04-27 09:48:30</sys_created_on>
+            <sys_id>e58a4073db105850bd7169c3ca961919</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>dmurray</sys_updated_by>
-            <sys_updated_on>2018-10-22 10:57:09</sys_updated_on>
-        </sys_ui_list_element>
-        <sys_ui_list_element action="INSERT_OR_UPDATE">
-            <average_value>false</average_value>
-            <element>data</element>
-            <list_id display_value="x_chef_automate_asset_buffer" element="NULL" name="x_chef_automate_asset_buffer" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">ab03a43ddb552380197478fdaa961987</list_id>
-            <max_value>false</max_value>
-            <min_value>false</min_value>
-            <position>1</position>
-            <sum>false</sum>
-            <sys_created_by>dmurray</sys_created_by>
-            <sys_created_on>2018-10-22 10:57:09</sys_created_on>
-            <sys_id>a303a43ddb552380197478fdaa961988</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>dmurray</sys_updated_by>
-            <sys_updated_on>2018-10-22 10:57:09</sys_updated_on>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-04-27 09:48:30</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>sys_created_by</element>
-            <list_id display_value="x_chef_automate_asset_buffer" element="NULL" name="x_chef_automate_asset_buffer" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">ab03a43ddb552380197478fdaa961987</list_id>
+            <list_id display_value="x_chef_automate_asset_buffer" element="NULL" name="x_chef_automate_asset_buffer" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">ad8a4073db105850bd7169c3ca961918</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
-            <position>2</position>
+            <position>1</position>
             <sum>false</sum>
-            <sys_created_by>dmurray</sys_created_by>
-            <sys_created_on>2018-10-22 10:57:09</sys_created_on>
-            <sys_id>2703a43ddb552380197478fdaa961988</sys_id>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-04-27 09:48:30</sys_created_on>
+            <sys_id>698a4073db105850bd7169c3ca961919</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>dmurray</sys_updated_by>
-            <sys_updated_on>2018-10-22 10:57:09</sys_updated_on>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-04-27 09:48:30</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -56,19 +41,19 @@
             <relationship/>
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
-            <sys_created_by>dmurray</sys_created_by>
-            <sys_created_on>2018-10-22 10:57:09</sys_created_on>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-04-27 09:48:30</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>ab03a43ddb552380197478fdaa961987</sys_id>
+            <sys_id>ad8a4073db105850bd7169c3ca961918</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_chef_automate_asset_buffer</sys_name>
             <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
             <sys_policy/>
             <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
             <sys_update_name>sys_ui_list_x_chef_automate_asset_buffer_null</sys_update_name>
-            <sys_updated_by>dmurray</sys_updated_by>
-            <sys_updated_on>2018-10-22 10:57:09</sys_updated_on>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-04-27 09:48:30</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>
