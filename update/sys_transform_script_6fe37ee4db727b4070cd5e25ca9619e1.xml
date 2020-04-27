@@ -35,10 +35,6 @@ var jsonUtil = new JsonUtil();
 			reportProfile.report = target.sys_id;
 			reportProfile.status = jsonUtil.getStringValue(profile, "status");
 			reportProfile.compliance_profile = profileId;
-			reportProfile.total_controls = 10;
-			reportProfile.passed_controls = 5;
-			reportProfile.skipped_controls = 2;
-			reportProfile.failed_controls = 3;
 			reportProfileId = reportProfile.insert();
 			if (reportProfileId) {
 				logger.debug(gs.getMessage("Report profile {0} added for report {1}", [profileName, source.sys_id]));
@@ -128,14 +124,14 @@ function getMessage(result) {
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-07-19 10:25:20</sys_created_on>
         <sys_id>6fe37ee4db727b4070cd5e25ca9619e1</sys_id>
-        <sys_mod_count>51</sys_mod_count>
+        <sys_mod_count>52</sys_mod_count>
         <sys_name>onAfter</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_transform_script_6fe37ee4db727b4070cd5e25ca9619e1</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-11-28 14:13:04</sys_updated_on>
+        <sys_updated_on>2020-04-27 13:24:03</sys_updated_on>
         <when>onAfter</when>
     </sys_transform_script>
 </record_update>
