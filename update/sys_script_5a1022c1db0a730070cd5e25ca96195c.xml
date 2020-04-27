@@ -94,7 +94,6 @@ function MapToImportTable(complianceImport, asset, logger){
 			complianceImport.job_id = jsonUtil.getStringValue(report, "job_id");
 			complianceImport.ip_address = jsonUtil.getStringValue(report, "ipaddress");
 			complianceImport.fqdn = jsonUtil.getStringValue(report, "fqdn");
-			complianceImport.controls = jsonUtil.stringify(report.controls);
 			complianceImport.platform = jsonUtil.stringify(report.platform);
 			complianceImport.statistics = jsonUtil.stringify(report.statistics);
 			complianceImport.profiles = jsonUtil.stringify(report.profiles);
@@ -110,7 +109,7 @@ function MapToImportTable(complianceImport, asset, logger){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5a1022c1db0a730070cd5e25ca96195c</sys_id>
-        <sys_mod_count>61</sys_mod_count>
+        <sys_mod_count>62</sys_mod_count>
         <sys_name>Insert to compliance import</sys_name>
         <sys_overrides/>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -118,7 +117,7 @@ function MapToImportTable(complianceImport, asset, logger){
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_5a1022c1db0a730070cd5e25ca96195c</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-02-14 14:14:00</sys_updated_on>
+        <sys_updated_on>2020-04-27 10:53:01</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
