@@ -16,7 +16,7 @@
 	   <table>
 		   <tr>
 			   <td style="padding-right:10px;"> <h4>Contact Chef Support:</h4></td>
-			   <td><h4><a href='https://www.chef.io/support/'>www.chef.io/support</a></h4></td>
+			   <td><h4><a rel="noopener noreferrer nofollow" href='https://www.chef.io/support/'>www.chef.io/support</a></h4></td>
 		   </tr>
 			   </table>
    </div>
@@ -28,13 +28,13 @@
         <sys_created_by>dmurray</sys_created_by>
         <sys_created_on>2018-09-17 08:48:21</sys_created_on>
         <sys_id>7ec5371edbe8eb00197478fdaa961974</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>Support</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_ui_page_7ec5371edbe8eb00197478fdaa961974</sys_update_name>
-        <sys_updated_by>dmurray</sys_updated_by>
-        <sys_updated_on>2018-10-10 12:54:53</sys_updated_on>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-06-04 10:04:17</sys_updated_on>
     </sys_ui_page>
 </record_update>
