@@ -3,11 +3,11 @@
         <dependency display_value="Configuration Management (CMDB)" source="com.snc.cmdb">af2dd55bdb3200101846e7dcd396196c</dependency>
         <min_version>1.1</min_version>
         <sys_created_by>mscott</sys_created_by>
-        <sys_created_on>2020-01-29 08:25:08</sys_created_on>
-        <sys_id>cac29ad6db8d1c50bd7169c3ca961909</sys_id>
+        <sys_created_on>2020-06-04 09:38:50</sys_created_on>
+        <sys_id>e2b4f3f3dbc59090bd7169c3ca961934</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-01-29 08:25:08</sys_updated_on>
+        <sys_updated_on>2020-06-04 09:38:50</sys_updated_on>
     </sys_package_dependency_m2m>
 </record_update>

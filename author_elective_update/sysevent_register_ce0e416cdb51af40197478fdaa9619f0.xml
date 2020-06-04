@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="DELETE">
+        <caller_access/>
+        <description/>
+        <event_name>x_chef_automate.asset_event</event_name>
+        <fired_by/>
+        <queue/>
+        <suffix>asset_event</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>dmurray</sys_created_by>
+        <sys_created_on>2018-10-18 16:56:14</sys_created_on>
+        <sys_id>ce0e416cdb51af40197478fdaa9619f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_chef_automate.asset_event</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sysevent_register_ce0e416cdb51af40197478fdaa9619f0</sys_update_name>
+        <sys_updated_by>dmurray</sys_updated_by>
+        <sys_updated_on>2018-10-18 16:56:14</sys_updated_on>
+        <table>x_chef_automate_asset_buffer</table>
+    </sysevent_register>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
+        <instance_name>ven02358</instance_name>
+        <name>sysevent_register_ce0e416cdb51af40197478fdaa9619f0</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <caller_access/>
+        <description/>
+        <event_name>x_chef_automate.asset_event</event_name>
+        <fired_by/>
+        <queue/>
+        <suffix>asset_event</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>dmurray</sys_created_by>
+        <sys_created_on>2018-10-18 16:56:14</sys_created_on>
+        <sys_id>ce0e416cdb51af40197478fdaa9619f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_chef_automate.asset_event</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sysevent_register_ce0e416cdb51af40197478fdaa9619f0</sys_update_name>
+        <sys_updated_by>dmurray</sys_updated_by>
+        <sys_updated_on>2018-10-18 16:56:14</sys_updated_on>
+        <table>x_chef_automate_asset_buffer</table>
+    </sysevent_register>
+</record_update>]]></payload>
+        <payload_hash>310392329</payload_hash>
+        <record_name>x_chef_automate.asset_event</record_name>
+        <reverted_from/>
+        <source>9bc21ed6db8d1c50bd7169c3ca9619e5</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-05-30 10:40:50</sys_created_on>
+        <sys_id>4ef25e1adb8d1c50bd7169c3ca9619a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>172652b860f0000001</sys_recorded_at>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-05-30 10:40:50</sys_updated_on>
+        <type>Event Registration</type>
+        <update_guid>8af25e1afe8d1c50995b8f978b7f9ea8</update_guid>
+        <update_guid_history>8af25e1afe8d1c50995b8f978b7f9ea8:0,92b216d6228d1c50b4a4e4f5e29c8956:403204969,d0502a5b7a7f8050a92f37a7c00bf3ec:0,4a10621bbb7f805053251d685d24256e:403204969,7e2e12d3297f805078a711f1af78e2ad:0,f7edd653917f8050419c964263f2cf58:403204969,3accda9f2d3f8050e826824a03427d08:0,238cd25fd93f8050463a8d936366247d:403204969,d8b320216e3b0c10e8bda1a3101e4b7e:0,6173a4ada5f70c1015d915d3c79ddff2:403204969,ded0a8a5f0f70c10e57f131232b2534d:0,fb906c256ef70c105374315aae57426f:403204969,e4f0967c9df38810ccbd4a187a05b7bf:0,fbb0def83df38810a285df6c835a893c:403204969,a46e9224e8a384500566e69a2cd4e0e5:0,a6fc9e20c0a38450e64ee87af1628ad0:2103817652,41ea5a68c663845066ab533fa2173d8e:0,f6aa9ee408638450ebe628e39773bb92:403204969,76b95264ce6384508bfe58c31fe9a2b0:0,8d491ea0e4638450bcfd35b7c4f632fa:562673612,bc86166830238450864575d25f7833e3:0,27469ee44f238450fdb70ac2a28b482b:403204969,08e55a6429238450670282a719ae6ce8:0,cfa5d224f5238450f24f791e37630a1f:403204969,75e615d0a9ef0450349459137684db11:0,a7d5d110b2ef04508960c80437dd345a:1331477346,d220511448af0450502bfe71a57cbdce:0,05ff85908daf04508001c909989f99b8:403204969,b95fcddcae6f04507bdc7e88b95cc980:0,ff1f099c936f0450bc9481a762119b90:403204969,5eb589508c6f045015e7a9e17c0cca6a:0,f65585dc7c2f0450be5e791d6fc86455:2105099236,b54048f1cf570c100205eb7b3c382f2c:0,1e0000b15d570c1049db8b06de1222dc:403204969,76d2f46ddd8bc410ba36abb473784ed4:0,2cb2742de98bc410846b3004f65147ba:403204969,102dac250a8bc4105e2527f275b6d02e:0,d9fca4a11b8bc410f2be2ab88b2a8700:403204969,792eb01073cbc0103721604a28f33a2c:0,140e30dcc68bc0104f141f181ae758ac:403204969,3aa1cbbbbcf68010929c99622c33aca0:0,a081477b1af680105ff412bbd8d6caca:403204969,5661d227383a4010913aebabed628e06:0,594192e3483a4010c6eb36c93b9e6936:403204969,44364ea347f6401015c199dd06f27be4:0,b2060a6335f640104d42d573483b54a0:403204969,63a50e6fc9b64010f3f536fb68233ce6:0,fa350eeb2cb64010d440fe10db507d39:-393414220,4205069be67a00101ae565de83c3eeba:0,41e4ce1bfa7a0010d1a086c0779aec85:403204969,f8204a13797a00108427594a3d9ba09c:0,97de759f843a0010c58ae31bf5c2aa32:403204969,da1575df2df60010a7eeb7cad254e51b:32934877</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-06-04 09:46:19</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_register">sysevent_register</sys_db_object>
+        <sys_id>022e5363d49648808109200673994344</sys_id>
+        <sys_metadata>ce0e416cdb51af40197478fdaa9619f0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_chef_automate.asset_event</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent display_value="Asset Buffer">2b157474db59af40197478fdaa9619e0</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete display_value="">03835e456e36492781266dc672a19f01</sys_scope_delete>
+        <sys_update_name>sysevent_register_ce0e416cdb51af40197478fdaa9619f0</sys_update_name>
+        <sys_update_version display_value="sysevent_register_ce0e416cdb51af40197478fdaa9619f0">4ef25e1adb8d1c50bd7169c3ca9619a8</sys_update_version>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-06-04 09:46:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
