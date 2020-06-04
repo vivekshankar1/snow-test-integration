@@ -13,14 +13,14 @@ Setting this property to 'Yes' will create entries in the core_company table if 
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2020-03-27 10:04:00</sys_created_on>
         <sys_id>65846cf9db774c10a9ad266e1396195f</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>x_chef_automate.insert_manufacturer</sys_name>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_properties_65846cf9db774c10a9ad266e1396195f</sys_update_name>
         <sys_updated_by>chef_api</sys_updated_by>
-        <sys_updated_on>2020-06-04 11:41:49</sys_updated_on>
+        <sys_updated_on>2020-06-04 12:48:34</sys_updated_on>
         <type>boolean</type>
         <value>false</value>
         <write_roles>x_chef_automate.admin</write_roles>
