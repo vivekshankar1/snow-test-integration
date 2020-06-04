@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_chef_automate.PropertiesUtil</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>PropertiesUtil</name>
+        <script><![CDATA[var PropertiesUtil = Class.create();
+PropertiesUtil.prototype = {
+    initialize: function() {
+    },
+	
+	setProperty: function(name, value) {
+		gs.setProperty(name, value);
+	},
+	
+    type: 'PropertiesUtil'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-06-04 11:37:57</sys_created_on>
+        <sys_id>42ce4c00db599090bd7169c3ca9619de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PropertiesUtil</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_script_include_42ce4c00db599090bd7169c3ca9619de</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-06-04 11:37:57</sys_updated_on>
+    </sys_script_include>
+</record_update>
