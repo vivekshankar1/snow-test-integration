@@ -7,14 +7,14 @@
         <hint>Chef Automate Application</hint>
         <name>Asset Import Table</name>
         <order>100</order>
-        <roles>x_chef_automate.user</roles>
+        <roles>x_chef_automate.user,x_chef_automate.admin</roles>
         <sys_class_name>sys_app_application</sys_class_name>
         <sys_created_by>dmurray</sys_created_by>
         <sys_created_on>2018-09-10 09:47:54</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ab604058db68e700197478fdaa961982</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Chef Automate</sys_name>
         <sys_overrides/>
         <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -22,7 +22,7 @@
         <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_app_application_ab604058db68e700197478fdaa961982</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2019-08-12 12:44:44</sys_updated_on>
+        <sys_updated_on>2020-06-04 10:38:44</sys_updated_on>
         <title>Chef Automate</title>
         <view_name/>
     </sys_app_application>
