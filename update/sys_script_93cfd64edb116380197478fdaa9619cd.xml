@@ -65,15 +65,15 @@ var importUtil = new ImportUtil();
             var hasAssetData = MapToImportTable(chefAssetsTable, asset, logger);
             if (!hasAssetData) {
                 logger.debug("Business Rule Insert to Asset import: No asset data for entry");
-                continue;
-            }
-            if (chefAssetsTable.insert() === null) {
-                var message = "Insert failed into x_chef_automate_asset_import";
-                logger.warn(message);
             } else {
-                logger.debug("Insert succeeded into x_chef_automate_asset_import");
+                if (chefAssetsTable.insert() === null) {
+                    var message = "Insert failed into x_chef_automate_asset_import";
+                    logger.warn(message);
+                } else {
+                    logger.debug("Insert succeeded into x_chef_automate_asset_import");
+                }
             }
-			// report 
+            // report 
             complianceImport = new GlideRecordSecure('x_chef_automate_compliance_import');
             complianceImport.initialize();
             if (importUtil.isComplianceReportEmpty(jsonUtil.getObject(asset, "report"))) {
@@ -259,7 +259,7 @@ function MapToImportTable(chefAssetsTable, assetData, logger) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>93cfd64edb116380197478fdaa9619cd</sys_id>
-        <sys_mod_count>127</sys_mod_count>
+        <sys_mod_count>128</sys_mod_count>
         <sys_name>Insert to Asset Import</sys_name>
         <sys_overrides/>
         <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -267,7 +267,7 @@ function MapToImportTable(chefAssetsTable, assetData, logger) {
         <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_93cfd64edb116380197478fdaa9619cd</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-06-02 11:15:34</sys_updated_on>
+        <sys_updated_on>2020-06-09 12:37:53</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
