@@ -22,7 +22,7 @@
     </sysevent_register>
 <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
-        <application display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</application>
+        <application display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</application>
         <file_path/>
         <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
         <instance_name>ven02358</instance_name>
@@ -77,10 +77,10 @@
         <sys_metadata>1cce7864db91af40197478fdaa96197b</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_chef_automate.asset_event</sys_name>
-        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_parent display_value="Asset Buffer">2b157474db59af40197478fdaa9619e0</sys_parent>
         <sys_policy/>
-        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_scope_delete display_value="">03835e456e36492781266dc672a19f01</sys_scope_delete>
         <sys_update_name>sysevent_register_1cce7864db91af40197478fdaa96197b</sys_update_name>
         <sys_update_version display_value="sysevent_register_1cce7864db91af40197478fdaa96197b">c6f25e1adb8d1c50bd7169c3ca9619a6</sys_update_version>

@@ -27,9 +27,9 @@
         <sys_mod_count>3</sys_mod_count>
         <sys_name>Support</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy>read</sys_policy>
-        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_app_module_c4c8ffdedbe8eb00197478fdaa961940</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
         <sys_updated_on>2019-08-08 13:18:26</sys_updated_on>

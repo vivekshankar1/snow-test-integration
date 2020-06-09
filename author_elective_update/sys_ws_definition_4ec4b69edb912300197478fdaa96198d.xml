@@ -29,7 +29,7 @@
     </sys_ws_definition>
 <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
-        <application display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</application>
+        <application display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</application>
         <file_path/>
         <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
         <instance_name>ven02358</instance_name>
@@ -91,10 +91,10 @@
         <sys_metadata>4ec4b69edb912300197478fdaa96198d</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Chef Automate Properties</sys_name>
-        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_parent/>
         <sys_policy>protected</sys_policy>
-        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_scope_delete display_value="">03835e456e36492781266dc672a19f01</sys_scope_delete>
         <sys_update_name>sys_ws_definition_4ec4b69edb912300197478fdaa96198d</sys_update_name>
         <sys_update_version display_value="sys_ws_definition_4ec4b69edb912300197478fdaa96198d">4af25e1adb8d1c50bd7169c3ca961987</sys_update_version>

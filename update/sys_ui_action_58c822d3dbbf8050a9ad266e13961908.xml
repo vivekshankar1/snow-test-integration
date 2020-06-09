@@ -75,9 +75,9 @@ function parseResponse(response) {
         <sys_mod_count>93</sys_mod_count>
         <sys_name>Test connectivity</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_ui_action_58c822d3dbbf8050a9ad266e13961908</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
         <sys_updated_on>2020-04-02 15:04:11</sys_updated_on>

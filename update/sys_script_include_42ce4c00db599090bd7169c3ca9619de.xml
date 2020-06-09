@@ -24,9 +24,9 @@ PropertiesUtil.prototype = {
         <sys_id>42ce4c00db599090bd7169c3ca9619de</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>PropertiesUtil</sys_name>
-        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy>protected</sys_policy>
-        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_include_42ce4c00db599090bd7169c3ca9619de</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
         <sys_updated_on>2020-06-04 12:01:14</sys_updated_on>

@@ -6,9 +6,9 @@
         <sys_id>065a6331dbc56b40197478fdaa9619d0</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>.x_chef_automate.user</sys_name>
-        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_security_acl display_value="x_chef_automate_Support">0d5aa731dbc56b40197478fdaa96190f</sys_security_acl>
         <sys_update_name>sys_security_acl_role_065a6331dbc56b40197478fdaa9619d0</sys_update_name>
         <sys_updated_by>dmurray</sys_updated_by>

@@ -70,9 +70,9 @@
             <sys_mod_count>1</sys_mod_count>
             <sys_name>Attributes</sys_name>
             <sys_overrides/>
-            <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+            <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
             <sys_policy/>
-            <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+            <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
             <sys_update_name>sys_ui_section_32b749a1db0fc4101846e7dcd39619a9</sys_update_name>
             <sys_updated_by>mscott</sys_updated_by>
             <sys_updated_on>2020-02-18 12:29:07</sys_updated_on>

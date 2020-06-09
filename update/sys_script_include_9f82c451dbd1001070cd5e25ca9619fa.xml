@@ -96,9 +96,9 @@ JsonUtil.prototype = {
         <sys_id>9f82c451dbd1001070cd5e25ca9619fa</sys_id>
         <sys_mod_count>16</sys_mod_count>
         <sys_name>JsonUtil</sys_name>
-        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy>read</sys_policy>
-        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_include_9f82c451dbd1001070cd5e25ca9619fa</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
         <sys_updated_on>2020-04-01 09:38:58</sys_updated_on>

@@ -56,9 +56,9 @@
         <sys_id>b1c25ad6db8d1c50bd7169c3ca9619ab</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Serial Number</sys_name>
-        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_dictionary_x_chef_automate_asset_import_serial_number</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
         <sys_updated_on>2020-05-30 10:40:19</sys_updated_on>

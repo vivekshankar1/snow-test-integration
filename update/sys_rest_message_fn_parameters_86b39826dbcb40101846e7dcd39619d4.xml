@@ -8,9 +8,9 @@
         <sys_id>86b39826dbcb40101846e7dcd39619d4</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_name>automate_url</sys_name>
-        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_rest_message_fn_parameters_86b39826dbcb40101846e7dcd39619d4</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
         <sys_updated_on>2020-06-04 10:11:57</sys_updated_on>

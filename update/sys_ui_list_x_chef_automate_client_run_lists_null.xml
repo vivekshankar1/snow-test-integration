@@ -33,9 +33,9 @@
             <sys_id>e5f9b4b4dbbe04104db62b35ca961968</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_chef_automate_client_run_lists</sys_name>
-            <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+            <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
             <sys_policy/>
-            <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+            <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
             <sys_update_name>sys_ui_list_x_chef_automate_client_run_lists_null</sys_update_name>
             <sys_updated_by>mscott</sys_updated_by>
             <sys_updated_on>2020-02-03 15:59:49</sys_updated_on>

@@ -61,9 +61,9 @@ var logger = new Logger();
         <sys_id>66019568dbe02b00197478fdaa9619ac</sys_id>
         <sys_mod_count>28</sys_mod_count>
         <sys_name>onAfter</sys_name>
-        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_transform_script_66019568dbe02b00197478fdaa9619ac</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
         <sys_updated_on>2020-04-08 13:02:51</sys_updated_on>

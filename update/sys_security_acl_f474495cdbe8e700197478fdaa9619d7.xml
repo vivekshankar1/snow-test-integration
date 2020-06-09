@@ -14,9 +14,9 @@
         <sys_id>f474495cdbe8e700197478fdaa9619d7</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_chef_automate_asset_import</sys_name>
-        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_security_acl_f474495cdbe8e700197478fdaa9619d7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2018-09-10 14:45:04</sys_updated_on>

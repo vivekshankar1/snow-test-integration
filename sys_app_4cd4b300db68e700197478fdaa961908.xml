@@ -10,7 +10,7 @@
         <license_model>none</license_model>
         <logo/>
         <menu/>
-        <name>Chef Automate</name>
+        <name>Chef Automate Integration App</name>
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
         <runtime_access_tracking>permissive</runtime_access_tracking>
@@ -25,9 +25,9 @@
         <sys_created_by>dmurray</sys_created_by>
         <sys_created_on>2018-09-10 08:57:09</sys_created_on>
         <sys_id>4cd4b300db68e700197478fdaa961908</sys_id>
-        <sys_mod_count>36</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-06-04 13:01:12</sys_updated_on>
+        <sys_updated_on>2020-06-09 10:24:45</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <user_role/>

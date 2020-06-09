@@ -17,9 +17,9 @@
         <sys_id>e171d257db8ff30070cd5e25ca961998</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Compliance reports</sys_name>
-        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_relationship_e171d257db8ff30070cd5e25ca961998</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
         <sys_updated_on>2019-08-09 06:52:15</sys_updated_on>
