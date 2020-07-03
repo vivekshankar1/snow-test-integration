@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list action="DELETE" parent="" relationship="" sys_domain="global" table="x_chef_automate_attributes_import" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>all_value_count</element>
+            <list_id display_value="x_chef_automate_attributes_import" element="NULL" name="x_chef_automate_attributes_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">5ff44961db0fc4101846e7dcd39619d1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_id>9bf44961db0fc4101846e7dcd39619d2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>automatic</element>
+            <list_id display_value="x_chef_automate_attributes_import" element="NULL" name="x_chef_automate_attributes_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">5ff44961db0fc4101846e7dcd39619d1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_id>13f44961db0fc4101846e7dcd39619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>automatic_value_count</element>
+            <list_id display_value="x_chef_automate_attributes_import" element="NULL" name="x_chef_automate_attributes_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">5ff44961db0fc4101846e7dcd39619d1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_id>93f44961db0fc4101846e7dcd39619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>default</element>
+            <list_id display_value="x_chef_automate_attributes_import" element="NULL" name="x_chef_automate_attributes_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">5ff44961db0fc4101846e7dcd39619d1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_id>17f44961db0fc4101846e7dcd39619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>default_value_count</element>
+            <list_id display_value="x_chef_automate_attributes_import" element="NULL" name="x_chef_automate_attributes_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">5ff44961db0fc4101846e7dcd39619d1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_id>97f44961db0fc4101846e7dcd39619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>import_set_run</element>
+            <list_id display_value="x_chef_automate_attributes_import" element="NULL" name="x_chef_automate_attributes_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">5ff44961db0fc4101846e7dcd39619d1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_id>1bf44961db0fc4101846e7dcd39619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>normal</element>
+            <list_id display_value="x_chef_automate_attributes_import" element="NULL" name="x_chef_automate_attributes_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">5ff44961db0fc4101846e7dcd39619d1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_id>9bf44961db0fc4101846e7dcd39619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>normal_value_count</element>
+            <list_id display_value="x_chef_automate_attributes_import" element="NULL" name="x_chef_automate_attributes_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">5ff44961db0fc4101846e7dcd39619d1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_id>1ff44961db0fc4101846e7dcd39619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>override</element>
+            <list_id display_value="x_chef_automate_attributes_import" element="NULL" name="x_chef_automate_attributes_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">5ff44961db0fc4101846e7dcd39619d1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>8</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_id>9ff44961db0fc4101846e7dcd39619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>override_value_count</element>
+            <list_id display_value="x_chef_automate_attributes_import" element="NULL" name="x_chef_automate_attributes_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">5ff44961db0fc4101846e7dcd39619d1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>9</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_id>13f44961db0fc4101846e7dcd39619d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_chef_automate_attributes_import</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5ff44961db0fc4101846e7dcd39619d1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_chef_automate_attributes_import</sys_name>
+            <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+            <sys_update_name>sys_ui_list_x_chef_automate_attributes_import_null</sys_update_name>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
+        <instance_name>ven02358</instance_name>
+        <name>sys_ui_list_x_chef_automate_attributes_import_null</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_chef_automate_attributes_import" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>all_value_count</element>
+            <list_id display_value="x_chef_automate_attributes_import" element="NULL" name="x_chef_automate_attributes_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">5ff44961db0fc4101846e7dcd39619d1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_id>9bf44961db0fc4101846e7dcd39619d2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>automatic</element>
+            <list_id display_value="x_chef_automate_attributes_import" element="NULL" name="x_chef_automate_attributes_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">5ff44961db0fc4101846e7dcd39619d1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_id>13f44961db0fc4101846e7dcd39619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>automatic_value_count</element>
+            <list_id display_value="x_chef_automate_attributes_import" element="NULL" name="x_chef_automate_attributes_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">5ff44961db0fc4101846e7dcd39619d1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_id>93f44961db0fc4101846e7dcd39619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>default</element>
+            <list_id display_value="x_chef_automate_attributes_import" element="NULL" name="x_chef_automate_attributes_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">5ff44961db0fc4101846e7dcd39619d1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_id>17f44961db0fc4101846e7dcd39619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>default_value_count</element>
+            <list_id display_value="x_chef_automate_attributes_import" element="NULL" name="x_chef_automate_attributes_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">5ff44961db0fc4101846e7dcd39619d1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_id>97f44961db0fc4101846e7dcd39619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>import_set_run</element>
+            <list_id display_value="x_chef_automate_attributes_import" element="NULL" name="x_chef_automate_attributes_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">5ff44961db0fc4101846e7dcd39619d1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_id>1bf44961db0fc4101846e7dcd39619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>normal</element>
+            <list_id display_value="x_chef_automate_attributes_import" element="NULL" name="x_chef_automate_attributes_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">5ff44961db0fc4101846e7dcd39619d1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_id>9bf44961db0fc4101846e7dcd39619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>normal_value_count</element>
+            <list_id display_value="x_chef_automate_attributes_import" element="NULL" name="x_chef_automate_attributes_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">5ff44961db0fc4101846e7dcd39619d1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_id>1ff44961db0fc4101846e7dcd39619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>override</element>
+            <list_id display_value="x_chef_automate_attributes_import" element="NULL" name="x_chef_automate_attributes_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">5ff44961db0fc4101846e7dcd39619d1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>8</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_id>9ff44961db0fc4101846e7dcd39619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>override_value_count</element>
+            <list_id display_value="x_chef_automate_attributes_import" element="NULL" name="x_chef_automate_attributes_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">5ff44961db0fc4101846e7dcd39619d1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>9</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_id>13f44961db0fc4101846e7dcd39619d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_chef_automate_attributes_import</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-18 10:59:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5ff44961db0fc4101846e7dcd39619d1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_chef_automate_attributes_import</sys_name>
+            <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+            <sys_update_name>sys_ui_list_x_chef_automate_attributes_import_null</sys_update_name>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-18 10:59:08</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>]]></payload>
+        <payload_hash>534263892</payload_hash>
+        <record_name>Attributes import</record_name>
+        <reverted_from/>
+        <source>9a202a1bdb7f8050a9ad266e139619a4</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-04-01 10:54:32</sys_created_on>
+        <sys_id>db40e65bdb7f8050a9ad266e13961971</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1713560dd250000001</sys_recorded_at>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-04-01 10:54:32</sys_updated_on>
+        <type>List Layout</type>
+        <update_guid>1b40e65b1b7f8050de42ebffbe865e71</update_guid>
+        <update_guid_history>1b40e65b1b7f8050de42ebffbe865e71:0,c1006ad78b7f8050bceab242d9a0e12b:-510290513,792ede939f7f80502ef9fbf3f06f9e02:0,a2ddde13997f8050b028ddfbb804822e:-510290513,bdcc5a9fc63f8050c85c2e73e67c3f8e:0,ed7c9a1fd53f80508dadde1cbca16334:-510290513,dba3eced6af70c10ac7f9ec8a6c60a29:0,3463e86d84f70c10f958734076453916:-510290513,9dd028a5f6f70c1087c5554ebd0c4fb4:0,3a806025f0f70c1000a48600f2241022:-510290513,b7e0567c12f388105ee19bc97ae8f05f:0,0fa016f86ef38810fba71040398bcd7e:-510290513,e35e122478a3845042d1ea1bf7ad0bf5:0,c5ec5620c1a38450e498c006646acbc0:-510290513,88ea1a685f6384507aa7c9613bc48701:0,359ad6e4d16384508beee2815ea0ef00:-510290513,71b91264cd638450f72a671a46bcca48:0,8f2992a0da6384500d56113f57dc831a:-510290513,8886d26813238450adeb2d29e5e3f663:0,df3696e4ef238450d11875762a751993:-510290513,1fd51a64b023845067b993326733d16d:0,6a959ae054238450be601502de7981f2:-510290513,4de691d001ef04500acf77187be49589:0,69c559dcaeaf04509471ce7e629b1865:-510290513,ed20111422af0450583f13e34e9df34d:0,14ef8d50d2af045076a6f0e818ca7fb3:-510290513,b05f8ddcde6f04500e516932026a7107:0,4b0f019c056f0450e9180a520e1a4b27:-510290513,11b50950ba6f045095c483ab2510aa76:0,c145499c1c2f0450e5f2660f3caa8d72:-510290513,7c40c4f139570c1039a8abf06c2912a6:0,cdff7b6171570c101a63bde3f578ff05:942645192,89ff7b6100570c105e1fe5bc9c0e5f01:-510290513,53f44961c70fc41068870df01ee91ed6:1601676246</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-04-27 12:41:52</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_list">sys_ui_list</sys_db_object>
+        <sys_id>725a417ed63047e4a44d36db5ab471a4</sys_id>
+        <sys_metadata>5ff44961db0fc4101846e7dcd39619d1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_chef_automate_attributes_import</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent display_value="">c9f2b86ddb8bc4101846e7dcd39619bf</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete display_value="">03835e456e36492781266dc672a19f01</sys_scope_delete>
+        <sys_update_name>sys_ui_list_x_chef_automate_attributes_import_null</sys_update_name>
+        <sys_update_version display_value="sys_ui_list_x_chef_automate_attributes_import_null">db40e65bdb7f8050a9ad266e13961971</sys_update_version>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-04-27 12:41:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
