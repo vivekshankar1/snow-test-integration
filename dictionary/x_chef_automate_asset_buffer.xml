@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="sys_import_set_row" label="Asset Buffer" max_length="40" name="x_chef_automate_asset_buffer" sizeclass="292" type="collection">
+    <element extends="sys_import_set_row" label="Asset Buffer" max_length="40" name="x_chef_automate_asset_buffer" sizeclass="166" type="collection">
         <element label="Data" max_length="16777215" name="data" type="string"/>
     </element>
 </database>

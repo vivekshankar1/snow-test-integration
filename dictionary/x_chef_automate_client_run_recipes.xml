@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Chef Infra Client run recipes" max_length="40" name="x_chef_automate_client_run_recipes" sizeclass="20" type="collection">
+    <element label="Chef Infra Client run recipes" max_length="40" name="x_chef_automate_client_run_recipes" sizeclass="28" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Client run" max_length="32" name="client_run" reference="x_chef_automate_client_run" reference_cascade_rule="delete" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Node" max_length="32" name="node" reference="cmdb_ci_server" reference_cascade_rule="delete" type="reference"/>
         <element label="Recipe" max_length="255" name="recipe" type="string"/>

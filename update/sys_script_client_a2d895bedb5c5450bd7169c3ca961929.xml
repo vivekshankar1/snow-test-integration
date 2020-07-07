@@ -23,6 +23,7 @@
 
             ga = new GlideAjax('AutomateApiClient');
             ga.addParam('sysparm_name', 'test');
+			ga.addParam('sysparm_destination_id', g_form.getValue('destination_id'));
             ga.addParam('sysparm_instance_name', g_form.getValue('name'));
             ga.addParam('sysparm_instance_url', g_form.getValue('instance'));
             ga.addParam('sysparm_api_token', g_form.getValue('api_token'));
@@ -69,7 +70,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a2d895bedb5c5450bd7169c3ca961929</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>Instance onload</sys_name>
         <sys_overrides/>
         <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -77,7 +78,7 @@
         <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_client_a2d895bedb5c5450bd7169c3ca961929</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-04-24 15:02:09</sys_updated_on>
+        <sys_updated_on>2020-07-07 13:21:49</sys_updated_on>
         <table>x_chef_automate_instances</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>
