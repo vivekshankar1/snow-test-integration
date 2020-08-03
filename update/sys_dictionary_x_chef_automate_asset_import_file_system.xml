@@ -53,7 +53,7 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-03-05 13:44:12</sys_created_on>
-        <sys_id>e5c25ad6db8d1c50bd7169c3ca96198a</sys_id>
+        <sys_id>42fcbc5fdb1a5050c2922781159619ff</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>File system</sys_name>
         <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -61,7 +61,7 @@
         <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_dictionary_x_chef_automate_asset_import_file_system</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-05-30 10:40:17</sys_updated_on>
+        <sys_updated_on>2020-08-03 10:17:46</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
