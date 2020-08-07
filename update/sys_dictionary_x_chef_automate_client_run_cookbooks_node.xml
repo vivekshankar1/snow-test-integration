@@ -53,7 +53,7 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-03-06 13:54:39</sys_created_on>
-        <sys_id>1afcfc5fdb1a5050c2922781159619fc</sys_id>
+        <sys_id>5de95d60dbea1450c29227811596190b</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Node</sys_name>
         <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -61,7 +61,7 @@
         <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_dictionary_x_chef_automate_client_run_cookbooks_node</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
-        <sys_updated_on>2020-08-03 10:17:50</sys_updated_on>
+        <sys_updated_on>2020-08-07 09:36:37</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
