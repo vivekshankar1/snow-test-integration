@@ -11,7 +11,7 @@
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>mscott</sys_created_by>
             <sys_created_on>2019-03-06 08:36:59</sys_created_on>
-            <sys_id>dde95d60dbea1450c292278115961936</sys_id>
+            <sys_id>cc6d118ddb7a1810c2922781159619a9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Chef version</sys_name>
             <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
