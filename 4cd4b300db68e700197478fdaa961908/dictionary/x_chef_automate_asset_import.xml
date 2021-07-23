@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="Asset Import" max_length="40" name="x_chef_automate_asset_import" type="collection">
+        <element label="Asset tag" max_length="255" name="asset_tag" type="string"/>
+        <element label="Attributes" max_length="16777215" name="attributes" type="string"/>
+        <element label="Chef Environment" max_length="256" name="chef_environment" type="string"/>
+        <element label="Client run" max_length="16777215" name="client_run" type="string"/>
+        <element label="Cloud Provider" max_length="16777215" name="cloud_provider" type="string"/>
+        <element label="Cookbooks" max_length="16777215" name="cookbooks" type="string"/>
+        <element label="Cpu Cores" max_length="3" name="cpu_cores" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="CPU core count" max_length="40" name="cpu_core_count" type="integer"/>
+        <element label="CPU count" max_length="4" name="cpu_count" type="string"/>
+        <element label="Cpu manufacturer" max_length="100" name="cpu_manufacturer" type="string"/>
+        <element label="CPU manufacturer sys id" max_length="32" name="cpu_manufacturer_sys_id" type="string"/>
+        <element label="Cpu Model" max_length="100" name="cpu_model" type="string"/>
+        <element label="Cpu Speed" max_length="20" name="cpu_speed" type="string"/>
+        <element label="Cpu Type" max_length="100" name="cpu_type" type="string"/>
+        <element label="Disk Space" max_length="100" name="disk_space" type="string"/>
+        <element label="DNS domain" max_length="255" name="dns_domain" type="string"/>
+        <element label="File system" max_length="16777215" name="file_system" type="string"/>
+        <element label="Host Name" max_length="256" name="host_name" type="string"/>
+        <element label="Ip Address" max_length="50" name="ip_address" type="string"/>
+        <element label="Languages" max_length="16777215" name="languages" type="string"/>
+        <element label="Mac Address" max_length="20" name="mac_address" type="string"/>
+        <element label="Manufacturer" max_length="255" name="manufacturer" type="string"/>
+        <element label="Memory Total" max_length="20" name="memory_total" type="string"/>
+        <element label="Model" max_length="255" name="model" type="string"/>
+        <element label="Model category name" max_length="255" name="model_category_name" type="string"/>
+        <element label="Model ID" max_length="32" name="model_id" type="string"/>
+        <element label="Name" max_length="255" name="name" type="string"/>
+        <element label="Deprecated Operating System" max_length="256" name="operating_system" type="string"/>
+        <element label="Operating System" max_length="50" name="os" type="string"/>
+        <element label="OS Family" max_length="100" name="os_family" type="string"/>
+        <element label="OS service pack" max_length="40" name="os_service_pack" type="string"/>
+        <element label="OS Version" max_length="256" name="os_version" type="string"/>
+        <element label="Packages" max_length="16777215" name="packages" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="RAM (MB)" max_length="40" name="ram" type="integer"/>
+        <element label="Serial Number" max_length="255" name="serial_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="server" max_length="32" name="server" reference="cmdb_ci_server" type="reference"/>
+        <element label="Description" max_length="1000" name="short_description" type="string"/>
+        <element label="System class name" max_length="255" name="system_class_name" type="string"/>
+        <element label="Timezone" max_length="50" name="timezone" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Is Virtual" max_length="40" name="virtual" type="boolean"/>
+        <index name="index">
+            <element name="server"/>
+        </index>
+    </element>
+</database>

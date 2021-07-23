@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_chef_automate.BufferToImportUtil</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>BufferToImportUtil</name>
+        <script><![CDATA[var BufferToImportUtil = Class.create();
+BufferToImportUtil.prototype = {
+    initialize: function() {
+var logger = new Logger();
+var jsonUtil = new JsonUtil();
+var importUtil = new ImportUtil();
+    },
+CapitalizeFirstLetter :function(string) {
+    try {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    } catch (err) {
+        logger.warn(gs.getMessage("Insert to Asset Import CapitalizeFirstLetter error: {0}", err));
+        return "";
+    }
+},
+
+ConvertCpuSpeed : function(cpuSpeed) {
+    try {
+        var cpuMHz = cpuSpeed.slice(0, -3) * 1000;
+        return cpuMHz.toString().replace(/\s/g, '');
+    } catch (err) {
+        logger.warn(gs.getMessage("Insert to Asset Import ConvertCpuSpeed error: {0}", err));
+        return "";
+    }
+},
+
+
+getSysClassName: function(operatingSystem) {
+    var sysClassName = "cmdb_ci_server";
+    logger.debug("getSysClassName: operatingSystem: ".concat(operatingSystem));
+    if (operatingSystem.match(/linux/i)) {
+        sysClassName = "cmdb_ci_linux_server";
+    }
+    if (operatingSystem.match(/windows/i)) {
+        sysClassName = "cmdb_ci_win_server";
+    }
+    if (operatingSystem.match(/mac_os_x/i)) {
+        sysClassName = "cmdb_ci_osx_server";
+    }
+
+    logger.debug("getSysClassName: sysClassName: ".concat(sysClassName));
+    return sysClassName;
+},
+
+
+MapToImportTable : function(chefAssetsTable, assetData, logger) {
+    try {
+		gs.info("under mapToImportTable ");
+        var attributes = jsonUtil.getObject(assetData, "attributes");
+        if (attributes === undefined) {
+            return false;
+        }
+        chefAssetsTable.attributes = jsonUtil.stringify(attributes);
+        var automaticAttrs = jsonUtil.getObject(attributes, "automatic");
+        var nodeData = jsonUtil.getObject(assetData, "node");
+        var lastRun = jsonUtil.getObject(assetData, "client_run");
+        logger.debug("Attributes: " + attributes + ", automaticAttrs: " + automaticAttrs + ", Last run: " + lastRun);
+        if (automaticAttrs === undefined && lastRun === undefined) {
+            return false;
+        }
+
+        chefAssetsTable.client_run = jsonUtil.stringify(lastRun);
+
+
+        chefAssetsTable.host_name = jsonUtil.getStringValue(nodeData, "hostname");
+        chefAssetsTable.name = chefAssetsTable.host_name;
+        var hostnamectl = jsonUtil.getObject(automaticAttrs, "hostnamectl");
+        var operatingSystem = jsonUtil.getStringValue(hostnamectl, "operating_system");
+        if (operatingSystem == "") {
+            operatingSystem = jsonUtil.getStringValue(automaticAttrs, "os");
+        }
+        chefAssetsTable.operating_system = this.CapitalizeFirstLetter(operatingSystem);
+        chefAssetsTable.os = chefAssetsTable.operating_system;
+        chefAssetsTable.os_family = this.CapitalizeFirstLetter(jsonUtil.getStringValue(automaticAttrs, "os"));
+        chefAssetsTable.os_version = this.CapitalizeFirstLetter(jsonUtil.getStringValue(automaticAttrs, "os_version"));
+        chefAssetsTable.system_class_name = this.getSysClassName(chefAssetsTable.os_family);
+        chefAssetsTable.mac_address = jsonUtil.getStringValue(nodeData, "macaddress");
+        chefAssetsTable.ip_address = jsonUtil.getStringValue(nodeData, "ipaddress");
+        var cpu = jsonUtil.getObject(automaticAttrs, "cpu");
+        var cpu0 = jsonUtil.getObject(cpu, "0");
+        chefAssetsTable.cpu_manufacturer = jsonUtil.getStringValue(cpu0, "vendor_id");
+        chefAssetsTable.cpu_model = jsonUtil.getStringValue(cpu0, "model");
+        var cores = jsonUtil.getIntValue(cpu, "cores");
+        if (cores != null) {
+            chefAssetsTable.cpu_cores = cores;
+            chefAssetsTable.cpu_core_count = cores;
+        }
+
+        var cpuTotal = jsonUtil.getIntValue(cpu, "total");
+        if (cpuTotal != null) {
+            chefAssetsTable.cpu_total = cpuTotal;
+        }
+
+        cpuModelName = jsonUtil.getStringValue(cpu0, "model_name");
+        if (cpuModelName.indexOf('@') > -1) {
+            var cpuSplit = cpuModelName.split('@');
+            chefAssetsTable.cpu_type = cpuSplit[0].replace(/\s/g, '');
+            var cpuMHz = this.ConvertCpuSpeed(cpuSplit[1]);
+            chefAssetsTable.cpu_speed = cpuMHz;
+        } else {
+            chefAssetsTable.cpu_type = cpuModelName;
+            chefAssetsTable.cpu_speed = this.ConvertCpuSpeed(jsonUtil.getStringValue(cpu0, "mhz"));
+        }
+
+        var cpuReal = jsonUtil.getIntValue(cpu, "real");
+        if (cpuReal != null) {
+            chefAssetsTable.cpu_count = cpuReal;
+        }
+
+        var dmi = jsonUtil.getObject(automaticAttrs, "dmi");
+        var system = jsonUtil.getObject(dmi, "system");
+        var systemEnclosure = jsonUtil.getObject(automaticAttrs, "system_enclosure");
+        var serialNumber = jsonUtil.getStringValue(nodeData, "serial_number");
+
+        chefAssetsTable.serial_number = serialNumber;
+        var memory = jsonUtil.getObject(automaticAttrs, "memory");
+        chefAssetsTable.memory_total = parseInt(jsonUtil.getStringValue(memory, "total")) / 1024;
+        chefAssetsTable.ram = parseInt(jsonUtil.getStringValue(memory, "total")) / 1024;
+        var time = jsonUtil.getObject(automaticAttrs, "time");
+        chefAssetsTable.timezone = jsonUtil.getStringValue(time, "timezone");
+        if (jsonUtil.getStringValue(hostnamectl, "chassis") == "vm") {
+            chefAssetsTable.virtual = true;
+        } else {
+            chefAssetsTable.virtual = false;
+        }
+        chefAssetsTable.languages = jsonUtil.stringify(automaticAttrs.languages);
+        chefAssetsTable.packages = jsonUtil.stringify(automaticAttrs.packages);
+        chefAssetsTable.cookbooks = jsonUtil.stringify(automaticAttrs.cookbooks);
+        chefAssetsTable.file_system = jsonUtil.stringify(automaticAttrs.filesystem);
+		
+//chefAssetsTable.model_category_name = jsonUtil.stringify(automaticAttrs.model_category);
+        var manufacturer = jsonUtil.getStringValue(system, "manufacturer");
+
+        if (manufacturer == "") {
+            // try system_enclosure
+			
+         manufacturer = jsonUtil.getStringValue(systemEnclosure, "manufacturer");
+			
+			
+        }
+        chefAssetsTable.manufacturer = manufacturer;
+        var model = jsonUtil.getStringValue(system, "product_name");
+        var kernel = jsonUtil.getObject(automaticAttrs, "kernel");
+        var csInfo = jsonUtil.getObject(kernel, "cs_info");
+        if (model == "") {
+            model = jsonUtil.getStringValue(csInfo, "model");
+        }
+        chefAssetsTable.model_id = model;
+		//chefAssetsTable.model=model;
+		
+        
+        var name = jsonUtil.getStringValue(kernel, "name");
+        var release = jsonUtil.getStringValue(kernel, "release");
+        var version = jsonUtil.getStringValue(kernel, "version");
+        var processor = jsonUtil.getStringValue(kernel, "processor");
+        var machine = jsonUtil.getStringValue(kernel, "machine");
+        var os = jsonUtil.getStringValue(kernel, "os");
+        var description = gs.getMessage("{0} {1} {2} {3} {4} {5} {6}", [name, chefAssetsTable.host_name, release, version, processor, machine, os]);
+        chefAssetsTable.short_description = description;
+        //chefAssetsTable.chef_environment = jsonUtil.getStringValue(automaticAttrs, "environment");
+		chefAssetsTable.chef_environment = jsonUtil.getStringValue(attributes, "chef_environment");
+        var cloud = jsonUtil.getObject(automaticAttrs, "cloud");
+        if (cloud != null) {
+            var cloudProviderName = jsonUtil.getObject(cloud, "provider");
+            var cloudProvider = jsonUtil.getObject(automaticAttrs, cloudProviderName);
+            chefAssetsTable.cloud_provider = jsonUtil.stringify(cloudProvider);
+        }
+        chefAssetsTable.dns_domain = jsonUtil.getStringValue(automaticAttrs, "domain");
+        var chassis = jsonUtil.getObject(dmi, "chassis");
+        chefAssetsTable.asset_tag = jsonUtil.getStringValue(chassis, "asset_tag");
+		//chefAssetsTable.model_category_name=jsonUtil.getStringValue(chassis, "model_category");
+        chefAssetsTable.os_service_pack = jsonUtil.getStringValue(automaticAttrs, "os_service_pack");
+        return true;
+    } catch (err) {
+        logger.errorWithStack("Chef Automate Import Table Mapping Error", err);
+        throw err;
+    }
+},
+    type: 'BufferToImportUtil'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>Admin</sys_created_by>
+        <sys_created_on>2021-04-27 10:56:04</sys_created_on>
+        <sys_id>942680d107f72c941824fbbf7c1ed0d8</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name>BufferToImportUtil</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_script_include_942680d107f72c941824fbbf7c1ed0d8</sys_update_name>
+        <sys_updated_by>chef.automate</sys_updated_by>
+        <sys_updated_on>2021-06-21 13:07:34</sys_updated_on>
+    </sys_script_include>
+</record_update>

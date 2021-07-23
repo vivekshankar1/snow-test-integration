@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Enable Software Installed Mapping</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_chef_automate.software_installed_mapping</name>
+        <read_roles/>
+        <suffix>software_installed_mapping</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>chefautomate</sys_created_by>
+        <sys_created_on>2021-06-30 13:18:12</sys_created_on>
+        <sys_id>1d7ccef11b45301053408515ec4bcb51</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>x_chef_automate.software_installed_mapping</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_properties_1d7ccef11b45301053408515ec4bcb51</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-01 11:37:55</sys_updated_on>
+        <type>boolean</type>
+        <value>false</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=1d7ccef11b45301053408515ec4bcb51"/>
+</record_update>

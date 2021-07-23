@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_chef_automate.Logger</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>Logger</name>
+        <script><![CDATA[var Logger = Class.create();
+Logger.prototype = {
+	
+	initialize: function() {
+		
+	},
+	
+	info: function(message) {
+		if (this._loggingEnabled()) {
+		var logMessage = message;
+		
+			logMessage = this._format(logMessage);
+			gs.info(logMessage);
+		}
+		//return logMessage;
+	},
+	
+	warn: function(message) {
+		if (this._loggingEnabled()) {
+		var logMessage = message;
+			logMessage = this._format(logMessage);
+			gs.warn(logMessage);
+		}
+		//return logMessage;
+	},
+	
+	warnWithStack: function(message, err) {
+		if (this._loggingEnabled()) {
+		var logMessage = message;
+			logMessage = this._format(logMessage);
+			gs.warn(gs.getMessage("{0} {1} {2}", [logMessage, err.message, err.stack]));
+		}
+		//return logMessage;
+	},
+	
+	debug: function(message) {
+		if (this._loggingEnabled()) {
+		var logMessage = message;
+			logMessage = this._format(logMessage);
+			gs.debug(logMessage);
+		}
+		//return logMessage;
+	},
+	
+	error: function(message) {
+		if (this._loggingEnabled()) {
+		var logMessage = message;
+			logMessage = this._format(logMessage);
+			gs.error(logMessage);
+		}
+		//return logMessage;
+	},
+	
+	errorWithStack: function(message, err) {
+		if (this._loggingEnabled()) {
+		var logMessage = message;
+			logMessage = this._format(logMessage);
+			gs.error(gs.getMessage("{0} {1} {2}", [logMessage, err.message, err.stack]));
+		}
+	//	return logMessage;
+	},
+
+	_loggingEnabled: function() {
+	return "true" === gs.getProperty('x_chef_automate.logging.enabled');
+	},
+	
+	_format: function(message) {
+		try {
+			if (message == null) {
+				message = '';
+			}
+			return new Date().toISOString().concat(' | ').concat('x_chef_automate | ').concat(message);
+		} catch (err) {
+			gs.error('x_chef_automate.Logger.format() failed and original message returned');
+			gs.error(err);
+			return message;
+		}
+	},
+	
+	type: 'Logger'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>dmurray</sys_created_by>
+        <sys_created_on>2018-09-11 14:22:09</sys_created_on>
+        <sys_id>28b88e24db642b00197478fdaa9619b2</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Logger</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_script_include_28b88e24db642b00197478fdaa9619b2</sys_update_name>
+        <sys_updated_by>Admin</sys_updated_by>
+        <sys_updated_on>2021-04-27 11:18:51</sys_updated_on>
+    </sys_script_include>
+</record_update>

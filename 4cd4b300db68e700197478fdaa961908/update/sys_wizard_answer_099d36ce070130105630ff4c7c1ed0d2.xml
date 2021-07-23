@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer>CI Cookbook</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>CI Cookbook</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Base Configuration Item" name="Base Configuration Item">d1981ae7db20230089e3378239961946</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-01 11:30:50</sys_created_on>
+        <sys_id>099d36ce070130105630ff4c7c1ed0d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CI Cookbook</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_wizard_answer_099d36ce070130105630ff4c7c1ed0d2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-01 11:30:50</sys_updated_on>
+        <table/>
+        <target_url>x_chef_automate_ci_cookbook.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+</record_update>

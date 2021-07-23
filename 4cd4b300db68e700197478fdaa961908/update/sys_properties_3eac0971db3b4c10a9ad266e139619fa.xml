@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>During data import insert the model if it is not found in the cmdb_model table.&#13;
+&#13;
+Setting this property to 'Yes' will create entries in the cmdb_model table.</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_chef_automate.insert_model</name>
+        <read_roles>x_chef_automate.admin,x_chef_automate.api,x_chef_automate.user</read_roles>
+        <suffix>insert_model</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-03-27 12:58:55</sys_created_on>
+        <sys_id>3eac0971db3b4c10a9ad266e139619fa</sys_id>
+        <sys_mod_count>95</sys_mod_count>
+        <sys_name>x_chef_automate.insert_model</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_properties_3eac0971db3b4c10a9ad266e139619fa</sys_update_name>
+        <sys_updated_by>Admin</sys_updated_by>
+        <sys_updated_on>2021-04-29 15:06:08</sys_updated_on>
+        <type>boolean</type>
+        <value>true</value>
+        <write_roles>x_chef_incident.admin</write_roles>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=3eac0971db3b4c10a9ad266e139619fa"/>
+</record_update>

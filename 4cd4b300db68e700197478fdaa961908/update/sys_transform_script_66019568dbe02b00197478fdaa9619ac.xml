@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <map display_value="Chef Automate Sync Transform">56940d5cdbe8e700197478fdaa96190b</map>
+        <order>600</order>
+        <script><![CDATA[// Software packages transform script
+// var jsonUtil = new JsonUtil();
+// var logger = new Logger();
+
+(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+	// Check the software package table for existing packages
+	var check =gs.getProperty("x_chef_automate.software_installed_mapping");
+	if(check== true || check== "true")
+	gs.eventQueue("x_chef_automate.process.installation",null,source.packages,source.server);
+
+})(source, map, log, target);]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>dmurray</sys_created_by>
+        <sys_created_on>2018-09-11 10:18:53</sys_created_on>
+        <sys_id>66019568dbe02b00197478fdaa9619ac</sys_id>
+        <sys_mod_count>43</sys_mod_count>
+        <sys_name>onAfter</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_transform_script_66019568dbe02b00197478fdaa9619ac</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-01 11:38:31</sys_updated_on>
+        <when>onAfter</when>
+    </sys_transform_script>
+</record_update>

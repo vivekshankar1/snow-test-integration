@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="error_backtrace" label="Error backtrace" language="en" table="x_chef_automate_client_run">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>error_backtrace</element>
+            <help/>
+            <hint/>
+            <label>Error backtrace</label>
+            <language>en</language>
+            <name>x_chef_automate_client_run</name>
+            <plural>Error backtraces</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-02-03 16:17:29</sys_created_on>
+            <sys_id>ef97f3be2f303010a7c1b6a62799b675</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Error backtrace</sys_name>
+            <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+            <sys_update_name>sys_documentation_x_chef_automate_client_run_error_backtrace_en</sys_update_name>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-02-03 16:17:29</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

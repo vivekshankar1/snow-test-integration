@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Turn on Rest APIs</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_chef_automate.Rest.api</name>
+        <read_roles/>
+        <suffix>Rest.api</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>Chef.Automate</sys_created_by>
+        <sys_created_on>2021-05-19 12:33:40</sys_created_on>
+        <sys_id>d9bee1d8075078901824fbbf7c1ed0fd</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>x_chef_automate.Rest.api</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_properties_d9bee1d8075078901824fbbf7c1ed0fd</sys_update_name>
+        <sys_updated_by>Chef.Automate</sys_updated_by>
+        <sys_updated_on>2021-05-28 12:20:09</sys_updated_on>
+        <type>boolean</type>
+        <value>true</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=d9bee1d8075078901824fbbf7c1ed0fd"/>
+</record_update>

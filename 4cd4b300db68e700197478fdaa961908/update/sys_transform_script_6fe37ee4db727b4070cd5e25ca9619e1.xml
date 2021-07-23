@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <map display_value="Compliance Import to Report">f87d83dddb42b30070cd5e25ca961953</map>
+        <order>100</order>
+        <script><![CDATA[// Compliance report profiles, controls and results transform script
+var logger = new Logger();
+var jsonUtil = new JsonUtil();
+
+(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+
+	try {
+		var arrayakka = new global.ArrayUtil();
+		var profiles = jsonUtil.parse(source.profiles);
+		for (var p in profiles) {
+			var profile = profiles[p];
+			var profileId = "";
+			var reportProfileId = "";
+			//var arraydh = [];
+			var profileName = jsonUtil.getStringValue(profile, "name");
+			var profileVersion = jsonUtil.getStringValue(profile, "version");
+			var complianceProfile = new GlideRecord('x_chef_automate_compliance_profiles');
+			complianceProfile.initialize();
+			complianceProfile.addQuery('name', profileName);
+			complianceProfile.addQuery('version', profileVersion);
+			complianceProfile.query();
+			if (complianceProfile.next()) {
+				profileId = complianceProfile.getValue("sys_id");
+				var reportData= complianceProfile.report.toString() +","+ target.sys_id.toString() ;
+				var arraydh = reportData.split(",");
+				complianceProfile.report = arrayakka.unique(arraydh).toString();
+				complianceProfile.update();
+				logger.debug(gs.getMessage("compliance profile {0}, {1}", [profileId, complianceProfile.sys_id]));
+			} else {
+				logger.debug(gs.getMessage("NO PROFILE FOUND for {0}:{1}", [profileName, profileVersion]));
+			}
+			
+			var reportProfile = new GlideRecord('x_chef_automate_compliance_report_profiles');
+			reportProfile.initialize();
+			reportProfile.report = target.sys_id;
+			reportProfile.status = jsonUtil.getStringValue(profile, "status");
+			reportProfile.compliance_profile = profileId;
+			reportProfileId = reportProfile.insert();
+			if (reportProfileId) {
+				logger.debug(gs.getMessage("Report profile {0} added for report {1}", [profileName, source.sys_id]));
+			} else {
+				logger.error("Could not insert report profile");
+			}
+			
+			var totalControls = 0;
+			var skippedControls = 0;
+			var passedControls = 0;
+			var failedControls = 0;
+			var controls = jsonUtil.getObject(profile, "controls");			
+			for (var c in controls) {
+				var control = controls[c];
+				
+				var profileControl = new GlideRecord('x_chef_automate_compliance_profile_controls');
+				profileControl.initialize();
+				profileControl.addQuery('id', jsonUtil.getStringValue(control, "id"));
+				profileControl.addQuery('profile', complianceProfile.sys_id);
+				profileControl.query();
+				
+				var controlId = "";
+				if (profileControl.hasNext()) {
+					profileControl.next();
+					controlId = profileControl.sys_id;
+				}
+				for (var r in control.results) {
+					var result = control.results[r];
+					var controlResult = new GlideRecord('x_chef_automate_compliance_report_results');
+					controlResult.initialize();
+					controlResult.compliance_report = target.sys_id;
+					controlResult.compliance_profile = profileId;
+					controlResult.compliance_profile_control = controlId;
+					controlResult.compliance_report_profile = reportProfileId;
+					controlResult.code_desc = jsonUtil.getStringValue(result, "code_desc");
+					controlResult.message = getMessage(result);
+					
+					controlResult.run_time = jsonUtil.getDecimalValue(result, "run_time");
+					var controlStatus = jsonUtil.getStringValue(result, "status");
+					controlResult.status = controlStatus;
+					totalControls++;
+					if (controlStatus === "passed") {
+						passedControls++;
+					} else if (controlStatus === "skipped") {
+						skippedControls++;
+					} else if (controlStatus === "failed") {
+						failedControls++;
+					}
+					var controlResultId = controlResult.insert();
+					if (controlResultId == null) {
+						logger.error("onAfter() compliance import to report could not insert result");
+					}
+				}
+			}
+			reportProfile = new GlideRecord('x_chef_automate_compliance_report_profiles');
+			reportProfile.initialize();
+			reportProfile.addQuery('sys_id', reportProfileId);
+			reportProfile.query();
+			if (reportProfile.hasNext()) {
+				reportProfile.next();
+				reportProfile.total_controls = totalControls;
+				reportProfile.passed_controls = passedControls;
+				reportProfile.skipped_controls = skippedControls;
+				reportProfile.failed_controls = failedControls;
+				reportProfileId = reportProfile.update("Updated control totals");
+			} else {
+				logger.warn(gs.getMessage("Could not query reportProfile {0} {1} for update", [profileName, reportProfileId]));
+			}
+		}
+	} catch(err) {
+		logger.errorWithStack("onAfter() compliance import to report", err);
+	}
+
+})(source, map, log, target);
+
+function getMessage(result) {
+	try {
+		var message = jsonUtil.getStringValue(result, "message");
+		if (message !== undefined && message !== null) {
+			return message.replace('\f', '\n');
+		}
+	} catch (err) {
+		logger.errorWithStack("onAfter() compliance import to report getMessage()", err.message);
+	}
+}]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2019-07-19 10:25:20</sys_created_on>
+        <sys_id>6fe37ee4db727b4070cd5e25ca9619e1</sys_id>
+        <sys_mod_count>67</sys_mod_count>
+        <sys_name>onAfter</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_transform_script_6fe37ee4db727b4070cd5e25ca9619e1</sys_update_name>
+        <sys_updated_by>chefautomate</sys_updated_by>
+        <sys_updated_on>2021-06-30 13:14:37</sys_updated_on>
+        <when>onAfter</when>
+    </sys_transform_script>
+</record_update>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Compliance report profiles" max_length="40" name="x_chef_automate_compliance_report_profiles" type="collection">
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" display="true" label="Compliance profile" max_length="40" name="compliance_profile" reference="x_chef_automate_compliance_profiles" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Failed controls" max_length="40" name="failed_controls" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Passed controls" max_length="40" name="passed_controls" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Report" max_length="40" name="report" reference="x_chef_automate_compliance_report" reference_cascade_rule="delete" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Skipped controls" max_length="40" name="skipped_controls" type="integer"/>
+        <element label="Status" max_length="10" name="status" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Total controls" max_length="40" name="total_controls" type="integer"/>
+        <index name="index">
+            <element name="compliance_profile"/>
+        </index>
+        <index name="index2">
+            <element name="report"/>
+        </index>
+    </element>
+</database>
