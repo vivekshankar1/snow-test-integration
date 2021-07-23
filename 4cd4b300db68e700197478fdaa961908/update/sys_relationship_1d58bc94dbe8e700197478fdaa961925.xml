@@ -59,22 +59,6 @@
     </sys_ui_related_list_relationship_entry>
     <sys_ui_related_list_relationship_entry action="INSERT_OR_UPDATE">
         <filter/>
-        <list_id display_value="Linux Server - Default view" name="cmdb_ci_linux_server" related_list="NULL" sys_domain="global" view="Default view">5c71c8f137332100dcd445cbbebe5d61</list_id>
-        <order_by/>
-        <position>11</position>
-        <related_list>REL:1d58bc94dbe8e700197478fdaa961925</related_list>
-        <sys_class_name>sys_ui_related_list_relationship_entry</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-06-28 00:49:43</sys_created_on>
-        <sys_id>a01e498507c530101933ff808c1ed0d6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_relationship display_value="Chef Infra Client Runs">1d58bc94dbe8e700197478fdaa961925</sys_relationship>
-        <sys_ui_related_list display_value="Linux Server - Default view" name="cmdb_ci_linux_server" related_list="NULL" sys_domain="global" view="Default view">5c71c8f137332100dcd445cbbebe5d61</sys_ui_related_list>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-06-28 00:49:43</sys_updated_on>
-    </sys_ui_related_list_relationship_entry>
-    <sys_ui_related_list_relationship_entry action="INSERT_OR_UPDATE">
-        <filter/>
         <list_id display_value="Windows Server - Default view" name="cmdb_ci_win_server" related_list="NULL" sys_domain="global" view="Default view">6d25896e0b103200c71e259335673aeb</list_id>
         <order_by/>
         <position>12</position>

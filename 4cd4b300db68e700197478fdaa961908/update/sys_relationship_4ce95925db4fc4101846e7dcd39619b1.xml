@@ -93,7 +93,7 @@
         <filter/>
         <list_id display_value="Linux Server - Default view" name="cmdb_ci_linux_server" related_list="NULL" sys_domain="global" view="Default view">5c71c8f137332100dcd445cbbebe5d61</list_id>
         <order_by/>
-        <position>12</position>
+        <position>11</position>
         <related_list>REL:4ce95925db4fc4101846e7dcd39619b1</related_list>
         <sys_class_name>sys_ui_related_list_relationship_entry</sys_class_name>
         <sys_created_by>admin</sys_created_by>

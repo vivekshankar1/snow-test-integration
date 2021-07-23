@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Compliance profile controls" max_length="40" name="x_chef_automate_compliance_profile_controls" type="collection">
+    <element label="Compliance profile controls" max_length="40" name="x_chef_automate_compliance_profile_controls" sizeclass="257" type="collection">
         <element label="Code" max_length="16777215" name="code" type="string"/>
         <element display="true" label="Id" max_length="255" name="id" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Impact" max_length="40" name="impact" type="float"/>

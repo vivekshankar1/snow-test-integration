@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Compliance profiles" max_length="40" name="x_chef_automate_compliance_profiles" type="collection">
+    <element label="Compliance profiles" max_length="40" name="x_chef_automate_compliance_profiles" sizeclass="2" type="collection">
         <element label="Copyright" max_length="255" name="copyright" type="string"/>
         <element label="Copyright email" max_length="255" name="copyright_email" type="string"/>
         <element display="true" label="Name" max_length="255" name="name" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Report" max_length="32" name="report" reference="x_chef_automate_compliance_report" type="glide_list"/>
+        <element attributes="edge_encryption_enabled=true" label="Report" max_length="1024" name="report" reference="x_chef_automate_compliance_report" type="glide_list"/>
         <element label="Sha256" max_length="255" name="sha256" type="string"/>
         <element label="Summary" max_length="16777215" name="summary" type="string"/>
         <element label="Title" max_length="255" name="title" type="string"/>
         <element label="Version" max_length="40" name="version" type="string"/>
-        <index name="index">
-            <element name="report"/>
-        </index>
     </element>
 </database>
