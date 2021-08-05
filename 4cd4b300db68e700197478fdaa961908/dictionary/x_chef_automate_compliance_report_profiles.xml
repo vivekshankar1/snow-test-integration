@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Compliance report profiles" max_length="40" name="x_chef_automate_compliance_report_profiles" sizeclass="346" type="collection">
+    <element label="Compliance report profiles" max_length="40" name="x_chef_automate_compliance_report_profiles" type="collection">
         <element attributes="edge_encryption_enabled=true,encode_utf8=false" display="true" label="Compliance profile" max_length="40" name="compliance_profile" reference="x_chef_automate_compliance_profiles" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Failed controls" max_length="40" name="failed_controls" type="integer"/>
         <element attributes="edge_encryption_enabled=true" label="Passed controls" max_length="40" name="passed_controls" type="integer"/>

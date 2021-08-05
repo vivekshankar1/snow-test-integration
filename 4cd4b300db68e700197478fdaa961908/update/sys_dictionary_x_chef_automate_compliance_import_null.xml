@@ -47,21 +47,21 @@
         <reference_qual/>
         <reference_qual_condition/>
         <reference_type/>
-        <sizeclass>0</sizeclass>
+        <sizeclass/>
         <spell_check>false</spell_check>
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-06-13 14:31:03</sys_created_on>
-        <sys_id>9241078edbc9b450363427e3ca9619dc</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_id>a1ff979d2f31301012be578b2799b634</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>x_chef_automate_compliance_import</sys_name>
         <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
-        <sys_update_name>sys_dictionary_x_chef_automate_compliance_import_null</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-07-23 06:44:51</sys_updated_on>
+        <sys_update_name>sys_dictionary_x_chef_automate_compliance_import_NULL</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 12:54:15</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

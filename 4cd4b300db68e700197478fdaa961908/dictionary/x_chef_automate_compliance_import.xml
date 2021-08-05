@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="sys_import_set_row" label="Compliance import" max_length="40" name="x_chef_automate_compliance_import" sizeclass="0" type="collection">
+    <element extends="sys_import_set_row" label="Compliance import" max_length="40" name="x_chef_automate_compliance_import" type="collection">
         <element label="End time" max_length="24" name="end_time" type="string"/>
         <element label="Environment" max_length="40" name="environment" type="string"/>
         <element label="Fqdn" max_length="255" name="fqdn" type="string"/>
