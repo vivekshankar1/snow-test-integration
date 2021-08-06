@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Compliance report" max_length="40" name="x_chef_automate_compliance_report" sizeclass="1" type="collection">
+    <element label="Compliance report" max_length="40" name="x_chef_automate_compliance_report" sizeclass="0" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Duration" max_length="40" name="duration" type="float"/>
         <element label="End time" max_length="24" name="end_time" type="string"/>
         <element label="Environment" max_length="40" name="environment" type="string"/>
@@ -19,6 +19,9 @@
             <element name="node"/>
         </index>
         <index name="index2">
+            <element name="id"/>
+        </index>
+        <index name="index3">
             <element name="id"/>
         </index>
     </element>

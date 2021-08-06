@@ -47,13 +47,13 @@
         <reference_qual/>
         <reference_qual_condition/>
         <reference_type/>
-        <sizeclass>257</sizeclass>
+        <sizeclass>0</sizeclass>
         <spell_check>false</spell_check>
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-07-19 09:27:52</sys_created_on>
-        <sys_id>4851c78edbc9b450363427e3ca9619ee</sys_id>
+        <sys_id>f400eb9d2f31301012be578b2799b648</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>x_chef_automate_compliance_profile_controls</sys_name>
         <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -61,7 +61,7 @@
         <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_dictionary_x_chef_automate_compliance_profile_controls_null</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-07-02 10:29:08</sys_updated_on>
+        <sys_updated_on>2021-08-06 12:39:55</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

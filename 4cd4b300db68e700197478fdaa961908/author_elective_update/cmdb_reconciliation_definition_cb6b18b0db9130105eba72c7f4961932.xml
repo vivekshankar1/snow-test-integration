@@ -50,7 +50,7 @@
         <update_guid_history>4b6bd0f0c2913010583d39d6c47a7848:937271268</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Server rule by chef_automate">47dd1c34db9130105eba72c7f4961988</sys_audit_delete>
+        <sys_audit_delete display_value="">47dd1c34db9130105eba72c7f4961988</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-09 12:56:18</sys_created_on>

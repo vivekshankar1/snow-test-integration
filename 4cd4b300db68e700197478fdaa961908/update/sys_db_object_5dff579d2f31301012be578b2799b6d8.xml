@@ -24,13 +24,13 @@
         <sys_class_path/>
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-06-13 14:31:03</sys_created_on>
-        <sys_id>9241078edbc9b450363427e3ca9619d9</sys_id>
+        <sys_id>5dff579d2f31301012be578b2799b6d8</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_name>Compliance import</sys_name>
         <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
-        <sys_update_name>sys_db_object_9241078edbc9b450363427e3ca9619d9</sys_update_name>
+        <sys_update_name>sys_db_object_5dff579d2f31301012be578b2799b6d8</sys_update_name>
         <sys_updated_by>mscott</sys_updated_by>
         <sys_updated_on>2019-08-12 12:38:16</sys_updated_on>
         <update_access>false</update_access>
