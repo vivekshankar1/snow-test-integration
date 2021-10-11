@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-02-18 09:40:52</sys_created_on>
+        <sys_id>f013f8addb8bc4101846e7dcd396194e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_chef_automate_attributes_import.x_chef_automate.user</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_security_acl display_value="x_chef_automate_attributes_import">7413f8addb8bc4101846e7dcd396194b</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_f013f8addb8bc4101846e7dcd396194e</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-02-18 09:47:16</sys_updated_on>
+        <sys_user_role display_value="x_chef_automate.user" name="x_chef_automate.user">9d7ce010dbe8e700197478fdaa9619ba</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
+        <instance_name>ven02358</instance_name>
+        <name>sys_security_acl_role_f013f8addb8bc4101846e7dcd396194e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-02-18 09:40:52</sys_created_on>
+        <sys_id>f013f8addb8bc4101846e7dcd396194e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_chef_automate_attributes_import.x_chef_automate.user</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_security_acl display_value="x_chef_automate_attributes_import">7413f8addb8bc4101846e7dcd396194b</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_f013f8addb8bc4101846e7dcd396194e</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-02-18 09:47:16</sys_updated_on>
+        <sys_user_role display_value="x_chef_automate.user" name="x_chef_automate.user">9d7ce010dbe8e700197478fdaa9619ba</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>]]></payload>
+        <payload_hash>-731596706</payload_hash>
+        <record_name>x_chef_automate_attributes_import.x_chef_automate.user</record_name>
+        <reverted_from/>
+        <source>9a202a1bdb7f8050a9ad266e139619a4</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-04-01 10:54:31</sys_created_on>
+        <sys_id>c740a65bdb7f8050a9ad266e139619cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1713560d6ea0000001</sys_recorded_at>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-04-01 10:54:31</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>0740a65b737f80507adceaef4baca5cc</update_guid>
+        <update_guid_history>0740a65b737f80507adceaef4baca5cc:0,4d002ad7117f80506f0b5eaed9a2a6e0:-789985870,112e9e93b37f80504104f4eab2c5b30c:0,2addde13ea7f8050734bf333e3d83415:-789985870,95cc1a9f9a3f8050cb1b93d14dab1bf0:0,e17c9a1f4d3f8050e1bc319fa2d51a03:-789985870,07a3acedb4f70c101424998443810a3c:0,7463a86d03f70c10e914260fe349d7cc:-789985870,0dd0e4a569f70c100c634babdc4094c4:0,3a8020253cf70c103e55454647f116d8:-789985870,57e0167cd2f38810e1e6199712a4d5cc:0,c3a016f803f38810cd3c88e2a6c16466:-789985870,935edee07ea3845040126939c2179fdd:0,c9ec562072a38450a1f214434910af99:149445264,3bdad66899638450027071b88e787a59:0,2d9a96e4716384500d623ecb9279d1b6:-789985870,a9b9de24286384500442e007af960638:0,4f2952a0546384503db0065b68bb7bff:508299800,b7769268ed238450ba89c90b9432f5d4:0,4f3696e4432384500878b1c6d7a48756:-789985870,b6d5d664df2384505924fc107aa2ddb5:0,2e959ae008238450803a779aebcba3da:-789985870,2ce651d04bef04502980902e5c0593f6:0,9dc559dc51af0450d5b865bb229aea3d:-1117231096,4d20ddd0d9af0450a1ef02892fda05a5:0,10ef8d5034af0450e1d997016b251c9b:-789985870,a85f4ddc4f6f0450e9b1a4b0f4408067:0,430f019ce26f0450d6c36b62ae6d7803:-789985870,cdb5c550f16f0450c9fb8f4edb7088e3:0,8145499c6c2f0450a26698a10f132425:1733777730,ac40c4f125570c10043d6b66bc00a513:0,09ff3b6104570c1013d46bcaf300c4e9:-789985870,6a84b4211fcbc4103ef9543313c2fbf1:835285242,c113f8ad378bc41061cc548cb355f250:-1988059890</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_chef_automate_attributes_import.x_chef_automate.user">c93270b7db905850bd7169c3ca9619e4</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-04-27 12:41:52</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>4d0d4435e5aa42909244bb28be278fc4</sys_id>
+        <sys_metadata>f013f8addb8bc4101846e7dcd396194e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_chef_automate_attributes_import.x_chef_automate.user</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent display_value="">7413f8addb8bc4101846e7dcd396194b</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete display_value="">03835e456e36492781266dc672a19f01</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_f013f8addb8bc4101846e7dcd396194e</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_f013f8addb8bc4101846e7dcd396194e">c740a65bdb7f8050a9ad266e139619cc</sys_update_version>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-04-27 12:41:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

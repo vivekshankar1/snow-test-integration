@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="cmdb_ci_computer" label="Server" max_length="40" name="cmdb_ci_server" sizeclass="40" type="collection">
+    <element audit="true" extends="cmdb_ci_computer" label="Server" max_length="40" name="cmdb_ci_server" sizeclass="28157" type="collection">
         <element label="Model Categoryname" max_length="40" name="x_chef_automate_model_categoryname" type="string"/>
     </element>
 </database>

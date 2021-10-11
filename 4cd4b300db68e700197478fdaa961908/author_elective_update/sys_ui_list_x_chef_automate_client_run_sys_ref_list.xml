@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list action="DELETE" parent="" relationship="" sys_domain="global" table="x_chef_automate_client_run" version="2" view="sys_ref_list">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_id</element>
+            <list_id display_value="x_chef_automate_client_run" element="NULL" name="x_chef_automate_client_run" parent="NULL" relationship="NULL" sys_domain="global" view="063c1153db3200101846e7dcd39619c1">27412139db7b4c10a9ad266e139619f9</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-03-27 14:28:25</sys_created_on>
+            <sys_id>23412139db7b4c10a9ad266e139619fa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-03-27 14:28:25</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_chef_automate_client_run</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-03-27 14:28:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>27412139db7b4c10a9ad266e139619f9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_chef_automate_client_run</sys_name>
+            <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+            <sys_update_name>sys_ui_list_x_chef_automate_client_run_sys_ref_list</sys_update_name>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-03-27 14:28:25</sys_updated_on>
+            <sys_user/>
+            <view display_value="Reference List" name="sys_ref_list">063c1153db3200101846e7dcd39619c1</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
+        <instance_name>ven02358</instance_name>
+        <name>sys_ui_list_x_chef_automate_client_run_sys_ref_list</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_chef_automate_client_run" version="2" view="sys_ref_list">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_id</element>
+            <list_id display_value="x_chef_automate_client_run" element="NULL" name="x_chef_automate_client_run" parent="NULL" relationship="NULL" sys_domain="global" view="063c1153db3200101846e7dcd39619c1">27412139db7b4c10a9ad266e139619f9</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-03-27 14:28:25</sys_created_on>
+            <sys_id>23412139db7b4c10a9ad266e139619fa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-03-27 14:28:25</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_chef_automate_client_run</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>mscott</sys_created_by>
+            <sys_created_on>2020-03-27 14:28:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>27412139db7b4c10a9ad266e139619f9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_chef_automate_client_run</sys_name>
+            <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+            <sys_update_name>sys_ui_list_x_chef_automate_client_run_sys_ref_list</sys_update_name>
+            <sys_updated_by>mscott</sys_updated_by>
+            <sys_updated_on>2020-03-27 14:28:25</sys_updated_on>
+            <sys_user/>
+            <view display_value="Reference List" name="sys_ref_list">063c1153db3200101846e7dcd39619c1</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>]]></payload>
+        <payload_hash>489024833</payload_hash>
+        <record_name>Chef Infra Client run</record_name>
+        <reverted_from/>
+        <source>964610a9db53d410c292278115961964</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-09-16 14:04:27</sys_created_on>
+        <sys_id>5fd6d86ddb53d410c29227811596193a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>174973b1dc60000001</sys_recorded_at>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-09-16 14:04:27</sys_updated_on>
+        <type>List Layout</type>
+        <update_guid>9bd6d86d4d53d41010dd24d8ce85933a</update_guid>
+        <update_guid_history>9bd6d86d4d53d41010dd24d8ce85933a:0,1056d0a9c853d4104e19352bc2aa0f2c:1455572991,755f9d05d2ba18103777c1443c9ad007:0,17de5d0103ba1810c6a66bc93da30293:1455572991,fd8d55cd1c7a1810aecb7db3ce625d2c:0,750d11c9d17a18100d51167b89588479:1455572991,0f0a11e02dea14503e8552affab488b3:0,91999dac58aa1450f87b00a8f08d0174:1455572991,f6706d1c23a214500d3d55f0347606dc:0,24ef1d1863a21450f9baaa5373e4fc4d:1455572991,cecc61ef07169050880a3d38d89d7871:0,b63ce9ebcb169050a28381a03d2a77bf:1455572991,631d30dfce1a5050f01c1d0552cd1b88:0,a9acb8db511a50505bbf42353db13da3:1455572991,2bfa310906525c10d668a089f9b265f8:0,737a7905f8525c102bab46c743f9bb3f:1455572991,45f21e1a3c8d1c50cca545179504a62c:0,28729a56358d1c50d0cc690cb4b80b83:-754136182,a740e65bf47f80503b8059989d7e0284:0,814c56dbc63f80502e5bc76622a21458:-754136182</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-22 08:49:47</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_list">sys_ui_list</sys_db_object>
+        <sys_id>1cc8a4f6cd8f4cc0874d6bfaf6882400</sys_id>
+        <sys_metadata>27412139db7b4c10a9ad266e139619f9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_chef_automate_client_run</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent display_value="">1cfbab38db88f70070cd5e25ca961905</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete/>
+        <sys_update_name>sys_ui_list_x_chef_automate_client_run_sys_ref_list</sys_update_name>
+        <sys_update_version display_value="sys_ui_list_x_chef_automate_client_run_sys_ref_list">5fd6d86ddb53d410c29227811596193a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-22 08:49:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

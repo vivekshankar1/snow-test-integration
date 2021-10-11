@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_chef_automate_asset_queue</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Insert to compliance import</name>
+        <order>110</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions>x_chef_automate.user</role_conditions>
+        <script><![CDATA[var logger = new Logger();
+var jsonUtil = new JsonUtil();
+var importUtil = new ImportUtil();
+
+(function executeRule(current, previous /*null when async*/) {
+	
+	logger.debug("Inserting to compliance import");
+	try {
+		var assetData = jsonUtil.parse(current.data);
+		
+		var complianceImport = new GlideRecordSecure('x_chef_automate_compliance_import');
+		
+		complianceImport.initialize();
+        if (complianceImport.canCreate()) {
+			logger.debug(gs.getMessage("User {0} can insert into x_chef_automate_compliance_import", gs.getUser().getName()));
+		} else {
+			logger.warn(gs.getMessage("User {0} cannot insert into x_chef_automate_compliance_import", gs.getUser().getName()));
+		}
+		logger.debug("Asset data length ".concat(assetData.length));
+	
+		// Map Request to Table
+		for(var entry = 0; entry < assetData.length; entry++) {
+			var asset =  assetData[entry];
+			if (importUtil.isComplianceReportEmpty(jsonUtil.getObject(asset, "report"))) {
+				logger.debug("There is no compliance report to process");
+				continue;
+			}
+			importUtil.mapToComplianceImportTable(complianceImport, asset, logger);
+			if (complianceImport.insert() === null) {
+				logger.warn("Insert failed into x_chef_automate_compliance_import");
+			} else {
+				logger.debug("Insert succeeded into x_chef_automate_compliance_import");
+			}
+		}
+	} catch (err) {
+		logger.errorWithStack("Insert to compliance report error", err);
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2019-06-13 15:12:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5a1022c1db0a730070cd5e25ca96195c</sys_id>
+        <sys_mod_count>66</sys_mod_count>
+        <sys_name>Insert to compliance import</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_script_5a1022c1db0a730070cd5e25ca96195c</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-06-02 11:09:07</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=5a1022c1db0a730070cd5e25ca96195c"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
+        <instance_name>ven02358</instance_name>
+        <name>sys_script_5a1022c1db0a730070cd5e25ca96195c</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;true&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;false&lt;/action_update&gt;&lt;active&gt;false&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;x_chef_automate_asset_queue&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition/&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;Insert to compliance import&lt;/name&gt;&lt;order&gt;110&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions&gt;x_chef_automate.user&lt;/role_conditions&gt;&lt;script&gt;&lt;![CDATA[var logger = new Logger();
+var jsonUtil = new JsonUtil();
+var importUtil = new ImportUtil();
+
+(function executeRule(current, previous /*null when async*/) {
+	
+	logger.debug("Inserting to compliance import");
+	try {
+		var assetData = jsonUtil.parse(current.data);
+		
+		var complianceImport = new GlideRecordSecure('x_chef_automate_compliance_import');
+		
+		complianceImport.initialize();
+        if (complianceImport.canCreate()) {
+			logger.debug(gs.getMessage("User {0} can insert into x_chef_automate_compliance_import", gs.getUser().getName()));
+		} else {
+			logger.warn(gs.getMessage("User {0} cannot insert into x_chef_automate_compliance_import", gs.getUser().getName()));
+		}
+		logger.debug("Asset data length ".concat(assetData.length));
+	
+		// Map Request to Table
+		for(var entry = 0; entry &lt; assetData.length; entry++) {
+			var asset =  assetData[entry];
+			if (importUtil.isComplianceReportEmpty(jsonUtil.getObject(asset, "report"))) {
+				logger.debug("There is no compliance report to process");
+				continue;
+			}
+			importUtil.mapToComplianceImportTable(complianceImport, asset, logger);
+			if (complianceImport.insert() === null) {
+				logger.warn("Insert failed into x_chef_automate_compliance_import");
+			} else {
+				logger.debug("Insert succeeded into x_chef_automate_compliance_import");
+			}
+		}
+	} catch (err) {
+		logger.errorWithStack("Insert to compliance report error", err);
+	}
+
+})(current, previous);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;mscott&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-06-13 15:12:36&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;5a1022c1db0a730070cd5e25ca96195c&lt;/sys_id&gt;&lt;sys_mod_count&gt;66&lt;/sys_mod_count&gt;&lt;sys_name&gt;Insert to compliance import&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Chef Automate" source="x_chef_automate"&gt;4cd4b300db68e700197478fdaa961908&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Chef Automate"&gt;4cd4b300db68e700197478fdaa961908&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_5a1022c1db0a730070cd5e25ca96195c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;mscott&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-06-02 11:09:07&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;after&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=5a1022c1db0a730070cd5e25ca96195c"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1979761266</payload_hash>
+        <record_name>Insert to compliance import</record_name>
+        <reverted_from/>
+        <source>d5c25256db8d1c50bd7169c3ca96196c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-06-02 11:09:07</sys_created_on>
+        <sys_id>ed363513db051090bd7169c3ca961965</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17274b87ee50000001</sys_recorded_at>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-06-02 11:09:07</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>a5363513b4051090547f40bab13b6465</update_guid>
+        <update_guid_history>a5363513b4051090547f40bab13b6465:1979761266,7751399bbfc1109003532bbe68033da7:509266913,d3e25a1a958d1c50870865caf727d222:0,f3625a56838d1c5004733e6edde6a8a9:1546845360,5071cdf31bd05850e9d79a3aab623a1b:946897828,346f78ffd1905850ebc3acbdb623079a:262398573,66495cbf5b105850b2a3a9fb1d5e07db:1597666765,3540265bc27f8050408fcb67cf9026b1:0,1ddfd2975f7f8050d84115cd61d04edd:1739328224,842e9a93e17f8050a8fbd7f1b00d7c87:0,cead9adfe83f8050b99cae35e8ec5c03:1739328224,c8cc969fe13f80503aa559752150c87c:0,ac4c16dbd23f8050459089b094ff9b63:1739328224,b1a3e8ed26f70c1080317fbe036a33be:0,f4336ce9bff70c10a68a8d7f0eac584f:1739328224,3bc024a5e9f70c10d5526d9ec301620e:0,8a50e0a1a7f70c105328c5874d465801:1739328224,dee0927ceff3881002be0bf003a4c595:0,5f701e7812f38810c5b5cf44a7b7087f:1739328224,165e1ee0b1a38450993e277efa6c1b59:0,bcbc12ec476384508e0fd1f0bfbf1654:1769255126,76da16681d638450a4e3404188e20784:0,dc6a52a41663845093e024fd0defe928:1739328224,54b91e2438638450e0858723f3eaffd2:0,b1f85a20cf638450b501f75ba7e8062d:-479997528,327612682d238450db1ee9bbaf2ae7ad:0,d01692a4ae238450af9862422b2401a2:1739328224,b5d5566424238450c05e71a32f7f0b80:0,2765d6a07f2384508cbd213d76a7a445:1739328224,23d6dd90fcef0450a4fd5f05dfbe7c07:0,1c95519c21af045055d2ea0d4dae5183:459029768,00205dd02aaf04501e80d0cb4721374d:0,bcbf8910e2af045071dbd54544ff3b97:1739328224,234fc9dc546f0450442bd30060f7213f:0,93de891c116f0450d96a76e901ac3ae2:1739328224,44b505506b6f0450036ed2df8aaac946:0,a8154d1c212f0450c2f3895123703c90:767785701,233004f1fb570c103175ecd3349876de:0,f6bff321b0570c10daa10cf51fd50cdb:1739328224,89d2346da38bc4106e34512fb844927f:0,ac82fca98d8bc410f5a7ea17657aa7bc:1739328224,e61da8257f8bc4104654cdd1802ca285:0,bfbc2061188bc4109277342c25629439:1739328224,cf3bc11caacbc010665617f5d51f8f93:1581747308,502ebcdc028bc0109acc381232aa9acc:0,34dd3c5c348bc0109e711ec5aa496058:24068471,95a10bbbf4f6801098983980b474ef3b:0,9b41cff74af6801014f29240ba774686:24068471,6461dee3373a4010ccf8efe105336b0c:0,36315ea3cd3a40100e879e072db0ec92:24068471,ee260aa3e6f6401025b8a1595a05825b:0,97d5c223d1f640107a16d206149827b4:24068471,0ea54a6f51b640106cf580e49f5c56ad:0,050546abdcb6401070f43e371ef50069:2116715268,2c05ce5bb57a001033409d417ff15646:0,a2b40ad7457a0010493988f36a85b319:24068471,13108613f07a0010373c7e208733f75c:0,efaefd1f003a0010f9acbd1ff2a52b92:24068471,3e15b5df90f600100f8c5cf5022743bc:75832683</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-06-02 11:52:32</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>787b56b69b04413094a87ba67576c440</sys_id>
+        <sys_metadata>5a1022c1db0a730070cd5e25ca96195c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Insert to compliance import</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent display_value="">196f56cadb116380197478fdaa9619b3</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete display_value="">03835e456e36492781266dc672a19f01</sys_scope_delete>
+        <sys_update_name>sys_script_5a1022c1db0a730070cd5e25ca96195c</sys_update_name>
+        <sys_update_version display_value="sys_script_5a1022c1db0a730070cd5e25ca96195c">ed363513db051090bd7169c3ca961965</sys_update_version>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-06-02 11:52:32</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

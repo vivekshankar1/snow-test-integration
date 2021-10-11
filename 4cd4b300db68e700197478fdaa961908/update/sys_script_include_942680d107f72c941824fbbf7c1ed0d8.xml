@@ -54,7 +54,7 @@ getSysClassName: function(operatingSystem) {
 
 MapToImportTable : function(chefAssetsTable, assetData, logger) {
     try {
-		gs.info("under mapToImportTable ");
+// 		gs.info("under mapToImportTable ");
         var attributes = jsonUtil.getObject(assetData, "attributes");
         if (attributes === undefined) {
             return false;
@@ -191,13 +191,13 @@ MapToImportTable : function(chefAssetsTable, assetData, logger) {
         <sys_created_by>Admin</sys_created_by>
         <sys_created_on>2021-04-27 10:56:04</sys_created_on>
         <sys_id>942680d107f72c941824fbbf7c1ed0d8</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_name>BufferToImportUtil</sys_name>
         <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_script_include_942680d107f72c941824fbbf7c1ed0d8</sys_update_name>
-        <sys_updated_by>chef.automate</sys_updated_by>
-        <sys_updated_on>2021-06-21 13:07:34</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-03 18:10:56</sys_updated_on>
     </sys_script_include>
 </record_update>

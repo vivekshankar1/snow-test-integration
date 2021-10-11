@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_entry">
+    <sys_transform_entry action="DELETE">
+        <choice_action>create</choice_action>
+        <coalesce>true</coalesce>
+        <coalesce_case_sensitive>false</coalesce_case_sensitive>
+        <coalesce_empty_fields>false</coalesce_empty_fields>
+        <date_format>yyyy-MM-dd HH:mm:ss</date_format>
+        <map display_value="Model Category">6ea7c5a0db0cb70070cd5e25ca96199e</map>
+        <reference_value_field/>
+        <source_field>[Script]</source_field>
+        <source_script><![CDATA[answer = (function transformEntry(source) {
+
+	// Add your code here
+	var osFamily = source.os_family;
+	var operatingSystem = source.os;
+	log.warn(gs.getMessage("Model category transform CI class, os_family: {0}, operating_system: {1}", [osFamily, operatingSystem]));
+	var ciClass = "";
+	if (osFamily.match(/linux/i))
+		ciClass = "cmdb_ci_linux_server";
+		
+	if (osFamily.match(/mac_os_x/i))
+		ciClass = "cmdb_ci_osx_server";
+		
+	if (osFamily.match(/windows/i))
+		ciClass = "cmdb_ci_win_server";
+	
+	return ciClass; // return the value to be put into the target field
+
+})(source);]]></source_script>
+        <source_table>x_chef_automate_asset_import</source_table>
+        <sys_class_name>sys_transform_entry</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2019-03-04 09:34:47</sys_created_on>
+        <sys_id>394b85a4db0cb70070cd5e25ca9619c2</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>[Script]</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_transform_entry_394b85a4db0cb70070cd5e25ca9619c2</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-03-25 13:06:27</sys_updated_on>
+        <target_field>cmdb_ci_class</target_field>
+        <target_table>cmdb_model_category</target_table>
+        <use_source_script>true</use_source_script>
+    </sys_transform_entry>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
+        <instance_name>ven02358</instance_name>
+        <name>sys_transform_entry_394b85a4db0cb70070cd5e25ca9619c2</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_transform_entry"&gt;&lt;sys_transform_entry action="INSERT_OR_UPDATE"&gt;&lt;choice_action&gt;create&lt;/choice_action&gt;&lt;coalesce&gt;true&lt;/coalesce&gt;&lt;coalesce_case_sensitive&gt;false&lt;/coalesce_case_sensitive&gt;&lt;coalesce_empty_fields&gt;false&lt;/coalesce_empty_fields&gt;&lt;date_format&gt;yyyy-MM-dd HH:mm:ss&lt;/date_format&gt;&lt;map display_value="Model Category"&gt;6ea7c5a0db0cb70070cd5e25ca96199e&lt;/map&gt;&lt;reference_value_field/&gt;&lt;source_field&gt;[Script]&lt;/source_field&gt;&lt;source_script&gt;&lt;![CDATA[answer = (function transformEntry(source) {
+
+	// Add your code here
+	var osFamily = source.os_family;
+	var operatingSystem = source.os;
+	log.warn(gs.getMessage("Model category transform CI class, os_family: {0}, operating_system: {1}", [osFamily, operatingSystem]));
+	var ciClass = "";
+	if (osFamily.match(/linux/i))
+		ciClass = "cmdb_ci_linux_server";
+		
+	if (osFamily.match(/mac_os_x/i))
+		ciClass = "cmdb_ci_osx_server";
+		
+	if (osFamily.match(/windows/i))
+		ciClass = "cmdb_ci_win_server";
+	
+	return ciClass; // return the value to be put into the target field
+
+})(source);]]&gt;&lt;/source_script&gt;&lt;source_table&gt;x_chef_automate_asset_import&lt;/source_table&gt;&lt;sys_class_name&gt;sys_transform_entry&lt;/sys_class_name&gt;&lt;sys_created_by&gt;mscott&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-03-04 09:34:47&lt;/sys_created_on&gt;&lt;sys_id&gt;394b85a4db0cb70070cd5e25ca9619c2&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;[Script]&lt;/sys_name&gt;&lt;sys_package display_value="Chef Automate" source="x_chef_automate"&gt;4cd4b300db68e700197478fdaa961908&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Chef Automate"&gt;4cd4b300db68e700197478fdaa961908&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_transform_entry_394b85a4db0cb70070cd5e25ca9619c2&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;mscott&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-03-25 13:06:27&lt;/sys_updated_on&gt;&lt;target_field&gt;cmdb_ci_class&lt;/target_field&gt;&lt;target_table&gt;cmdb_model_category&lt;/target_table&gt;&lt;use_source_script&gt;true&lt;/use_source_script&gt;&lt;/sys_transform_entry&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-604107210</payload_hash>
+        <record_name>[Script]</record_name>
+        <reverted_from/>
+        <source>f6d01e3cdbf38810a9ad266e13961973</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-03-25 13:06:27</sys_created_on>
+        <sys_id>275bbecddbf3c810a9ad266e139619c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17111cd200a0000001</sys_recorded_at>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-03-25 13:06:27</sys_updated_on>
+        <type>Field Map</type>
+        <update_guid>6f5bbecdc7f3c810823b1d7507c177c0</update_guid>
+        <update_guid_history>6f5bbecdc7f3c810823b1d7507c177c0:-604107210,6be0167cccf388108d6a412af886cef3:0,31b0daf83af38810955dad179e8984c3:1771345209,d75e12246da384509089a814860a611c:0,e8fcda204fa38450f8c8ed5e8437beb4:-1974389894,b7dad66876638450c7c088ebbb1cbc8c:0,0daa1ee4b3638450d6706d8fcb3c0827:1771345209,65b9de243f638450ab4258d3f64de56c:0,b6395aa0716384500d28628cf3ca2f84:818350675,7f769268d723845001f9084b41ae84fa:0,fd46dae4c2238450aac2d81cd76a5bc6:1771345209,43d5d664d0238450550593814b4547e9:0,a9a512240d238450e0742f02bc53cd71:1771345209,30e691d07fef045027ab3e8832690e1e:0,0dd5dddcfdaf0450328066e45f6cb4f0:210413652,9120ddd06eaf04506d6b7cefd51654e5:0,d3ef0590d4af04508128c6cc631a1369:1771345209,645f4ddc056f0450d4d125688d33319b:0,061f859c3d6f0450d4cef51b38bacd1d:1771345209,49b50950136f04501ceb2ddefd543617:0,e45541dc6a2f0450acec641ad7bc3de2:-790623990,a040c4f132570c102e33fb417a62633b:0,98008c7152570c10440da711c243e758:1771345209,4ad2b46d668bc41094d83fb7f3c90d4f:0,a7a2342d538bc410a858c08e7915dd53:1771345209,9f1d2c25f38bc4104740c5ddba69056a:0,14fc24a1b58bc410cd55a776963b256f:1771345209,852e301087cbc010f3a4cc6a90a42f9c:0,effdfc9c7d8bc0103424abfef867e732:1771345209,39a18bbb7bf68010535cd38ed9b2560b:0,2f71077bbaf680106b5fd4a433949a47:1771345209,d1615227e53a4010e4abfc09bb49fd4f:0,ae311ea3bb3a4010bbeb1234b1ed5fcc:1771345209,d726caa334f640101bf14b49ee665959:0,7506c66373f64010f7cce524c6c9df3e:1771345209,3aa5ca6f58b640101c52270e6028ea4d:0,39358aeb1fb640105c696a505b29be6e:1044418509,5d05429be17a0010d12ee8660c5120fb:0,9ce44e1b427a00102f8163041ef4aa9b:1771345209,8c20c613f97a0010905a35be00470aff:0,c6def19fba3a0010daf1b319ab1b2097:1771345209,a71579df0af600101ba91b900a789b12:795605933</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-03-25 15:09:22</sys_created_on>
+        <sys_db_object display_value="" name="sys_transform_entry">sys_transform_entry</sys_db_object>
+        <sys_id>05bd56dc8cc6411080e0e88b92833739</sys_id>
+        <sys_metadata>394b85a4db0cb70070cd5e25ca9619c2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>[Script]</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete display_value="">03835e456e36492781266dc672a19f01</sys_scope_delete>
+        <sys_update_name>sys_transform_entry_394b85a4db0cb70070cd5e25ca9619c2</sys_update_name>
+        <sys_update_version display_value="sys_transform_entry_394b85a4db0cb70070cd5e25ca9619c2">275bbecddbf3c810a9ad266e139619c1</sys_update_version>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-03-25 15:09:22</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

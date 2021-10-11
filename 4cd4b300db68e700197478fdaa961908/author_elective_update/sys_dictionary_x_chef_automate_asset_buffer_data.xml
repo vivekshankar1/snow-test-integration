@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_dictionary action="DELETE" element="data" table="x_chef_automate_asset_buffer">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes/>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Data</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>data</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="String">string</internal_type>
+        <mandatory>false</mandatory>
+        <max_length>16777215</max_length>
+        <name>x_chef_automate_asset_buffer</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>dmurray</sys_created_by>
+        <sys_created_on>2018-10-19 09:43:06</sys_created_on>
+        <sys_id>4b5ddd4ddb7a1810c29227811596191b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Data</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_dictionary_x_chef_automate_asset_buffer_data</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-08-21 09:24:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
+        <instance_name>ven02358</instance_name>
+        <name>sys_dictionary_x_chef_automate_asset_buffer_data</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update&gt;
+    &lt;sys_dictionary action="INSERT_OR_UPDATE" element="data" table="x_chef_automate_asset_buffer"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;array&gt;false&lt;/array&gt;
+        &lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+        &lt;attributes/&gt;
+        &lt;audit&gt;false&lt;/audit&gt;
+        &lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;
+        &lt;choice/&gt;
+        &lt;choice_field/&gt;
+        &lt;choice_table/&gt;
+        &lt;column_label&gt;Data&lt;/column_label&gt;
+        &lt;comments/&gt;
+        &lt;create_roles/&gt;
+        &lt;default_value/&gt;
+        &lt;defaultsort/&gt;
+        &lt;delete_roles/&gt;
+        &lt;dependent/&gt;
+        &lt;dependent_on_field/&gt;
+        &lt;display&gt;false&lt;/display&gt;
+        &lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+        &lt;dynamic_creation_script/&gt;
+        &lt;dynamic_default_value/&gt;
+        &lt;dynamic_ref_qual/&gt;
+        &lt;element&gt;data&lt;/element&gt;
+        &lt;element_reference&gt;false&lt;/element_reference&gt;
+        &lt;foreign_database/&gt;
+        &lt;function_definition/&gt;
+        &lt;function_field&gt;false&lt;/function_field&gt;
+        &lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;
+        &lt;mandatory&gt;false&lt;/mandatory&gt;
+        &lt;max_length&gt;16777215&lt;/max_length&gt;
+        &lt;name&gt;x_chef_automate_asset_buffer&lt;/name&gt;
+        &lt;next_element/&gt;
+        &lt;primary&gt;false&lt;/primary&gt;
+        &lt;read_only&gt;false&lt;/read_only&gt;
+        &lt;read_roles/&gt;
+        &lt;reference/&gt;
+        &lt;reference_cascade_rule/&gt;
+        &lt;reference_floats&gt;false&lt;/reference_floats&gt;
+        &lt;reference_key/&gt;
+        &lt;reference_qual/&gt;
+        &lt;reference_qual_condition/&gt;
+        &lt;reference_type/&gt;
+        &lt;sizeclass/&gt;
+        &lt;spell_check&gt;false&lt;/spell_check&gt;
+        &lt;staged&gt;false&lt;/staged&gt;
+        &lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;dmurray&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2018-10-19 09:43:06&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;4b5ddd4ddb7a1810c29227811596191b&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Data&lt;/sys_name&gt;
+        &lt;sys_package display_value="Chef Automate Integration App" source="x_chef_automate"&gt;4cd4b300db68e700197478fdaa961908&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Chef Automate Integration App"&gt;4cd4b300db68e700197478fdaa961908&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_dictionary_x_chef_automate_asset_buffer_data&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;mscott&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2020-08-21 09:24:22&lt;/sys_updated_on&gt;
+        &lt;table_reference&gt;false&lt;/table_reference&gt;
+        &lt;text_index&gt;false&lt;/text_index&gt;
+        &lt;unique&gt;false&lt;/unique&gt;
+        &lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+        &lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+        &lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+        &lt;virtual&gt;false&lt;/virtual&gt;
+        &lt;widget/&gt;
+        &lt;write_roles/&gt;
+        &lt;xml_view&gt;false&lt;/xml_view&gt;
+    &lt;/sys_dictionary&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>-904071321</payload_hash>
+        <record_name>Asset Buffer.Data</record_name>
+        <reverted_from/>
+        <source>964610a9db53d410c292278115961964</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-09-16 14:03:58</sys_created_on>
+        <sys_id>40c61c2ddb53d410c2922781159619b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>174973aa8e40000001</sys_recorded_at>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-09-16 14:03:58</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>8cc61c2d4f53d4105d927cfaa209bdb1</update_guid>
+        <update_guid_history>8cc61c2d4f53d4105d927cfaa209bdb1:0,0a5654a9ac53d4109f7639c06b246b80:893169505,4f3f91058cba1810b8bf5545e2dd8fa6:0,38ee51417fba1810cbd686e9bee40956:893169505,876d558dbd7a1810ffe8653b42d61ed1:0,d70dd1c9b77a1810b996f36f7c2535ee:893169505,5cf991a090ea14501b07e8ef615f6f3c:0,8f9991ec5aaa145082383598b85b3d4f:893169505,a750a11c43a2145095e2741db00d74a8:0,30ff515897a21450f753d0904b97a485:893169505,74ac25af2e169050d92b04c10e19b38a:0,614cadebd916905083fefac8eb904236:893169505,550d749fe31a5050fa6ea9a575391627:0,53ac7cdb711a5050991f926d7a14c464:893169505,fceab1c5db525c104cd314acf6c38afe:0,a18af90586525c10fe46a5e3942046e0:893169505,e1d2521adb8d1c50f62039bf66a5fc1b:0,16721e56c48d1c503b979e12098cc7ee:-836821834,60302e1bdc7f8050b2f5e7f514a2b8a8:0,d3dfd697997f8050f23db62b2de33140:-836821834,da0e92931b7f8050bb0cfc1e4c5605c9:0,94bd5edf463f8050d7016c13450c1258:-836821834,d6ac9e5f923f805050451cd3bc7bf1c0:0,be4c1adb4a3f80502c321ad441f1dc09:-836821834,1093a0ed49f70c10806c5adbd2824e47:0,0333a02d65f70c108e43f590d366a31f:-836821834,c6b068650af70c109fdbfb68c349a6b2:0,5c60e4a15bf70c10a3972686422015b7:-836821834,a9d09a3cb8f38810e6fae6735884b8f9:0,118012b8c3f388104ebd8805d73e2925:-836821834,9d4e16e05ca3845027bbb52d8f15b891:0,f6bcd2ec8963845051355522c964698e:-836821834,d5ca5a28ba638450066e410fbb01968e:0,166a16a48863845080a5931dd214dcad:-836821834,439916242963845015c153dfba7b082b:0,cc095e20bf6384509f9e54568e794013:-836821834,99665a286f238450b016e03fa2732420:0,5a1656a410238450b089687c8884b6b8:-836821834,05c55e24762384505815d8837437b7fc:0,61759aa02b238450cd11511f98b5e948:-836821834,62c61590adef04508c1080c395adfa3f:0,a295559c24af04504f491be06b9cff52:-836821834,070051d09aaf0450dfd66cf66f7fc2d4:0,b2bf4d10d8af0450ffdfa0e7092868b4:-836821834,9a3fc1dcd76f0450a61f68d8d09bf2a5:0,ddee8d1cc56f04501c04f5ac1fe0a13c:-836821834,36954910566f0450f7e789dac03f4518:0,6615815c062f04503b6101833066aca2:-836821834,91200cb1b0570c10e6ff6d20981cb52b:0,89cfb721ae570c10b4ed064ce4e328c7:-836821834,7dc2bc2dde8bc410ff202af1cd8edbda:0,1a82b0e9518bc410d6605dd08e1f4679:-836821834,bd0daca19d8bc410da090cf6c9e6b780:0,7dcce061d28bc410e057850c688be31e:-836821834,341e78dcf18bc01098486b63a3406d38:0,e2ddfc5cb98bc010988f8f3753cdb758:-836821834,499143bb61f68010fa1738d9a1a70432:0,9951c33bb5f68010dc65bbe680feeb33:-836821834,cf1642a33bf64010f3ece951bb8ff7d8:0,0de5862313f64010e39ea4b34755ef8b:-836821834,3595026f9cb64010e523a55260db6fe1:0,4f050aab61b64010bdbbc0c5496f9652:-836821834,95f44a5b5f7a0010a80ecc7683b2491c:0,54c4cad7577a0010ba93afa394154868:-836821834,c41002130e7a0010b6be994e7384d9dd:0,d9beb15f643a001055a6144bbeac14a6:-836821834,68057d9f9af60010d288c2544b4e1779:-1096258838</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-22 08:49:55</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>726191d29de94ed3a506a795294483d9</sys_id>
+        <sys_metadata>77a6542ddb53d410c2922781159619f1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Data</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent display_value="">2b157474db59af40197478fdaa9619e0</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete/>
+        <sys_update_name>sys_dictionary_x_chef_automate_asset_buffer_data</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_chef_automate_asset_buffer_data">40c61c2ddb53d410c2922781159619b2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-22 08:49:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

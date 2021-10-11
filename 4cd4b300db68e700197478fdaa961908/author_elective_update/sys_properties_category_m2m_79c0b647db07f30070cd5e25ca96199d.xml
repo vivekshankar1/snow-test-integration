@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="DELETE">
+        <category display_value="Chef Automate Properties">7b811d68dbe02b00197478fdaa961975</category>
+        <order>200</order>
+        <property display_value="x_chef_automate.macAddress" name="x_chef_automate.macAddress">339fe607db07f30070cd5e25ca961932</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2019-08-08 14:29:47</sys_created_on>
+        <sys_id>79c0b647db07f30070cd5e25ca96199d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>x_chef_automate.macAddress.Chef Automate Properties</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_79c0b647db07f30070cd5e25ca96199d</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-03-27 13:40:49</sys_updated_on>
+    </sys_properties_category_m2m>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
+        <instance_name>ven02358</instance_name>
+        <name>sys_properties_category_m2m_79c0b647db07f30070cd5e25ca96199d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="Chef Automate Properties">7b811d68dbe02b00197478fdaa961975</category><order>200</order><property display_value="x_chef_automate.macAddress" name="x_chef_automate.macAddress">339fe607db07f30070cd5e25ca961932</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>mscott</sys_created_by><sys_created_on>2019-08-08 14:29:47</sys_created_on><sys_id>79c0b647db07f30070cd5e25ca96199d</sys_id><sys_mod_count>3</sys_mod_count><sys_name>x_chef_automate.macAddress.Chef Automate Properties</sys_name><sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package><sys_policy/><sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope><sys_update_name>sys_properties_category_m2m_79c0b647db07f30070cd5e25ca96199d</sys_update_name><sys_updated_by>mscott</sys_updated_by><sys_updated_on>2020-03-27 13:40:49</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+        <payload_hash>1246129453</payload_hash>
+        <record_name>x_chef_automate.macAddress.Chef Automate Properties</record_name>
+        <reverted_from/>
+        <source>3983a829dbf70c10a9ad266e139619d8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-03-27 13:40:49</sys_created_on>
+        <sys_id>1a669d3ddb3b4c10a9ad266e139619ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1711c394cba0000001</sys_recorded_at>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-03-27 13:40:49</sys_updated_on>
+        <type>Category Property</type>
+        <update_guid>12669d3d103b4c10bf32d86fb9b19cef</update_guid>
+        <update_guid_history>12669d3d103b4c10bf32d86fb9b19cef:1246129453,f59c85b1e53b4c10a57f7fe468516152:790296878,41a368edaaf70c10e7205282bfcfd3c7:0,3b6324ad1ef70c10924c168837eae812:-1728272863,c7c060a5fdf70c1051b8b682a63bc5fa:0,7990a8253ff70c103f2f3d6224dd9d2e:-1728272863,7de0527ca3f3881038ef70c40a07ad63:0,bdb0daf85bf38810be2022653ca038a3:-1728272863,e95e9ae0b0a38450982fa1f256e571f9:0,54fcda20c2a38450ad645cf26d469f9e:-1695383605,42da92684a6384509002f94d0b75e483:0,b8aa1ee449638450abb7ca782fc0ae16:-1728272863,67a9da24ac6384506b97a8f178003087:0,fa395aa03c6384508387f555d750e06c:-1505401109,5276de287023845002d924648100217f:0,f946dae4a3238450416dbb48c61a21b4:-1728272863,15d516640b238450b46e1409c620c04e:0,e1a512245823845031f1b6b6ef473f60:-1728272863,72d61d90abef0450d269546a4bafc4f5:0,01d5dddca1af04506b93caab1f0f85d8:2048124633,e310d9d0c8af045041d690dcb1466558:0,5fef0590fdaf0450d7f34a2846208956:-1728272863,be4f89dcaa6f045080fe74b7c15fb10c:0,0a1f859c226f0450f97bf2c45cdd840a:-1728272863,dfa58150666f0450c88045c87dd6d534:0,a05541dc6b2f04500ad2a98030b4b5bd:-1368418423,7230c0f146570c1080fbd90dcd160793:0,14008c719a570c106edffa7d8900f639:-1728272863,30d2f06d9c8bc410eafee4210aa0a3da:0,efa2342d3c8bc4107bae6a8538d75343:-1728272863,5a1dace1c58bc410d2a7a775c66943c5:0,94fc24a1b68bc410dff82ad6424f5b60:-1728272863,0c2ebcdc2e8bc0101545c0f787a1ba4b:0,17fdfc9c738bc01006c95ef85021fa24:-1728272863,b4a1c7bbf3f68010531b2869ae1d6ea2:0,2371077b77f68010692cdd550db5b614:-1728272863,90619ee3473a4010c1b6bf22d89e6b1c:0,92311ea3473a401007fbb26fe848a987:-1728272863,c226c6a398f64010990fea5b60a59261:0,b506c6639af6401046e55537ec1a0824:-1728272863,79a54a6f7ab6401096d4861ed8234426:0,25358aeb51b64010268bffe41db07f5c:1920847053,10058e5bb67a00101462b2f6cd9019c6:0,9ce44e1b407a0010fa9fbb308c047f80:-1728272863,0b1046133f7a0010863454a9f41e31da:0,8adef19f673a0010d065a2da99b9d17a:-1728272863,f21575dff5f600106616d75502ac81f9:1246129453</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-03-27 14:48:34</sys_created_on>
+        <sys_db_object display_value="" name="sys_properties_category_m2m">sys_properties_category_m2m</sys_db_object>
+        <sys_id>0f29bc7048d0458b84cd9305b7a0c1d9</sys_id>
+        <sys_metadata>79c0b647db07f30070cd5e25ca96199d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_chef_automate.macAddress.Chef Automate Properties</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete display_value="">03835e456e36492781266dc672a19f01</sys_scope_delete>
+        <sys_update_name>sys_properties_category_m2m_79c0b647db07f30070cd5e25ca96199d</sys_update_name>
+        <sys_update_version display_value="sys_properties_category_m2m_79c0b647db07f30070cd5e25ca96199d">1a669d3ddb3b4c10a9ad266e139619ef</sys_update_version>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-03-27 14:48:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

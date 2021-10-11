@@ -53,7 +53,7 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-11-28 12:22:05</sys_created_on>
-        <sys_id>1ca7f3be2f303010a7c1b6a62799b6fc</sys_id>
+        <sys_id>49d5ce911b477410dbcfbbb21a4bcb74</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Skipped controls</sys_name>
         <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
@@ -61,7 +61,7 @@
         <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_dictionary_x_chef_automate_compliance_report_profiles_skipped_controls</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-06-21 13:25:38</sys_updated_on>
+        <sys_updated_on>2021-10-06 09:38:25</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

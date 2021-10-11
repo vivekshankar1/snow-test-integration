@@ -10,9 +10,52 @@
 	var logger = new Logger();
 	
 	try {
+		var bymount = jsonUtil.parse(source.file_system);
+		if(bymount.by_mountpoint){
+			var mount = bymount.by_mountpoint;
+			for (var fs in mount) {
+				var byclass = mount[fs];
+				for(var jj in byclass){
+				var name = fs;
+				var mountPoint = jsonUtil.getStringValue(mount[fs], "mount_option");
+				var label = jsonUtil.getStringValue(mount[fs], "volume_name");
+				var size =  util.getSafeNumber(jsonUtil.getStringValue(mount[fs], "kb_size"));
+				var space =  util.getSafeNumber(jsonUtil.getStringValue(mount[fs], "kb_available"));
+				var type =  jsonUtil.getStringValue(mount[fs], "fs_type");
+				var computer = source.server;
+			
+				var fileSystem = new GlideRecord('cmdb_ci_file_system');				
+				
+				fileSystem.addQuery('name', name);
+				fileSystem.addQuery('computer', computer);
+				fileSystem.query();
+				if (fileSystem.next()) {
+					fileSystem.mount_point = mountPoint;
+					fileSystem.label = label;
+					fileSystem.size_bytes = size;
+					fileSystem.free_space_bytes = space;
+					fileSystem.file_system = type;
+					fileSystem.update();
+				} else {
+					fileSystem.initialize();
+					fileSystem.name = name;
+					fileSystem.computer = computer;
+					fileSystem.mount_point = mountPoint;
+					fileSystem.label = label;
+					fileSystem.size_bytes = size;
+					fileSystem.free_space_bytes = space;
+					fileSystem.file_system = type;
+					fileSystem.insert();
+				}
+				}
+		}
+		}
+		else{
 		if (source.operating_system == "Windows") {
 			var fileSystems = jsonUtil.parse(source.file_system);
 			for (var fs in fileSystems) {
+				var byclass = fileSystems[fs];
+				for(var jj in byclass){
 				var name = fs;
 				var mountPoint = jsonUtil.getStringValue(fileSystems[fs], "mount");
 				var label = jsonUtil.getStringValue(fileSystems[fs], "volume_name");
@@ -43,6 +86,7 @@
 					fileSystem.free_space_bytes = space;
 					fileSystem.file_system = type;
 					fileSystem.insert();
+				}
 				}
 			}
 		} else {
@@ -83,7 +127,8 @@
 				}
 			}
 		}
-	} catch (error) {
+	} 
+	}catch (error) {
 		logger.errorWithStack("Chef Automate File System Import Table Mapping Error", error);
 	}
 		
@@ -94,14 +139,14 @@
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2019-03-05 14:28:23</sys_created_on>
         <sys_id>0d9e87f4db48f70070cd5e25ca961976</sys_id>
-        <sys_mod_count>39</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name>onAfter</sys_name>
         <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
         <sys_policy/>
         <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
         <sys_update_name>sys_transform_script_0d9e87f4db48f70070cd5e25ca961976</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-06-24 12:36:07</sys_updated_on>
+        <sys_updated_on>2021-10-05 04:41:53</sys_updated_on>
         <when>onAfter</when>
     </sys_transform_script>
 </record_update>

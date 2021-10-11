@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
     <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
-        <dependency display_value="Configuration Management For Scoped Apps (CMDB)" source="com.snc.cmdb.scoped">75a085c76d2620100acb70b3534330bc</dependency>
+        <dependency display_value="Configuration Management For Scoped Apps (CMDB)" source="com.snc.cmdb.scoped">51e37f73dbc59090bd7169c3ca9619aa</dependency>
         <min_version>1.0.0</min_version>
         <sys_created_by>mscott</sys_created_by>
         <sys_created_on>2020-06-04 09:38:50</sys_created_on>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+    <sys_db_object action="DELETE">
+        <access>package_private</access>
+        <actions_access>false</actions_access>
+        <alter_access>false</alter_access>
+        <caller_access/>
+        <client_scripts_access>false</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>false</create_access>
+        <create_access_controls>true</create_access_controls>
+        <delete_access>false</delete_access>
+        <extension_model/>
+        <is_extendable>false</is_extendable>
+        <label>Asset Queue</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>x_chef_automate_asset_queue</name>
+        <number_ref/>
+        <provider_class/>
+        <read_access>false</read_access>
+        <scriptable_table>false</scriptable_table>
+        <super_class/>
+        <sys_class_code/>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_class_path/>
+        <sys_created_by>dmurray</sys_created_by>
+        <sys_created_on>2018-10-23 14:40:03</sys_created_on>
+        <sys_id>196f56cadb116380197478fdaa9619b3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Asset Queue</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_db_object_196f56cadb116380197478fdaa9619b3</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-08-12 12:35:52</sys_updated_on>
+        <update_access>false</update_access>
+        <user_role display_value="x_chef_automate.user" name="x_chef_automate.user">9d7ce010dbe8e700197478fdaa9619ba</user_role>
+        <ws_access>false</ws_access>
+    </sys_db_object>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
+        <instance_name>ven02358</instance_name>
+        <name>sys_db_object_196f56cadb116380197478fdaa9619b3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+    <sys_db_object action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <actions_access>false</actions_access>
+        <alter_access>false</alter_access>
+        <caller_access/>
+        <client_scripts_access>false</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>false</create_access>
+        <create_access_controls>true</create_access_controls>
+        <delete_access>false</delete_access>
+        <extension_model/>
+        <is_extendable>false</is_extendable>
+        <label>Asset Queue</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>x_chef_automate_asset_queue</name>
+        <number_ref/>
+        <provider_class/>
+        <read_access>false</read_access>
+        <scriptable_table>false</scriptable_table>
+        <super_class/>
+        <sys_class_code/>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_class_path/>
+        <sys_created_by>dmurray</sys_created_by>
+        <sys_created_on>2018-10-23 14:40:03</sys_created_on>
+        <sys_id>196f56cadb116380197478fdaa9619b3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Asset Queue</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_db_object_196f56cadb116380197478fdaa9619b3</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-08-12 12:35:52</sys_updated_on>
+        <update_access>false</update_access>
+        <user_role display_value="x_chef_automate.user" name="x_chef_automate.user">9d7ce010dbe8e700197478fdaa9619ba</user_role>
+        <ws_access>false</ws_access>
+    </sys_db_object>
+</record_update>]]></payload>
+        <payload_hash>-1927757589</payload_hash>
+        <record_name>Asset Queue</record_name>
+        <reverted_from/>
+        <source>964610a9db53d410c292278115961964</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-09-16 14:03:38</sys_created_on>
+        <sys_id>d7a6542ddb53d410c292278115961971</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>174973a5d7f0000001</sys_recorded_at>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-09-16 14:03:38</sys_updated_on>
+        <type>Table</type>
+        <update_guid>17a6542db053d410188b5ecb2db3e071</update_guid>
+        <update_guid_history>17a6542db053d410188b5ecb2db3e071:0,fb4690a93753d410941e4414e274cfba:-1532943127,362fd9c1b7ba18101c5e65b0b8e04f1a:0,b6de1d01fdba18103ec2245f032b5c8d:-1532943127,7a5d9d4d217a181081fbf125620f6ba5:0,910ddd898c7a1810be0ee19d6bfced5a:-1532943127,1ce9d960d1ea14508f42e8a5562bcd58:0,c1995dac14aa1450ade965caf8e453a0:-1532943127,4340e9d816a21450e6e6fad2ff7c4fb5:0,94efd9185fa21450e9058c6325c99e60:-1532943127,e49c2d6fda169050d32bfe5fd2fb5527:0,2a3ce9ebd1169050e2f43f6f5fbbcf4e:-1532943127,51fc7c5fff1a5050e33a3bb32e07a170:0,11acb8dba61a5050f137afaa98ab5d4b:-1532943127,a4daf985b5525c10f21cd9caa5a255f1:0,df7a39058d525c10487bf6e11cb692a7:-1532943127,41c21ad60b8d1c50782071294ca78494:0,c0729a56b38d1c5097f87bd2812e6700:1979029812,9020661b7c7f8050a8f1b7da5faa2c4c:0,65df1697b07f8050b3b8a30cc11aa15a:1979029812,82fdda53267f8050b2638c7a8d781c83:0,92ad9adf153f80503ea96bbff5e12074:1979029812,b59cd65f7a3f80500e4775d5b78a708a:0,304c16db333f8050eb5f95db9d571ed4:1979029812,7b73a8addaf70c10aff2164f8332facf:0,4d336ce96ef70c10392b2412c66f65f0:1979029812,8aa06065d1f70c10ce0ce8908066f3ab:0,1a50e0a132f70c100d3779da88ffce7d:1979029812,31c0d23c82f38810ffee4dc4de498b57:0,e3705e7849f38810f4b08218383cb308:1979029812,e93edaa018a384507fe737b47afd0f5b:0,b0bc12ecba6384508c4104ecb80356ac:-702062250,d5ba922851638450cc5ee353cf2d2f44:0,ac6a52a49b638450358debccfb303ea4:1979029812,ba891ee07863845036958d4f3828e5f2:0,82f85a20f26384508699f69cc3dbde9f:-1460023562,6d569228fc238450be420762a9b0011d:0,6c1692a455238450f9615cdd8f63def8:1979029812,55b59624f7238450c1caebfeeeec4edf:0,f365d6a00e238450078262f09ac1c2a7:1979029812,32b65d50d2ef04506d766ba8bf5cde39:0,6c95519cfaaf0450c244d8936341e7f5:2040293941,57ff899019af0450379b8d4210f7b9ae:0,85bfc910abaf0450b247195be74a4007:1979029812,122f0d9ce66f04501534440632db1d93:0,63dec91c126f0450c1266990ed78185e:1979029812,438541101b6f04503e6fd0c77ecdbf3f:0,70158d1c7d2f0450e0dc2885cd31140f:1704218451,dd1004b153570c1079b23041344039f6:0,c7bf372182570c109467b2eb91ad8f3e:1979029812,4bb2782da98bc4105459699838e63825:0,f88230e99c8bc41098b9ad89f19fbd07:1979029812,cbfc68a1e08bc4109fff38125f071b2c:0,48cc2061788bc410afe8815859cbff82:1979029812,c20ef0dc468bc010d4d8fa8b305bedc0:0,05dd3c5cef8bc010f5ce2a0184e2ada0:1979029812,0a810b7b5af680101138f1a70b3621f7:0,6341cff752f680101becc395c35514db:1979029812,934156e31f3a4010424d3aa4921f2a58:0,684112e39e3a4010d43ccc434eaecf74:0,2c160e63a7f64010a1aab34de86a2538:0,2bd5c223f8f64010ea39e0f19f8f41f9:1979029812,8785ca2f53b64010cac61244e39fdb30:0,950546ab0eb64010009b88c77af918bb:197845636,22e4c25b7c7a0010f439c821df228b50:0,3eb40ad7d27a0010b8233abdd6e1c576:1979029812,dd00cadf643a0010b83d468074eecb8d:0,3faefd1ff43a00102d988f967e9929d8:1979029812,d8057d9fbdf60010ae850f35245fbd47:-1041778882</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-22 08:49:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_db_object">sys_db_object</sys_db_object>
+        <sys_id>6099e6ffcf344458a5fec54fed324790</sys_id>
+        <sys_metadata>196f56cadb116380197478fdaa9619b3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Asset Queue</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete/>
+        <sys_update_name>sys_db_object_196f56cadb116380197478fdaa9619b3</sys_update_name>
+        <sys_update_version display_value="sys_db_object_196f56cadb116380197478fdaa9619b3">d7a6542ddb53d410c292278115961971</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-22 08:49:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

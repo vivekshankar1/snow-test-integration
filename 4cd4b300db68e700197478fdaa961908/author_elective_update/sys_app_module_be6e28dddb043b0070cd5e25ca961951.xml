@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="Chef Automate">ab604058db68e700197478fdaa961982</application>
+        <assessment/>
+        <content_page/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Client run lists</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_chef_automate_client_run_lists</name>
+        <order>120</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>x_chef_automate.user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2019-03-06 15:22:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>be6e28dddb043b0070cd5e25ca961951</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Client run lists</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_app_module_be6e28dddb043b0070cd5e25ca961951</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-08-12 12:45:56</sys_updated_on>
+        <timeline_page/>
+        <title>Client run lists</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>4f0d5a8cdb3743c02b157236bf961971</instance_id>
+        <instance_name>ven02359</instance_name>
+        <name>sys_app_module_be6e28dddb043b0070cd5e25ca961951</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Chef Automate">ab604058db68e700197478fdaa961982</application>
+        <assessment/>
+        <content_page/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Client run lists</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_chef_automate_client_run_lists</name>
+        <order>120</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>x_chef_automate.user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2019-03-06 15:22:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>be6e28dddb043b0070cd5e25ca961951</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Client run lists</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_app_module_be6e28dddb043b0070cd5e25ca961951</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-08-12 12:45:56</sys_updated_on>
+        <timeline_page/>
+        <title>Client run lists</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>]]></payload>
+        <payload_hash>1087088699</payload_hash>
+        <record_name>Client run lists</record_name>
+        <reverted_from/>
+        <source>d2154acfdbaa0c504db62b35ca9619c5</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-01-29 10:59:07</sys_created_on>
+        <sys_id>d0358203dbea0c504db62b35ca96199d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16ff0f46c040000001</sys_recorded_at>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-01-29 10:59:07</sys_updated_on>
+        <type>Module</type>
+        <update_guid>1035820394ea0c50b9fbe449ab279a9d</update_guid>
+        <update_guid_history>1035820394ea0c50b9fbe449ab279a9d:0,7cf44e8f19aa0c502a63a60c7b981620:634287269,5264024fd1aa0c500558e47e2e254b70:0,a3248acb48aa0c500aef2e562a0d9535:634287269,e712a1c7e52a0c5070663d0378c30493:0,10d16947c32a0c50b4ec582fbd39e7de:634287269,83f92d366faac8501affbf0e4f7dfe07:0,b3b965f21aaac8508eeda112eef3d4a7:634287269,a188edbe866ac8507e5a7f8ee5cd2756:0,1638257e606ac8503c3a8d8eaaffa11f:634287269,262d3c125016c8104807f78f1ae94fe7:0,fffc7cde4ad2c8106a16903ef4a0c703:1139092859,5bfc3cde29d2c81081539eb787ccc007:0,1fb4e4965092c810edf25f938881aca0:0,9c74ac165a92c8101b780a771400127c:634287269,86b36c126892c810e57d56650797fc09:0,3d53ac9eea52c810bb716778e7379029:634287269,5d14c7df8891041006d56c2f5082ee8e:0,3cd3cb5f1a9104106a5e575c64b21bdc:634287269,553032c7abd1c0103217e97e5d1c4707:0,faffaa472bd1c01038274f9848f5f07a:634287269,5c3804a2eb5d0010e2546a9b3f57fd68:0,99e7c8223e5d0010fd256f1c8cdcbc85:634287269,10ab2626a7810010865d94bec9a031c6:0,c96baea28f81001071131990d74909a4:634287269,6e2d07c86173770042253926797b573f:1087088699</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">39e970b4dbbe04104db62b35ca96199c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-02-03 15:59:33</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>3e8c5890839942669713d6b2c7a8b1e1</sys_id>
+        <sys_metadata>be6e28dddb043b0070cd5e25ca961951</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Client run lists</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete display_value="">03835e456e36492781266dc672a19f01</sys_scope_delete>
+        <sys_update_name>sys_app_module_be6e28dddb043b0070cd5e25ca961951</sys_update_name>
+        <sys_update_version display_value="sys_app_module_be6e28dddb043b0070cd5e25ca961951">d0358203dbea0c504db62b35ca96199d</sys_update_version>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-02-03 15:59:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

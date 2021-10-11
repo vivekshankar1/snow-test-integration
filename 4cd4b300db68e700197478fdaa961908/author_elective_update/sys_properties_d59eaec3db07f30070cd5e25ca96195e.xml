@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="DELETE">
+        <choices/>
+        <description>Filter matching CI's by  hostname</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>true</is_private>
+        <name>x_chef_automate.hostname</name>
+        <read_roles>x_chef_automate.admin</read_roles>
+        <suffix>hostname</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2019-08-08 14:23:25</sys_created_on>
+        <sys_id>d59eaec3db07f30070cd5e25ca96195e</sys_id>
+        <sys_mod_count>596</sys_mod_count>
+        <sys_name>x_chef_automate.hostname</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_properties_d59eaec3db07f30070cd5e25ca96195e</sys_update_name>
+        <sys_updated_by>chef_api</sys_updated_by>
+        <sys_updated_on>2020-03-27 14:06:27</sys_updated_on>
+        <type>boolean</type>
+        <value>true</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="DELETE" query="documentkey=d59eaec3db07f30070cd5e25ca96195e"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
+        <instance_name>ven02358</instance_name>
+        <name>sys_properties_d59eaec3db07f30070cd5e25ca96195e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Filter matching CI's by  hostname</description><ignore_cache>true</ignore_cache><is_private>true</is_private><name>x_chef_automate.hostname</name><read_roles>x_chef_automate.admin</read_roles><suffix>hostname</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>mscott</sys_created_by><sys_created_on>2019-08-08 14:23:25</sys_created_on><sys_id>d59eaec3db07f30070cd5e25ca96195e</sys_id><sys_mod_count>596</sys_mod_count><sys_name>x_chef_automate.hostname</sys_name><sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package><sys_policy/><sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope><sys_update_name>sys_properties_d59eaec3db07f30070cd5e25ca96195e</sys_update_name><sys_updated_by>chef_api</sys_updated_by><sys_updated_on>2020-03-27 14:06:27</sys_updated_on><type>boolean</type><value>true</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=d59eaec3db07f30070cd5e25ca96195e"/></record_update>]]></payload>
+        <payload_hash>1505168896</payload_hash>
+        <record_name>x_chef_automate.hostname</record_name>
+        <reverted_from/>
+        <source>04ea8e13dbba00101846e7dcd3961903</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>chef_api</sys_created_by>
+        <sys_created_on>2020-03-27 14:06:27</sys_created_on>
+        <sys_id>f14c55b1db7b4c10a9ad266e139619db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1711c50c35e0000001</sys_recorded_at>
+        <sys_updated_by>chef_api</sys_updated_by>
+        <sys_updated_on>2020-03-27 14:06:27</sys_updated_on>
+        <type>System Property</type>
+        <update_guid>3d4c55b14d7b4c10fb5996ed2aa10eda</update_guid>
+        <update_guid_history>3d4c55b14d7b4c10fb5996ed2aa10eda:1505168896,ec9bd571907b4c1096de86c6e8e26167:1133316879,3dd4fc3de1b74c1058879194eee59373:1505168896,b424f03d68b74c1061f59355decd7bf7:1133316879,01a368edadf70c10421aecee25e398cf:0,7973e4adc7f70c103a19e7b9f4dea215:393939468,4fc0a0a50cf70c105a78bd0319b3810e:0,c8a06c2526f70c1008024b643d1df787:393939468,ae4baf199b33009035895d9a8a6c0ccc:1505168896,9d9a671997330090f23ba14c8e23260c:1133316879,50b1a609d6b3c810f94b553704aa5be0:1505168896,47f02ec5bab3c810300ef55392b522f5:1133316879,3de0527c84f388106066ae8b7f01d56b:0,ffb0def8e5f388108246cdef47cbf379:393939468,8e181db88a3f4c50ac26daa5078762e6:1505168896,b86791b8fc3f4c500a839c5a7f9e5f5a:1133316879,448e0ce894bb0c5076dbb81ddbb86d07:1505168896,fecd80e89cbb0c5070bf2d2a64ad9691:1133316879,bfdd35bbfe6f8410a0634045489395bf:1505168896,a22df97b116f8410002c5282f78b48bf:1133316879,ffb138e73d2f4410fa6b72ebe305ba0b:1505168896,e201b8a7b82f44101af3175d39d0b26f:1133316879,6f18ab43e8eb0410d64961398d24ff3b:1505168896,1e6767434deb0410b1834dc6b59d4a1b:1133316879,ed8e927e096bc010c1e10fffe1e9e64b:1505168896,d4dd923ee56bc0105349971cca5d7fde:1133316879,b29551e254638450af912e1f2a996b02:1505168896,91e455a2a0638450dbb903f46cf246d6:1133316879,cf6b849a82ef045014522ee061bfc9d9:1505168896,bdba085abbef04508bf1c6c9dba966fb:1133316879,269e6c11b5670850cc0727f1fca0e16d:1505168896,11ed2411996708508af57c2f6f8e3132:1133316879,310527f889e3c45094bf20941c7b9b39:1505168896,ec54a7b8b1e3c4504fcb51a0a5a942df:1133316879,615edae065a3845072337df13572fc0e:0,76fcde206ba38450e1af5ccef55a152b:1294354480,02da9268626384506858ab456877f68b:0,4faa9ee4fe63845085d1925b1942aaa8:393939468,27a9da244f6384505e3652bce29bc38f:0,9d495ea0e5638450a7f8ec2e1b32bc25:-423764556,1276de28e923845040929703190c5087:0,ef469ee4fd2384508c2fbf95d377664c:-1895743179,d1d5166489238450d152cabc5bcbc356:0,17a5d2247c238450dab0ebbbab670942:-1895743179,32d61d9061ef0450c5a878c68bc22dfd:0,efd5d11041ef045085e39372bab0ff78:-2094518650,2b7019543faf0450620d3ce92002142c:-1807369279,a310d9d0ffaf045020bc882209d83a60:0,11ff859059af0450cd43f0a01152b3ce:393939468,7e4f89dc0b6f04504967e99496980614:0,4c2f099c9c6f04508067d5e581b052b3:393939468,9fa58150956f04501095e160a448613c:0,c75585dcd12f0450ac382a680a88e880:1453005780,463844c09b2fc0508344afe35f71a3e0:-1807369279,b8878880af2fc0509c0fd29133ec6ec8:1523848558,f9423007769b0050c1f83ac622fd5f93:-1807369279,6491b4c3759b00509755fac54a61a7f6:1523848558,e87b608fb75b005057c584901e89db98:-1807369279,63ba284f545b0050f9346dbb1012d604:1523848558,0fb82be6121f081045c13eefe90c6e1f:-1807369279,3908afa6801f0810ac2223c029890782:1523848558,9de1eb2eb11bcc1060c3379c509ba2f7:-1807369279,4831efea211bcc10646fa5d1f7b21619:1523848558,1058de9a0cd78c1072f4eb28e8335e69:-1807369279,4f97969a4dd78c10edab81c11dac55be:1523848558,14cec9ca4a1b841044a3f11dd349c6aa:-1807369279,be0ec58ab71b841003e2f859b067c893:1523848558,2b01c875c7570c10b150c36d360d5ce5:-1807369279,3230c0f197570c104e103281ae7e2b9b:0,160000b167570c1079198e13372edcf4:393939468,cf2fa4f01cd38010e093ac5bc787b188:1505168896,357e2cb086d38010bcfcf41a8d6659fe:1133316879,99586cf44f934810fed4b1108a19f95f:1505168896,80a7a0f499934810149afec77b01e6d7:1133316879,f6ab94e44417081005fbc50ddd996b81:1505168896,65fa1ca45717081095ec1c5c917cffb3:1133316879,c3be53dc3b1308107d28cd5eb2108a5a:1505168896,8a0e9b9c24130810fef66ec3861a746f:1133316879,8a359ecc50df841038305cb3fef1eadb:1505168896,20849e04ea93c41004b68e5ebc255b4e:1133316879,c59b01b3f7cf4410d1c31ddbfb2f6113:1505168896,7fda817344cf4410076c31f11a84af77:1133316879,048288634a8f041063568b78f7b3515e:1505168896,b2c1cc23ab8f04105b2d0ad23e999ec8:1133316879,51452c2e4ccb40100853b96af7cae3c8:1505168896,80946cea89cb401019f88fa518ec0191:1133316879,a672e3462ecb0010736df23f0c693109:1505168896,5dc16b063acb0010bf650e3be298b667:1133316879,c2ab5b8e178b001072f810ca2e820173:1505168896,24fadf4e748b0010c4b95ba89c4ea8a4:1133316879,5cee17f5c64b081024d9205871d0b19b:1505168896,909edfb5e84b08107e1265d3a31936d8:1133316879,4d029631614f08107e874c57d30883e1:1505168896,3b41d6fd9c0f0810b4e434c47d8057e8:1133316879,baf8cefd2c070810178f8ceacfbf318c:1505168896,a5480afdd0070810b6d20dac3054db68:1133316879,87ce8da9d80fc410810803f20bfe10ae:1505168896,791e81a9780fc41012c979804069b7e0:1133316879,c8788d25ca0fc410e5c34f50eef54af5:1505168896,7ab705253f0fc410e99a2729fd7f7acb:1133316879,fcd2f06dd98bc4100fe75039fee50de1:0,e4b2742de98bc410f8212e553afd68c5:393939468,9e1dece1778bc410eb79faa3340bb3c5:0,11fca4a1a68bc410458e81a044f5ca0b:393939468,c1498151a60b841026f31861cf5b72db:1505168896,f788c111d30b8410dfdf57cd74c9a5cb:1133316879,8e004d19e6c7841063c943a01e3d599b:1505168896,fc5ff019c1c78410b77abed1beb156f4:1133316879,ca19b49106c78410b905d4ee1c14c2f6:1505168896,2137b4ddbd87841027e210b0d110355d:1133316879,4df8e0119d4f8410bb98fac0240813f9:1505168896,0048e4dde80f8410639e7f3222ac3945:1133316879,de760059d307841010606bfc27f63ead:1505168896,01c5c419a507841048c95a4312c55840:1133316879,a4de7b4deb8b8410b09f1e7da8e1432a:1505168896,df1ebf0d8f8b8410e9b94a2e0442b7f6:1133316879,c82ebcdc7b8bc010a6042890a775a053:0,e40e30dcc78bc010f2cdd0c4317120b6:393939468,59682010bac3c0106ea4107a01d1b870:1505168896,b3a7a4dc5e83c0105e888ef1006c1acc:1133316879,19122098d383c0100a63ee10ba2bbfec:1505168896,8061e4584b83c010257dcbfe08685d48:1133316879,e15b377f02f28010088511e8c526ad9d:1505168896,90aabb3fd8f280102bebb3dbe3e375a3:1133316879,7bf13f77cdba8010cc4abea84cb5d553:1505168896,3e413777b5ba801000848222b70a56cd:1133316879,ec2c57f35cb2801047af99a6259292ed:1505168896,1b6b5fb321b280106222f6def459514c:1133316879,45a1c7bb0bf680102328ed6880a061aa:0,e881477bb8f680108321095cf0f081d4:-109752488,18619ee3243a401031a4bd3968be8130:0,9d4192e31c3a40104e0efbc1eec69c9a:-109752488,f9fe06633e7240108bd83ff8fc667bae:301819212,e44e8623eb724010e1edf894dd075c8c:350782951,1e26c6a308f640105dc6b1d5f375dc74:0,7e060a63c0f64010d64f44e0a71d8fa9:-109752488,75a54a6f9eb640104f778a79df368f2d:0,07350eebe3b6401088b217e9d8967247:1717963168,5386861f467a001066aaedc0cde163b2:301819212,fc36861fe77a00100cc07113dd29178f:-1807369279,90058e5beb7a00102eb1810d9e52b4cd:0,41e4ce1b027a0010199e70ddea6b9e8f:393939468,8b104613a07a001088eeb022fbf9cfe1:0,5fde759f913a0010dece44e2fa983e3d:-1895743179,be1575dfc7f600100de2fe975962dcfe:-1807369279</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-03-27 14:48:49</sys_created_on>
+        <sys_db_object display_value="" name="sys_properties">sys_properties</sys_db_object>
+        <sys_id>0c12c7799022438a812593d18bde59e1</sys_id>
+        <sys_metadata>d59eaec3db07f30070cd5e25ca96195e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_chef_automate.hostname</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete/>
+        <sys_update_name>sys_properties_d59eaec3db07f30070cd5e25ca96195e</sys_update_name>
+        <sys_update_version display_value="sys_properties_d59eaec3db07f30070cd5e25ca96195e">f14c55b1db7b4c10a9ad266e139619db</sys_update_version>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-03-27 14:48:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

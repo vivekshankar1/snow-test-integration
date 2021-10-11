@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_entry">
+    <sys_transform_entry action="DELETE">
+        <choice_action>create</choice_action>
+        <coalesce>true</coalesce>
+        <coalesce_case_sensitive>false</coalesce_case_sensitive>
+        <coalesce_empty_fields>false</coalesce_empty_fields>
+        <date_format>yyyy-MM-dd HH:mm:ss</date_format>
+        <map display_value="CPU Manufacturer Transform">3f6948fadbbcb700bd7169c3ca96199a</map>
+        <reference_value_field/>
+        <source_field>cpu_vendor_id</source_field>
+        <source_script><![CDATA[answer = (function transformEntry(source) {
+
+	// Add your code here
+	return ""; // return the value to be put into the target field
+
+})(source);]]></source_script>
+        <source_table>x_chef_automate_asset_import</source_table>
+        <sys_class_name>sys_transform_entry</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2019-04-17 11:18:54</sys_created_on>
+        <sys_id>3b6948fadbbcb700bd7169c3ca96199e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>cpu_vendor_id</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_transform_entry_3b6948fadbbcb700bd7169c3ca96199e</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-04-17 11:30:22</sys_updated_on>
+        <target_field>name</target_field>
+        <target_table>core_company</target_table>
+        <use_source_script>false</use_source_script>
+    </sys_transform_entry>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
+        <instance_name>ven02358</instance_name>
+        <name>sys_transform_entry_3b6948fadbbcb700bd7169c3ca96199e</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_transform_entry"&gt;
+    &lt;sys_transform_entry action="INSERT_OR_UPDATE"&gt;
+        &lt;choice_action&gt;create&lt;/choice_action&gt;
+        &lt;coalesce&gt;true&lt;/coalesce&gt;
+        &lt;coalesce_case_sensitive&gt;false&lt;/coalesce_case_sensitive&gt;
+        &lt;coalesce_empty_fields&gt;false&lt;/coalesce_empty_fields&gt;
+        &lt;date_format&gt;yyyy-MM-dd HH:mm:ss&lt;/date_format&gt;
+        &lt;map display_value="CPU Manufacturer Transform"&gt;3f6948fadbbcb700bd7169c3ca96199a&lt;/map&gt;
+        &lt;reference_value_field/&gt;
+        &lt;source_field&gt;cpu_vendor_id&lt;/source_field&gt;
+        &lt;source_script&gt;&lt;![CDATA[answer = (function transformEntry(source) {
+
+	// Add your code here
+	return ""; // return the value to be put into the target field
+
+})(source);]]&gt;&lt;/source_script&gt;
+        &lt;source_table&gt;x_chef_automate_asset_import&lt;/source_table&gt;
+        &lt;sys_class_name&gt;sys_transform_entry&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;mscott&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2019-04-17 11:18:54&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;3b6948fadbbcb700bd7169c3ca96199e&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;cpu_vendor_id&lt;/sys_name&gt;
+        &lt;sys_package display_value="Chef Automate" source="x_chef_automate"&gt;4cd4b300db68e700197478fdaa961908&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Chef Automate"&gt;4cd4b300db68e700197478fdaa961908&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_transform_entry_3b6948fadbbcb700bd7169c3ca96199e&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;mscott&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2019-04-17 11:30:22&lt;/sys_updated_on&gt;
+        &lt;target_field&gt;name&lt;/target_field&gt;
+        &lt;target_table&gt;core_company&lt;/target_table&gt;
+        &lt;use_source_script&gt;false&lt;/use_source_script&gt;
+    &lt;/sys_transform_entry&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>557566246</payload_hash>
+        <record_name>cpu_vendor_id</record_name>
+        <reverted_from/>
+        <source>a3c0963cdbf38810a9ad266e139619d8</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-03-24 15:22:34</sys_created_on>
+        <sys_id>63e0167cdbf38810a9ad266e139619f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1710d235ef20000001</sys_recorded_at>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-03-24 15:22:34</sys_updated_on>
+        <type>Field Map</type>
+        <update_guid>afe0167c01f388107ae10f6cd402c2f5</update_guid>
+        <update_guid_history>afe0167c01f388107ae10f6cd402c2f5:0,c2b0daf8a4f3881082d3ac66ea2709cc:-1484490428,1f5e1224e6a3845027325ec88590f01e:0,e0fcda2009a38450a64a7cdae5ef62c0:991908060,fbdad668a363845082d4bc12e120808e:0,45aa1ee4226384506be10338312c6230:-1484490428,a9b9de249b63845041a1cdd9361d936e:0,f2395aa036638450f68d2e0eb319f49d:-356687395,b3769268432384501ced026d3b6615fd:0,3d46dae440238450aa3e8fabe8fd61dc:-1484490428,87d5d66495238450ca4b858c5114f8eb:0,e1a51224c923845037829b2c38741d7a:-1484490428,74e691d01fef04502a3ef76a0a89b920:0,09d5dddcf2af0450010614bbdee3effc:804499592,d520ddd0a9af045013163b9e5e7a4ce7:0,23ef0590e5af0450c94ab9d694ee2273:-1484490428,a85f4ddc3d6f0450ed6ffad4906bcf9d:0,961f859c896f04509862fb57dd43dd26:-1484490428,8db50950ff6f045031aff6ada1608219:0,a85541dcaf2f045011b49f9e5ed2e4fa:-809385077,e440c4f172570c1021d2515a525cb63d:0,94008c71de570c10c0dc9431d950ad62:-1484490428,8ed2b46d4d8bc410dd7b2fa7d65ab551:0,bba2342dea8bc410e40c25924642df5b:-1484490428,531d2c25ce8bc41094460ec5d78aac6d:0,14fc24a1e18bc410f80cc6b871a8b077:-1484490428,c92e3010a6cbc010a28ebe5521bd0f9e:0,2ffdfc9c008bc010b8a2399ef2fce53a:-1484490428,7da18bbb33f680100dbffbe743994d0d:0,e771077b02f680100213fbc81fb5d54f:-1484490428,29615227c83a40109b877d459e0dd051:0,6a311ea3e43a40100d03d1069788e3d4:-1484490428,1b26caa316f640101c9ff8564b07dc5b:0,7906c66386f64010607326e1311ef845:-1484490428,76a5ca6f3bb640101a85e68d221a8a68:0,31358aebbeb640103fbf8aacfca90279:-1428556036,9d05429b9c7a0010024ba124d25351fd:0,dce44e1b737a00105a4dc520fc8c06af:-1484490428,cc200a13067a00107ac9e4c6d7e42701:0,9adef19f8d3a00109cb0a46db9a7a6a0:-1484490428,2f1579df1ff600103167aa9532030213:-399012936</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-03-25 15:10:21</sys_created_on>
+        <sys_db_object display_value="" name="sys_transform_entry">sys_transform_entry</sys_db_object>
+        <sys_id>612cb61af4ba433891d5093b5ccdb9c4</sys_id>
+        <sys_metadata>3b6948fadbbcb700bd7169c3ca96199e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>cpu_vendor_id</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete display_value="">03835e456e36492781266dc672a19f01</sys_scope_delete>
+        <sys_update_name>sys_transform_entry_3b6948fadbbcb700bd7169c3ca96199e</sys_update_name>
+        <sys_update_version display_value="sys_transform_entry_3b6948fadbbcb700bd7169c3ca96199e">63e0167cdbf38810a9ad266e139619f6</sys_update_version>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-03-25 15:10:21</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <condition/>
+        <description>Default access control on x_chef_automate_asset_queue</description>
+        <name>x_chef_automate_asset_queue</name>
+        <operation display_value="read">read</operation>
+        <script/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>dmurray</sys_created_by>
+        <sys_created_on>2018-10-23 14:40:03</sys_created_on>
+        <sys_id>9eaf564edb116380197478fdaa961960</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_chef_automate_asset_queue</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_security_acl_9eaf564edb116380197478fdaa961960</sys_update_name>
+        <sys_updated_by>dmurray</sys_updated_by>
+        <sys_updated_on>2018-10-23 14:40:03</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
+        <instance_name>ven02358</instance_name>
+        <name>sys_security_acl_9eaf564edb116380197478fdaa961960</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <condition/>
+        <description>Default access control on x_chef_automate_asset_queue</description>
+        <name>x_chef_automate_asset_queue</name>
+        <operation display_value="read">read</operation>
+        <script/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>dmurray</sys_created_by>
+        <sys_created_on>2018-10-23 14:40:03</sys_created_on>
+        <sys_id>9eaf564edb116380197478fdaa961960</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_chef_automate_asset_queue</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_security_acl_9eaf564edb116380197478fdaa961960</sys_update_name>
+        <sys_updated_by>dmurray</sys_updated_by>
+        <sys_updated_on>2018-10-23 14:40:03</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>]]></payload>
+        <payload_hash>-1829518371</payload_hash>
+        <record_name>x_chef_automate_asset_queue</record_name>
+        <reverted_from/>
+        <source>964610a9db53d410c292278115961964</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-09-16 14:04:22</sys_created_on>
+        <sys_id>02d6186ddb53d410c2922781159619f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>174973b09d10000001</sys_recorded_at>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-09-16 14:04:22</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>4ed6186de153d41088abbd50b97229f0</update_guid>
+        <update_guid_history>4ed6186de153d41088abbd50b97229f0:0,934650a9dd53d410b4af29876c633cf1:1606125843,a45fd90564ba18100c299550f77f2291:0,eeded901b4ba1810bbb3e88b3f24fb6c:1606125843,688d91cd207a1810ee01be08d61a7690:0,bc0d5d89c07a18103012951979a522fa:1606125843,c20a9da0c1ea1450663e70b274066077:0,a4991dac98aa1450bdbc7ab826d85d4e:1606125843,6570e91c4da21450ed110beefc3942ac:0,f7df9918f1a214503c7fa487c9828e27:1606125843,3cccedaf781690507b8bf6e8f591d603:0,0a3ca9eb5b169050878790d0099015b7:1606125843,621dbc9f351a5050bbd9df0612b83344:0,30ac78db7e1a505064d5990742f31d8e:1606125843,defa7dc5e2525c10923f22d11eb9e5b9:0,8f7af5056b525c10a4ddc2172552b4f6:1606125843,f3e25a1a8c8d1c50bff00c19bfbbefd8:0,6b625a56498d1c5039825da91c1fc756:-1505673304,de40665be07f80508ae74959ba70c46f:0,c5dfd297b17f80508997b85a074cb48b:-1505673304,a82eda937c7f80501716b78dd21c46cf:0,39ad5adfc43f8050f90f6d9b2f39f9b1:-1505673304,a8ccd69f1f3f8050917b943220021c6e:0,9c4c16db2c3f8050440f3b0c5c0d9e04:-1505673304,dea32ced38f70c105959392100349adf:0,20332ce94bf70c10ce1be9c1aa0601a7:-1505673304,d0d064a5fcf70c109b24f6c97098304a:0,f950a0a185f70c10b1c6bc0fff324b4c:-1505673304,3ee0d27cfff3881060fb1007e8482c56:0,c3701e78cef388100aa4aee7a778082e:-1505673304,2e5e5ee0d0a384507425fb95062b1ea0:0,68bc12eccd638450170c26dd9a6e890c:182341727,03da56683963845064b4173f15925cbf:0,806a12a4986384506de0de2fb08ad4cb:-1505673304,38b95e24e963845061e467aef6d3a1d8:0,3df81a201563845055caa777c45f96e1:-1477049037,53765268922384509766386404716378:0,c01692a4c923845056760ada719f0b5d:-1505673304,12d596644723845054567368edd09540:0,d365d6a0f5238450d295501af185ca00:-1505673304,00e611d01def045097f9dfab7a8d8e43:0,cc95519c53af04506cc21a482ba6552b:-69573837,60209dd0f2af045068fa459fe0ab2f3d:0,a4bf8910a5af0450971289de8c06b65f:-1505673304,b34f0ddce06f045054331fba145f8d0b:0,17de891c8c6f04504127449e8fdfce84:-1505673304,10b54550826f0450380ab22792899a9b:0,d4154d1c712f04509622852e823a6b2c:1401738646,b73044f1cc570c10f5cf2d934d3504b7:0,3abff3210b570c1062c4642910152ba2:-1505673304,11d2746d7e8bc41008ef5b689227d502:0,5482fca9e58bc410981ff66762548a77:-1505673304,be1da825af8bc410feff6fab5e7e5df6:0,2fbcec21eb8bc410c4a35c4384400cf7:-1505673304,e02efcdc328bc0105ab1f33431c6445b:0,24dd3c5c978bc010417a6d0c2599bb07:-1505673304,d5a10bbb96f6801067c54e5d01cab2ca:0,8b41cff725f680100e33aa83e6127035:-1505673304,fa264aa396f64010ea8cf316fdd68643:0,47d5c223ebf64010d591cbcdde54db7d:-1505673304,96a58a6f09b640106e1d77d85028b42e:0,4d0546ab85b64010265b4ff7490d6816:-1916336027,7005ce5b647a0010ce9890a6874b77e5:0,5ab4c6d7d87a0010b1183ad4609830d5:-1505673304,6f108613ed7a001007d5d957bfe246c8:0,d3aefd1fa53a0010511757a9879a0240:-1505673304,0315f5dfd9f600100f2e45e98bdb6186:-398078668</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-22 08:49:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>2354a0553e3d4d14a069e4066abae890</sys_id>
+        <sys_metadata>9eaf564edb116380197478fdaa961960</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_chef_automate_asset_queue</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent display_value="">78b6d42ddb53d410c29227811596195e</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete/>
+        <sys_update_name>sys_security_acl_9eaf564edb116380197478fdaa961960</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_9eaf564edb116380197478fdaa961960">02d6186ddb53d410c2922781159619f1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-22 08:49:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

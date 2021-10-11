@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="DELETE">
+        <name>service_now_url</name>
+        <rest_message_function display_value="POST Destination">a0e1aebddb4f08101846e7dcd39619aa</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-02-19 12:31:59</sys_created_on>
+        <sys_id>bdb3e2fddb4f08101846e7dcd39619a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>service_now_url</sys_name>
+        <sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_bdb3e2fddb4f08101846e7dcd39619a4</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-02-19 12:31:59</sys_updated_on>
+        <type>string</type>
+        <value>https://ven02358.service-now.com/api/x_chef_automate/asset</value>
+    </sys_rest_message_fn_parameters>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
+        <instance_name>ven02358</instance_name>
+        <name>sys_rest_message_fn_parameters_bdb3e2fddb4f08101846e7dcd39619a4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters"><sys_rest_message_fn_parameters action="INSERT_OR_UPDATE"><name>service_now_url</name><rest_message_function display_value="POST Destination">a0e1aebddb4f08101846e7dcd39619aa</rest_message_function><sys_class_name>sys_rest_message_fn_parameters</sys_class_name><sys_created_by>mscott</sys_created_by><sys_created_on>2020-02-19 12:31:59</sys_created_on><sys_id>bdb3e2fddb4f08101846e7dcd39619a4</sys_id><sys_mod_count>0</sys_mod_count><sys_name>service_now_url</sys_name><sys_package display_value="Chef Automate" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package><sys_policy/><sys_scope display_value="Chef Automate">4cd4b300db68e700197478fdaa961908</sys_scope><sys_update_name>sys_rest_message_fn_parameters_bdb3e2fddb4f08101846e7dcd39619a4</sys_update_name><sys_updated_by>mscott</sys_updated_by><sys_updated_on>2020-02-19 12:31:59</sys_updated_on><type>string</type><value>https://ven02358.service-now.com/api/x_chef_automate/asset</value></sys_rest_message_fn_parameters></record_update>]]></payload>
+        <payload_hash>418835568</payload_hash>
+        <record_name>service_now_url</record_name>
+        <reverted_from/>
+        <source>15c27c2ddb8bc4101846e7dcd39619c7</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-02-19 12:31:59</sys_created_on>
+        <sys_id>1dd32a31db8f08101846e7dcd39619fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1705d6efbc40000001</sys_recorded_at>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-02-19 12:31:59</sys_updated_on>
+        <type>Variable Substitutions</type>
+        <update_guid>55d32a31758f0810715fcadfbbc76bfd</update_guid>
+        <update_guid_history>55d32a31758f0810715fcadfbbc76bfd:418835568</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-02-20 13:49:13</sys_created_on>
+        <sys_db_object display_value="" name="sys_rest_message_fn_parameters">sys_rest_message_fn_parameters</sys_db_object>
+        <sys_id>9dfdd2d8d9044980998ee5513eed3900</sys_id>
+        <sys_metadata>bdb3e2fddb4f08101846e7dcd39619a4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>service_now_url</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete display_value="">03835e456e36492781266dc672a19f01</sys_scope_delete>
+        <sys_update_name>sys_rest_message_fn_parameters_bdb3e2fddb4f08101846e7dcd39619a4</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_fn_parameters_bdb3e2fddb4f08101846e7dcd39619a4">1dd32a31db8f08101846e7dcd39619fd</sys_update_version>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-02-20 13:49:13</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

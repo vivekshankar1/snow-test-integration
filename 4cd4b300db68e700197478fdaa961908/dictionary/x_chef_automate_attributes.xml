@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Attributes" max_length="40" name="x_chef_automate_attributes" sizeclass="0" type="collection">
+    <element label="Attributes" max_length="40" name="x_chef_automate_attributes" type="collection">
         <element attributes="edge_encryption_enabled=true" label="All value count" max_length="40" name="all_value_count" type="longint"/>
         <element label="Automatic" max_length="16777215" name="automatic" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Automatic value count" max_length="40" name="automatic_value_count" type="longint"/>

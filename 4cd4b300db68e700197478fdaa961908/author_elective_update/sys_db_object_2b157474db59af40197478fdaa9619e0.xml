@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+    <sys_db_object action="DELETE">
+        <access>package_private</access>
+        <actions_access>false</actions_access>
+        <alter_access>false</alter_access>
+        <caller_access/>
+        <client_scripts_access>false</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>false</create_access>
+        <create_access_controls>true</create_access_controls>
+        <delete_access>false</delete_access>
+        <extension_model/>
+        <is_extendable>false</is_extendable>
+        <label>Asset Buffer</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>x_chef_automate_asset_buffer</name>
+        <number_ref/>
+        <provider_class/>
+        <read_access>false</read_access>
+        <scriptable_table>false</scriptable_table>
+        <super_class display_value="Import Set Row" name="sys_import_set_row">13cc1197db3200101846e7dcd396192c</super_class>
+        <sys_class_code/>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_class_path/>
+        <sys_created_by>dmurray</sys_created_by>
+        <sys_created_on>2018-10-19 09:43:06</sys_created_on>
+        <sys_id>2b157474db59af40197478fdaa9619e0</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Asset Buffer</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_db_object_2b157474db59af40197478fdaa9619e0</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-08-12 12:35:42</sys_updated_on>
+        <update_access>false</update_access>
+        <user_role display_value="x_chef_automate.user" name="x_chef_automate.user">9d7ce010dbe8e700197478fdaa9619ba</user_role>
+        <ws_access>false</ws_access>
+    </sys_db_object>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
+        <instance_name>ven02358</instance_name>
+        <name>sys_db_object_2b157474db59af40197478fdaa9619e0</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+    <sys_db_object action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <actions_access>false</actions_access>
+        <alter_access>false</alter_access>
+        <caller_access/>
+        <client_scripts_access>false</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>false</create_access>
+        <create_access_controls>true</create_access_controls>
+        <delete_access>false</delete_access>
+        <extension_model/>
+        <is_extendable>false</is_extendable>
+        <label>Asset Buffer</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>x_chef_automate_asset_buffer</name>
+        <number_ref/>
+        <provider_class/>
+        <read_access>false</read_access>
+        <scriptable_table>false</scriptable_table>
+        <super_class display_value="Import Set Row" name="sys_import_set_row">13cc1197db3200101846e7dcd396192c</super_class>
+        <sys_class_code/>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_class_path/>
+        <sys_created_by>dmurray</sys_created_by>
+        <sys_created_on>2018-10-19 09:43:06</sys_created_on>
+        <sys_id>2b157474db59af40197478fdaa9619e0</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Asset Buffer</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_db_object_2b157474db59af40197478fdaa9619e0</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2019-08-12 12:35:42</sys_updated_on>
+        <update_access>false</update_access>
+        <user_role display_value="x_chef_automate.user" name="x_chef_automate.user">9d7ce010dbe8e700197478fdaa9619ba</user_role>
+        <ws_access>false</ws_access>
+    </sys_db_object>
+</record_update>]]></payload>
+        <payload_hash>123780544</payload_hash>
+        <record_name>Asset Buffer</record_name>
+        <reverted_from/>
+        <source>964610a9db53d410c292278115961964</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-09-16 14:03:38</sys_created_on>
+        <sys_id>a3a6542ddb53d410c29227811596197b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>174973a5e470000001</sys_recorded_at>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-09-16 14:03:38</sys_updated_on>
+        <type>Table</type>
+        <update_guid>efa6542d9953d4101d30451e65f2d27a</update_guid>
+        <update_guid_history>efa6542d9953d4101d30451e65f2d27a:0,1e5654a92553d410154124561bb3bebb:1063190312,8f2fd9c1b5ba1810dc017ee1fa296b3c:0,41ee514182ba18108c43e10a0a0c7d85:1063190312,7a5d9d4d907a18108d8fbcf6f53f0faf:0,530d15c9647a1810167f77f60211751d:1063190312,9ce9d960acea145054a08d7e3f840c6e:0,039991ec73aa145024313812e03dd58b:1063190312,0f40e9d8d1a21450fae5c8b4e7940cbe:0,cdff5158c2a21450b95b0cae70b3b49a:1063190312,a09c2d6f161690501f73202de4df2631:0,214cadeb4a1690506e39db6635165e4c:1063190312,adfc7c5f061a505013b23d54f36a3679:0,13ac7cdb951a5050069d93634224d67a:1063190312,e0daf985f4525c105cdf1f50da46f0fb:0,718af905c4525c10f15bcd24a4d76bf6:1063190312,c5c21ad62f8d1c50fbbaf46ea42e929b:0,ea725e567e8d1c500a01af4e73c72e00:-833236621,1020661b457f8050abe64a634c0aed55:0,a3dfd6972a7f8050d3c1b70b8dd88153:-833236621,c6fdda536c7f805027bdd6ea7531448c:0,a8bd5edfd43f8050793ca3fdc0462d6b:-833236621,ca9cd65f053f8050979cec2aceedb793:0,3a4c1adb503f805028f219f3fbc88529:-833236621,8c83a8add1f70c102422917d77a25ed8:0,0333a02dedf70c10e92cc56d0574594b:-833236621,cea06065dbf70c108a9d3da36a988eb4:0,1460e4a1e5f70c1006a144640c4279f0:-833236621,75c0d23c80f38810f118735195626560:0,598012b8c7f388109716789ec236c444:-833236621,f53edaa097a3845056a7bda555f60f71:0,b6bcd2ec7963845043531dae2283b1a1:-1060217261,1dba92287e63845020cc689592f3d14d:0,6e6a16a4b16384509fa0774f18b820cb:-833236621,b6895ee016638450fc12c9328d993108:0,50095e2013638450a22504ed54c3a834:1237251943,a1569228ca238450fd11d9d7c2b76227:0,de1656a4c92384500e9e9591d335daca:-833236621,99b596249b23845023d3920b54b44ce8:0,ad759aa06c238450bb6f9e68b27b0b66:-833236621,76b65d5061ef0450037911929bee0842:0,6e95559cdaaf045001e3b2ff08d79465:-399873812,5bff899027af04505e83fb78a55741b7:0,7abf4d10c7af0450bf52325a21f53ed3:-833236621,562f0d9cdc6f0450aac9d4365214499c:0,21ee8d1c416f0450cdec09a0a10bbf5c:-833236621,c78541103c6f04508ecaaeb317e42686:0,b615815c622f0450181c7de177008ac2:1887050239,5d1004b177570c10b15dbe327c79b7ff:0,01cfb72116570c1055859e34526a35da:-833236621,4fb2782d6e8bc4102daa31b3136fb22e:0,aa82b0e9aa8bc410fae9c41970eb63a5:-833236621,0ffc68a1ad8bc410358e9dba13631e35:0,35cce061c08bc410d1832d415325c231:-833236621,0a0ef0dcfe8bc010a9fd25c1dcc312c9:0,e2ddfc5ce58bc010d43ca2f97857316a:-833236621,5e814b7bfdf68010a9e296a0d5391000:0,6151c33bb1f68010de8c177b16e5ff52:-833236621,d34156e37e3a4010ce811f4a7abcf061:0,e84112e35f3a40101118cd3dfdd06176:0,64160e638df640103d077924bb32fc41:0,dde586238cf6401025919285b53c1a9c:-833236621,cb85ca2fb8b640101fa602389e6a5438:0,cb050aab8bb6401051d372911a4e3b64:-2090188783,7ae4c25b3f7a00103fa4b694aeb80358:0,d0c4cad7e57a0010a1ead04256fc507a:-833236621,5500cadfc53a00101f83b1535a7c0e96:0,29beb15f803a0010c24d8b026241ecb8:-833236621,50057d9f48f60010ada78c1843e66e4f:1348322627</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-22 08:49:53</sys_created_on>
+        <sys_db_object display_value="" name="sys_db_object">sys_db_object</sys_db_object>
+        <sys_id>5f0a0c49f9a84cc0a5c7fb6478836100</sys_id>
+        <sys_metadata>2b157474db59af40197478fdaa9619e0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Asset Buffer</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete/>
+        <sys_update_name>sys_db_object_2b157474db59af40197478fdaa9619e0</sys_update_name>
+        <sys_update_version display_value="sys_db_object_2b157474db59af40197478fdaa9619e0">a3a6542ddb53d410c29227811596197b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-22 08:49:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

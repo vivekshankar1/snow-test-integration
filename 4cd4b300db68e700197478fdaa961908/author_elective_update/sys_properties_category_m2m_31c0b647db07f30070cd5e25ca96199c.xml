@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="DELETE">
+        <category display_value="Chef Automate Properties">7b811d68dbe02b00197478fdaa961975</category>
+        <order>800</order>
+        <property display_value="x_chef_automate.logging.enabled" name="x_chef_automate.logging.enabled">32303a07db07f30070cd5e25ca9619c3</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2019-08-08 14:29:47</sys_created_on>
+        <sys_id>31c0b647db07f30070cd5e25ca96199c</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>x_chef_automate.logging.enabled.Chef Automate Properties</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_31c0b647db07f30070cd5e25ca96199c</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-03-27 13:40:49</sys_updated_on>
+    </sys_properties_category_m2m>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</application>
+        <file_path/>
+        <instance_id>9d0d9e48dbfbcf802ffa7236bf961920</instance_id>
+        <instance_name>ven02358</instance_name>
+        <name>sys_properties_category_m2m_31c0b647db07f30070cd5e25ca96199c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="INSERT_OR_UPDATE">
+        <category display_value="Chef Automate Properties">7b811d68dbe02b00197478fdaa961975</category>
+        <order>800</order>
+        <property display_value="x_chef_automate.logging.enabled" name="x_chef_automate.logging.enabled">32303a07db07f30070cd5e25ca9619c3</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2019-08-08 14:29:47</sys_created_on>
+        <sys_id>31c0b647db07f30070cd5e25ca96199c</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>x_chef_automate.logging.enabled.Chef Automate Properties</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_31c0b647db07f30070cd5e25ca96199c</sys_update_name>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-03-27 13:40:49</sys_updated_on>
+    </sys_properties_category_m2m>
+</record_update>]]></payload>
+        <payload_hash>-1261245270</payload_hash>
+        <record_name>x_chef_automate.logging.enabled.Chef Automate Properties</record_name>
+        <reverted_from/>
+        <source>964610a9db53d410c292278115961964</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>mscott</sys_created_by>
+        <sys_created_on>2020-09-16 14:04:17</sys_created_on>
+        <sys_id>3cd6946ddb53d410c292278115961957</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>174973af5d40000001</sys_recorded_at>
+        <sys_updated_by>mscott</sys_updated_by>
+        <sys_updated_on>2020-09-16 14:04:17</sys_updated_on>
+        <type>Category Property</type>
+        <update_guid>78d6946dad53d410b7d4be788326bd57</update_guid>
+        <update_guid_history>78d6946dad53d410b7d4be788326bd57:0,2d961ce9ed53d41094c87b1dadf9e6d3:-820278278,ab4f5905f3ba181039e35fc37471fc6e:0,c21f91c113ba1810d6c760b2cb2e9ef2:-142138308,f436eb981836d410037497f62fcb47f6:214682696,677d9d8dc17a1810107cfb82a611b9b8:0,8d4d554d747a181029b27a1db240e5e6:-142138308,f436eb981836d410037497f62fcb47f6:214682696,780a1da032ea1450487ccb744231962a:0,57c9916089ea145027439e052281b6c8:-820278278,9470691c56a214500fb7de06e7f99253:0,a130e1d81ca214501bc98bb775152e96:-820278278,67bc6daf8e16905051655c8470c55501:0,af7c256f151690509de7a3c0baef6986:-820278278,991df89f081a5050dbb21be1372d62fb:0,acec745faa1a50506fd6c838e6bb5222:-820278278,45fa79c5da525c10dba9915e5cd3b2ed:0,9bbaf185a8525c10013825f3e4e0af12:-820278278,52e2d61aac8d1c50b0fb1b7a322ca1d0:0,27a212d6858d1c50093d9cdb96f3e771:-2099432955,8940e25b707f805072c42c50189c1a7e:0,c810aed7167f8050e53ca9d470609ee2:-2085253561,1b1e5a93e27f8050fa743b4da7d36035:0,39ed1653ff7f80509f23c142dff315da:-2085253561,93bc569f973f8050dd4b1b97d52a1b44:0,788c125f543f80508d1f8190a6276f11:-2099432955,da66dd3d0f3b4c10d185a8993f2f1707:-1263832559,f99c0db17c3b4c105437ce5e9ec14d60:-1256742862,c9a368edb4f70c10962ffa40e2e3d9b3:0,f76324ad8af70c10f05f2afb4b42120b:-2085253561,0bc060a5a5f70c103b73a90ad0dd10f3:0,b990a825eff70c10c46c5c900b205627:-2085253561,bde0527c06f38810705a59b441cdd85c:0,f9b0daf875f388102892b7c4e50e2a90:-2085253561,2d5e9ae096a38450fd76a77c7a6c6af2:0,9cfcda2014a38450455c7e1992c50a95:294967826,cada92681c638450ee58c1ccfd5e746f:0,f0aa1ee48e638450b8a2494ff0f1bf10:-2085253561,2ba9da243d6384508d80665c9082e267:0,2e395aa06d638450cd21e24a2a7fa54a:1745048526,9276de2852238450da20bbe22a1be578:0,b146dae402238450024bf6751c3b10ae:-2085253561,55d5166478238450ba9826f672f59f47:0,11a512243b238450d922f0702731845a:-2085253561,36d61d9066ef04501954d8a1fd246dd5:0,4dd5dddcd0af04507f41b84e27ec92c2:1777822305,6f10d9d032af0450e62fbe7eba6bc344:0,1bef059037af045011702b73a9ca1f4f:-2085253561,fe4f89dc5a6f0450e4c78e5c1853ab05:0,8e1f859c606f045026e8566192372103:-2085253561,93a58150666f045017e374553b131015:0,e05541dc3c2f04501c1ecd7879bfdfb4:-330085782,b230c0f12a570c10e9745eec29c8b88c:0,dc008c715c570c109938327f8332ae32:-2085253561,70d2f06d788bc410674518c7316343d3:0,e7a2342d0a8bc4105558d92b1a232d3d:-2085253561,021dace1b38bc4100dd730e9413bd7bf:0,5cfc24a10a8bc410de2d61d22467e959:-2085253561,7f1ebcdc8f8bc010e97a186d84007744:0,dffdfc9c4e8bc010770eb758f30c6a1d:-2085253561,f4a1c7bba9f68010f059d1c19898f29b:0,af71077b3ff6801096501da97d6fe90d:-2085253561,d0619ee3453a4010f978eee7dd7ab015:0,52311ea3ae3a4010c5318bf3666e407a:-2085253561,0226c6a3dff640101cfdc06e79e1fa5b:0,7506c663e3f64010489b364f72079c1e:-2085253561,3da54a6f26b64010e857d83706c80320:0,e5358aebadb640101c9295e6ffc5d954:1324866732,5c058e5ba97a0010b7e59de4697822bf:0,0ce44e1b4c7a001051421a0b93ac767a:-2085253561,47104613b57a001072ef7a1922ea36d4:0,0adef19fc93a0010edfb087c07fcb673:-2085253561,ea1575df15f60010ab3c1241da9f47f4:-1249653165</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-22 08:50:51</sys_created_on>
+        <sys_db_object display_value="" name="sys_properties_category_m2m">sys_properties_category_m2m</sys_db_object>
+        <sys_id>1983bee7813e43e082becc2dec241c64</sys_id>
+        <sys_metadata>31c0b647db07f30070cd5e25ca96199c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_chef_automate.logging.enabled.Chef Automate Properties</sys_name>
+        <sys_package display_value="Chef Automate Integration App" source="x_chef_automate">4cd4b300db68e700197478fdaa961908</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Chef Automate Integration App">4cd4b300db68e700197478fdaa961908</sys_scope>
+        <sys_scope_delete/>
+        <sys_update_name>sys_properties_category_m2m_31c0b647db07f30070cd5e25ca96199c</sys_update_name>
+        <sys_update_version display_value="sys_properties_category_m2m_31c0b647db07f30070cd5e25ca96199c">3cd6946ddb53d410c292278115961957</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-22 08:50:51</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
